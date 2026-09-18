@@ -6,7 +6,7 @@
   <img src="packages/ui/public/brand/jot-wordmark.svg" alt="Jot" width="220" height="80">
 </picture>
 
-### the first system one agent
+### The first general-purpose System One agent
 
 Jev picks the next move. Jot runs the loop.
 
