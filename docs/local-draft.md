@@ -1,7 +1,7 @@
 # Local draft answers
 
 Jev continues to choose tools and generate tool arguments. The user-authorized
-exception is `draft_answer`, which now calls a local LFM2.5-1.2B-Instruct service
+exception is `draft_message`, which now calls a local LFM2.5-1.2B-Instruct service
 through the server adapter. It receives a compact conversation plus clipped tool evidence (status, text, value, error, url/title), not raw snapshot control lists;
 its output is streamed through the existing tool event path. No local model is
 imported into the provider-independent agent or browser packages.
@@ -22,7 +22,7 @@ for this local endpoint. The existing Jev key stays server-side.
 
 Draft generation uses temperature 0.1, top-k 50, repetition penalty 1.05, a
 512-token output cap and a 60-second request timeout. When page evidence contains Google Flights-style option rows, code assembles a
-markdown table and `draft_answer` streams that table directly. The local 1.2B
+markdown table and `draft_message` streams that table directly. The local 1.2B
 model is not asked to invent or reformat those rows; it is still used for ordinary
 prose drafts. Cancellation propagates to
 the local request. A missing service or truncated stream is a tool error, not a

@@ -77,7 +77,7 @@ app.post("/api/chat", async (req, res) => {
   try {
     if(req.body.chatId!==undefined)lease=await browserPool().acquire(browserChatId(req.body.chatId));
     const useLocalDraft=req.body?.localDraft!==false;
-    for await (const event of generateChatReply(key, messages, controller.signal,{...(useLocalDraft?{draft}:{}),...(lease?{extraTools:createBrowserTools(lease.session),maxTurns:24}:{})})) {
+    for await (const event of generateChatReply(key, messages, controller.signal,{...(useLocalDraft?{draft}:{}),...(lease?{extraTools:createBrowserTools(lease.session)}:{})})) {
       emit({ ...event, elapsed: Date.now() - started });
     }
   } catch (error) {
@@ -111,7 +111,7 @@ if (process.env.NODE_ENV === "production") {
 const port = Number(process.env.PORT || env.PORT || 3000);
 const linux=await ensureLinuxChrome();
 app.listen(port, "127.0.0.1", () => {
-  console.log(`Jot → http://localhost:${port}${linux.cdpUrl?`\nLinux Chrome VNC ${linux.vncUrl}`:''}`);
+  console.log(`Jot → http://localhost:${port}${linux.cdpUrl?`\nLinux Chrome VNC ${linux.vncUrl}`:'\nBrowser: local headed Chrome'}`);
   void browserPool().warmup('shared').catch((error:Error)=>console.error(`Browser warmup failed: ${error.message}`));
 });
 

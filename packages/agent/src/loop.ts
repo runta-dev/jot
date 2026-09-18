@@ -10,7 +10,7 @@ export async function* runAgentLoop(conversation:ChatMessage[],options:{model:Mo
  });
  let displayed='';
  try{
-  for(let turn=0;turn<(options.maxTurns??8);turn++){
+  for(let turn=0;options.maxTurns===undefined||turn<options.maxTurns;turn++){
    signal.throwIfAborted();
    const tools=factories.map(factory=>factory({messages,signal})).filter((t):t is Tool=>t!==null);
    const decision=await model(messages,tools,signal);signal.throwIfAborted();

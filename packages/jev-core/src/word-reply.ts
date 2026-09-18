@@ -21,13 +21,13 @@ export async function* generateWordReply(key:string,messages:Message[],signal:Ab
  async function ask(questions:Record<string,ChoiceQuestion>){
   signal.throwIfAborted();if(metrics.inputTokens>=maxInput)throw new BudgetReached();
   if(options.evaluate)metrics.requests++;
-  const response=await evaluate({model:'jev-latest',state:{conversation:messages,assistant:{name:'Jev',provider:'TypeSafe'},reply_so_far:prefix,...(options.toolResults?{tool_results:options.toolResults}:{})},questions:options.instructions?Object.fromEntries(Object.entries(questions).map(([id,q])=>[id,{...q,instructions:`${options.instructions}\n${q.instructions}`}])):questions},signal);
+  const response=await evaluate({model:'jev-latest',state:{conversation:messages,assistant:{name:'Jot',decision_model:'Jev',provider:'TypeSafe'},reply_so_far:prefix,...(options.toolResults?{tool_results:options.toolResults}:{})},questions:options.instructions?Object.fromEntries(Object.entries(questions).map(([id,q])=>[id,{...q,instructions:`${options.instructions}\n${q.instructions}`}])):questions},signal);
   signal.throwIfAborted();metrics.inputTokens+=response.usage?.input_tokens??0;metrics.outputTokens+=response.usage?.output_tokens??0;
   return response.answers;
  }
  try{
   const context=conversationLexemes(messages);
-  const banks=groups([...new Set([...base,...context,'Jev','TypeSafe'])]);
+  const banks=groups([...new Set([...base,...context,'Jot','Jev','TypeSafe'])]);
   const selected=await ask(Object.fromEntries(banks.map((bank,i)=>[`g${i}`,{type:'choice',instructions:'Which listed word is most useful in a concise, correct answer to the latest user message? Use the conversation for context.',criteria:Object.fromEntries(bank.map(w=>[w,null]))}])));
   const active=[...new Set([...base.slice(0,400),...context,'Jev','TypeSafe',...Object.values(selected).flatMap(a=>top(a,32))])];
   for(let i=0;i<maxSteps;i++){

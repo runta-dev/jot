@@ -119,6 +119,7 @@ function App() {
     setSettingsOpen(false);
     follow.current = true;
     setTimeout(() => textarea.current?.focus(), 0);
+    void fetch(`/api/browser/${encodeURIComponent(fresh.id)}/warmup`,{method:'POST'}).catch(()=>{});
   };
   const deleteChat = (id: string) => {
     if (busy) return;

@@ -25,7 +25,7 @@ test('draft prompt keeps tool text and drops snapshot control lists',()=>{
 });
 test('draft prompt includes an optional must-keep phrase',()=>{
  const packed=JSON.stringify(draftMessages(history,'13 then 26'));
- assert.match(packed,/Must keep this phrase/);
+ assert.match(packed,/Hints to keep/);
  assert.match(packed,/13 then 26/);
 });
 test('truncated or aborted local streams never report completion',async()=>{
@@ -33,11 +33,21 @@ test('truncated or aborted local streams never report completion',async()=>{
  const stream=draft(history,new AbortController().signal);await stream.next();await assert.rejects(stream.next(),/before completion/);
  const controller=new AbortController();controller.abort();await assert.rejects(draft(history,controller.signal).next());
 });
-test('draft_answer delegates only its text generation while Jev still selects actions',async()=>{
- let localCalls=0,decisions=0;
- const evaluate:Evaluate=async request=>{const answers:any={};if(request.questions.notes)answers.notes={type:'choice',choice:'NONE',confidence:1,probabilities:{NONE:1}};if(request.questions.action){const choice=decisions++?'respond_0':'draft_answer';answers.action={type:'choice',choice,confidence:1,probabilities:{[choice]:1}};}return {model:'fixture',answers};};
+test('draft_message delegates only its text generation while Jev still selects actions',async()=>{
+ let localCalls=0,decisions=0,nexts=0;
+ const evaluate:Evaluate=async request=>{
+  const answers:any={};
+  if(request.questions.action){const choice=decisions++?'respond_0':'draft_message';return {model:'fixture',answers:{action:{type:'choice',choice,confidence:1,probabilities:{[choice]:1}}}};}
+  for(const [id,q] of Object.entries(request.questions) as any){
+   const keys=Object.keys(q.criteria);let choice=keys.find((k:string)=>k!=='OTHER'&&k!=='END')??keys[0];
+   if(id==='next'){nexts++;choice=nexts===1?(keys.find((k:string)=>k!=='END')??'END'):'END';}
+   if(!keys.includes(choice))choice=keys[0];
+   answers[id]={type:'choice',choice,confidence:1,probabilities:{[choice]:1}};
+  }
+  return {model:'fixture',answers};
+ };
  const events=[];for await(const e of generateChatReply('',[{role:'user',content:'Explain rain.'}],new AbortController().signal,{evaluate,draft:async function*(messages){localCalls++;assert.equal((messages[0] as any).content,'Explain rain.');yield {type:'text_delta',delta:'Local answer.'};return {status:'ok',text:'Local answer.'};}}))events.push(e);
- assert.equal(localCalls,1);assert.equal(decisions,2);assert.ok(events.some(e=>e.type==='tool_call'&&e.call.name==='draft_answer'));assert.equal(events.at(-1)?.type,'done');
+ assert.equal(localCalls,1);assert.equal(decisions,2);assert.ok(events.some(e=>e.type==='tool_call'&&e.call.name==='draft_message'));assert.equal(events.at(-1)?.type,'done');
 });
 
 test('draft prompt includes a markdown flight table extracted from page evidence',()=>{
@@ -50,7 +60,7 @@ test('draft prompt includes a markdown flight table extracted from page evidence
  assert.match(packed,/\$178/);
 });
 
-test('draft_answer emits a markdown flight table from evidence without calling the local generator',async()=>{
+test('draft_message emits a markdown flight table from evidence without calling the local generator',async()=>{
  let called=0;const fetcher:typeof fetch=async()=>{called++;throw Error('should not call');};
  const text=`Search results\n7:40 AM\n–\n8:35 AM\nBritish Airways\n1 hr 55 min\nNonstop\n$178\n4:45 PM\n–\n5:35 PM\neasyJet\n1 hr 50 min\nNonstop\n$188`;
  const gen=createLocalDraft({fetch:fetcher})([{role:'user',content:'Show the flights.'},{role:'tool',name:'browser_observe',toolCallId:'b1',result:{status:'ok',text}}] as any,new AbortController().signal);

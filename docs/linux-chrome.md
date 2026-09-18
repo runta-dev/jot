@@ -1,14 +1,12 @@
-# Headed Linux Chrome
+# Browser runtime
 
-`npm run dev` bootstraps the repo Linux Chromium (OrbStack/Docker), then
-connects Jot over CDP. This is headed Chromium on Xvfb, not `--headless`.
+Default is **local headed Chrome** with a shared Jot profile. That is the
+light path for Google sign-in on this Mac. `npm run dev` does not build a
+Linux image.
 
-Sign in at the printed VNC URL (`http://127.0.0.1:6080/vnc.html`). The
-profile is `.cache/linux-chrome-profile`.
+Optional Linux Chromium (heavier):
 
 ```sh
-npm run dev
-npm run chrome:linux -- down
+JOT_BROWSER_CDP=1 npm run chrome:linux -- up
+JOT_BROWSER_CDP=1 npm run dev
 ```
-
-`JOT_BROWSER_CDP=0 npm run dev` keeps the previous local Mac Chrome path.

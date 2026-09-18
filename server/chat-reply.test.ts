@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {generateChatReply,sourceSpans} from './chat-reply.ts';
 import {emptySchema,type ToolFactory} from '@jot/agent';
 import type {Evaluate,EvaluationRequest} from '@jot/jev-core';
-function response(request:EvaluationRequest,choices:Record<string,string>){return {model:'test',answers:Object.fromEntries(Object.entries(request.questions).map(([id,q])=>{const choice=choices[id]??(id==='notes'&&Object.hasOwn(q.criteria,'NONE')?'NONE':choices[id]);return [id,{type:'choice' as const,choice,confidence:1,probabilities:Object.fromEntries(Object.keys(q.criteria).map(k=>[k,k===choice?1:0]))}];})),usage:{input_tokens:10,output_tokens:2}};}
+function response(request:EvaluationRequest,choices:Record<string,string>){return {model:'test',answers:Object.fromEntries(Object.entries(request.questions).map(([id,q])=>{if(q.type==='noul')return [id,{type:'noul' as const,noul:choices[id]==='true'?1:0}];const choice=choices[id]??(id==='hints'&&'criteria' in q&&q.criteria&&Object.hasOwn(q.criteria,'NONE')?'NONE':choices[id]);return [id,{type:'choice' as const,choice,confidence:1,probabilities:Object.fromEntries(Object.keys(q.criteria).map(k=>[k,k===choice?1:0]))}];})),usage:{input_tokens:10,output_tokens:2}};}
 const user=[{role:'user' as const,content:'Calculate 6 plus 7, then multiply the result by 2.'}];
 test('loop appends assistant calls and tool results; next calculation consumes prior result',async()=>{
  const snapshots:EvaluationRequest[]=[];
@@ -27,8 +27,8 @@ test('original whitespace/punctuation survive source tool and explicit final res
  assert.equal((events.find(e=>e.type==='replace') as any).content,'blue  river!');assert.equal(events.at(-1)?.requests,3);
 });
 test('tool errors become observations and permit the next tool, rather than hidden fallback',async()=>{
- const tools:ToolFactory[]=[()=>({name:'fail',description:'fails',parameters:emptySchema,async *execute(){throw Error('Fixture failure');}}),()=>({name:'draft_answer',description:'recovers',parameters:emptySchema,async *execute(){return {status:'ok',text:'Recovered'};}})];
- const evaluate:Evaluate=async r=>{const results=(r.state as any).messages.filter((m:any)=>m.role==='tool');if(results.length===1)assert.equal(results[0].result.error,'Fixture failure');return response(r,{action:results.length===0?'fail':results.length===1?'draft_answer':'respond_0'});};
+ const tools:ToolFactory[]=[()=>({name:'fail',description:'fails',parameters:emptySchema,async *execute(){throw Error('Fixture failure');}}),()=>({name:'draft_message',description:'recovers',parameters:emptySchema,async *execute(){return {status:'ok',text:'Recovered'};}})];
+ const evaluate:Evaluate=async r=>{const results=(r.state as any).messages.filter((m:any)=>m.role==='tool');if(results.length===1)assert.equal(results[0].result.error,'Fixture failure');return response(r,{action:results.length===0?'fail':results.length===1?'draft_message':'respond_0'});};
  const events=[];for await(const e of generateChatReply('unused',user,new AbortController().signal,{evaluate,tools}))events.push(e);
  assert.equal((events.find(e=>e.type==='replace') as any).content,'Recovered');
 });
@@ -43,7 +43,7 @@ test('abort after tool call prevents execution and no late result is emitted',as
  const evaluate:Evaluate=async r=>response(r,{action:'test'});const stream=generateChatReply('unused',user,controller.signal,{evaluate,tools});assert.equal((await stream.next()).value?.type,'tool_call');controller.abort();await assert.rejects(stream.next());assert.equal(executed,false);
 });
 test('shared input budget and turn budget stop explicitly',async()=>{
- const evaluate:Evaluate=async r=>response(r,{action:'draft_answer'});const events=[];
+ const evaluate:Evaluate=async r=>response(r,{action:'draft_message'});const events=[];
  for await(const e of generateChatReply('unused',user,new AbortController().signal,{evaluate,maxInputTokens:10}))events.push(e);
  assert.equal((events.at(-1) as any).reason,'budget');assert.equal(events.at(-1)?.requests,1);
  const empty=[];for await(const e of generateChatReply('unused',user,new AbortController().signal,{evaluate,maxTurns:0}))empty.push(e);assert.equal((empty.at(-1) as any).reason,'limit');

@@ -27,10 +27,11 @@ export async function waitForLinuxCdp(url=LINUX_CDP,options:{fetch?:typeof fetch
  }
  throw Error(`Linux headed Chromium CDP was not reachable at ${url}.`);
 }
-/** Starts the repo's OrbStack/Docker headed Chromium and returns its CDP URL. JOT_BROWSER_CDP=0 keeps the local Mac browser. */
+/** Opt-in Linux headed Chromium. Default is local headed Chrome. Set JOT_BROWSER_CDP=1 or a URL to use the VM. */
 export async function ensureLinuxChrome(options:{fetch?:typeof fetch;compose?:(args:string[])=>Promise<void>}={}){
- if(process.env.JOT_BROWSER_CDP==='0')return {cdpUrl:undefined,vncUrl:undefined};
- const cdpUrl=process.env.JOT_BROWSER_CDP&&process.env.JOT_BROWSER_CDP!=='1'?process.env.JOT_BROWSER_CDP:LINUX_CDP;
+ const raw=process.env.JOT_BROWSER_CDP;
+ if(!raw||raw==='0')return {cdpUrl:undefined,vncUrl:undefined};
+ const cdpUrl=raw==='1'?LINUX_CDP:raw;
  const run=options.compose??compose;
  const request=options.fetch??fetch;
  if(!await cdpReady(cdpUrl,request,AbortSignal.timeout(1500))){

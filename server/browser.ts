@@ -2,7 +2,7 @@ import {resolve} from 'node:path';
 import {Router} from 'express';
 import {BrowserPool,type BrowserAction,type BrowserInput,type BrowserEvent} from '@jot/browser';
 let pool:BrowserPool|undefined;
-export function browserPool(){return pool??=new BrowserPool(4,{profileRoot:resolve('.cache/browser-profiles'),headless:process.env.JOT_BROWSER_HEADLESS!=='0',sharedProfile:true,cdpUrl:process.env.JOT_BROWSER_CDP==='0'?undefined:process.env.JOT_BROWSER_CDP,vncUrl:process.env.JOT_BROWSER_VNC});}
+export function browserPool(){return pool??=new BrowserPool(4,{profileRoot:resolve('.cache/browser-profiles'),headless:process.env.JOT_BROWSER_HEADLESS==='1',sharedProfile:true,cdpUrl:process.env.JOT_BROWSER_CDP==='0'?undefined:process.env.JOT_BROWSER_CDP,vncUrl:process.env.JOT_BROWSER_VNC,homeUrl:'https://www.google.com/'});}
 export function browserChatId(value:unknown):string{if(typeof value!=='string'||!/^[A-Za-z0-9_-]{1,80}$/.test(value))throw Error('Invalid browser session.');return value;}
 export const browserRouter=Router();
 browserRouter.use((req,res,next)=>{if(!['localhost','127.0.0.1','[::1]'].includes(req.hostname)){res.status(403).json({error:'Local host required.'});return;}const origin=req.get('origin');if(req.get('sec-fetch-site')==='cross-site'||origin&&origin!==`http://${req.get('host')}`&&origin!==`https://${req.get('host')}`){res.status(403).json({error:'Origin not allowed.'});return;}next();});
@@ -43,6 +43,10 @@ for(const path of ['command','input'] as const)browserRouter.post(`/:chatId/${pa
 });
 
 // Manual authentication owns the same profile, never the user's personal profile.
+browserRouter.post('/:chatId/warmup',async(req,res)=>{
+ try{await browserPool().warmup(browserChatId(req.params.chatId));if(!res.destroyed)res.json({ok:true});}
+ catch(e){if(!res.destroyed)res.status(400).json({error:(e as Error).message});}
+});
 browserRouter.post('/:chatId/login',async(req,res)=>{
  let lease;const controller=new AbortController();res.on('close',()=>{if(!res.writableEnded)controller.abort();});
  try{

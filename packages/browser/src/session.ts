@@ -3,26 +3,46 @@ import {existsSync} from 'node:fs';
 import {mkdir,chmod} from 'node:fs/promises';
 import {randomUUID} from 'node:crypto';
 import {openManualChrome} from './manual-chrome.ts';
+import {openBackgroundChrome} from './background-chrome.ts';
 import {READ_SNAPSHOT} from './snapshot.ts';
 import {StaleBrowserSnapshot,type BrowserAction,type BrowserEvent,type BrowserSnapshot,type BrowserStatus,type BrowserFrame,type BrowserInput} from './types.ts';
 export function navigationURL(input:string){const url=new URL(input);if(!['http:','https:'].includes(url.protocol)||url.username||url.password)throw Error('Use an HTTP or HTTPS URL without embedded credentials.');return url.href;}
 /** Owns an isolated browser, never attaches to a user's personal profile. */
 export class BrowserSession{
  private browser?:Browser;private context?:BrowserContext;private page?:Page;private cdp?:CDPSession;
- private manual=false;private manualChrome?:Awaited<ReturnType<typeof openManualChrome>>;private manualURL='';
+ private manual=false;private manualChrome?:Awaited<ReturnType<typeof openManualChrome>>;private backgroundChrome?:Awaited<ReturnType<typeof openBackgroundChrome>>;private ownsChrome=false;private manualURL='';
  private starting?:Promise<void>;private queue:Promise<unknown>=Promise.resolve();private closed=false;private inputQueue:Promise<unknown>=Promise.resolve();
  private listeners=new Set<(event:BrowserEvent)=>void>();private pageKey='';private snapshot?:BrowserSnapshot;
  private frame?:BrowserFrame;private status:BrowserStatus={state:'idle',url:'about:blank',title:'',loading:false};
- constructor(private options:{width?:number;height?:number;executablePath?:string;profileDirectory?:string;headless?:boolean;cdpUrl?:string;vncUrl?:string;homeUrl?:string}={}){}
+ constructor(private options:{width?:number;height?:number;executablePath?:string;profileDirectory?:string;headless?:boolean;cdpUrl?:string;vncUrl?:string;homeUrl?:string;connect?:()=>Promise<{browser:Browser;context:BrowserContext}>}={}){}
  get current(){return this.snapshot;}
+ get runtime(){return this.browser&&this.context?{browser:this.browser,context:this.context}:undefined;}
  get currentStatus(){return {...this.status};}
  subscribe(listener:(event:BrowserEvent)=>void){this.listeners.add(listener);listener({type:'status',status:this.currentStatus});if(this.frame)listener({type:'frame',frame:this.frame});return ()=>{this.listeners.delete(listener);};}
  private emit(event:BrowserEvent){for(const listener of this.listeners){try{listener(event);}catch{/* one disconnected viewer must not stop the browser */}}}
  private update(update:Partial<BrowserStatus>){this.status={...this.status,...update};this.emit({type:'status',status:this.currentStatus});}
- private async dispose(){await this.cdp?.detach().catch(()=>{});this.cdp=undefined;if(this.options.cdpUrl){this.page=undefined;this.context=undefined;this.browser=undefined;return;}const context=this.context,browser=this.browser;try{await context?.close();}finally{await browser?.close();}}
+ private async dispose(kill=false){await this.cdp?.detach().catch(()=>{});this.cdp=undefined;const page=this.page,browser=this.browser,context=this.context;this.page=undefined;this.snapshot=undefined;this.frame=undefined;if(this.options.connect){if(kill)await page?.close().catch(()=>{});this.context=undefined;this.browser=undefined;return;}this.context=undefined;this.browser=undefined;if(this.options.cdpUrl&&!this.ownsChrome)return;if(!kill&&this.ownsChrome)return;try{await context?.close();}finally{await browser?.close().catch(()=>{});}}
  private async start(){
   if(this.closed)throw Error('Browser session is closed.');if(this.manual)throw Error('Finish sign-in in Chrome, then select Continue in Jot.');if(this.starting)return this.starting;if(this.page&&!this.page.isClosed())return;
-  this.starting=(async()=>{await this.dispose();this.update({state:'starting',loading:true});
+  this.starting=(async()=>{await this.dispose(false);this.update({state:'starting',loading:true});
+   if(this.options.connect){
+    const runtime=await this.options.connect();this.browser=runtime.browser;this.context=runtime.context;this.ownsChrome=false;
+    const page=await this.newBackgroundPage();await this.attach(page);
+    await this.openHome();
+    this.update({state:'ready',loading:false,url:this.page?.url()??'about:blank'});
+    return;
+   }
+   if(!this.options.cdpUrl&&!(this.options.headless??true)&&this.options.profileDirectory&&process.platform==='darwin'){
+    this.backgroundChrome=await openBackgroundChrome(this.options.profileDirectory,{app:this.options.executablePath});
+    this.ownsChrome=true;
+    this.browser=await chromium.connectOverCDP(this.backgroundChrome.cdpUrl);
+    this.context=this.browser.contexts()[0]??await this.browser.newContext({viewport:{width:this.options.width??1120,height:this.options.height??780}});
+    const page=this.context.pages()[0]??await this.context.newPage();await this.attach(page);
+    this.context.on('page',page=>{if(this.page&&!this.page.isClosed())return;void this.attach(page).catch(e=>this.update({error:String(e)}));});
+    await this.openHome();
+    this.update({state:'ready',loading:false,url:this.page?.url()??this.status.url});
+    return;
+   }
    if(this.options.cdpUrl){
     this.browser=await chromium.connectOverCDP(this.options.cdpUrl);
     this.context=this.browser.contexts()[0]??await this.browser.newContext({viewport:{width:this.options.width??1120,height:this.options.height??780}});
@@ -51,7 +71,7 @@ export class BrowserSession{
    }
    const page=this.context.pages()[0]??await this.context.newPage();await this.attach(page);
    const context=this.context;context.on('close',()=>{if(this.context===context){this.context=undefined;this.browser=undefined;this.page=undefined;this.snapshot=undefined;this.frame=undefined;this.update({state:'closed',loading:false});}});
-   this.context.on('page',page=>{void this.attach(page).catch(e=>this.update({error:String(e)}));});
+   this.context.on('page',page=>{if(this.page&&!this.page.isClosed())return;void this.attach(page).catch(e=>this.update({error:String(e)}));});
    await this.openHome();
    this.update({state:'ready',loading:false,url:this.page?.url()??this.status.url});
   })().catch(async error=>{await this.dispose().catch(()=>{});this.context=undefined;this.browser=undefined;this.page=undefined;this.update({state:'error',loading:false,error:(error as Error).message});throw error;}).finally(()=>{this.starting=undefined;});
@@ -94,7 +114,7 @@ export class BrowserSession{
   await this.start();await this.inputQueue;signal.throwIfAborted();
   this.manual=true;this.manualURL=destination;
   try{
-   await this.dispose();this.frame=undefined;this.snapshot=undefined;this.cdp=undefined;
+   await this.dispose(true);this.frame=undefined;this.snapshot=undefined;this.cdp=undefined;
    const chrome='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
    const profile=this.options.profileDirectory;if(!profile)throw Error('Sign-in requires a persistent Jot browser profile.');
    this.manualChrome=await openManualChrome(this.options.executablePath??(existsSync(chrome)?chrome:chromium.executablePath()),profile,destination);
@@ -125,6 +145,18 @@ export class BrowserSession{
   }while(Date.now()-started<1200);
   signal.throwIfAborted();return this.read();
  }
+ private async newBackgroundPage(){
+  const browser=this.browser,context=this.context;if(!browser||!context)throw Error('Browser is not running.');
+  const url=this.options.homeUrl?navigationURL(this.options.homeUrl):'about:blank';
+  try{
+   const session=await browser.newBrowserCDPSession();
+   try{
+    const pending=context.waitForEvent('page');
+    await session.send('Target.createTarget',{url,background:true});
+    return await pending;
+   }finally{await session.detach().catch(()=>{});}
+  }catch{return context.newPage();}
+ }
  private async openHome(){
   const home=this.options.homeUrl;if(!home||!this.page||this.page.isClosed())return;
   const current=this.page.url();if(current&&current!=='about:blank')return;
@@ -136,17 +168,25 @@ export class BrowserSession{
  private async target(action:Extract<BrowserAction,{elementId:string}>):Promise<ElementHandle<HTMLElement>>{
   const observed=this.snapshot;if(!observed||action.snapshotId!==observed.id)throw new StaleBrowserSnapshot();
   const element=observed.elements.find(e=>e.id===action.elementId);if(!element||!element.actions.includes(action.type))throw new StaleBrowserSnapshot('Target was not observed with this operation.');
-  const handle=await this.page!.evaluateHandle(({id,key,guard})=>{
-   const c=(window as any).__jotBrowser,e=c?.nodes.get(id) as HTMLElement;
-   if(!c||c.pageKey()!==key||c.guard(e)!==guard||!e?.isConnected)return null;
-   const input=e as HTMLInputElement;if(input.disabled||input.readOnly||['password','file','hidden'].includes(input.type))return null;
-   const r=e.getBoundingClientRect(),x=r.x+r.width/2,y=r.y+r.height/2;
-   if(x<0||y<0||x>=innerWidth||y>=innerHeight)return null;
-   const root=e.getRootNode() as Document|ShadowRoot;const hit=root.elementFromPoint(x,y);
-   if(!hit||!e.contains(hit))return null;return e;
-  },{id:element.id,key:this.pageKey,guard:element.guard});
-  const node=handle.asElement();if(!node){await handle.dispose();throw new StaleBrowserSnapshot('Target changed, is hidden, or is covered. Observe again.');}
-  return node as ElementHandle<HTMLElement>;
+  const locate=async()=>{
+   const handle=await this.page!.evaluateHandle(({id,key,guard})=>{
+    const c=(window as any).__jotBrowser,e=c?.nodes.get(id) as HTMLElement;
+    if(!c||c.pageKey()!==key||c.guard(e)!==guard||!e?.isConnected)return null;
+    const input=e as HTMLInputElement;if(input.disabled||input.readOnly||['password','file','hidden'].includes(input.type))return null;
+    e.scrollIntoView({block:'center',inline:'nearest'});
+    const r=e.getBoundingClientRect(),x=r.x+r.width/2,y=r.y+r.height/2;
+    if(x<0||y<0||x>=innerWidth||y>=innerHeight)return null;
+    const root=e.getRootNode() as Document|ShadowRoot;const hit=root.elementFromPoint(x,y);
+    if(!hit||!e.contains(hit))return null;return e;
+   },{id:element.id,key:this.pageKey,guard:element.guard});
+   const node=handle.asElement();if(!node){await handle.dispose();return undefined;}
+   return node as ElementHandle<HTMLElement>;
+  };
+  for(let attempt=0;attempt<5;attempt++){
+   const node=await locate();if(node)return node;
+   await new Promise(r=>setTimeout(r,80));
+  }
+  throw new StaleBrowserSnapshot('Target changed, is hidden, or is covered. Observe again.');
  }
  private async navigation<T>(pending:Promise<T>,signal:AbortSignal):Promise<T>{
   let abort!:()=>void;
@@ -197,5 +237,5 @@ export class BrowserSession{
   else await page.keyboard.press(input.key);
   this.snapshot=undefined;
  });this.inputQueue=run.catch(()=>{});return run;}
- async close(){this.closed=true;await this.queue.catch(()=>{});await this.inputQueue.catch(()=>{});await this.starting?.catch(()=>{});await this.manualChrome?.close();this.manualChrome=undefined;await this.dispose();this.context=undefined;this.browser=undefined;this.page=undefined;this.snapshot=undefined;this.frame=undefined;this.update({state:'closed',loading:false});this.listeners.clear();}
+ async close(){this.closed=true;await this.queue.catch(()=>{});await this.inputQueue.catch(()=>{});await this.starting?.catch(()=>{});await this.manualChrome?.close();this.manualChrome=undefined;await this.dispose(true);this.ownsChrome=false;this.backgroundChrome=undefined;this.context=undefined;this.browser=undefined;this.page=undefined;this.snapshot=undefined;this.frame=undefined;this.update({state:'closed',loading:false});this.listeners.clear();}
 }

@@ -4,7 +4,7 @@ import {ToolCalls,type ToolEntry} from './ToolCalls';
 const call:ToolEntry={id:'call-1',name:'calculate',arguments:{left:'6',operator:'add',right:'7'}};
 test('running tool is visible without opening debug details',()=>{const html=renderToStaticMarkup(<ToolCalls calls={[call]} status="writing"/>);assert.match(html,/Running/);assert.match(html,/Running/);assert.match(html,/6 \+ 7/);});
 test('completed and failed tools retain their actual arguments and results',()=>{
- const completed=renderToStaticMarkup(<ToolCalls calls={[{...call,result:{status:'ok',text:'13'}}]} status="complete"/>);assert.match(completed,/Ran calculate\(6 \+ 7\)/);assert.match(completed,/>13<\/pre>/);assert.match(completed,/Completed/);
+ const completed=renderToStaticMarkup(<ToolCalls calls={[{...call,result:{status:'ok',text:'13'}}]} status="complete"/>);assert.match(completed,/Ran calculate\(6 \+ 7\)/);assert.match(completed,/>13<\/pre>/);assert.doesNotMatch(completed,/Completed ·/);
  const failed=renderToStaticMarkup(<ToolCalls calls={[{...call,result:{status:'error',error:'Connection failed'}}]} status="error"/>);assert.match(failed,/Failed/);assert.match(failed,/Connection failed/);
 });
 test('interrupted persisted calls cannot appear permanently running',()=>{const html=renderToStaticMarkup(<ToolCalls calls={[call]} status="stopped"/>);assert.match(html,/Stopped/);assert.doesNotMatch(html,/Waiting for the tool result/);});

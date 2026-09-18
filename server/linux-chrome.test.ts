@@ -1,14 +1,12 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';
 import {ensureLinuxChrome,waitForLinuxCdp} from './linux-chrome.ts';
-test('ensureLinuxChrome is a no-op when CDP is disabled',async()=>{
- process.env.JOT_BROWSER_CDP='0';
- try{
-  const ready=await ensureLinuxChrome({compose:async()=>{throw Error('should not compose');}});
-  assert.deepEqual(ready,{cdpUrl:undefined,vncUrl:undefined});
- }finally{delete process.env.JOT_BROWSER_CDP;}
+test('ensureLinuxChrome is a no-op unless CDP is opted in',async()=>{
+ delete process.env.JOT_BROWSER_CDP;
+ const ready=await ensureLinuxChrome({compose:async()=>{throw Error('should not compose');}});
+ assert.deepEqual(ready,{cdpUrl:undefined,vncUrl:undefined});
 });
 test('ensureLinuxChrome starts compose when CDP is down then waits for /json/version',async()=>{
- delete process.env.JOT_BROWSER_CDP;
+ process.env.JOT_BROWSER_CDP='1';
  let calls=0,up=0;
  const fetchFn:typeof fetch=async()=>{
   calls++;

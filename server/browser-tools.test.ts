@@ -53,3 +53,20 @@ test('does not re-offer observe after a successful observation',()=>{
  const tools=createBrowserTools(browser).map(f=>f({messages,signal:new AbortController().signal})).filter((t):t is NonNullable<typeof t>=>!!t);
  assert.ok(!tools.some(t=>t.name==='browser_observe'));
 });
+
+test('sign-in chrome is not a click target unless the user asked to sign in',()=>{
+ const snapshot:BrowserSnapshot={id:'s',url:'https://www.google.com/travel/flights',title:'Flights',text:'Flights',elements:[{id:'1',name:'Sign in',role:'button',actions:['click'],rect:{x:0,y:0,width:10,height:10}},{id:'2',name:'Search',role:'button',actions:['click'],rect:{x:0,y:0,width:10,height:10}}],scroll:{x:0,y:0,height:1,viewportHeight:1},viewport:{width:1,height:1},observedAt:1};
+ const browser={current:snapshot} as unknown as BrowserSession;
+ const tools=createBrowserTools(browser).map(f=>f({messages:[{role:'user',content:'Find flights to London'}],signal:new AbortController().signal})).filter((t):t is NonNullable<typeof t>=>!!t);
+ const click=tools.find(t=>t.name==='browser_click')!;
+ assert.ok(click.parameters.properties.elementId.oneOf?.some(o=>o.const==='2'));
+ assert.ok(!click.parameters.properties.elementId.oneOf?.some(o=>o.const==='1'));
+});
+
+test('google account pages stop the agent instead of filling the login form',async()=>{
+ const snapshot={id:'s',url:'https://accounts.google.com/v3/signin/identifier',title:'Sign in',text:'Email or phone',elements:[],scroll:{x:0,y:0,height:1,viewportHeight:1},viewport:{width:1,height:1},observedAt:1};
+ const browser={observe:async()=>snapshot,act:async()=>snapshot} as unknown as BrowserSession;
+ const wait=createBrowserTools(browser).map(f=>f({messages:[{role:'user',content:'Find flights'}],signal:new AbortController().signal})).find(t=>t?.name==='browser_wait')!;
+ const output=await wait.execute({}).next();assert.ok(output.done);
+ assert.equal(output.value.reason,'needs_input');
+});

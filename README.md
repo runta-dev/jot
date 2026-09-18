@@ -23,7 +23,7 @@ Jev picks the next move. Jot runs the loop.
 
 Jot is a small chat agent built around [TypeSafe’s Jev](https://typesafe.ai/). Jev selects tools and their arguments, reads the results, and decides what to do next. A minimal interface shows the conversation and the actual tool calls.
 
-Jev controls decisions and tool arguments. Calculations run in code; `draft_answer` uses a local LFM2.5-1.2B-Instruct model to write the answer from conversation and tool evidence. Other text parameters still use the existing Jev generator. See [local draft setup](docs/local-draft.md).
+Jev controls decisions and tool arguments. Calculations run in code; `draft_message` uses a local LFM2.5-1.2B-Instruct model to write the answer from conversation and tool evidence. Other text parameters still use the existing Jev generator. See [local draft setup](docs/local-draft.md).
 
 ## The loop
 
