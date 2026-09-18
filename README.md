@@ -23,7 +23,9 @@ Jev picks the next move. Jot runs the loop.
 </div>
 
 <p align="center">
-  <img src="videos/demo.png" alt="Jot demo" width="100%">
+  <a href="https://github.com/runta-dev/jot/raw/main/videos/demo.mp4">
+    <img src="videos/demo.png" alt="Jot demo" width="100%">
+  </a>
 </p>
 
 ## What it does
