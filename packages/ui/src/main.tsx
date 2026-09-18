@@ -2,23 +2,22 @@ import React, { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
   ArrowUp,
-  Plus,
-  X,
-  Square,
   ChevronDown,
   Check,
-  Copy,
+  SquarePen,
+  X,
+  Square,
   Menu,
-  Command,
   Trash2,
 } from "lucide-react";
 import "./style.css";
 import {ToolCalls} from "./ToolCalls";
+import {BrowserOpenButton,BrowserPanel} from "./BrowserPanel";
+import {BrowserView} from "./BrowserView";
 import {applyAgentEvent,type Message} from "./chat-state";
-import type {AgentEvent,Selection} from "@jot/agent";
+import type {AgentEvent} from "@jot/agent";
 
 const storageKey = "jev.chats";
-type CharacterChoice = Selection;
 type Chat = { id: string; title: string; messages: Message[]; updated: number };
 const uid = () => crypto.randomUUID();
 const newChat = (): Chat => ({
@@ -67,9 +66,8 @@ function App() {
   const [error, setError] = useState("");
   const [configured, setConfigured] = useState<boolean | null>(null);
   const [sidebar, setSidebar] = useState(false);
-  const [inspect, setInspect] = useState(false);
-  const [choice, setChoice] = useState<CharacterChoice | null>(null);
-  const [copied, setCopied] = useState("");
+  const [browserOpen, setBrowserOpen] = useState(false);
+  const browserToggle = useRef<HTMLButtonElement>(null);
   const abort = useRef<AbortController | null>(null);
   const textarea = useRef<HTMLTextAreaElement>(null);
   const end = useRef<HTMLDivElement>(null);
@@ -109,7 +107,6 @@ function App() {
     setInput("");
     setError("");
     setSidebar(false);
-    setChoice(null);
     follow.current = true;
     setTimeout(() => textarea.current?.focus(), 0);
   };
@@ -124,7 +121,6 @@ function App() {
       setActiveId(remaining[0].id);
       setInput("");
       setError("");
-      setChoice(null);
       follow.current = true;
     }
   };
@@ -196,7 +192,6 @@ function App() {
     setInput("");
     setError("");
     setBusy(true);
-    setChoice(null);
     follow.current = true;
     const controller = new AbortController();
     abort.current = controller;
@@ -228,7 +223,6 @@ function App() {
           const event = JSON.parse(line) as (AgentEvent & {elapsed:number}) | {type:"error";error:string};
           if (event.type === "error") throw new Error(event.error);
           updateMessage(chatId, messageId, m => applyAgentEvent(m, event, event.elapsed));
-          if (event.type === "text_delta" && event.selection) setChoice(event.selection);
           if (event.type === "done") finished = true;
         }
       }
@@ -254,11 +248,8 @@ function App() {
       {sidebar && <div className="scrim" onClick={() => setSidebar(false)} />}
       <aside className={`sidebar ${sidebar ? "open" : ""}`}>
         <button className="new-chat" onClick={startNew} disabled={busy}>
-          <Plus size={16} />
+          <SquarePen size={16} strokeWidth={1.7} />
           <span>New chat</span>
-          <span className="shortcut">
-            <Command size={10} /> K
-          </span>
         </button>
         <div className="history-label">Chats</div>
         <nav aria-label="Conversations">
@@ -273,7 +264,6 @@ function App() {
                     setActiveId(c.id);
                     setError("");
                     setSidebar(false);
-                    setChoice(null);
                     follow.current = true;
                   }}
                 >
@@ -305,7 +295,9 @@ function App() {
             >
               <Menu size={20} />
             </button>
+            <h2 className="conversation-title" title={chat.title}>{chat.title}</h2>
           </div>
+          {!browserOpen && <BrowserOpenButton buttonRef={browserToggle} onClick={() => setBrowserOpen(true)}/>}
           {configured === false && (
             <span className="setup-status">API key required</span>
           )}
@@ -329,12 +321,7 @@ function App() {
             <div className="messages">
               {chat.messages.map((m) => (
                 <article className={`message ${m.role}`} key={m.id}>
-                  {m.role === "assistant" && (
-                    <div className="message-label">
-                      <span className="avatar"><img src="/brand/jot-mark.svg" alt="" width="24" height="24" /></span>Jot
-                    </div>
-                  )}
-                  {m.role === "assistant" && !!m.toolCalls?.length && <ToolCalls calls={m.toolCalls} status={m.status}/>}
+                  {m.role === "assistant" && !!m.toolCalls?.length && <ToolCalls calls={m.toolCalls} status={m.status} elapsedMs={m.elapsed}/>}
                   <div className="message-content">
                     {m.content ||
                       (m.status === "writing" ? (m.toolCalls?.length ? null : (
@@ -354,43 +341,9 @@ function App() {
                       <span className="cursor" />
                     )}
                   </div>
-                  {m.role === "assistant" &&
-                    m.status !== "writing" &&
-                    m.content && (
-                      <div className="message-meta">
-                        <span>{((m.elapsed || 0) / 1000).toFixed(1)}s</span>
-                        {m.status === "repetition" && (
-                          <span>· Repetition detected, stopped</span>
-                        )}
-                        {m.status === "limit" && (
-                          <span>· Reply limit reached</span>
-                        )}
-                        {m.status === "budget" && <span>· Budget reached</span>}
-                        {m.status === "stopped" && <span>· Stopped</span>}
-                        {m.status === "error" && <span>· Interrupted</span>}
-                        <button
-                          className="copy-button"
-                          aria-label="Copy response"
-                          onClick={async () => {
-                            try {
-                              await navigator.clipboard.writeText(m.content);
-                              setCopied(m.id);
-                              setTimeout(() => setCopied(""), 2000);
-                            } catch {
-                              setError(
-                                "Clipboard unavailable in this browser.",
-                              );
-                            }
-                          }}
-                        >
-                          {copied === m.id ? (
-                            <Check size={13} />
-                          ) : (
-                            <Copy size={13} />
-                          )}
-                        </button>
-                      </div>
-                    )}
+                  {m.role === "assistant" && m.content && ["limit", "budget", "stopped", "error"].includes(m.status || "") && (
+                    <p className="message-status">{m.status === "limit" ? "Reply limit reached" : m.status === "budget" ? "Budget reached" : m.status === "stopped" ? "Stopped" : "Interrupted"}</p>
+                  )}
                 </article>
               ))}
               <div ref={end} />
@@ -408,30 +361,6 @@ function App() {
               >
                 <X size={14} />
               </button>
-            </div>
-          )}
-          {inspect && (
-            <div className="inspector">
-              <div>
-                <span>Selected continuation</span>
-                <span className="inspector-caption">
-                  {choice
-                    ? `Selected: ${choice.choice === " " ? "space" : choice.choice === "\n" ? "newline" : choice.choice}`
-                    : "Waiting for a reply"}
-                </span>
-              </div>
-              {choice && (
-                <div className="alternatives">
-                  {choice.alternatives.map((a) => (
-                    <div key={a.char}>
-                      <code>
-                        {a.char === " " ? "␣" : a.char === "\n" ? "↵" : a.char}
-                      </code>
-                      <span>{(a.probability * 100).toFixed(1)}%</span>
-                    </div>
-                  ))}
-                </div>
-              )}
             </div>
           )}
           <form
@@ -461,15 +390,16 @@ function App() {
               }}
             />
             <div className="composer-bottom">
-              <button
-                type="button"
-                className={`choice-toggle ${inspect ? "active" : ""}`}
-                aria-expanded={inspect}
-                onClick={() => setInspect(!inspect)}
-              >
-                <span className="choice-icon">[a]</span>Details
-                <ChevronDown size={12} />
-              </button>
+              <div className="model-picker">
+                <button type="button" className="composer-model" popoverTarget="model-menu" aria-label="Choose model">
+                  Jev 1.13 <ChevronDown size={14} />
+                </button>
+                <div id="model-menu" popover="auto" className="model-popover">
+                  <button type="button" className="model-option" popoverTarget="model-menu" popoverTargetAction="hide" aria-label="Jev 1.13, selected">
+                    <span>Jev 1.13</span><Check size={14} aria-hidden="true" />
+                  </button>
+                </div>
+              </div>
               {busy ? (
                 <button
                   className="send-button stop"
@@ -493,7 +423,7 @@ function App() {
           </form>
         </div>
       </main>
-
+      <BrowserPanel open={browserOpen} onClose={() => { setBrowserOpen(false); requestAnimationFrame(() => browserToggle.current?.focus()); }}><BrowserView key={chat.id} active={browserOpen} chatId={chat.id} onTakeOver={() => abort.current?.abort()}/></BrowserPanel>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 import { parse } from "dotenv";
 import { parseMessages } from "./messages.ts";
 import { generateChatReply } from "./chat-reply.ts";
+import {browserRouter,browserPool} from "./browser.ts";
 let raw = "";
 try {
   raw = readFileSync(resolve(".env"), "utf8").trim();
@@ -20,6 +21,7 @@ const key =
 const app = express();
 app.disable("x-powered-by");
 app.use(express.json({ limit: "32kb" }));
+app.use("/api/browser",browserRouter);
 app.get("/api/health", (_req, res) =>
   res.json({ configured: Boolean(key), model: "jev-latest" }),
 );
@@ -102,3 +104,5 @@ const port = Number(process.env.PORT || env.PORT || 3000);
 app.listen(port, "127.0.0.1", () =>
   console.log(`Jot → http://localhost:${port}`),
 );
+
+for(const name of ["SIGINT","SIGTERM"] as const)process.once(name,()=>{void browserPool.close().finally(()=>process.exit(0));});

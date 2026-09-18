@@ -7,7 +7,7 @@
     "dev": "tsx server/index.ts",
     "build": "npm run typecheck && vite build",
     "start": "NODE_ENV=production tsx server/index.ts",
-    "test": "npm run check:boundaries && tsx --test server/*.test.ts packages/agent/src/*.test.ts packages/jev-core/src/*.test.ts packages/ui/src/*.test.tsx",
+    "test": "npm run check:boundaries && tsx --test server/*.test.ts packages/agent/src/*.test.ts packages/browser/src/*.test.ts packages/jev-core/src/*.test.ts packages/ui/src/*.test.tsx",
     "typecheck": "tsc --noEmit && npm run typecheck --workspaces",
     "check:boundaries": "node scripts/check-boundaries.mjs"
   },
@@ -15,7 +15,8 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "@jot/agent": "0.1.0",
-    "@jot/jev-core": "0.1.0"
+    "@jot/jev-core": "0.1.0",
+    "@jot/browser": "0.1.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.5",
