@@ -6,7 +6,7 @@
   <img src="packages/ui/public/brand/jot-wordmark.svg" alt="Jot" width="220" height="80">
 </picture>
 
-### An agent built from choices.
+### the first system one agent
 
 Jev picks the next move. Jot runs the loop.
 
@@ -20,7 +20,7 @@ Jev picks the next move. Jot runs the loop.
 
 ---
 
-## Introducing Jot, the first system one agent
+## Introducing Jot
 
 Jot is a small chat agent built around [TypeSafe’s Jev](https://typesafe.ai/). Jev selects tools and their arguments, reads the results, and decides what to do next. A minimal interface shows the conversation and the actual tool calls.
 
