@@ -43,7 +43,7 @@ test('abort after tool call prevents execution and no late result is emitted',as
  const evaluate:Evaluate=async r=>response(r,{action:'test'});const stream=generateChatReply('unused',user,controller.signal,{evaluate,tools});assert.equal((await stream.next()).value?.type,'tool_call');controller.abort();await assert.rejects(stream.next());assert.equal(executed,false);
 });
 test('shared input budget and turn budget stop explicitly',async()=>{
- const evaluate:Evaluate=async r=>response(r,{action:'compose_reply'});const events=[];
+ const evaluate:Evaluate=async r=>response(r,{action:'draft_answer'});const events=[];
  for await(const e of generateChatReply('unused',user,new AbortController().signal,{evaluate,maxInputTokens:10}))events.push(e);
  assert.equal((events.at(-1) as any).reason,'budget');assert.equal(events.at(-1)?.requests,1);
  const empty=[];for await(const e of generateChatReply('unused',user,new AbortController().signal,{evaluate,maxTurns:0}))empty.push(e);assert.equal((empty.at(-1) as any).reason,'limit');

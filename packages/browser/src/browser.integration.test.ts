@@ -131,3 +131,82 @@ test('verification interruption requires both a visible challenge and blocking-p
  assert.equal((await browser.act({type:'navigate',url:origin+'/blocked'},signal)).interruption,'verification');
  assert.equal((await browser.act({type:'navigate',url:origin+'/form'},signal)).interruption,undefined);
 });
+
+test('observations exclude controls covered by a modal and expose them after it closes',{skip:process.env.JOT_BROWSER_TEST!=='1',timeout:15000},async t=>{
+ const server=createServer((_,res)=>{res.setHeader('Content-Type','text/html');res.end('<button>Background action</button><div id="modal" style="position:fixed;inset:0;background:white;z-index:1"><button onclick="document.querySelector(\'#modal\').remove()">Close modal</button></div>');});
+ await new Promise<void>(r=>server.listen(0,'127.0.0.1',r));const browser=new BrowserSession(),signal=new AbortController().signal;
+ t.after(async()=>{await browser.close();await new Promise<void>(r=>server.close(()=>r()));});
+ const before=await browser.act({type:'navigate',url:`http://127.0.0.1:${(server.address() as AddressInfo).port}`},signal);
+ assert.ok(!before.elements.some(e=>e.name==='Background action'));assert.ok(!before.text.includes('Background action'));
+ const after=await browser.act({type:'click',snapshotId:before.id,elementId:before.elements.find(e=>e.name==='Close modal')!.id},signal);
+ assert.ok(after.elements.some(e=>e.name==='Background action'));
+});
+
+test('same-document URL updates keep unchanged controls usable while document/target guards remain active',{skip:process.env.JOT_BROWSER_TEST!=='1',timeout:15000},async t=>{
+ let tick!:()=>void;const ticked=new Promise<void>(r=>tick=r);
+ const server=createServer((req,res)=>{if(req.url==='/tick'){tick();res.end('ok');return;}res.setHeader('Content-Type','text/html');res.end('<button onclick="document.querySelector(\'#result\').textContent=\'Clicked\'">Continue</button><p id="result"></p><script>setTimeout(()=>{history.replaceState({},\"\",\"?state=updated\");fetch(\"/tick\")},400)</script>');});
+ await new Promise<void>(r=>server.listen(0,'127.0.0.1',r));const browser=new BrowserSession(),signal=new AbortController().signal;
+ t.after(async()=>{await browser.close();await new Promise<void>(r=>server.close(()=>r()));});
+ const before=await browser.act({type:'navigate',url:`http://127.0.0.1:${(server.address() as AddressInfo).port}`},signal);
+ await ticked;
+ const after=await browser.act({type:'click',snapshotId:before.id,elementId:before.elements.find(e=>e.name==='Continue')!.id},signal);
+ assert.match(after.text,/Clicked/);assert.match(after.url,/state=updated/);
+});
+
+test('fill clicks a combobox and types into its newly focused popup input',{skip:process.env.JOT_BROWSER_TEST!=='1',timeout:15000},async t=>{
+ const server=createServer((_,res)=>{res.setHeader('Content-Type','text/html');res.end(`<input aria-label="Destination" onclick="setTimeout(()=>{document.querySelector('#popup').hidden=false;document.querySelector('#entry').focus()},80)"><div hidden id="popup" style="position:fixed;inset:0;background:white"><input id="entry" aria-label="Search destination"></div>`);});
+ await new Promise<void>(r=>server.listen(0,'127.0.0.1',r));const browser=new BrowserSession(),signal=new AbortController().signal;
+ t.after(async()=>{await browser.close();await new Promise<void>(r=>server.close(()=>r()));});
+ const before=await browser.act({type:'navigate',url:`http://127.0.0.1:${(server.address() as AddressInfo).port}`},signal);
+ const after=await browser.act({type:'fill',snapshotId:before.id,elementId:before.elements.find(e=>e.name==='Destination')!.id,text:'London'},signal);
+ assert.equal(after.elements.find(e=>e.name==='Search destination')?.value,'London');
+});
+
+test('manual sign-in uses normal Chrome and preserves the same profile on resume',{skip:process.env.JOT_BROWSER_TEST!=='1',timeout:30000},async t=>{
+ const {mkdtemp,rm}=await import('node:fs/promises');const {tmpdir}=await import('node:os');const {join}=await import('node:path');
+ const profileDirectory=await mkdtemp(join(tmpdir(),'jot-manual-login-'));
+ let report!:()=>void;const reported=new Promise<void>(r=>report=r);let webdriver:string|null=null,manualHadCookie=false,resumedHadCookie=false,visits=0;
+ const server=createServer((req,res)=>{
+  const url=new URL(req.url??'/','http://localhost');
+  if(url.pathname==='/report'){webdriver=url.searchParams.get('webdriver');report();res.end('ok');return;}
+  res.setHeader('Content-Type','text/html');
+  if(url.pathname==='/before'){res.setHeader('Set-Cookie','jot_before=saved; Path=/; Max-Age=3600');res.end('<p>Before sign-in</p>');return;}
+  if(url.pathname!=='/manual'){res.writeHead(204);res.end();return;}
+  visits++;const cookies=req.headers.cookie??'';
+  if(visits===1)manualHadCookie=cookies.includes('jot_before=saved');else resumedHadCookie=cookies.includes('jot_login=manual');
+  if(visits===1)res.setHeader('Set-Cookie','jot_login=manual; Path=/; Max-Age=3600; HttpOnly');
+  res.end(`<p id="result"></p><script>${visits===1?"localStorage.setItem('manual-state','retained');":''}document.querySelector('#result').textContent=localStorage.getItem('manual-state')||'missing';fetch('/report?webdriver='+navigator.webdriver)</script>`);
+ });
+ await new Promise<void>(r=>server.listen(0,'127.0.0.1',r));const origin=`http://127.0.0.1:${(server.address() as AddressInfo).port}`;
+ const browser=new BrowserSession({profileDirectory,headless:true}),signal=new AbortController().signal;
+ t.after(async()=>{await browser.close();server.closeAllConnections();await new Promise<void>(r=>server.close(()=>r()));await rm(profileDirectory,{recursive:true,force:true});});
+ await browser.act({type:'navigate',url:origin+'/before'},signal);
+ await browser.beginManualLogin(origin+'/manual',signal);await reported;
+ assert.equal(browser.currentStatus.state,'manual');assert.equal(webdriver,'false');assert.equal(manualHadCookie,true);
+ await assert.rejects(browser.observe(signal),/Finish sign-in/);
+ await browser.finishManualLogin(signal);
+ assert.equal(browser.currentStatus.state,'ready');assert.equal(resumedHadCookie,true);assert.match(browser.current!.text,/retained/);
+});
+
+test('fill observes asynchronously arriving autocomplete options before returning',{skip:process.env.JOT_BROWSER_TEST!=='1',timeout:15000},async t=>{
+ const server=createServer((_,res)=>{res.setHeader('Content-Type','text/html');res.end(`<input aria-label="City" role="combobox" aria-controls="options" oninput="setTimeout(()=>{document.querySelector('#options').innerHTML='<div role=option>London, United Kingdom</div>'},250)"><div id="options" role="listbox"></div>`);});
+ await new Promise<void>(r=>server.listen(0,'127.0.0.1',r));const browser=new BrowserSession(),signal=new AbortController().signal;
+ t.after(async()=>{await browser.close();await new Promise<void>(r=>server.close(()=>r()));});
+ const page=await browser.act({type:'navigate',url:`http://127.0.0.1:${(server.address() as AddressInfo).port}`},signal);
+ const filled=await browser.act({type:'fill',snapshotId:page.id,elementId:page.elements.find(e=>e.name==='City')!.id,text:'London'},signal);
+ assert.ok(filled.elements.some(e=>e.role==='option'&&e.name==='London, United Kingdom'));
+});
+
+test('warmup starts a blank browser through the pool without filling the page',{skip:process.env.JOT_BROWSER_TEST!=='1',timeout:30000},async()=>{
+ const {BrowserPool}=await import('./pool.ts');
+ const pool=new BrowserPool(1,{headless:true});
+ try{
+  await pool.warmup('warm');
+  const lease=await pool.acquire('warm');
+  try{
+   assert.equal(lease.session.currentStatus.state,'ready');
+   assert.equal(lease.session.currentStatus.url,'about:blank');
+   assert.equal(lease.session.current,undefined);
+  }finally{lease.release();}
+ }finally{await pool.close();}
+});

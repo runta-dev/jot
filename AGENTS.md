@@ -9,6 +9,6 @@ Use the installed TypeSafe skill at `.agents/skills/typesafe-ai/SKILL.md` for th
 - Tool-call UI follows Codex desktop activity disclosures: neutral running/completed rows, thin tool icons, hover/open chevrons, expandable actual output, and reduced-motion support. See `docs/tool-call-ui.md`.
 - Verify with `npm run build`, `npm test`, and a real browser conversation. Distinguish successful transport from actual response quality.
 
-- Use Jev as the only model. Do not introduce another generative model to produce drafts, candidates, or answers. Deterministic tool results must not be attributed to model reasoning.
+- Jev owns agent decisions and tool arguments. The user-authorized local LFM2.5-1.2B-Instruct model supplies only `draft_answer`; do not expand its role without user instruction. Deterministic tool results must not be attributed to model reasoning.
 - Keep Jot a general, open-ended, multi-turn agent. Do not replace the chat with a comparator, canned-answer collection, or topic-specific interface.
 - Preserve conversation and tool history, exact source text, cancellation, and explicit budget limits. Verify answer quality separately from transport and test results.

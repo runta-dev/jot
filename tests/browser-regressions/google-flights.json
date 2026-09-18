@@ -10,5 +10,13 @@
     "cabin": "economy",
     "terminalState": "matching flight options visible"
   },
-  "reference": {"system": "jev-ultrafast", "seconds": 7.1, "source": "user-reported; not independently measured"}
+  "reference": {
+    "system": "jev-ultrafast",
+    "seconds": 7.1,
+    "source": "upstream report, corroborating user comparison; not locally reproduced",
+    "url": "https://github.com/browser-use/jev-ultrafast/blob/main/docs/performance.md",
+    "timingBoundary": "first prediction after initial homepage observation through accepted DONE; setup and initial navigation excluded",
+    "textHelper": "inception/mercury-2.5",
+    "reportedJevMedianMs": 178
+  }
 }

@@ -8,7 +8,7 @@ export type Usage={requests:number;inputTokens:number;outputTokens:number};
 export type Selection={choice:string;confidence:number;alternatives:{char:string;probability:number}[]};
 export type TextUpdate={type:'text_delta';delta:string;selection?:Selection};
 export type AgentEvent=(TextUpdate|{type:'done';reason:'complete'|'limit'|'budget'|'needs_input'}|{type:'tool_call';call:ToolCall}|{type:'tool_result';message:ToolMessage}|{type:'replace';content:string})&Usage;
-export type Parameter={type:'string';description:string;oneOf?:{const:string;description?:string}[];maxLength?:number};
+export type Parameter={type:'string';description:string;oneOf?:{const:string;description?:string}[];maxLength?:number;dependsOn?:string[]};
 export type Parameters={type:'object';properties:Record<string,Parameter>;required:string[];additionalProperties:false};
 export type Tool={name:string;description:string;parameters:Parameters;execute:(args:ToolArguments)=>AsyncGenerator<TextUpdate,ToolResult>};
 export type ToolFactory=(context:{messages:AgentMessage[];signal:AbortSignal})=>Tool|null;

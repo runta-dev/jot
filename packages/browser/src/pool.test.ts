@@ -29,3 +29,10 @@ test('closing rejects queued/new acquisition and closes active sessions exactly 
 test('invalid capacity is rejected before any browser starts',()=>{
  for(const capacity of [0,-1,1.5,NaN])assert.throws(()=>new BrowserPool(capacity),/capacity/);
 });
+test('manual sign-in remains protected after the panel releases its lease',async()=>{
+ const pool=new BrowserPool(1);try{
+  const lease=await pool.acquire('sign-in');
+  Object.defineProperty(lease.session,'currentStatus',{get:()=>({state:'manual',url:'https://example.com/',title:'Sign in',loading:false})});
+  lease.release();await assert.rejects(pool.acquire('another'),/Finish Chrome sign-in/);
+ }finally{await pool.close();}
+});

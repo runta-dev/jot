@@ -40,3 +40,17 @@ for(const path of ['command','input'] as const)browserRouter.post(`/:chatId/${pa
   if(!res.destroyed)res.json({ok:true,status:lease.session.currentStatus});
  }catch(e){if(!res.destroyed)res.status(400).json({error:(e as Error).message});}finally{res.removeListener('close',close);lease?.release();}
 });
+
+// Manual authentication owns the same profile, never the user's personal profile.
+browserRouter.post('/:chatId/login',async(req,res)=>{
+ let lease;const controller=new AbortController();res.on('close',()=>{if(!res.writableEnded)controller.abort();});
+ try{
+  if(!['open','resume'].includes(req.body?.action))throw Error('Invalid sign-in action.');
+  lease=await browserPool.acquire(browserChatId(req.params.chatId));
+  if(req.body.action==='open'){
+   if(typeof req.body.url!=='string'||req.body.url.length>4000)throw Error('Invalid sign-in URL.');
+   await lease.session.beginManualLogin(req.body.url,controller.signal);
+  }else await lease.session.finishManualLogin(controller.signal);
+  if(!res.destroyed)res.json({ok:true,status:lease.session.currentStatus});
+ }catch(e){if(!res.destroyed)res.status(400).json({error:(e as Error).message});}finally{lease?.release();}
+});

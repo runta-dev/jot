@@ -1,3 +1,4 @@
+import {createLocalDraft,localDraftModel} from './local-draft.ts';
 import express from "express";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
@@ -19,12 +20,13 @@ const key =
   env.TYPESAFE_API_KEY ||
   env.JEV_API_KEY ||
   (!raw.includes("\n") && !raw.includes("=") && !/\s/.test(raw) ? raw : "");
+const draft=createLocalDraft({url:process.env.JOT_DRAFT_URL||env.JOT_DRAFT_URL,model:localDraftModel});
 const app = express();
 app.disable("x-powered-by");
 app.use(express.json({ limit: "1mb" }));
 app.use("/api/browser",browserRouter);
 app.get("/api/health", (_req, res) =>
-  res.json({ configured: Boolean(key), model: "jev-latest" }),
+  res.json({ configured: Boolean(key), model: "jev-latest", draftModel:localDraftModel }),
 );
 let active = 0;
 app.post("/api/chat", async (req, res) => {
@@ -73,7 +75,7 @@ app.post("/api/chat", async (req, res) => {
   const started = Date.now();
   try {
     if(req.body.chatId!==undefined)lease=await browserPool.acquire(browserChatId(req.body.chatId));
-    for await (const event of generateChatReply(key, messages, controller.signal,lease?{extraTools:createBrowserTools(lease.session),maxTurns:24}:{})) {
+    for await (const event of generateChatReply(key, messages, controller.signal,{draft,...(lease?{extraTools:createBrowserTools(lease.session),maxTurns:24}:{})})) {
       emit({ ...event, elapsed: Date.now() - started });
     }
   } catch (error) {

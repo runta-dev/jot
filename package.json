@@ -10,7 +10,9 @@
     "test": "npm run check:boundaries && tsx --test server/*.test.ts packages/agent/src/*.test.ts packages/browser/src/*.test.ts packages/jev-core/src/*.test.ts packages/ui/src/*.test.tsx",
     "typecheck": "tsc --noEmit && npm run typecheck --workspaces",
     "check:boundaries": "node scripts/check-boundaries.mjs",
-    "test:flights": "tsx scripts/browser-regression.ts"
+    "test:flights": "tsx scripts/browser-regression.ts",
+    "test:flights:warm": "JOT_BROWSER_WARM=1 tsx scripts/browser-regression.ts",
+    "draft:serve": "sh scripts/draft-serve.sh"
   },
   "dependencies": {
     "dotenv": "^17.2.3",

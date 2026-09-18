@@ -11,6 +11,7 @@ import {
   Trash2,
 } from "lucide-react";
 import "./style.css";
+import {MessageCopyButton} from "./MessageCopyButton";
 import {ToolCalls} from "./ToolCalls";
 import {BrowserOpenButton,BrowserPanel} from "./BrowserPanel";
 import {BrowserView} from "./BrowserView";
@@ -287,8 +288,7 @@ function App() {
           )}
         </nav>
         <div className="sidebar-logo">
-          <img src="/brand/jot-wordmark.svg" alt="Jot" width="55" height="20" />
-          <p className="sidebar-slogan">The first general-purpose<br />System One agent</p>
+          <img src="/brand/jot-wordmark.svg" alt="Jot" width="44" height="16" />
         </div>
       </aside>
       <main className="workspace">
@@ -327,6 +327,7 @@ function App() {
             <div className="messages">
               {chat.messages.map((m) => (
                 <article className={`message ${m.role}`} key={m.id}>
+                  {m.role === "user" && <MessageCopyButton text={m.content}/>}
                   {m.role === "assistant" && !!m.toolCalls?.length && <ToolCalls calls={m.toolCalls} status={m.status} elapsedMs={m.elapsed}/>}
                   <div className="message-content">
                     {m.content ||
@@ -343,9 +344,6 @@ function App() {
                               : m.status === "error" ? "Interrupted." : "Done."}
                         </span>
                       ))}
-                    {m.status === "writing" && m.content && (
-                      <span className="cursor" />
-                    )}
                   </div>
                   {m.role === "assistant" && m.content && ["limit", "budget", "stopped", "error"].includes(m.status || "") && (
                     <p className="message-status">{m.status === "limit" ? "Reply limit reached" : m.status === "budget" ? "Budget reached" : m.status === "stopped" ? "Stopped" : "Interrupted"}</p>
@@ -429,7 +427,7 @@ function App() {
           </form>
         </div>
       </main>
-      <BrowserPanel open={browserOpen} onClose={() => { setBrowserOpen(false); requestAnimationFrame(() => browserToggle.current?.focus()); }}><BrowserView key={chat.id} active={browserOpen} chatId={chat.id} onTakeOver={() => abort.current?.abort()}/></BrowserPanel>
+      <BrowserPanel open={browserOpen}><BrowserView onClose={() => { setBrowserOpen(false); requestAnimationFrame(() => browserToggle.current?.focus()); }} key={chat.id} active={browserOpen} chatId={chat.id} onTakeOver={() => abort.current?.abort()}/></BrowserPanel>
     </div>
   );
 }

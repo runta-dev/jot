@@ -23,7 +23,7 @@ Jev picks the next move. Jot runs the loop.
 
 Jot is a small chat agent built around [TypeSafe’s Jev](https://typesafe.ai/). Jev selects tools and their arguments, reads the results, and decides what to do next. A minimal interface shows the conversation and the actual tool calls.
 
-Only Jev makes model calls. Calculations run in code; text is assembled through Jev choices with a fixed vocabulary and deterministic word inflections. No second generative model writes the answers.
+Jev controls decisions and tool arguments. Calculations run in code; `draft_answer` uses a local LFM2.5-1.2B-Instruct model to write the answer from conversation and tool evidence. Other text parameters still use the existing Jev generator. See [local draft setup](docs/local-draft.md).
 
 ## The loop
 
@@ -59,7 +59,7 @@ The arithmetic comes from the calculator. Jev chooses the calls and uses their r
 
 ## Quick start
 
-Requires Node.js with npm and a TypeSafe API key.
+Requires Node.js with npm, a TypeSafe API key, and Apple Silicon with `uv` for local draft generation.
 
 ```sh
 npm install
@@ -73,9 +73,11 @@ TYPESAFE_API_KEY=your_key_here
 PORT=3000
 ```
 
-Then:
+Start the local draft service, then start Jot in another terminal:
 
 ```sh
+npm run draft:serve
+# another terminal
 npm run dev
 ```
 

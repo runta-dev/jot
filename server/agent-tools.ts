@@ -1,3 +1,4 @@
+import type {DraftAnswer} from './local-draft.ts';
 import {calculateOperands,type ArithmeticOperator} from './arithmetic.ts';
 import {sourceSpans} from './source-spans.ts';
 import {generateWordReply,type Evaluate} from '@jot/jev-core';
@@ -5,7 +6,7 @@ import {emptySchema,conversation,toolResults,type Parameters,type Parameter,type
 function field(description:string,options:Record<string,string|null>):Parameter{return {type:'string',description,oneOf:Object.entries(options).map(([value,label])=>({const:value,...(label?{description:label}:{})}))};}
 function parameters(properties:Record<string,Parameter>):Parameters{return {type:'object',properties,required:Object.keys(properties),additionalProperties:false};}
 /** Application tools; the agent package has no knowledge of these implementations. */
-export function createAgentTools(runtime:{key:string;evaluate:Evaluate;remainingInput:()=>number}):ToolFactory[]{
+export function createAgentTools(runtime:{key:string;evaluate:Evaluate;remainingInput:()=>number;draft?:DraftAnswer}):ToolFactory[]{
  const calculate:ToolFactory=({messages})=>{
   const fromMessages=conversation(messages).flatMap(m=>m.content.match(/[+-]?\d+(?:\.\d+)?(?:\/[+-]?\d+)?/g)??[]);
   const values=[...new Set([...fromMessages,...toolResults(messages).flatMap(o=>o.result.value?[o.result.value]:[])])].filter(v=>v.length<=90);
@@ -21,7 +22,8 @@ export function createAgentTools(runtime:{key:string;evaluate:Evaluate;remaining
   const spans=sourceSpans(conversation(messages));if(!spans?.length)return null;
   return {name:'read_context',description:'Retrieve an exact answer already in the conversation, preserving corrections, role attribution, whitespace and punctuation. Does not invent, calculate, combine separated facts, or explain.',parameters:parameters({spanId:field('Can the latest user request be fully and correctly answered by returning exactly one provided source span? Select that exact complete answer, respecting corrections and context. Choose NONE if explanation, new content, calculation, missing information, or any wording not present in a span is needed. Do not select a span merely because it repeats the question or is related to it.',{...Object.fromEntries(spans.map((s,i)=>[`s${i}`,s])),NONE:'No source span alone fully answers; use another tool.'})}),async *execute(args){if(args.spanId==='NONE')return {status:'error',error:'No complete answer found in conversation.'};const text=spans[Number(args.spanId.slice(1))];if(!text)throw Error('Invalid span identifier.');return {status:'ok',text,data:{source:'conversation',spanId:args.spanId}};}};
  };
- const compose:ToolFactory=({messages,signal})=>({name:'compose_reply',description:'Compose an English reply using pure Jev word choices, full conversation and tool results. Use for explanations, writing, advice, combinations, or requests not fully answered by other tools.',parameters:emptySchema,async *execute(){
+ const compose:ToolFactory=({messages,signal})=>({name:'draft_answer',description:'Draft a concise answer from the full conversation and actual tool results. Use for explanations, writing, advice, combinations, or requests not fully answered by other tools.',parameters:emptySchema,async *execute(){
+  if(runtime.draft)return yield* runtime.draft(messages,signal);
   let text='',reason:'complete'|'limit'|'budget'='complete';
   for await(const event of generateWordReply(runtime.key,conversation(messages),signal,{evaluate:runtime.evaluate,maxInputTokens:runtime.remainingInput(),toolResults:toolResults(messages)})){
    if(event.type==='character'){text+=event.character;yield {type:'text_delta',delta:event.character,selection:event.step};}else reason=event.reason;
