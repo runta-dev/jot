@@ -10,7 +10,12 @@
 
 Jev picks the next move. Jot runs the loop.
 
+[![GitHub stars](https://img.shields.io/github/stars/runta-dev/jot?style=flat-square&color=c66a2b)](https://github.com/runta-dev/jot/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/runta-dev/jot?style=flat-square)](https://github.com/runta-dev/jot/issues)
+[![Last commit](https://img.shields.io/github/last-commit/runta-dev/jot?style=flat-square)](https://github.com/runta-dev/jot/commits)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![macOS](https://img.shields.io/badge/macOS-000000?style=flat-square&logo=apple&logoColor=white)](https://www.apple.com/macos/)
 [![Powered by Jev](https://img.shields.io/badge/powered_by-Jev-c66a2b?style=flat-square)](https://typesafe.ai/)
 
 [Quick start](#quick-start) · [The loop](#the-loop) · [Packages](#packages)
@@ -21,104 +26,59 @@ Jev picks the next move. Jot runs the loop.
   <img src="videos/demo.png" alt="Jot demo" width="100%">
 </p>
 
-<img src="docs/assets/divider.svg" alt="" width="100%" height="1">
+## What it does
 
-## Introducing Jot
+Jot is a local chat agent. [Jev](https://typesafe.ai/) chooses tools and arguments. The loop executes them, puts the real results back into context, and asks Jev again until it can reply.
 
-Jot is a small chat agent built around [TypeSafe’s Jev](https://typesafe.ai/). Jev selects tools and their arguments, reads the results, and decides what to do next. A minimal interface shows the conversation and the actual tool calls.
-
-Jev controls decisions and tool arguments. Calculations run in code; `draft_message` uses a local LFM2.5-1.2B-Instruct model to write the answer from conversation and tool evidence. Other text parameters still use the existing Jev generator. See [local draft setup](docs/local-draft.md).
+You see every tool call. Credentials stay on the server. Chats stay in this browser.
 
 ## The loop
 
 ```text
-User message
-    ↓
-Jev chooses a tool + arguments
-    ↓
-Execute → append tool result → ask Jev again
-    ↓
-Reply when ready
+You → Jev chooses a tool → execute → tool result → Jev again → reply
 ```
 
-For example, a two-step calculation can produce this trace:
-
 ```text
-You: Add 6 and 7, then multiply the result by 2.
+You: Add 6 and 7, then multiply by 2.
 
-calculate({ left: "6", operator: "add", right: "7" })
-  → 13
-calculate({ left: "13", operator: "multiply", right: "2" })
-  → 26
+calculate({ left: "6", operator: "add", right: "7" })  → 13
+calculate({ left: "13", operator: "multiply", right: "2" })  → 26
 
 Jot: 26
 ```
 
-The arithmetic comes from the calculator. Jev chooses the calls and uses their results.
-
-- **Visible tool calls.** Inspect arguments, results, and execution state in the chat.
-- **A small, real loop.** Tool results go back into context before the next decision. Inspired by [pi](https://github.com/earendil-works/pi).
-- **Streaming and cancellation.** Watch a reply arrive; stop an ongoing turn.
-- **Local conversation history.** Chats stay in this browser. API credentials stay on the server.
+The calculator does the math. Jev only decides the calls.
 
 ## Quick start
 
-Requires Node.js with npm, a TypeSafe API key, and Apple Silicon with `uv` for local draft generation.
+Needs Node.js, a [TypeSafe](https://typesafe.ai/) API key, and Apple Silicon with `uv` for local drafts.
 
 ```sh
 npm install
-cp .env.example .env
+cp .env.example .env   # set TYPESAFE_API_KEY
+npm run draft:serve    # terminal 1
+npm run dev            # terminal 2
 ```
 
-Put your key in `.env`:
-
-```dotenv
-TYPESAFE_API_KEY=your_key_here
-PORT=3000
-```
-
-Start the local draft service, then start Jot in another terminal:
+Open [localhost:3000](http://localhost:3000). Loopback only.
 
 ```sh
-npm run draft:serve
-# another terminal
-npm run dev
-```
-
-Open **[localhost:3000](http://localhost:3000)**. The server binds to loopback only.
-
-`JEV_API_KEY` is also supported. Restart the server after changing credentials. The server sends conversation context to TypeSafe for inference; local chat storage does not mean offline inference.
-
-```sh
-npm test          # Unit and lifecycle tests
-npm run build     # Typecheck every package and build the UI
-npm start         # Serve the built app locally
+npm test && npm run build
 ```
 
 ## Packages
 
 ```text
-packages/
-├── ui/          React chat UI and tool-call presentation
-├── agent/       Provider-independent agent loop, messages, and tool contracts
-└── jev-core/    TypeSafe client, Jev word generation, and inflections
-server/          HTTP server, Jev model adapter, and application tools
+packages/ui          Chat UI and tool-call trace
+packages/agent       Provider-independent loop
+packages/jev-core    TypeSafe client and Jev text
+server/              HTTP, Jev adapter, tools
 ```
 
-The UI consumes agent events. The agent loop knows neither React nor Jev’s API. The server wires the loop, provider, and tools together.
-
-## Development
-
-Keep UI, agent loop, and provider code in their respective packages. New capabilities belong in tools, not request-specific response branches.
-
-Read [AGENTS.md](AGENTS.md) and the [TypeSafe skill](.agents/skills/typesafe-ai/SKILL.md) before changing the integration. Keep credentials out of code and logs, and run `npm test` and `npm run build` before submitting changes.
+UI talks to agent events. The loop does not import React or Jev. The server wires them.
 
 ## Credits
 
-- [TypeSafe / Jev](https://typesafe.ai/) — the decision model.
-- [pi](https://github.com/earendil-works/pi) — the reference for a minimal agent loop.
-- [Errand](https://runerrand.dev/) — visual reference.
-- [FrequencyWords](https://github.com/hermitdave/FrequencyWords) — vocabulary data, CC BY-SA 4.0; see the [data attribution](packages/jev-core/src/data/conversation-words.LICENSE.md).
-- [jsRealB](https://github.com/rali-udem/jsRealB) — deterministic inflection, ISC.
+[TypeSafe / Jev](https://typesafe.ai/) · [pi](https://github.com/earendil-works/pi) · [Errand](https://runerrand.dev/) · [FrequencyWords](https://github.com/hermitdave/FrequencyWords) · [jsRealB](https://github.com/rali-udem/jsRealB)
 
-Jot is an independent project, not affiliated with or endorsed by TypeSafe. Jev remains the name of the underlying model.
+Jot is independent and not affiliated with TypeSafe. Jev is the model name.
