@@ -1,8 +1,8 @@
 export type BrowserElement={id:string;role:string;name:string;value?:string;actions:('click'|'fill'|'select')[];options?:{value:string;label:string}[];rect:{x:number;y:number;width:number;height:number};guard:string};
-export type BrowserSnapshot={id:string;url:string;title:string;text:string;elements:BrowserElement[];scroll:{x:number;y:number;height:number;viewportHeight:number};viewport:{width:number;height:number};observedAt:number};
+export type BrowserSnapshot={id:string;url:string;title:string;text:string;headings?:string[];elements:BrowserElement[];scroll:{x:number;y:number;height:number;viewportHeight:number};viewport:{width:number;height:number};observedAt:number};
 export type BrowserAction={type:'navigate';url:string}|{type:'click';snapshotId:string;elementId:string}|{type:'fill';snapshotId:string;elementId:string;text:string}|{type:'select';snapshotId:string;elementId:string;value:string}|{type:'scroll';direction:'up'|'down'}|{type:'wait'}|{type:'back'}|{type:'forward'}|{type:'reload'}|{type:'resize';width:number;height:number};
 export type BrowserFrame={data:string;mimeType:'image/jpeg';width:number;height:number;timestamp:number};
-export type BrowserStatus={state:'idle'|'starting'|'ready'|'closed'|'error';url:string;title:string;loading:boolean;error?:string};
+export type BrowserStatus={state:'idle'|'starting'|'ready'|'closed'|'error';url:string;title:string;loading:boolean;target?:{rect:BrowserElement['rect'];viewport:{width:number;height:number};action:'click'|'fill'|'select';name:string};error?:string};
 export type BrowserEvent={type:'status';status:BrowserStatus}|{type:'frame';frame:BrowserFrame};
 export class StaleBrowserSnapshot extends Error {constructor(message='Page changed. Observe the browser again before acting.'){super(message);this.name='StaleBrowserSnapshot';}}
 export type BrowserInput={type:'click';x:number;y:number;button?:'left'|'right';clickCount?:number}|{type:'wheel';x:number;y:number;deltaX:number;deltaY:number}|{type:'text';text:string}|{type:'key';key:string};

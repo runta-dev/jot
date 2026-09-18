@@ -286,7 +286,10 @@ function App() {
             <p className="history-empty">No conversations yet.</p>
           )}
         </nav>
-        <div className="sidebar-logo"><img src="/brand/jot-wordmark.svg" alt="Jot" width="55" height="20" /></div>
+        <div className="sidebar-logo">
+          <img src="/brand/jot-wordmark.svg" alt="Jot" width="55" height="20" />
+          <p className="sidebar-slogan">The first general-purpose<br />System One agent</p>
+        </div>
       </aside>
       <main className="workspace">
         <header>

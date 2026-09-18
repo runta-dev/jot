@@ -9,7 +9,7 @@ function top(a:ChoiceAnswer,n:number){return Object.entries(a.probabilities).fil
 export function conversationLexemes(messages:Message[]){return messages.flatMap(m=>m.content.match(/[A-Za-z0-9]+(?:['_.:-][A-Za-z0-9]+)*/g)??[]);}
 function render(prefix:string,word:string){if(/^[.,!?]$/.test(word))return prefix+word;let w=word==='i'?'I':word;if((!prefix||/[.!?]$/.test(prefix))&&!/[0-9_-]/.test(w))w=w[0].toUpperCase()+w.slice(1);return prefix+(prefix?' ':'')+w;}
 class BudgetReached extends Error {}
-type Options={toolResults?:unknown;evaluate?:Evaluate;vocabulary?:string[];forms?:(word:string)=>string[];maxSteps?:number;maxInputTokens?:number};
+type Options={instructions?:string;toolResults?:unknown;evaluate?:Evaluate;vocabulary?:string[];forms?:(word:string)=>string[];maxSteps?:number;maxInputTokens?:number};
 type Metrics={requests:number;inputTokens:number;outputTokens:number};
 export type WordEvent=({type:'character';character:string;count:number;step:CharacterChoice}|{type:'done';reason:'complete'|'limit'|'budget'})&Metrics;
 /** Pure Jev choices plus disclosed lexical data and deterministic morphology. */
@@ -21,7 +21,7 @@ export async function* generateWordReply(key:string,messages:Message[],signal:Ab
  async function ask(questions:Record<string,ChoiceQuestion>){
   signal.throwIfAborted();if(metrics.inputTokens>=maxInput)throw new BudgetReached();
   if(options.evaluate)metrics.requests++;
-  const response=await evaluate({model:'jev-latest',state:{conversation:messages,assistant:{name:'Jev',provider:'TypeSafe'},reply_so_far:prefix,...(options.toolResults?{tool_results:options.toolResults}:{})},questions},signal);
+  const response=await evaluate({model:'jev-latest',state:{conversation:messages,assistant:{name:'Jev',provider:'TypeSafe'},reply_so_far:prefix,...(options.toolResults?{tool_results:options.toolResults}:{})},questions:options.instructions?Object.fromEntries(Object.entries(questions).map(([id,q])=>[id,{...q,instructions:`${options.instructions}\n${q.instructions}`}])):questions},signal);
   signal.throwIfAborted();metrics.inputTokens+=response.usage?.input_tokens??0;metrics.outputTokens+=response.usage?.output_tokens??0;
   return response.answers;
  }

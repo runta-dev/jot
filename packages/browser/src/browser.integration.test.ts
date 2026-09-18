@@ -113,3 +113,13 @@ test('aborted navigation releases the action queue and allows a new page',{skip:
  const recovered=await browser.act({type:'navigate',url:origin+'/ok'},new AbortController().signal);
  assert.match(recovered.text,/Recovered page/);
 });
+
+test('link navigation taking over a second is a successful click, not a retryable failure',{skip:process.env.JOT_BROWSER_TEST!=='1',timeout:15000},async t=>{
+ let visits=0;
+ const server=createServer((req,res)=>{res.setHeader('Content-Type','text/html');if(req.url==='/next'){visits++;setTimeout(()=>res.end('<title>Destination</title><h1>Arrived</h1>'),1300);}else res.end('<a href="/next">Continue</a>');});
+ await new Promise<void>(r=>server.listen(0,'127.0.0.1',r));const browser=new BrowserSession();const signal=new AbortController().signal;
+ t.after(async()=>{await browser.close();await new Promise<void>(r=>server.close(()=>r()));});
+ const start=await browser.act({type:'navigate',url:`http://127.0.0.1:${(server.address() as AddressInfo).port}`},signal);
+ const end=await browser.act({type:'click',snapshotId:start.id,elementId:start.elements[0].id},signal);
+ assert.equal(visits,1);assert.equal(end.title,'Destination');assert.deepEqual(end.headings,['Arrived']);
+});

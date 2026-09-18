@@ -93,16 +93,21 @@ export class BrowserSession{
   const node=handle.asElement();if(!node){await handle.dispose();throw new StaleBrowserSnapshot('Target changed, is hidden, or is covered. Observe again.');}
   return node as ElementHandle<HTMLElement>;
  }
+ private async navigation<T>(pending:Promise<T>,signal:AbortSignal):Promise<T>{
+  let abort!:()=>void;
+  const cancelled=new Promise<never>((_,reject)=>{abort=()=>{void this.cdp?.send('Page.stopLoading').catch(()=>{}).finally(()=>reject(signal.reason??new Error('Navigation cancelled.')));};signal.addEventListener('abort',abort,{once:true});if(signal.aborted)abort();});
+  try{return await Promise.race([pending,cancelled]);}finally{signal.removeEventListener('abort',abort);}
+ }
  act(action:BrowserAction,signal:AbortSignal){return this.exclusive(signal,async()=>{
   const page=this.page!;signal.throwIfAborted();
-  if(action.type==='navigate'){this.update({loading:true});await page.goto(navigationURL(action.url),{waitUntil:'domcontentloaded'});}
-  else if(action.type==='back')await page.goBack({waitUntil:'domcontentloaded'});
-  else if(action.type==='forward')await page.goForward({waitUntil:'domcontentloaded'});
+  if(action.type==='navigate'){this.update({loading:true});await this.navigation(page.goto(navigationURL(action.url),{waitUntil:'domcontentloaded'}),signal);}
+  else if(action.type==='back')await this.navigation(page.goBack({waitUntil:'domcontentloaded'}),signal);
+  else if(action.type==='forward')await this.navigation(page.goForward({waitUntil:'domcontentloaded'}),signal);
   else if(action.type==='resize'){await page.setViewportSize({width:Math.max(320,Math.min(1600,Math.round(action.width))),height:Math.max(240,Math.min(1200,Math.round(action.height)))});this.snapshot=undefined;}
-  else if(action.type==='reload')await page.reload({waitUntil:'domcontentloaded'});
+  else if(action.type==='reload')await this.navigation(page.reload({waitUntil:'domcontentloaded'}),signal);
   else if(action.type==='scroll')await page.mouse.wheel(0,(action.direction==='down'?1:-1)*(page.viewportSize()!.height*.75));
   else if(action.type==='wait')await new Promise(resolve=>setTimeout(resolve,150));
-  else{const node=await this.target(action);try{signal.throwIfAborted();if(action.type==='click')await node.click({timeout:1000});else if(action.type==='fill')await node.fill(action.text,{timeout:1000});else{const el=this.snapshot!.elements.find(e=>e.id===action.elementId)!;if(!el.options?.some(o=>o.value===action.value))throw new StaleBrowserSnapshot('Option was not observed.');await node.selectOption(action.value,{timeout:1000});}}finally{await node.dispose();}}
+  else{const node=await this.target(action);try{signal.throwIfAborted();const rect=await node.boundingBox();if(rect)this.update({target:{rect,viewport:page.viewportSize()!,action:action.type,name:this.snapshot?.elements.find(e=>e.id===action.elementId)?.name??''}});if(action.type==='click')await this.navigation(node.click({timeout:15000}),signal);else if(action.type==='fill')await node.fill(action.text,{timeout:1000});else{const el=this.snapshot!.elements.find(e=>e.id===action.elementId)!;if(!el.options?.some(o=>o.value===action.value))throw new StaleBrowserSnapshot('Option was not observed.');await node.selectOption(action.value,{timeout:1000});}}finally{this.update({target:undefined});await node.dispose();}}
   signal.throwIfAborted();await new Promise(resolve=>setTimeout(resolve,75));return this.read();
  });}
  // Manual input must remain responsive while a navigation waits for page resources.

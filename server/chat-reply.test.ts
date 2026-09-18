@@ -61,3 +61,18 @@ test('a failed tool-only turn survives HTTP parsing and reaches the next model t
  const evaluate:Evaluate=async r=>{const transcript=(r.state as any).messages;assert.ok(transcript.some((m:any)=>m.role==='tool'&&m.result.error==='Provider timeout'));assert.ok(!transcript.some((m:any)=>m.role==='assistant'&&m.content===''));throw Error('Observed retained history');};
  await assert.rejects(generateChatReply('unused',input,new AbortController().signal,{evaluate}).next(),/Observed retained history/);
 });
+test('free string arguments reuse Jev word generation instead of source-span selection',async()=>{
+ const history=[{role:'user' as const,content:'search latest news about runta'}];
+ let received='';const tools:ToolFactory[]=[()=>({name:'browser_search',description:'Search',parameters:{type:'object',required:['query'],additionalProperties:false,properties:{query:{type:'string',description:'Write search keywords.'}}},async *execute(args){received=args.query;return {status:'ok',text:'Executed'};}})];
+ const evaluate:Evaluate=async r=>{
+  if(r.questions.action)return response(r,{action:(r.state as any).messages.some((m:any)=>m.role==='tool')?'respond_0':'browser_search'});
+  const prefix=(r.state as any).reply_so_far;
+  const desired=prefix===''?'Runta':prefix==='Runta'?'Runta news':undefined;
+  assert.ok(Object.values(r.questions).every(q=>String(q.instructions).includes('browser_search.query')));
+  const choices=Object.fromEntries(Object.entries(r.questions).map(([id,q])=>[id,id==='next'?(desired?Object.keys(q.criteria).find(k=>q.criteria[k]===desired)!:'END'):(Object.hasOwn(q.criteria,'runta')?'runta':Object.hasOwn(q.criteria,'news')?'news':Object.keys(q.criteria)[0])]));
+  return response(r,choices);
+ };
+ const events=[];for await(const e of generateChatReply('',history,new AbortController().signal,{evaluate,tools}))events.push(e);
+ assert.equal(received,'Runta news');assert.ok(!history[0].content.includes(received));
+ assert.equal(events.find(e=>e.type==='tool_call')?.call.arguments.query,'Runta news');
+});

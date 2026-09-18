@@ -92,3 +92,79 @@ it does not establish broad reliability across external sites or nested frames.
 Headless is now the default to prevent native-window focus stealing during input.
 Existing per-chat profile paths are unchanged. Sandbox remains enabled. Headless
 browser integration tests cover input, streaming, loading and profile persistence.
+
+## Lifecycle and multi-step checks
+
+Pool regressions cover concurrent leases, idempotent release, preserving active
+sessions, deterministic idle eviction and rejecting queued/new acquisitions during
+shutdown. Pool shutdown is idempotent and attempts all session closes even if one
+fails. Recency uses a monotonic access counter rather than wall-clock ties.
+
+A blocked-resource navigation test initially timed out after cancellation:
+`Page.stopLoading` alone did not settle the navigation promise. Navigation now
+races its wait with cancellation and releases the queue after stopping loading.
+The real-browser test subsequently opened a new page successfully (entire test
+about 0.8 seconds, including browser startup).
+
+A real Jev run against `scripts/browser-task-fixture.ts` completed navigate → fill
+Name with Ada → select Green → scroll → click Continue. The resulting page read
+`Completed / Name: Ada / Color: Green`; no preselected action sequence was passed
+to the model. It took 20.1 seconds, 11 provider requests, 94,823 input tokens and
+2,377 output tokens. This records a successful local multi-step run, not a broad
+success-rate claim. Provider token cost remains an optimization opportunity.
+
+## Public navigation and direct page reading
+
+A real Jev task visited `https://example.com`, clicked Learn more and requested
+the destination title/headings. The first run exposed two failures: a completed
+click was reported as failed while waiting on navigation under a one-second
+click timeout; later, composing metadata as generated words exhausted the budget.
+
+Clicks now use the bounded, abortable navigation wait (15 seconds). A regression
+serves a destination after 1.3 seconds and verifies one request, a successful
+click result, and correct destination title/headings. `browser_read` exposes exact
+URL, title, headings or visible text as deterministic tool results. The snapshot
+reader collects visible headings; no model-generated metadata is substituted.
+
+The same public task subsequently completed using navigate → click → read:
+`Title: Example Domains`, headings `Example Domains` and `Further Reading`.
+It took 14.3 seconds, seven Jev requests, 30,703 input tokens and 498 output tokens.
+This proves one public navigation workflow, not general challenge bypass or a
+broad external-site success rate. All 47 normal tests and six owned-browser
+integration tests passed after this change, along with the production build.
+
+## Navigation without a supplied URL
+
+Removed the tool-availability gate requiring an explicit HTTP(S) URL. Navigation
+now accepts bare domains and omnibox-style text, using the same address resolver
+as the UI (a pure exported browser-package helper). `browser_search(query)` opens
+a real Google query in the same browser session. Operation selection instructions
+require actual tool evidence before claiming browsing/search completion.
+
+Tests verify both bare-domain normalization and search availability without any
+URL. A real Jev request containing only a quoted search topic invoked
+`browser_search` and reached Google. Google returned its unusual-traffic
+verification page, so this is evidence of actual navigation, not successful search
+retrieval. The test was stopped without interacting with the CAPTCHA. Challenge
+handling still needs a dedicated stop/handoff behavior to avoid redundant retries.
+
+Exact quoted/multiline input is now retained beyond the previous six-word span
+limit. A real textarea task preserved the complete two-line text, including the
+second line's indentation, in the actual `browser_fill` arguments and submitted
+it. The test completed in 12.5 seconds with seven provider requests.
+
+## Generated search arguments
+
+`browser_search.query` is now a free string parameter, not an enumeration of
+source spans. The Jev adapter reuses `generateWordReply` with argument-specific
+instructions, original conversation and tool observations. Other enumerated
+parameters (observed targets, direction, select options) retain validation.
+No extra model, keyword rewriting rules or search-specific decoder was added.
+
+A real request `search latest news about runta` produced the actual tool argument
+`Runta news latest` after 5.7 seconds / ten provider requests. This is generated
+word ordering, not a contiguous source span. Google returned a verification page;
+the test was stopped without interacting with its CAPTCHA. This verifies argument
+generation, not successful retrieval. Regression coverage also verifies generated
+arguments reach the actual tool call and continue to share cancellation/budget
+handling with the existing generator.

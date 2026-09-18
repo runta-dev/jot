@@ -8,7 +8,7 @@ export type Usage={requests:number;inputTokens:number;outputTokens:number};
 export type Selection={choice:string;confidence:number;alternatives:{char:string;probability:number}[]};
 export type TextUpdate={type:'text_delta';delta:string;selection?:Selection};
 export type AgentEvent=(TextUpdate|{type:'done';reason:'complete'|'limit'|'budget'}|{type:'tool_call';call:ToolCall}|{type:'tool_result';message:ToolMessage}|{type:'replace';content:string})&Usage;
-export type Parameter={type:'string';description:string;oneOf:{const:string;description?:string}[]};
+export type Parameter={type:'string';description:string;oneOf?:{const:string;description?:string}[];maxLength?:number};
 export type Parameters={type:'object';properties:Record<string,Parameter>;required:string[];additionalProperties:false};
 export type Tool={name:string;description:string;parameters:Parameters;execute:(args:ToolArguments)=>AsyncGenerator<TextUpdate,ToolResult>};
 export type ToolFactory=(context:{messages:AgentMessage[];signal:AbortSignal})=>Tool|null;
@@ -20,5 +20,8 @@ export function conversation(messages:AgentMessage[]):ChatMessage[]{return messa
 export function toolResults(messages:AgentMessage[]):ToolMessage[]{return messages.filter((m):m is ToolMessage=>m.role==='tool');}
 export function validateArguments(schema:Parameters,args:ToolArguments){
  if(Object.keys(args).some(k=>!Object.hasOwn(schema.properties,k)))throw Error('Unknown tool argument.');
- for(const name of schema.required)if(typeof args[name]!=='string'||!schema.properties[name].oneOf.some(o=>o.const===args[name]))throw Error(`Invalid tool argument: ${name}`);
+ for(const name of schema.required){
+  const parameter=schema.properties[name],value=args[name];
+  if(typeof value!=='string'||parameter.oneOf&&!parameter.oneOf.some(o=>o.const===value)||parameter.maxLength!==undefined&&value.length>parameter.maxLength)throw Error(`Invalid tool argument: ${name}`);
+ }
 }

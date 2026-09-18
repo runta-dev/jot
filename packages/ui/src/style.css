@@ -1038,7 +1038,7 @@ header {
     0 0 0 0.5px #20202029,
     0 2px 7px #00000008,
     0 0 18px #00000009;
-  padding: 19px 19px 12px;
+  padding: 14px 19px 12px;
 }
 .composer textarea {
   font-size: 13px;
@@ -1360,7 +1360,7 @@ hr { border: 0; border-top: 0.5px solid var(--border); }
 .composer-bottom { justify-content: flex-end; }
 
  .model-picker { position: relative; margin-right: 8px; }
-.composer-model { anchor-name: --model-trigger; display: flex; align-items: center; gap: 6px; padding: 5px 8px; border: 0; border-radius: 7px; background: transparent; font-size: 13px; line-height: 20px; color: #42464a; }
+.composer-model { anchor-name: --model-trigger; display: flex; align-items: center; gap: 6px; padding: 5px 8px; border: 0; border-radius: 24px; background: transparent; font-size: 13px; line-height: 20px; color: #42464a; }
 .composer-model:hover, .composer-model:focus-visible { background: #f4f4f5; }
 .composer-model svg { color: #929599; }
 .model-popover { position: fixed; position-anchor: --model-trigger; inset: auto; bottom: anchor(top); right: anchor(right); margin: 0 0 8px; width: 180px; padding: 5px; border: .5px solid #e5e5e5; border-radius: 10px; background: #fff; box-shadow: 0 4px 16px #0000000d; }
@@ -1372,3 +1372,24 @@ hr { border: 0; border-top: 0.5px solid var(--border); }
 
 .sidebar-logo { flex-shrink: 0; padding: 16px 10px 0; }
 .sidebar-logo img { display: block; width: 55px; height: 20px; }
+
+.browser-agent-overlay { position: absolute; inset: 0 0 auto; width: 100%; pointer-events: none; overflow: hidden; }
+.browser-agent-target { position: absolute; border: 1px solid #339cff; border-radius: 4px; background: #339cff12; }
+.browser-agent-cursor { position: absolute; width: 23px; height: 24px; max-width: none; transform: translate(-3px,-3px); filter: drop-shadow(0 0 6px rgb(51 156 255 / .9)) drop-shadow(0 0 15px rgb(51 156 255 / .48)); }
+
+@font-face {
+  font-family: "VT323";
+  src: url("/fonts/vt323/VT323-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.sidebar-slogan {
+  margin: 12px 0 0;
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #969892;
+  -webkit-font-smoothing: none;
+}
