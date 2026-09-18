@@ -6,7 +6,7 @@
   <img src="packages/ui/public/brand/jot-wordmark.svg" alt="Jot" width="220" height="80">
 </picture>
 
-### The first general-purpose System One agent
+### The first general-purpose System One agent for Jev
 
 Jev picks the next move. Jot runs the loop.
 
@@ -28,7 +28,7 @@ Jev picks the next move. Jot runs the loop.
 
 ## What it does
 
-Jot is a local chat agent. [Jev](https://typesafe.ai/) chooses tools and arguments. The loop executes them, puts the real results back into context, and asks Jev again until it can reply.
+Jot is the first general-purpose [System One](https://typesafe.ai/) agent for [Jev](https://typesafe.ai/). Jev chooses tools and arguments. Jot runs the loop: execute, put the real results back into context, ask Jev again until it can reply.
 
 You see every tool call. Credentials stay on the server. Chats stay in this browser.
 
