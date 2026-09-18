@@ -168,3 +168,19 @@ the test was stopped without interacting with its CAPTCHA. This verifies argumen
 generation, not successful retrieval. Regression coverage also verifies generated
 arguments reach the actual tool call and continue to share cancellation/budget
 handling with the existing generator.
+
+## Verification-page handoff
+
+Browser observations identify an interruption only when both a visible challenge
+iframe and explicit blocking-verification text are present. This is a conservative
+heuristic, not universal CAPTCHA detection. A normal contact form containing a
+CAPTCHA alone does not trigger it. The adapter returns a `needs_input` tool result;
+the generic loop preserves the trace, displays the tool's explanation and pauses
+without another model call. History parsing accepts the new reason for later turns.
+
+A real Jev request against the local verification fixture navigated once and
+stopped with `needs_input` in 2.5 seconds / two provider calls. It did not retry
+search, compose a misleading answer or interact with verification controls.
+The text is a deterministic tool explanation, not attributed to Jev reasoning.
+55 normal tests, seven real-browser tests and the build passed. Actual external
+verification controls were not solved during this check.

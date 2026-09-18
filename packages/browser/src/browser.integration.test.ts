@@ -123,3 +123,11 @@ test('link navigation taking over a second is a successful click, not a retryabl
  const end=await browser.act({type:'click',snapshotId:start.id,elementId:start.elements[0].id},signal);
  assert.equal(visits,1);assert.equal(end.title,'Destination');assert.deepEqual(end.headings,['Arrived']);
 });
+
+test('verification interruption requires both a visible challenge and blocking-page text',{skip:process.env.JOT_BROWSER_TEST!=='1',timeout:15000},async t=>{
+ const server=createServer((req,res)=>{res.setHeader('Content-Type','text/html');res.end(`<h1>${req.url==='/blocked'?'Verify you are human':'Contact form'}</h1><iframe title="captcha" srcdoc="Verification widget"></iframe>`);});
+ await new Promise<void>(r=>server.listen(0,'127.0.0.1',r));const browser=new BrowserSession(),signal=new AbortController().signal;const origin=`http://127.0.0.1:${(server.address() as AddressInfo).port}`;
+ t.after(async()=>{await browser.close();await new Promise<void>(r=>server.close(()=>r()));});
+ assert.equal((await browser.act({type:'navigate',url:origin+'/blocked'},signal)).interruption,'verification');
+ assert.equal((await browser.act({type:'navigate',url:origin+'/form'},signal)).interruption,undefined);
+});

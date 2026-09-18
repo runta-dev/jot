@@ -76,3 +76,11 @@ test('free string arguments reuse Jev word generation instead of source-span sel
  assert.equal(received,'Runta news');assert.ok(!history[0].content.includes(received));
  assert.equal(events.find(e=>e.type==='tool_call')?.call.arguments.query,'Runta news');
 });
+test('tool requiring human input stops the loop without inventing a reply or retrying',async()=>{
+ let calls=0;
+ const tools:ToolFactory[]=[()=>({name:'browser_observe',description:'Observe',parameters:emptySchema,async *execute(){return {status:'error',reason:'needs_input',text:'Complete verification in the browser.',error:'Verification required.'};}})];
+ const evaluate:Evaluate=async r=>{calls++;return response(r,{action:'browser_observe'});};
+ const events=[];for await(const e of generateChatReply('',[{role:'user',content:'Continue searching'}],new AbortController().signal,{tools,evaluate}))events.push(e);
+ assert.equal(calls,1);assert.equal(events.at(-1)?.type,'done');assert.equal((events.at(-1) as any).reason,'needs_input');
+ assert.equal(events.find(e=>e.type==='replace')?.content,'Complete verification in the browser.');
+});

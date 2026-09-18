@@ -1,5 +1,5 @@
 export type ToolArguments=Record<string,string>;
-export type ToolResult={status:'ok'|'error';text?:string;value?:string;reason?:'complete'|'limit'|'budget';error?:string;data?:unknown};
+export type ToolResult={status:'ok'|'error';text?:string;value?:string;reason?:'complete'|'limit'|'budget'|'needs_input';error?:string;data?:unknown};
 export type ToolCall={id:string;name:string;arguments:ToolArguments};
 export type ChatMessage={role:'user'|'assistant';content:string;toolCalls?:(ToolCall&{result?:ToolResult})[]};
 export type ToolMessage={role:'tool';toolCallId:string;name:string;result:ToolResult};
@@ -7,12 +7,12 @@ export type AgentMessage=ChatMessage|{role:'assistant';toolCall:ToolCall}|ToolMe
 export type Usage={requests:number;inputTokens:number;outputTokens:number};
 export type Selection={choice:string;confidence:number;alternatives:{char:string;probability:number}[]};
 export type TextUpdate={type:'text_delta';delta:string;selection?:Selection};
-export type AgentEvent=(TextUpdate|{type:'done';reason:'complete'|'limit'|'budget'}|{type:'tool_call';call:ToolCall}|{type:'tool_result';message:ToolMessage}|{type:'replace';content:string})&Usage;
+export type AgentEvent=(TextUpdate|{type:'done';reason:'complete'|'limit'|'budget'|'needs_input'}|{type:'tool_call';call:ToolCall}|{type:'tool_result';message:ToolMessage}|{type:'replace';content:string})&Usage;
 export type Parameter={type:'string';description:string;oneOf?:{const:string;description?:string}[];maxLength?:number};
 export type Parameters={type:'object';properties:Record<string,Parameter>;required:string[];additionalProperties:false};
 export type Tool={name:string;description:string;parameters:Parameters;execute:(args:ToolArguments)=>AsyncGenerator<TextUpdate,ToolResult>};
 export type ToolFactory=(context:{messages:AgentMessage[];signal:AbortSignal})=>Tool|null;
-export type Decision={type:'tool_call';name:string;arguments:ToolArguments}|{type:'answer';text:string;reason?:'complete'|'limit'|'budget'};
+export type Decision={type:'tool_call';name:string;arguments:ToolArguments}|{type:'answer';text:string;reason?:'complete'|'limit'|'budget'|'needs_input'};
 export type Model=(messages:AgentMessage[],tools:Tool[],signal:AbortSignal)=>Promise<Decision>;
 export const emptySchema:Parameters={type:'object',properties:{},required:[],additionalProperties:false};
 export class BudgetReached extends Error {}

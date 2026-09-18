@@ -337,10 +337,10 @@ function App() {
                       )) : (
                         <span className="empty-response">
                           {m.status === "complete"
-                            ? "The reply ended without text."
+                            ? "Done."
                             : m.status === "stopped"
                               ? "Generation stopped."
-                              : "No response received."}
+                              : m.status === "error" ? "Interrupted." : "Done."}
                         </span>
                       ))}
                     {m.status === "writing" && m.content && (

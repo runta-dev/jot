@@ -4,6 +4,7 @@ createServer((req,res)=>{
  const url=new URL(req.url??'/','http://127.0.0.1:8766');
  const escape=(text:string)=>text.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
  res.setHeader('Content-Type','text/html; charset=utf-8');
+ if(url.pathname==='/verification'){res.end('<!doctype html><title>Local verification fixture</title><h1>Verify you are human</h1><iframe title="captcha" srcdoc="Local test widget"></iframe>');return;}
  if(url.pathname==='/message'){res.end('<!doctype html><title>Message fixture</title><form action="/message-done"><label>Message <textarea name="message" rows="8" cols="60"></textarea></label><button>Submit message</button></form>');return;}
  if(url.pathname==='/message-done'){res.end('<!doctype html><title>Message received</title><h1>Message received</h1><pre>'+escape(url.searchParams.get('message')??'')+'</pre>');return;}
 

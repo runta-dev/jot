@@ -24,7 +24,7 @@ export function parseMessages(value: unknown): Message[] {
       toolCalls = m.toolCalls.map((call: any) => {
         if (!call || typeof call.id !== 'string' || call.id.length > 100 || typeof call.name !== 'string' || !/^[a-z_]+$/.test(call.name) || !call.arguments || typeof call.arguments !== 'object' || Array.isArray(call.arguments) || !Object.values(call.arguments).every(v => typeof v === 'string')) throw new Error('Invalid tool history.');
         const r=call.result;
-        if(r!==undefined && (!r || !['ok','error'].includes(r.status) || ['text','value','error'].some(k=>r[k]!==undefined&&typeof r[k]!=='string') || r.reason!==undefined&&!['complete','limit','budget'].includes(r.reason))) throw new Error('Invalid tool result history.');
+        if(r!==undefined && (!r || !['ok','error'].includes(r.status) || ['text','value','error'].some(k=>r[k]!==undefined&&typeof r[k]!=='string') || r.reason!==undefined&&!['complete','limit','budget','needs_input'].includes(r.reason))) throw new Error('Invalid tool result history.');
         return {id:call.id,name:call.name,arguments:call.arguments,...(r?{result:r}:{})};
       });
       size += JSON.stringify(toolCalls).length;

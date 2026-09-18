@@ -8,6 +8,6 @@ export function applyAgentEvent(message:Message,event:AgentEvent,elapsed:number)
   case 'tool_result':return {...message,toolCalls:(message.toolCalls??[]).map(call=>call.id===event.message.toolCallId?{...call,result:event.message.result,finishedAt:elapsed}:call)};
   case 'text_delta':return {...message,content:message.content+event.delta,count:message.content.length+event.delta.length,elapsed};
   case 'replace':return {...message,content:event.content,count:event.content.length,elapsed};
-  case 'done':return {...message,status:event.reason,elapsed};
+  case 'done':return {...message,content:message.content.trim()?message.content:'Done.',status:event.reason,elapsed};
  }
 }
