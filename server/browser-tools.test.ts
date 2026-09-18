@@ -46,3 +46,10 @@ test('search without any URL navigates the same browser session using the select
  const output=await search.execute({query:'browser automation'}).next();assert.ok(output.done);
  assert.deepEqual(actions,[{type:'navigate',url:'https://www.google.com/search?q=browser%20automation'}]);assert.equal(output.value.text,'Actual page text');
 });
+
+test('does not re-offer observe after a successful observation',()=>{
+ const browser={current:{id:'s',url:'https://example.com',title:'T',text:'Hello',elements:[],scroll:{x:0,y:0,height:1,viewportHeight:1},viewport:{width:1,height:1},observedAt:1},observe:async()=>({id:'s',url:'https://example.com',title:'T',text:'Hello',elements:[],scroll:{x:0,y:0,height:1,viewportHeight:1},viewport:{width:1,height:1},observedAt:1})} as any;
+ const messages=[{role:'user' as const,content:'Look'},{role:'tool' as const,toolCallId:'o',name:'browser_observe',result:{status:'ok' as const,text:'Hello'}}];
+ const tools=createBrowserTools(browser).map(f=>f({messages,signal:new AbortController().signal})).filter((t):t is NonNullable<typeof t>=>!!t);
+ assert.ok(!tools.some(t=>t.name==='browser_observe'));
+});

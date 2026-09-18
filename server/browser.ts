@@ -1,12 +1,13 @@
 import {resolve} from 'node:path';
 import {Router} from 'express';
 import {BrowserPool,type BrowserAction,type BrowserInput,type BrowserEvent} from '@jot/browser';
-export const browserPool=new BrowserPool(4,{profileRoot:resolve('.cache/browser-profiles'),headless:process.env.JOT_BROWSER_HEADLESS!=='0'});
+let pool:BrowserPool|undefined;
+export function browserPool(){return pool??=new BrowserPool(4,{profileRoot:resolve('.cache/browser-profiles'),headless:process.env.JOT_BROWSER_HEADLESS!=='0',sharedProfile:true,cdpUrl:process.env.JOT_BROWSER_CDP==='0'?undefined:process.env.JOT_BROWSER_CDP,vncUrl:process.env.JOT_BROWSER_VNC});}
 export function browserChatId(value:unknown):string{if(typeof value!=='string'||!/^[A-Za-z0-9_-]{1,80}$/.test(value))throw Error('Invalid browser session.');return value;}
 export const browserRouter=Router();
 browserRouter.use((req,res,next)=>{if(!['localhost','127.0.0.1','[::1]'].includes(req.hostname)){res.status(403).json({error:'Local host required.'});return;}const origin=req.get('origin');if(req.get('sec-fetch-site')==='cross-site'||origin&&origin!==`http://${req.get('host')}`&&origin!==`https://${req.get('host')}`){res.status(403).json({error:'Origin not allowed.'});return;}next();});
 browserRouter.get('/:chatId/events',async(req,res)=>{
- let lease;try{lease=await browserPool.acquire(browserChatId(req.params.chatId));}catch(e){res.status(400).json({error:(e as Error).message});return;}
+ let lease;try{lease=await browserPool().acquire(browserChatId(req.params.chatId));}catch(e){res.status(400).json({error:(e as Error).message});return;}
  res.set({'Content-Type':'text/event-stream','Cache-Control':'no-cache, no-transform','X-Accel-Buffering':'no'});res.flushHeaders();
  // Once the socket fills, retain only the newest frame and status.
  let blocked=false;let pendingFrame:BrowserEvent|undefined,pendingStatus:BrowserEvent|undefined;
@@ -35,7 +36,7 @@ function input(body:any):BrowserInput{
 }
 for(const path of ['command','input'] as const)browserRouter.post(`/:chatId/${path}`,async(req,res)=>{
  let lease;const controller=new AbortController();const close=()=>{if(!res.writableEnded)controller.abort();};res.on('close',close);
- try{const action=path==='command'?command(req.body):input(req.body);lease=await browserPool.acquire(browserChatId(req.params.chatId));
+ try{const action=path==='command'?command(req.body):input(req.body);lease=await browserPool().acquire(browserChatId(req.params.chatId));
   if(path==='command')await lease.session.act(action as BrowserAction,controller.signal);else await lease.session.input(action as BrowserInput,controller.signal);
   if(!res.destroyed)res.json({ok:true,status:lease.session.currentStatus});
  }catch(e){if(!res.destroyed)res.status(400).json({error:(e as Error).message});}finally{res.removeListener('close',close);lease?.release();}
@@ -46,7 +47,7 @@ browserRouter.post('/:chatId/login',async(req,res)=>{
  let lease;const controller=new AbortController();res.on('close',()=>{if(!res.writableEnded)controller.abort();});
  try{
   if(!['open','resume'].includes(req.body?.action))throw Error('Invalid sign-in action.');
-  lease=await browserPool.acquire(browserChatId(req.params.chatId));
+  lease=await browserPool().acquire(browserChatId(req.params.chatId));
   if(req.body.action==='open'){
    if(typeof req.body.url!=='string'||req.body.url.length>4000)throw Error('Invalid sign-in URL.');
    await lease.session.beginManualLogin(req.body.url,controller.signal);

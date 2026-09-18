@@ -12,7 +12,8 @@
     "check:boundaries": "node scripts/check-boundaries.mjs",
     "test:flights": "tsx scripts/browser-regression.ts",
     "test:flights:warm": "JOT_BROWSER_WARM=1 tsx scripts/browser-regression.ts",
-    "draft:serve": "sh scripts/draft-serve.sh"
+    "draft:serve": "sh scripts/draft-serve.sh",
+    "chrome:linux": "sh scripts/linux-chrome.sh"
   },
   "dependencies": {
     "dotenv": "^17.2.3",

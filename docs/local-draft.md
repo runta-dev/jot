@@ -21,7 +21,10 @@ with `JOT_DRAFT_URL` in the environment or `.env` if needed. No API key is requi
 for this local endpoint. The existing Jev key stays server-side.
 
 Draft generation uses temperature 0.1, top-k 50, repetition penalty 1.05, a
-256-token output cap and a 60-second request timeout. Cancellation propagates to
+512-token output cap and a 60-second request timeout. When page evidence contains Google Flights-style option rows, code assembles a
+markdown table and `draft_answer` streams that table directly. The local 1.2B
+model is not asked to invent or reformat those rows; it is still used for ordinary
+prose drafts. Cancellation propagates to
 the local request. A missing service or truncated stream is a tool error, not a
 silent fallback to another provider. Tool results include the local model name,
 first-token time, elapsed time and returned token usage. Agent event counters

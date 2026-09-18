@@ -14,13 +14,17 @@ test('group exposes elapsed work time and rows use tool icons rather than succes
  const html=renderToStaticMarkup(<ToolCalls calls={[{...call,result:{status:'ok',text:'13'}}]} status="complete" elapsedMs={36500}/>);
  assert.match(html,/Worked for 36s/);assert.match(html,/tool-icon/);assert.doesNotMatch(html,/tool-state|tool-duration|lucide-check/);
 });
+test('completed rows show tool duration in milliseconds at the end of the summary',()=>{
+ const html=renderToStaticMarkup(<ToolCalls calls={[{...call,result:{status:'ok',text:'13'},startedAt:100,finishedAt:253}]} status="complete"/>);
+ assert.match(html,/>153ms</);
+});
 test('running group shows Working label and native disclosures remain keyboard accessible',()=>{
  const html=renderToStaticMarkup(<ToolCalls calls={[call]} status="writing" elapsedMs={36000}/>);
  assert.match(html,/Working for 36s/);assert.match(html,/<details/);assert.match(html,/<summary/);assert.match(html,/class="tool-row running"/);
 });
-test('active tool stays above completed activity while work is in progress',()=>{
+test('later tool calls stay below earlier activity, including the running tool',()=>{
  const html=renderToStaticMarkup(<ToolCalls calls={[{...call,result:{status:'ok',text:'13'}},{id:'reading',name:'read_context',arguments:{spanId:'s2'}}]} status="writing" elapsedMs={1200}/>);
- assert.ok(html.indexOf('Running read_context')<html.indexOf('Ran calculate'));
+ assert.ok(html.indexOf('Ran calculate')<html.indexOf('Running read_context'));
 });
 
 test('completed groups start collapsed while running groups start expanded',()=>{

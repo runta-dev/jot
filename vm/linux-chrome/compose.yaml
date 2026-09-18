@@ -1,0 +1,10 @@
+services:
+  chrome:
+    build: .
+    shm_size: 1gb
+    ports:
+      - "127.0.0.1:9222:9222"
+      - "127.0.0.1:6080:6080"
+    volumes:
+      - ../../.cache/linux-chrome-profile:/data/profile
+    restart: unless-stopped

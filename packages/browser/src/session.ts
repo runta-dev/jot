@@ -13,16 +13,24 @@ export class BrowserSession{
  private starting?:Promise<void>;private queue:Promise<unknown>=Promise.resolve();private closed=false;private inputQueue:Promise<unknown>=Promise.resolve();
  private listeners=new Set<(event:BrowserEvent)=>void>();private pageKey='';private snapshot?:BrowserSnapshot;
  private frame?:BrowserFrame;private status:BrowserStatus={state:'idle',url:'about:blank',title:'',loading:false};
- constructor(private options:{width?:number;height?:number;executablePath?:string;profileDirectory?:string;headless?:boolean}={}){}
+ constructor(private options:{width?:number;height?:number;executablePath?:string;profileDirectory?:string;headless?:boolean;cdpUrl?:string;vncUrl?:string;homeUrl?:string}={}){}
  get current(){return this.snapshot;}
  get currentStatus(){return {...this.status};}
  subscribe(listener:(event:BrowserEvent)=>void){this.listeners.add(listener);listener({type:'status',status:this.currentStatus});if(this.frame)listener({type:'frame',frame:this.frame});return ()=>{this.listeners.delete(listener);};}
  private emit(event:BrowserEvent){for(const listener of this.listeners){try{listener(event);}catch{/* one disconnected viewer must not stop the browser */}}}
  private update(update:Partial<BrowserStatus>){this.status={...this.status,...update};this.emit({type:'status',status:this.currentStatus});}
- private async dispose(){const context=this.context,browser=this.browser;try{await context?.close();}finally{await browser?.close();}}
+ private async dispose(){await this.cdp?.detach().catch(()=>{});this.cdp=undefined;if(this.options.cdpUrl){this.page=undefined;this.context=undefined;this.browser=undefined;return;}const context=this.context,browser=this.browser;try{await context?.close();}finally{await browser?.close();}}
  private async start(){
   if(this.closed)throw Error('Browser session is closed.');if(this.manual)throw Error('Finish sign-in in Chrome, then select Continue in Jot.');if(this.starting)return this.starting;if(this.page&&!this.page.isClosed())return;
   this.starting=(async()=>{await this.dispose();this.update({state:'starting',loading:true});
+   if(this.options.cdpUrl){
+    this.browser=await chromium.connectOverCDP(this.options.cdpUrl);
+    this.context=this.browser.contexts()[0]??await this.browser.newContext({viewport:{width:this.options.width??1120,height:this.options.height??780}});
+    const page=this.context.pages()[0]??await this.context.newPage();await this.attach(page);
+    await this.openHome();
+    this.update({state:'ready',loading:false,url:this.page?.url()??this.status.url});
+    return;
+   }
    const chrome='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
    const headless=this.options.headless??true;
    // Position headed windows before their first paint; retain rendering while offscreen.
@@ -44,7 +52,8 @@ export class BrowserSession{
    const page=this.context.pages()[0]??await this.context.newPage();await this.attach(page);
    const context=this.context;context.on('close',()=>{if(this.context===context){this.context=undefined;this.browser=undefined;this.page=undefined;this.snapshot=undefined;this.frame=undefined;this.update({state:'closed',loading:false});}});
    this.context.on('page',page=>{void this.attach(page).catch(e=>this.update({error:String(e)}));});
-   this.update({state:'ready',loading:false});
+   await this.openHome();
+   this.update({state:'ready',loading:false,url:this.page?.url()??this.status.url});
   })().catch(async error=>{await this.dispose().catch(()=>{});this.context=undefined;this.browser=undefined;this.page=undefined;this.update({state:'error',loading:false,error:(error as Error).message});throw error;}).finally(()=>{this.starting=undefined;});
   return this.starting;
  }
@@ -76,14 +85,19 @@ export class BrowserSession{
  private transition<T>(work:()=>Promise<T>){const run=this.queue.then(work);this.queue=run.catch(()=>{});return run;}
  beginManualLogin(url:string,signal:AbortSignal){return this.transition(async()=>{
   signal.throwIfAborted();if(this.closed)throw Error('Browser session is closed.');if(this.manual)return;
-  if(!this.options.profileDirectory)throw Error('Sign-in requires a persistent Jot browser profile.');
+  if(!this.options.cdpUrl&&!this.options.profileDirectory)throw Error('Sign-in requires a persistent Jot browser profile.');
   const destination=navigationURL(url);
+  if(this.options.cdpUrl){
+   this.manual=true;this.manualURL=destination;
+   this.update({state:'manual',url:this.options.vncUrl??'http://127.0.0.1:6080/vnc.html',title:'Sign in in Linux Chrome',loading:false,error:undefined,target:undefined});return;
+  }
   await this.start();await this.inputQueue;signal.throwIfAborted();
   this.manual=true;this.manualURL=destination;
   try{
    await this.dispose();this.frame=undefined;this.snapshot=undefined;this.cdp=undefined;
    const chrome='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
-   this.manualChrome=await openManualChrome(this.options.executablePath??(existsSync(chrome)?chrome:chromium.executablePath()),this.options.profileDirectory,destination);
+   const profile=this.options.profileDirectory;if(!profile)throw Error('Sign-in requires a persistent Jot browser profile.');
+   this.manualChrome=await openManualChrome(this.options.executablePath??(existsSync(chrome)?chrome:chromium.executablePath()),profile,destination);
    this.update({state:'manual',url:destination,title:'Sign in in Chrome',loading:false,error:undefined,target:undefined});
   }catch(error){this.manual=false;this.update({state:'error',loading:false,error:(error as Error).message});throw error;}
  });}
@@ -110,6 +124,12 @@ export class BrowserSession{
    await new Promise(r=>setTimeout(r,150));
   }while(Date.now()-started<1200);
   signal.throwIfAborted();return this.read();
+ }
+ private async openHome(){
+  const home=this.options.homeUrl;if(!home||!this.page||this.page.isClosed())return;
+  const current=this.page.url();if(current&&current!=='about:blank')return;
+  this.update({loading:true});
+  await this.page.goto(navigationURL(home),{waitUntil:'domcontentloaded'});
  }
  ready(signal:AbortSignal){return this.exclusive(signal,async()=>{});}
  observe(signal:AbortSignal){return this.exclusive(signal,()=>this.settledRead(signal));}

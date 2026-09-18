@@ -2,17 +2,20 @@ import {createHash} from 'node:crypto';
 import {join} from 'node:path';
 import {BrowserSession} from './session.ts';
 type Entry={session:BrowserSession;leases:number;lastUsed:number};
-/** Small per-chat owner pool; active sessions are never evicted. */
+/** Small owner pool; active sessions are never evicted. */
 export class BrowserPool{
  private entries=new Map<string,Entry>();private queue:Promise<unknown>=Promise.resolve();private closed=false;private closing?:Promise<void>;private access=0;
- constructor(private maximum=4,private options:{profileRoot?:string;headless?:boolean}={}){if(!Number.isInteger(maximum)||maximum<1)throw Error('Browser pool capacity must be a positive integer.');}
+ constructor(private maximum=4,private options:{profileRoot?:string;headless?:boolean;sharedProfile?:boolean;cdpUrl?:string;vncUrl?:string}={}){if(!Number.isInteger(maximum)||maximum<1)throw Error('Browser pool capacity must be a positive integer.');}
+ private key(id:string){return this.options.sharedProfile?'shared':id;}
  acquire(id:string):Promise<{session:BrowserSession;release:()=>void}>{
   const task=this.queue.then(async()=>{
    if(this.closed)throw Error('Browser pool is closed.');
-   let entry=this.entries.get(id);
+   const key=this.key(id);
+   let entry=this.entries.get(key);
    if(!entry){
     if(this.entries.size>=this.maximum){const idle=[...this.entries].filter(([,e])=>e.leases===0&&e.session.currentStatus.state!=='manual').sort((a,b)=>a[1].lastUsed-b[1].lastUsed)[0];if(!idle)throw Error('All browser sessions are busy. Finish Chrome sign-in or close an unused browser panel.');this.entries.delete(idle[0]);await idle[1].session.close();}
-    entry={session:new BrowserSession({headless:this.options.headless,profileDirectory:this.options.profileRoot?join(this.options.profileRoot,createHash('sha256').update(id).digest('hex')):undefined}),leases:0,lastUsed:++this.access};this.entries.set(id,entry);
+    const profileName=this.options.sharedProfile?'shared':createHash('sha256').update(id).digest('hex');
+    entry={session:new BrowserSession({headless:this.options.headless,cdpUrl:this.options.cdpUrl,vncUrl:this.options.vncUrl,profileDirectory:this.options.cdpUrl?undefined:this.options.profileRoot?join(this.options.profileRoot,profileName):undefined}),leases:0,lastUsed:++this.access};this.entries.set(key,entry);
    }
    const owned=entry;owned.leases++;owned.lastUsed=++this.access;let released=false;
    return {session:owned.session,release:()=>{if(!released){released=true;owned.leases--;owned.lastUsed=++this.access;}}};

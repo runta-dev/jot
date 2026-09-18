@@ -1,4 +1,5 @@
 import {createLocalDraft,localDraftModel} from './local-draft.ts';
+import {ensureLinuxChrome} from './linux-chrome.ts';
 import express from "express";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
@@ -71,11 +72,12 @@ app.post("/api/chat", async (req, res) => {
   const emit = (event: object) => {
     if (!res.destroyed) res.write(JSON.stringify(event) + "\n");
   };
-  let lease:Awaited<ReturnType<typeof browserPool.acquire>>|undefined;
+  let lease:Awaited<ReturnType<ReturnType<typeof browserPool>["acquire"]>>|undefined;
   const started = Date.now();
   try {
-    if(req.body.chatId!==undefined)lease=await browserPool.acquire(browserChatId(req.body.chatId));
-    for await (const event of generateChatReply(key, messages, controller.signal,{draft,...(lease?{extraTools:createBrowserTools(lease.session),maxTurns:24}:{})})) {
+    if(req.body.chatId!==undefined)lease=await browserPool().acquire(browserChatId(req.body.chatId));
+    const useLocalDraft=req.body?.localDraft!==false;
+    for await (const event of generateChatReply(key, messages, controller.signal,{...(useLocalDraft?{draft}:{}),...(lease?{extraTools:createBrowserTools(lease.session),maxTurns:24}:{})})) {
       emit({ ...event, elapsed: Date.now() - started });
     }
   } catch (error) {
@@ -107,8 +109,10 @@ if (process.env.NODE_ENV === "production") {
   app.use(vite.middlewares);
 }
 const port = Number(process.env.PORT || env.PORT || 3000);
-app.listen(port, "127.0.0.1", () =>
-  console.log(`Jot → http://localhost:${port}`),
-);
+const linux=await ensureLinuxChrome();
+app.listen(port, "127.0.0.1", () => {
+  console.log(`Jot → http://localhost:${port}${linux.cdpUrl?`\nLinux Chrome VNC ${linux.vncUrl}`:''}`);
+  void browserPool().warmup('shared').catch((error:Error)=>console.error(`Browser warmup failed: ${error.message}`));
+});
 
-for(const name of ["SIGINT","SIGTERM"] as const)process.once(name,()=>{void browserPool.close().finally(()=>process.exit(0));});
+for(const name of ["SIGINT","SIGTERM"] as const)process.once(name,()=>{void browserPool().close().finally(()=>process.exit(0));});

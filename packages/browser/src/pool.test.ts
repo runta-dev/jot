@@ -36,3 +36,12 @@ test('manual sign-in remains protected after the panel releases its lease',async
   lease.release();await assert.rejects(pool.acquire('another'),/Finish Chrome sign-in/);
  }finally{await pool.close();}
 });
+
+test('shared profile reuses one session across chats',async()=>{
+ const pool=new BrowserPool(4,{sharedProfile:true});
+ try{
+  const a=await pool.acquire('chat-a');const b=await pool.acquire('chat-b');
+  assert.equal(a.session,b.session);
+  a.release();b.release();
+ }finally{await pool.close();}
+});

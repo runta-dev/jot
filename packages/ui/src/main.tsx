@@ -9,6 +9,7 @@ import {
   Square,
   Menu,
   Trash2,
+  Settings,
 } from "lucide-react";
 import "./style.css";
 import {MessageCopyButton} from "./MessageCopyButton";
@@ -16,9 +17,11 @@ import {ToolCalls} from "./ToolCalls";
 import {BrowserOpenButton,BrowserPanel} from "./BrowserPanel";
 import {BrowserView} from "./BrowserView";
 import {applyAgentEvent,type Message} from "./chat-state";
+import {SettingsPage} from "./SettingsPage";
 import type {AgentEvent} from "@jot/agent";
 
 const storageKey = "jev.chats";
+const draftKey = "jot.localDraft";
 type Chat = { id: string; title: string; messages: Message[]; updated: number };
 const uid = () => crypto.randomUUID();
 const newChat = (): Chat => ({
@@ -67,6 +70,10 @@ function App() {
   const [error, setError] = useState("");
   const [configured, setConfigured] = useState<boolean | null>(null);
   const [sidebar, setSidebar] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [localDraft, setLocalDraft] = useState(()=>{
+    try{return localStorage.getItem(draftKey)!=="0";}catch{return true;}
+  });
   const [browserOpen, setBrowserOpen] = useState(false);
   const browserToggle = useRef<HTMLButtonElement>(null);
   const abort = useRef<AbortController | null>(null);
@@ -81,6 +88,7 @@ function App() {
       /* private mode or full storage */
     }
   }, [chats]);
+  useEffect(()=>{try{localStorage.setItem(draftKey,localDraft?"1":"0");}catch{/* private mode */}},[localDraft]);
   useEffect(() => {
     fetch("/api/health")
       .then((r) => r.json())
@@ -108,6 +116,7 @@ function App() {
     setInput("");
     setError("");
     setSidebar(false);
+    setSettingsOpen(false);
     follow.current = true;
     setTimeout(() => textarea.current?.focus(), 0);
   };
@@ -202,7 +211,7 @@ function App() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           chatId,
-          messages: history.map(({ role, content, toolCalls }) => ({ role, content, ...(toolCalls ? { toolCalls } : {}) })),
+          messages: history.map(({ role, content, toolCalls }) => ({ role, content, ...(toolCalls ? { toolCalls } : {}) })), localDraft,
         }),
         signal: controller.signal,
       });
@@ -262,11 +271,12 @@ function App() {
               <div className="history-row" key={c.id}>
                 <button
                   disabled={busy}
-                  className={`history-item ${c.id === chat.id ? "selected" : ""}`}
+                  className={`history-item ${!settingsOpen && c.id === chat.id ? "selected" : ""}`}
                   onClick={() => {
                     setActiveId(c.id);
                     setError("");
                     setSidebar(false);
+                    setSettingsOpen(false);
                     follow.current = true;
                   }}
                 >
@@ -287,9 +297,10 @@ function App() {
             <p className="history-empty">No conversations yet.</p>
           )}
         </nav>
-        <div className="sidebar-logo">
-          <img src="/brand/jot-wordmark.svg" alt="Jot" width="44" height="16" />
-        </div>
+        <button type="button" className={`sidebar-settings ${settingsOpen?"selected":""}`} onClick={()=>{setSettingsOpen(true);setSidebar(false);}}>
+          <Settings size={16} strokeWidth={1.75} />
+          <span>Settings</span>
+        </button>
       </aside>
       <main className="workspace">
         <header>
@@ -301,14 +312,14 @@ function App() {
             >
               <Menu size={20} />
             </button>
-            <h2 className="conversation-title" title={chat.title}>{chat.title}</h2>
+            <h2 className="conversation-title" title={settingsOpen?"Settings":chat.title}>{settingsOpen?"Settings":chat.title}</h2>
           </div>
-          {!browserOpen && <BrowserOpenButton buttonRef={browserToggle} onClick={() => setBrowserOpen(true)}/>}
+          {!settingsOpen&&!browserOpen && <BrowserOpenButton buttonRef={browserToggle} onClick={() => setBrowserOpen(true)}/>}
           {configured === false && (
             <span className="setup-status">API key required</span>
           )}
         </header>
-        <section
+        {settingsOpen?<SettingsPage localDraft={localDraft} onLocalDraft={setLocalDraft}/>:<section
           className={`conversation ${empty ? "is-empty" : ""}`}
           ref={scroll}
           onScroll={() => {
@@ -353,8 +364,8 @@ function App() {
               <div ref={end} />
             </div>
           )}
-        </section>
-        <div className="compose-area">
+        </section>}
+        {!settingsOpen&&<div className="compose-area">
           {error && (
             <div role="alert" className="error">
               <span>{error}</span>
@@ -425,7 +436,7 @@ function App() {
               )}
             </div>
           </form>
-        </div>
+        </div>}
       </main>
       <BrowserPanel open={browserOpen}><BrowserView onClose={() => { setBrowserOpen(false); requestAnimationFrame(() => browserToggle.current?.focus()); }} key={chat.id} active={browserOpen} chatId={chat.id} onTakeOver={() => abort.current?.abort()}/></BrowserPanel>
     </div>

@@ -24,7 +24,7 @@ export function ToolCalls({calls,status,elapsedMs}:{calls:ToolEntry[];status?:st
  useEffect(()=>{
   setLiveElapsed(measured);
   if(!working)return;
-  const started=Date.now();const timer=setInterval(()=>setLiveElapsed(measured+Date.now()-started),1000);
+  const started=Date.now();const timer=setInterval(()=>setLiveElapsed(measured+Date.now()-started),100);
   return ()=>clearInterval(timer);
  },[working,measured]);
  if(!calls.length)return null;
@@ -32,12 +32,12 @@ export function ToolCalls({calls,status,elapsedMs}:{calls:ToolEntry[];status?:st
  const label=working?(elapsed<1000?'Working':`Working for ${time(elapsed)}`):status==='stopped'?`Stopped after ${time(elapsed)}`:status==='error'?`Failed after ${time(elapsed)}`:elapsed>0?`Worked for ${time(elapsed)}`:'Worked';
  return <section className="tool-activity" aria-label="Tool calls">
   <button type="button" className="tool-work-status" aria-expanded={expanded} aria-controls={groupId} onClick={()=>setExpanded(value=>!value)}>
-   <span aria-live="off">{label}</span><ChevronRight size={14} strokeWidth={1.5} className="tool-group-chevron" aria-hidden="true"/>
+   <span aria-live="off" className={working?'tool-shimmer':undefined}>{label}</span><ChevronRight size={14} strokeWidth={1.5} className="tool-group-chevron" aria-hidden="true"/>
   </button>
   <div id={groupId} className={`tool-disclosure ${expanded?'is-expanded':''}`} aria-hidden={!expanded} inert={!expanded}>
   <div className="tool-disclosure-inner">
   <div className="tool-list">
-   {(working ? [...calls.filter(call=>!call.result),...calls.filter(call=>call.result)] : calls).map(call=>{
+   {calls.map(call=>{
     const running=!call.result&&working;
     const failed=call.result?.status==='error';
     const stopped=(!call.result&&!running)||(!!call.result?.reason&&call.result.reason!=='complete');
@@ -46,15 +46,17 @@ export function ToolCalls({calls,status,elapsedMs}:{calls:ToolEntry[];status?:st
     const drafting=call.name==='draft_answer'||call.name==='compose_reply';
     const command=invocation(call),Icon=call.name.startsWith('browser_')?BrowserToolIcon:icons[call.name]??Wrench;
     const label=drafting?'Draft answer':`${verb} ${command}`;
-    const duration=call.startedAt!==undefined&&call.finishedAt!==undefined?Math.max(0,call.finishedAt-call.startedAt):null;
+    const duration=call.startedAt!==undefined&&call.finishedAt!==undefined?Math.max(0,call.finishedAt-call.startedAt):running&&call.startedAt!==undefined?Math.max(0,elapsed-call.startedAt):null;
+    const timing=duration===null?'':`${Math.round(duration)}ms`;
     return <details className={`tool-row ${state.toLowerCase()}`} key={`${call.id}-${working?"active":"settled"}`}>
-     <summary aria-label={`${label} — ${state}`} title={label}>
+     <summary aria-label={`${label} — ${state}${timing?` — ${timing}`:''}`} title={label}>
       <Icon className="tool-icon" size={16} strokeWidth={1.5} aria-hidden="true"/>
-      <span className="tool-summary">{drafting?'Draft answer':<><span className="tool-action">{verb}</span>{' '}{command}</>}</span>
+      <span className="tool-summary">{running?<span className="tool-shimmer">{drafting?'Draft answer':<><span className="tool-action">{verb}</span>{' '}{command}</>}</span>:drafting?'Draft answer':<><span className="tool-action">{verb}</span>{' '}{command}</>}</span>
+      {timing&&<span className="tool-ms">{timing}</span>}
       <ChevronRight size={14} strokeWidth={1.5} className="tool-chevron" aria-hidden="true"/>
      </summary>
      <div className="tool-body">
-      <div className="tool-kind"><span>{call.result?(failed?'Error':'Result'):'Details'}</span><span>{state}{duration!==null?` · ${(duration/1000).toFixed(1)}s`:''}</span></div>
+      <div className="tool-kind"><span>{call.result?(failed?'Error':'Result'):'Details'}</span><span>{state}{timing?` · ${timing}`:''}</span></div>
       {Object.keys(call.arguments).length>0&&<dl>{Object.entries(call.arguments).map(([key,value])=><div key={key}><dt>{key}</dt><dd>{value}</dd></div>)}</dl>}
       {call.result?<div className={`tool-output ${drafting?'tool-output-prose':''}`}><pre>{call.result.text??call.result.error??'No output'}</pre></div>:<p className="tool-pending">{running?'Waiting for the tool result.':'This tool call was interrupted.'}</p>}
      </div>
