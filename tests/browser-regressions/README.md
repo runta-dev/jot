@@ -9,7 +9,7 @@ Runs write their case, streamed tool events, per-provider-call timings/usage,
 final observation, final frame and report beneath `.cache/browser-regressions`.
 Credentials are loaded server-side and are never included in these artifacts.
 Default settings match the application: 24 turns, 500k input-token budget, 180s
-wall-clock timeout, headless Chrome. Set JOT_BROWSER_HEADLESS=0 for headed Chrome.
+wall-clock timeout, local headed Chrome. The Linux Chrome VM is obsolete.
 Browser startup and navigation are included in reported elapsed time.
 
 The runner exits 0 only when the final page passes every check in
