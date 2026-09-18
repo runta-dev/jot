@@ -1,0 +1,32 @@
+{
+  "protocol": "research/R17-real-output-verification.md",
+  "specs": [
+    {
+      "root": "bounded-branch-greedy-2026-09-18T07-49-04.111Z",
+      "labels": [
+        false,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "root": "bounded-branch-branch-2026-09-18T07-50-00.111Z",
+      "labels": [
+        true,
+        true,
+        null,
+        false
+      ]
+    },
+    {
+      "root": "broad-diagnostic-2026-09-18T07-39-21.753Z",
+      "labels": [
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  ]
+}

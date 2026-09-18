@@ -1,0 +1,182 @@
+[
+  {
+    "arm": "baseline",
+    "id": "deadline",
+    "user": "Rewrite politely: \"Send the report by Tuesday.\"",
+    "text": "Please send the report by Tuesday",
+    "words": 6,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 15,
+      "inputTokens": 79312,
+      "outputTokens": 80635
+    },
+    "ms": 6529
+  },
+  {
+    "arm": "baseline",
+    "id": "deadline",
+    "user": "Change the deadline to Thursday and keep it polite.",
+    "text": "Please send the report by Thursday",
+    "words": 6,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 15,
+      "inputTokens": 79966,
+      "outputTokens": 80695
+    },
+    "ms": 5396
+  },
+  {
+    "arm": "baseline",
+    "id": "invitation",
+    "user": "Write a friendly one-sentence invitation to dinner.",
+    "text": "Write friendly invitation to dinner. Would you like to join?",
+    "words": 10,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 27,
+      "inputTokens": 124870,
+      "outputTokens": 122153
+    },
+    "ms": 9907
+  },
+  {
+    "arm": "baseline",
+    "id": "invitation",
+    "user": "Make it formal, still one sentence.",
+    "text": "Dear sir, would you like to attend dinner?",
+    "words": 8,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 23,
+      "inputTokens": 112874,
+      "outputTokens": 110357
+    },
+    "ms": 8314
+  },
+  {
+    "arm": "baseline",
+    "id": "quoted",
+    "user": "Shorten this without changing its meaning: \"Please return the library book before Friday.\"",
+    "text": "Return the book before Friday",
+    "words": 5,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 13,
+      "inputTokens": 72069,
+      "outputTokens": 73654
+    },
+    "ms": 4603
+  },
+  {
+    "arm": "baseline",
+    "id": "quoted",
+    "user": "Now change Friday to Monday, preserving the rest.",
+    "text": "Return the book before Monday",
+    "words": 5,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 13,
+      "inputTokens": 72652,
+      "outputTokens": 73768
+    },
+    "ms": 5806
+  },
+  {
+    "arm": "copy",
+    "id": "deadline",
+    "user": "Rewrite politely: \"Send the report by Tuesday.\"",
+    "text": "Please send the report by Tuesday",
+    "words": 6,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 9,
+      "inputTokens": 58105,
+      "outputTokens": 60132
+    },
+    "ms": 4748
+  },
+  {
+    "arm": "copy",
+    "id": "deadline",
+    "user": "Change the deadline to Thursday and keep it polite.",
+    "text": "Please send the report by Thursday",
+    "words": 6,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 9,
+      "inputTokens": 58387,
+      "outputTokens": 60086
+    },
+    "ms": 4679
+  },
+  {
+    "arm": "copy",
+    "id": "invitation",
+    "user": "Write a friendly one-sentence invitation to dinner.",
+    "text": "Would you like to come over for dinner?",
+    "words": 8,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 21,
+      "inputTokens": 101501,
+      "outputTokens": 100726
+    },
+    "ms": 10681
+  },
+  {
+    "arm": "copy",
+    "id": "invitation",
+    "user": "Make it formal, still one sentence.",
+    "text": "Would you like to join for dinner?",
+    "words": 7,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 13,
+      "inputTokens": 75189,
+      "outputTokens": 75108
+    },
+    "ms": 6646
+  },
+  {
+    "arm": "copy",
+    "id": "quoted",
+    "user": "Shorten this without changing its meaning: \"Please return the library book before Friday.\"",
+    "text": "Return book before Friday",
+    "words": 4,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 7,
+      "inputTokens": 50704,
+      "outputTokens": 52998
+    },
+    "ms": 4375
+  },
+  {
+    "arm": "copy",
+    "id": "quoted",
+    "user": "Now change Friday to Monday, preserving the rest.",
+    "text": "Return book before Monday",
+    "words": 4,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 7,
+      "inputTokens": 50246,
+      "outputTokens": 52549
+    },
+    "ms": 3750
+  }
+]

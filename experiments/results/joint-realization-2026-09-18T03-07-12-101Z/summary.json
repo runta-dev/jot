@@ -1,0 +1,342 @@
+{
+  "directory": "experiments/results/joint-realization-2026-09-18T03-07-12-101Z",
+  "rows": [
+    {
+      "id": "identity",
+      "request": "Who are you? State your name and provider in one sentence.",
+      "facts": "name: Jev; provider: TypeSafe; kind: AI assistant",
+      "slots": {
+        "subject": "I",
+        "verb": "be",
+        "object": "Jev",
+        "number": "s",
+        "subjectDet": "NONE",
+        "objectDet": "NONE",
+        "tense": "p",
+        "negated": false,
+        "voice": "active"
+      },
+      "modifiers": [
+        {
+          "relation": "from",
+          "text": "TypeSafe"
+        }
+      ],
+      "result": "I am Jev from TypeSafe.",
+      "requests": 4,
+      "usage": {
+        "input_tokens": 3954,
+        "output_tokens": 1141
+      },
+      "elapsedMs": 1898
+    },
+    {
+      "id": "incident",
+      "request": "Summarize the incident in one sentence, including the status and when it happened.",
+      "facts": "entity: the health endpoint; event: returned HTTP 503; day: Monday; time: 09:00; cause: unknown",
+      "slots": {
+        "subject": "the health endpoint",
+        "verb": "return",
+        "object": "HTTP 503",
+        "number": "s",
+        "subjectDet": "the",
+        "objectDet": "NONE",
+        "tense": "ps",
+        "negated": false,
+        "voice": "active"
+      },
+      "modifiers": [
+        {
+          "relation": "at",
+          "text": "09:00"
+        },
+        {
+          "relation": "on",
+          "text": "Monday"
+        }
+      ],
+      "result": "The health endpoint returned HTTP 503 at 09:00 on Monday.",
+      "requests": 4,
+      "usage": {
+        "input_tokens": 6661,
+        "output_tokens": 1912
+      },
+      "elapsedMs": 1991
+    },
+    {
+      "id": "past",
+      "request": "Tell me what Mira did and when, in one sentence.",
+      "facts": "agent: Mira; action: sent; object: the report; time: yesterday",
+      "slots": {
+        "subject": "Mira",
+        "verb": "send",
+        "object": "the report",
+        "number": "s",
+        "subjectDet": "NONE",
+        "objectDet": "the",
+        "tense": "ps",
+        "negated": false,
+        "voice": "active"
+      },
+      "modifiers": [
+        {
+          "relation": "time",
+          "text": "yesterday"
+        }
+      ],
+      "result": "Mira sent the report yesterday.",
+      "requests": 4,
+      "usage": {
+        "input_tokens": 4383,
+        "output_tokens": 1365
+      },
+      "elapsedMs": 1728
+    },
+    {
+      "id": "negation",
+      "request": "Explain the service status in one sentence.",
+      "facts": "entity: the service; property: available; available: false; time: now",
+      "slots": {
+        "subject": "the service",
+        "verb": "be",
+        "object": "available",
+        "number": "s",
+        "subjectDet": "the",
+        "objectDet": "NONE",
+        "tense": "p",
+        "negated": true,
+        "voice": "active"
+      },
+      "modifiers": [],
+      "result": "The service is not available.",
+      "requests": 3,
+      "usage": {
+        "input_tokens": 3370,
+        "output_tokens": 1111
+      },
+      "elapsedMs": 893
+    },
+    {
+      "id": "plural",
+      "request": "Describe what the servers do in one sentence.",
+      "facts": "agents: the servers; number: plural; action: process; object: requests; tense: present",
+      "slots": {
+        "subject": "the servers",
+        "verb": "process",
+        "object": "requests",
+        "number": "p",
+        "subjectDet": "the",
+        "objectDet": "NONE",
+        "tense": "p",
+        "negated": false,
+        "voice": "active"
+      },
+      "modifiers": [],
+      "result": "The servers process requests.",
+      "requests": 3,
+      "usage": {
+        "input_tokens": 3407,
+        "output_tokens": 1164
+      },
+      "elapsedMs": 808
+    },
+    {
+      "id": "future",
+      "request": "Describe Ana's plan in one sentence, including when.",
+      "facts": "agent: Ana; action: visit; object: the museum; time: tomorrow",
+      "slots": {
+        "subject": "Ana",
+        "verb": "visit",
+        "object": "the museum",
+        "number": "s",
+        "subjectDet": "NONE",
+        "objectDet": "NONE",
+        "tense": "f",
+        "negated": false,
+        "voice": "active"
+      },
+      "modifiers": [
+        {
+          "relation": "time",
+          "text": "tomorrow"
+        }
+      ],
+      "result": "Ana will visit the museum tomorrow.",
+      "requests": 4,
+      "usage": {
+        "input_tokens": 4441,
+        "output_tokens": 1390
+      },
+      "elapsedMs": 1334
+    },
+    {
+      "id": "passive",
+      "request": "Summarize what happened to the package in one sentence.",
+      "facts": "entity: the package; action: delivered; time: yesterday; agent: unknown",
+      "slots": {
+        "subject": "the package",
+        "verb": "deliver",
+        "object": null,
+        "number": "s",
+        "subjectDet": "the",
+        "objectDet": "NONE",
+        "tense": "ps",
+        "negated": false,
+        "voice": "passive"
+      },
+      "modifiers": [
+        {
+          "relation": "time",
+          "text": "yesterday"
+        }
+      ],
+      "result": "The package was delivered yesterday.",
+      "requests": 4,
+      "usage": {
+        "input_tokens": 4326,
+        "output_tokens": 1373
+      },
+      "elapsedMs": 1524
+    },
+    {
+      "id": "cause",
+      "request": "Explain why the launch is delayed in one sentence.",
+      "facts": "entity: the launch; status: delayed; reason: the tests failed; time: now",
+      "slots": {
+        "subject": "the launch",
+        "verb": "delay",
+        "object": null,
+        "number": "s",
+        "subjectDet": "the",
+        "objectDet": "the",
+        "tense": "p",
+        "negated": false,
+        "voice": "passive"
+      },
+      "modifiers": [
+        {
+          "relation": "because",
+          "text": "the tests failed"
+        }
+      ],
+      "result": "The launch is delayed because the tests failed.",
+      "requests": 4,
+      "usage": {
+        "input_tokens": 6002,
+        "output_tokens": 2166
+      },
+      "elapsedMs": 1279
+    },
+    {
+      "id": "fresh_purchase",
+      "request": "Say what Nora did and when in one sentence.",
+      "facts": "agent: Nora; action: bought; object: the tickets; day: Tuesday",
+      "slots": {
+        "subject": "Nora",
+        "verb": "buy",
+        "object": "the tickets",
+        "number": "s",
+        "subjectDet": "NONE",
+        "objectDet": "NONE",
+        "tense": "ps",
+        "negated": false,
+        "voice": "active"
+      },
+      "modifiers": [
+        {
+          "relation": "on",
+          "text": "Tuesday"
+        }
+      ],
+      "result": "Nora bought the tickets on Tuesday.",
+      "requests": 4,
+      "usage": {
+        "input_tokens": 4370,
+        "output_tokens": 1342
+      },
+      "elapsedMs": 1046
+    },
+    {
+      "id": "fresh_door",
+      "request": "Explain whether the door is locked in one sentence.",
+      "facts": "entity: the door; property: locked; locked: false; time: now",
+      "slots": {
+        "subject": "the door",
+        "verb": "be",
+        "object": "locked",
+        "number": "s",
+        "subjectDet": "the",
+        "objectDet": "NONE",
+        "tense": "p",
+        "negated": true,
+        "voice": "active"
+      },
+      "modifiers": [],
+      "result": "The door is not locked.",
+      "requests": 3,
+      "usage": {
+        "input_tokens": 3674,
+        "output_tokens": 1255
+      },
+      "elapsedMs": 902
+    },
+    {
+      "id": "fresh_workers",
+      "request": "Describe the workers' routine, including how often.",
+      "facts": "agents: the workers; number: plural; action: repair; object: the bridge; frequency: daily; tense: present",
+      "slots": {
+        "subject": "the workers",
+        "verb": "repair",
+        "object": "the bridge",
+        "number": "p",
+        "subjectDet": "the",
+        "objectDet": "the",
+        "tense": "p",
+        "negated": false,
+        "voice": "active"
+      },
+      "modifiers": [
+        {
+          "relation": "time",
+          "text": "daily"
+        }
+      ],
+      "result": "The workers repair the bridge daily.",
+      "requests": 4,
+      "usage": {
+        "input_tokens": 5554,
+        "output_tokens": 1866
+      },
+      "elapsedMs": 1163
+    },
+    {
+      "id": "fresh_shop",
+      "request": "Describe Omar's plan and when it will happen.",
+      "facts": "agent: Omar; action: open; object: the shop; time: next week",
+      "slots": {
+        "subject": "Omar",
+        "verb": "open",
+        "object": "the shop",
+        "number": "s",
+        "subjectDet": "NONE",
+        "objectDet": "NONE",
+        "tense": "f",
+        "negated": false,
+        "voice": "active"
+      },
+      "modifiers": [
+        {
+          "relation": "time",
+          "text": "next week"
+        }
+      ],
+      "result": "Omar will open the shop next week.",
+      "requests": 4,
+      "usage": {
+        "input_tokens": 4607,
+        "output_tokens": 1417
+      },
+      "elapsedMs": 1376
+    }
+  ]
+}

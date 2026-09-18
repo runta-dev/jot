@@ -1,0 +1,322 @@
+[
+  {
+    "prompt": "Why do wet clothes dry?",
+    "text": "",
+    "reason": "Error: HTTP 400",
+    "tree": {
+      "kind": "link",
+      "relation": "because",
+      "left": {
+        "kind": "clause",
+        "subject": {
+          "kind": "np",
+          "determiner": "the",
+          "plural": true,
+          "noun": {
+            "kind": "word",
+            "sort": "noun",
+            "value": "clothes"
+          }
+        },
+        "predicate": {
+          "kind": "vp",
+          "verb": {
+            "kind": "word",
+            "sort": "verb",
+            "value": "dry"
+          }
+        },
+        "past": false
+      },
+      "right": {
+        "kind": "clause",
+        "subject": {
+          "kind": "hole",
+          "sort": "np"
+        },
+        "predicate": {
+          "kind": "hole",
+          "sort": "vp"
+        },
+        "past": false
+      }
+    },
+    "chosenSenses": [
+      {
+        "path": [
+          "left",
+          "predicate",
+          "verb"
+        ],
+        "lemma": "dry",
+        "offset": "00219829",
+        "lemmas": [
+          "dry",
+          "dry_out"
+        ],
+        "definition": "become dry or drier",
+        "examples": [
+          "The laundry dries in the sun"
+        ],
+        "lexFile": 30,
+        "frames": [
+          1
+        ]
+      }
+    ],
+    "requests": 10,
+    "inputTokens": 61848,
+    "ms": 6604
+  },
+  {
+    "prompt": "A child dropped a glass. What might happen next?",
+    "text": "The glass breaks.",
+    "reason": "complete",
+    "tree": {
+      "kind": "clause",
+      "subject": {
+        "kind": "np",
+        "determiner": "the",
+        "plural": false,
+        "noun": {
+          "kind": "word",
+          "sort": "noun",
+          "value": "glass"
+        }
+      },
+      "predicate": {
+        "kind": "vp",
+        "verb": {
+          "kind": "word",
+          "sort": "verb",
+          "value": "break"
+        }
+      },
+      "past": false
+    },
+    "chosenSenses": [
+      {
+        "path": [
+          "predicate",
+          "verb"
+        ],
+        "lemma": "break",
+        "offset": "00334996",
+        "lemmas": [
+          "break",
+          "separate",
+          "split_up",
+          "fall_apart",
+          "come_apart"
+        ],
+        "definition": "become separated into pieces or fragments",
+        "examples": [
+          "The figurine broke",
+          "The freshly baked loaf fell apart"
+        ],
+        "lexFile": 30,
+        "frames": [
+          1
+        ]
+      }
+    ],
+    "requests": 7,
+    "inputTokens": 39107,
+    "ms": 2705
+  },
+  {
+    "prompt": "How can I begin a difficult task?",
+    "text": "You begin the task.",
+    "reason": "complete",
+    "tree": {
+      "kind": "clause",
+      "subject": {
+        "kind": "pronoun",
+        "value": "you"
+      },
+      "predicate": {
+        "kind": "vp",
+        "verb": {
+          "kind": "word",
+          "sort": "verb",
+          "value": "begin"
+        },
+        "object": {
+          "kind": "np",
+          "determiner": "the",
+          "plural": false,
+          "noun": {
+            "kind": "word",
+            "sort": "noun",
+            "value": "task"
+          }
+        }
+      },
+      "past": false
+    },
+    "chosenSenses": [
+      {
+        "path": [
+          "predicate",
+          "verb"
+        ],
+        "lemma": "begin",
+        "offset": "00346415",
+        "lemmas": [
+          "get_down",
+          "begin",
+          "get",
+          "start_out",
+          "start",
+          "set_about",
+          "set_out",
+          "commence"
+        ],
+        "definition": "take the first step or steps in carrying out an action",
+        "examples": [
+          "We began working at dawn",
+          "Who will start?",
+          "Get working as soon as the sun rises!",
+          "The first tourists began to arrive in Cambodia",
+          "He began early in the day",
+          "Let's get down to work now"
+        ],
+        "lexFile": 30,
+        "frames": [
+          1,
+          2,
+          8,
+          28,
+          33
+        ]
+      }
+    ],
+    "requests": 9,
+    "inputTokens": 77058,
+    "ms": 7396
+  },
+  {
+    "prompt": "Why does a metal spoon get warm in hot soup?",
+    "text": "",
+    "reason": "unsupported_sense",
+    "tree": {
+      "kind": "link",
+      "relation": "because",
+      "left": {
+        "kind": "clause",
+        "subject": {
+          "kind": "np",
+          "determiner": "the",
+          "plural": false,
+          "noun": {
+            "kind": "word",
+            "sort": "noun",
+            "value": "spoon"
+          }
+        },
+        "predicate": {
+          "kind": "vp",
+          "verb": {
+            "kind": "word",
+            "sort": "verb",
+            "value": "get"
+          }
+        },
+        "past": false
+      },
+      "right": {
+        "kind": "hole",
+        "sort": "clause"
+      }
+    },
+    "chosenSenses": [],
+    "requests": 8,
+    "inputTokens": 45721,
+    "ms": 4514
+  },
+  {
+    "prompt": "A person forgot an umbrella in the rain. What might happen?",
+    "text": "A person chills in the rain.",
+    "reason": "complete",
+    "tree": {
+      "kind": "clause",
+      "subject": {
+        "kind": "np",
+        "determiner": "a",
+        "plural": false,
+        "noun": {
+          "kind": "word",
+          "sort": "noun",
+          "value": "person"
+        }
+      },
+      "predicate": {
+        "kind": "attach",
+        "head": {
+          "kind": "vp",
+          "verb": {
+            "kind": "word",
+            "sort": "verb",
+            "value": "chill"
+          }
+        },
+        "modifier": {
+          "kind": "pp",
+          "preposition": "in",
+          "object": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "rain"
+            }
+          }
+        }
+      },
+      "past": false
+    },
+    "chosenSenses": [
+      {
+        "path": [
+          "predicate",
+          "head",
+          "verb"
+        ],
+        "lemma": "chill",
+        "offset": "00370517",
+        "lemmas": [
+          "cool",
+          "chill",
+          "cool_down"
+        ],
+        "definition": "loose heat",
+        "examples": [
+          "The air cooled considerably after the thunderstorm"
+        ],
+        "lexFile": 30,
+        "frames": [
+          1,
+          2
+        ]
+      }
+    ],
+    "requests": 11,
+    "inputTokens": 88851,
+    "ms": 8891
+  },
+  {
+    "prompt": "How can I organize scattered notes?",
+    "text": "",
+    "reason": "unsupported",
+    "tree": {
+      "kind": "hole",
+      "sort": "clause"
+    },
+    "chosenSenses": [],
+    "requests": 1,
+    "inputTokens": 841,
+    "ms": 268
+  }
+]

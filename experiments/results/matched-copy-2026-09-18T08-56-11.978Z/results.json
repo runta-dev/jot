@@ -1,0 +1,170 @@
+[
+  {
+    "round": 0,
+    "id": "replace",
+    "arm": "baseline",
+    "text": "Please send the report by Thursday.",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 17,
+      "inputTokens": 87968,
+      "outputTokens": 88183
+    },
+    "ms": 6717
+  },
+  {
+    "round": 0,
+    "id": "replace",
+    "arm": "copy",
+    "text": "Please send the report by Thursday",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 11,
+      "inputTokens": 65970,
+      "outputTokens": 67069
+    },
+    "ms": 3816
+  },
+  {
+    "round": 0,
+    "id": "remove",
+    "arm": "baseline",
+    "text": "Please send the report",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 11,
+      "inputTokens": 65200,
+      "outputTokens": 66919
+    },
+    "ms": 4091
+  },
+  {
+    "round": 0,
+    "id": "remove",
+    "arm": "copy",
+    "text": "Please send the report",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 5,
+      "inputTokens": 43004,
+      "outputTokens": 45686
+    },
+    "ms": 1849
+  },
+  {
+    "round": 0,
+    "id": "formal",
+    "arm": "baseline",
+    "text": "Would you like to attend dinner?",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 17,
+      "inputTokens": 89428,
+      "outputTokens": 88823
+    },
+    "ms": 6903
+  },
+  {
+    "round": 0,
+    "id": "formal",
+    "arm": "copy",
+    "text": "Dear Would you like to join to dinner?",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 13,
+      "inputTokens": 74243,
+      "outputTokens": 74338
+    },
+    "ms": 4501
+  },
+  {
+    "round": 1,
+    "id": "replace",
+    "arm": "baseline",
+    "text": "Please send the report by Thursday",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 15,
+      "inputTokens": 80482,
+      "outputTokens": 81320
+    },
+    "ms": 5229
+  },
+  {
+    "round": 1,
+    "id": "replace",
+    "arm": "copy",
+    "text": "Please send the report by Thursday",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 11,
+      "inputTokens": 65768,
+      "outputTokens": 66874
+    },
+    "ms": 4545
+  },
+  {
+    "round": 1,
+    "id": "remove",
+    "arm": "baseline",
+    "text": "Please send the report",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 11,
+      "inputTokens": 65208,
+      "outputTokens": 66776
+    },
+    "ms": 3890
+  },
+  {
+    "round": 1,
+    "id": "remove",
+    "arm": "copy",
+    "text": "Please send the report",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 5,
+      "inputTokens": 43114,
+      "outputTokens": 45780
+    },
+    "ms": 1935
+  },
+  {
+    "round": 1,
+    "id": "formal",
+    "arm": "baseline",
+    "text": "Dear sir, would you like to join?",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 21,
+      "inputTokens": 105090,
+      "outputTokens": 103488
+    },
+    "ms": 8927
+  },
+  {
+    "round": 1,
+    "id": "formal",
+    "arm": "copy",
+    "text": "Would you like to join to dinner? Please.",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 15,
+      "inputTokens": 82247,
+      "outputTokens": 81643
+    },
+    "ms": 7405
+  }
+]

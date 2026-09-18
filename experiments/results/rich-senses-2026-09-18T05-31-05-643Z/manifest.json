@@ -1,0 +1,162 @@
+{
+  "protocol": "research/R11.1-rich-sense-protocol.md",
+  "source": "experiments/results/verb-senses-2026-09-18T05-18-52-825Z",
+  "cases": [
+    {
+      "id": "procrastination",
+      "repeat": 0,
+      "mode": "definitions",
+      "lemma": "start"
+    },
+    {
+      "id": "procrastination",
+      "repeat": 1,
+      "mode": "definitions",
+      "lemma": "begin"
+    },
+    {
+      "id": "reading",
+      "repeat": 0,
+      "mode": "definitions",
+      "lemma": "jot"
+    },
+    {
+      "id": "reading",
+      "repeat": 1,
+      "mode": "definitions",
+      "lemma": "summarize"
+    },
+    {
+      "id": "deadlines",
+      "repeat": 0,
+      "mode": "definitions",
+      "lemma": "list"
+    },
+    {
+      "id": "deadlines",
+      "repeat": 1,
+      "mode": "definitions",
+      "lemma": "list"
+    },
+    {
+      "id": "project",
+      "repeat": 0,
+      "mode": "definitions",
+      "lemma": "decompose"
+    },
+    {
+      "id": "project",
+      "repeat": 1,
+      "mode": "definitions",
+      "lemma": "decompose"
+    },
+    {
+      "id": "vocabulary",
+      "repeat": 0,
+      "mode": "bare",
+      "lemma": "card"
+    },
+    {
+      "id": "vocabulary",
+      "repeat": 0,
+      "mode": "definitions",
+      "lemma": "list"
+    },
+    {
+      "id": "vocabulary",
+      "repeat": 1,
+      "mode": "bare",
+      "lemma": "card"
+    },
+    {
+      "id": "vocabulary",
+      "repeat": 1,
+      "mode": "definitions",
+      "lemma": "list"
+    },
+    {
+      "id": "desk",
+      "repeat": 0,
+      "mode": "definitions",
+      "lemma": "sort"
+    },
+    {
+      "id": "desk",
+      "repeat": 1,
+      "mode": "definitions",
+      "lemma": "sort"
+    },
+    {
+      "id": "distractions",
+      "repeat": 0,
+      "mode": "definitions",
+      "lemma": "block"
+    },
+    {
+      "id": "distractions",
+      "repeat": 1,
+      "mode": "definitions",
+      "lemma": "remove"
+    },
+    {
+      "id": "draft",
+      "repeat": 0,
+      "mode": "definitions",
+      "lemma": "outline"
+    },
+    {
+      "id": "draft",
+      "repeat": 1,
+      "mode": "definitions",
+      "lemma": "outline"
+    },
+    {
+      "id": "meeting",
+      "repeat": 0,
+      "mode": "definitions",
+      "lemma": "plan"
+    },
+    {
+      "id": "meeting",
+      "repeat": 1,
+      "mode": "definitions",
+      "lemma": "schedule"
+    },
+    {
+      "id": "files",
+      "repeat": 0,
+      "mode": "definitions",
+      "lemma": "categorize"
+    },
+    {
+      "id": "files",
+      "repeat": 1,
+      "mode": "definitions",
+      "lemma": "organize"
+    },
+    {
+      "id": "scrolling",
+      "repeat": 0,
+      "mode": "definitions",
+      "lemma": "limit"
+    },
+    {
+      "id": "scrolling",
+      "repeat": 1,
+      "mode": "definitions",
+      "lemma": "limit"
+    },
+    {
+      "id": "homework",
+      "repeat": 0,
+      "mode": "definitions",
+      "lemma": "analyze"
+    },
+    {
+      "id": "homework",
+      "repeat": 1,
+      "mode": "definitions",
+      "lemma": "analyze"
+    }
+  ]
+}

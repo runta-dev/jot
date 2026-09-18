@@ -1,0 +1,5 @@
+# R44 mixed-role source selection
+
+Preregistered before inference. Eight synthetic role-labeled conversations, two candidate orders. Four exact source answers and four GENERATE controls. Include erroneous assistant restatement, explicit user correction, example-vs-real identifier, reported previous assistant wording, requested combination of separated facts, unsupported assistant assertion, explanation request and absent historical detail. Synthetic assistant errors are disclosed fixtures, not claims about prior live performance.
+
+Same span generator1–6words; all roles contribute candidates; full roles retained in state. Use original R42 Choice prompt, no Noul and no post-hoc threshold. Expected target only evaluator metadata. Gate zero wrong direct answers, all four exact-answer cases correct both orders. Safe GENERATE on positives counts missed optimization, not unsafe output. No production integration solely from this probe; no broad generation claim. If role priority fails, do not silently fix labels or hand-exclude failing spans.

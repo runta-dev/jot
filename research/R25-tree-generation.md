@@ -1,0 +1,5 @@
+# R25 sequential tree generation pilot
+
+Preregistered before inference. Three development prompts: Why do wet clothes dry? / A child dropped a glass. What might happen next? / How can I begin a difficult task? Different domains through the same grammar, no handlers or authored answer candidates. One tree per prompt is a feasibility probe, not full chat or acceptance.
+
+At each first hole, Jev selects a legal structural expansion or lexical candidate conditioned on entire tree, original request, retained sense choices. Lexical banks: first4096 subtitle words plus prompt words, intersected with jsRealB lexical POS. Group180, top2/group then one final choice; no cross-group probability comparison. Verb lemmas filtered by actual WordNet frame evidence for the committed VP shape, then a specific compatible sense selected with definitions/examples. Unknown structure explicitly returns unsupported. Max30 expansions/60nodes/500k input tokens. No extra model. No reference answer or manually corrected text. Render only completed trees, report renderer/coverage failures and all constraints. One run; three cases do not establish open-ended dialogue.

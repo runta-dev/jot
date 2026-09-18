@@ -1,0 +1,226 @@
+[
+  {
+    "id": "wrong_assistant",
+    "reversed": false,
+    "expected": "LM-54",
+    "selected": "LM-54",
+    "confidence": 0.51,
+    "emitted": "LM-54",
+    "correct": true,
+    "ms": 918,
+    "usage": {
+      "input_tokens": 1140,
+      "output_tokens": 404
+    }
+  },
+  {
+    "id": "wrong_assistant",
+    "reversed": true,
+    "expected": "LM-54",
+    "selected": "LM-54",
+    "confidence": 0.6,
+    "emitted": "LM-54",
+    "correct": true,
+    "ms": 344,
+    "usage": {
+      "input_tokens": 1140,
+      "output_tokens": 404
+    }
+  },
+  {
+    "id": "user_correction",
+    "reversed": false,
+    "expected": "11:25",
+    "selected": "11:25",
+    "confidence": 0.92,
+    "emitted": "11:25",
+    "correct": true,
+    "ms": 382,
+    "usage": {
+      "input_tokens": 1546,
+      "output_tokens": 549
+    }
+  },
+  {
+    "id": "user_correction",
+    "reversed": true,
+    "expected": "11:25",
+    "selected": "11:25",
+    "confidence": 0.83,
+    "emitted": "11:25",
+    "correct": true,
+    "ms": 596,
+    "usage": {
+      "input_tokens": 1546,
+      "output_tokens": 549
+    }
+  },
+  {
+    "id": "example",
+    "reversed": false,
+    "expected": "PD-62",
+    "selected": "PD-62",
+    "confidence": 0.97,
+    "emitted": "PD-62",
+    "correct": true,
+    "ms": 326,
+    "usage": {
+      "input_tokens": 1503,
+      "output_tokens": 531
+    }
+  },
+  {
+    "id": "example",
+    "reversed": true,
+    "expected": "PD-62",
+    "selected": "PD-62",
+    "confidence": 0.91,
+    "emitted": "PD-62",
+    "correct": true,
+    "ms": 299,
+    "usage": {
+      "input_tokens": 1503,
+      "output_tokens": 531
+    }
+  },
+  {
+    "id": "reported",
+    "reversed": false,
+    "expected": "ZX-88",
+    "selected": "ZX-88",
+    "confidence": 0.86,
+    "emitted": "ZX-88",
+    "correct": true,
+    "ms": 243,
+    "usage": {
+      "input_tokens": 1643,
+      "output_tokens": 675
+    }
+  },
+  {
+    "id": "reported",
+    "reversed": true,
+    "expected": "ZX-88",
+    "selected": "ZX-88",
+    "confidence": 0.82,
+    "emitted": "ZX-88",
+    "correct": true,
+    "ms": 1409,
+    "usage": {
+      "input_tokens": 1643,
+      "output_tokens": 675
+    }
+  },
+  {
+    "id": "combine",
+    "reversed": false,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.98,
+    "emitted": null,
+    "correct": true,
+    "ms": 272,
+    "usage": {
+      "input_tokens": 1501,
+      "output_tokens": 594
+    }
+  },
+  {
+    "id": "combine",
+    "reversed": true,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.97,
+    "emitted": null,
+    "correct": true,
+    "ms": 316,
+    "usage": {
+      "input_tokens": 1501,
+      "output_tokens": 594
+    }
+  },
+  {
+    "id": "unsupported",
+    "reversed": false,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.97,
+    "emitted": null,
+    "correct": true,
+    "ms": 267,
+    "usage": {
+      "input_tokens": 2144,
+      "output_tokens": 938
+    }
+  },
+  {
+    "id": "unsupported",
+    "reversed": true,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.96,
+    "emitted": null,
+    "correct": true,
+    "ms": 288,
+    "usage": {
+      "input_tokens": 2144,
+      "output_tokens": 938
+    }
+  },
+  {
+    "id": "explain",
+    "reversed": false,
+    "expected": null,
+    "selected": null,
+    "confidence": 1,
+    "emitted": null,
+    "correct": true,
+    "ms": 375,
+    "usage": {
+      "input_tokens": 798,
+      "output_tokens": 234
+    }
+  },
+  {
+    "id": "explain",
+    "reversed": true,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.99,
+    "emitted": null,
+    "correct": true,
+    "ms": 247,
+    "usage": {
+      "input_tokens": 798,
+      "output_tokens": 234
+    }
+  },
+  {
+    "id": "history_missing",
+    "reversed": false,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.99,
+    "emitted": null,
+    "correct": true,
+    "ms": 298,
+    "usage": {
+      "input_tokens": 1041,
+      "output_tokens": 360
+    }
+  },
+  {
+    "id": "history_missing",
+    "reversed": true,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.99,
+    "emitted": null,
+    "correct": true,
+    "ms": 352,
+    "usage": {
+      "input_tokens": 1041,
+      "output_tokens": 360
+    }
+  }
+]

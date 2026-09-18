@@ -1,0 +1,50 @@
+[
+  {
+    "format": "full",
+    "id": "identity",
+    "user": "Hello. Who are you?",
+    "text": "I am Jev",
+    "reason": "complete",
+    "requests": 9,
+    "inputTokens": 55755,
+    "outputTokens": 58608,
+    "ms": 7333,
+    "firstMs": 4994
+  },
+  {
+    "format": "full",
+    "id": "identity",
+    "user": "What can you help me with?",
+    "text": "I can help with questions about programming",
+    "reason": "complete",
+    "requests": 17,
+    "inputTokens": 84219,
+    "outputTokens": 85285,
+    "ms": 5942,
+    "firstMs": 1514
+  },
+  {
+    "format": "full",
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "text": "Because water becomes gas.",
+    "reason": "complete",
+    "requests": 13,
+    "inputTokens": 70291,
+    "outputTokens": 72847,
+    "ms": 5268,
+    "firstMs": 1339
+  },
+  {
+    "format": "full",
+    "id": "explanation",
+    "user": "Explain that more simply.",
+    "text": "Because water becomes gas. Heat helps.",
+    "reason": "complete",
+    "requests": 19,
+    "inputTokens": 92270,
+    "outputTokens": 93209,
+    "ms": 6840,
+    "firstMs": 1272
+  }
+]

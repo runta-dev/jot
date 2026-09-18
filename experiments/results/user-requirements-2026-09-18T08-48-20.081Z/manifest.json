@@ -1,0 +1,19 @@
+{
+  "protocol": "research/R36-user-requirements.md",
+  "cases": [
+    {
+      "id": "retain",
+      "turns": [
+        "Rewrite politely: Send the invoice by Monday.",
+        "Make it shorter, keep the deadline."
+      ]
+    },
+    {
+      "id": "replace",
+      "turns": [
+        "Write a warm one-sentence invitation to lunch.",
+        "Make it formal instead, still one sentence."
+      ]
+    }
+  ]
+}

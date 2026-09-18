@@ -1,0 +1,5 @@
+{
+  "source": "experiments/results/continuation-2026-09-18T07-32-05.542Z/trace.jsonl",
+  "protocol": "research/R15.2-rerank-ablation.md",
+  "states": 26
+}

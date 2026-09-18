@@ -1,0 +1,50 @@
+[
+  {
+    "id": "stated",
+    "text": "16:20",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 5,
+      "inputTokens": 43410,
+      "outputTokens": 45548
+    },
+    "ms": 2867
+  },
+  {
+    "id": "missing",
+    "text": "Unknown",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 5,
+      "inputTokens": 43395,
+      "outputTokens": 45522
+    },
+    "ms": 2308
+  },
+  {
+    "id": "conflict",
+    "text": "Multiple depends because there are two times. Confirm which one? Please.",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 31,
+      "inputTokens": 144483,
+      "outputTokens": 137522
+    },
+    "ms": 11955
+  },
+  {
+    "id": "corrected",
+    "text": "17:40",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 5,
+      "inputTokens": 43717,
+      "outputTokens": 45501
+    },
+    "ms": 3056
+  }
+]

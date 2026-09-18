@@ -1,0 +1,17 @@
+{
+  "protocol": "research/R30-evidence-injection.md",
+  "sources": [
+    {
+      "url": "https://science.nasa.gov/eclips/videos/suns-position/",
+      "text": "Find out more about how our sun's position in the sky changes due to Earth's rotation, revolution and tilt."
+    },
+    {
+      "url": "https://pubs.usgs.gov/chapter11/chapter11M.html",
+      "text": "Evaporation [hydrology]: Process by which water is changed from a liquid into a vapor."
+    }
+  ],
+  "prompts": [
+    "Why does a shadow change position during the day?",
+    "Why do wet clothes dry?"
+  ]
+}

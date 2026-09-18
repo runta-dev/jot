@@ -1,0 +1,357 @@
+{
+  "directory": "experiments/results/editor-2026-09-18T02-10-54-852Z",
+  "model": "jev-latest",
+  "returnedModels": [
+    "jev-1.13.0"
+  ],
+  "requests": 72,
+  "errors": 0,
+  "repair": {
+    "requests": 36,
+    "choice": {
+      "correct": 33,
+      "total": 36
+    },
+    "scoreUniqueTop": {
+      "correct": 33,
+      "total": 36
+    },
+    "draftReady": {
+      "correct": 33,
+      "total": 36
+    },
+    "candidateAcceptance": {
+      "correct": 0,
+      "total": 0
+    },
+    "falseAccepts": 0,
+    "falseRejects": 0
+  },
+  "quality": {
+    "requests": 36,
+    "choice": {
+      "correct": 36,
+      "total": 36
+    },
+    "scoreUniqueTop": {
+      "correct": 30,
+      "total": 30
+    },
+    "draftReady": {
+      "correct": 0,
+      "total": 0
+    },
+    "candidateAcceptance": {
+      "correct": 144,
+      "total": 144
+    },
+    "falseAccepts": 0,
+    "falseRejects": 0
+  },
+  "repairOnly": {
+    "correct": 24,
+    "total": 24
+  },
+  "preserveControls": {
+    "correct": 9,
+    "total": 12
+  },
+  "latencyMs": {
+    "median": 283,
+    "max": 6257
+  },
+  "usage": {
+    "input_tokens": 85065,
+    "output_tokens": 12480
+  },
+  "perCase": [
+    {
+      "id": "r01",
+      "category": "missing_letter",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "r02",
+      "category": "repeated_letter",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "r03",
+      "category": "repeated_space",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "r04",
+      "category": "repeated_word",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "r05",
+      "category": "agreement",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "r06",
+      "category": "article",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "r07",
+      "category": "punctuation",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "r08",
+      "category": "proper_noun",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "r09",
+      "category": "preserve_negation",
+      "choice": {
+        "correct": 0,
+        "total": 3
+      },
+      "score": {
+        "correct": 0,
+        "total": 3
+      }
+    },
+    {
+      "id": "r10",
+      "category": "preserve_number",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "r11",
+      "category": "preserve_verbatim",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "r12",
+      "category": "preserve_literal_space",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "q01",
+      "category": "relevant_vs_fluent",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "q02",
+      "category": "grounded_identity",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "q03",
+      "category": "arithmetic",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "q04",
+      "category": "negation_rule",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "q05",
+      "category": "missing_evidence",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "q06",
+      "category": "multiple_requirements",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "q07",
+      "category": "format_constraint",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "q08",
+      "category": "history_reference",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "q09",
+      "category": "short_vs_fluent_wrong",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "q10",
+      "category": "unsupported_addition",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 3,
+        "total": 3
+      }
+    },
+    {
+      "id": "q11",
+      "category": "all_candidates_wrong",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 0,
+        "total": 0
+      }
+    },
+    {
+      "id": "q12",
+      "category": "all_candidates_violate_format",
+      "choice": {
+        "correct": 3,
+        "total": 3
+      },
+      "score": {
+        "correct": 0,
+        "total": 0
+      }
+    }
+  ]
+}

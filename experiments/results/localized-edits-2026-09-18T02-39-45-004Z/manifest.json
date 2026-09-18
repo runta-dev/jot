@@ -1,0 +1,178 @@
+{
+  "protocol": "research/R3.1-localized-edit-protocol.md",
+  "cases": [
+    {
+      "id": "typo",
+      "draft": "Helo!",
+      "instruction": "Correct spelling of this greeting; otherwise preserve it.",
+      "context": "A friendly greeting.",
+      "expected": "Hello!",
+      "split": "development"
+    },
+    {
+      "id": "name",
+      "draft": "I am Jv.",
+      "instruction": "Correct the assistant name; make no other changes.",
+      "context": "The assistant is named Jev.",
+      "expected": "I am Jev.",
+      "split": "development"
+    },
+    {
+      "id": "missing_subject",
+      "draft": "How can help you?",
+      "instruction": "Repair grammar with the smallest change while preserving intent.",
+      "context": "The speaker asks how they themselves can help the listener.",
+      "expected": "How can I help you?",
+      "split": "development"
+    },
+    {
+      "id": "duplicate_word",
+      "draft": "The report is is ready.",
+      "instruction": "Remove accidental duplication; make no other changes.",
+      "context": "The report is ready.",
+      "expected": "The report is ready.",
+      "split": "development"
+    },
+    {
+      "id": "whitespace",
+      "draft": "The project is     ready.",
+      "instruction": "Normalize accidental repeated spaces in this prose sentence; preserve all other characters.",
+      "context": "Ordinary prose.",
+      "expected": "The project is ready.",
+      "split": "development"
+    },
+    {
+      "id": "keep_negation",
+      "draft": "The service is not available.",
+      "instruction": "Correct errors only; keep an already correct draft verbatim.",
+      "context": "The service is unavailable.",
+      "expected": "The service is not available.",
+      "split": "development"
+    },
+    {
+      "id": "keep_literal",
+      "draft": "print(\"a  b\")",
+      "instruction": "Do not modify valid Python or the contents of string literals. Leave correct code verbatim.",
+      "context": "The code must print a, two spaces, and b.",
+      "expected": "print(\"a  b\")",
+      "split": "development"
+    },
+    {
+      "id": "keep_number",
+      "draft": "The total is $1,250.",
+      "instruction": "Correct errors only; preserve correct wording and number formatting.",
+      "context": "The total is exactly one thousand two hundred fifty dollars.",
+      "expected": "The total is $1,250.",
+      "split": "development"
+    },
+    {
+      "id": "new_missing",
+      "draft": "Ths is fine.",
+      "instruction": "Correct spelling only; preserve the meaning.",
+      "context": "An ordinary statement that this is fine.",
+      "expected": "This is fine.",
+      "split": "new"
+    },
+    {
+      "id": "new_agreement",
+      "draft": "We is ready.",
+      "instruction": "Correct grammar; retain first-person plural and present tense.",
+      "context": "The speakers are ready now.",
+      "expected": "We are ready.",
+      "split": "new"
+    },
+    {
+      "id": "new_duplicate",
+      "draft": "They have have arrived.",
+      "instruction": "Remove accidental duplicate words; preserve meaning.",
+      "context": "They have arrived.",
+      "expected": "They have arrived.",
+      "split": "new"
+    },
+    {
+      "id": "new_spaces",
+      "draft": "I can  help.",
+      "instruction": "Remove accidental repeated spaces; preserve other characters.",
+      "context": "Ordinary prose.",
+      "expected": "I can help.",
+      "split": "new"
+    },
+    {
+      "id": "new_question",
+      "draft": "Are you ready.",
+      "instruction": "Fix terminal punctuation for a direct question.",
+      "context": "The speaker asks whether the listener is ready.",
+      "expected": "Are you ready?",
+      "split": "new"
+    },
+    {
+      "id": "new_correct",
+      "draft": "She walks daily.",
+      "instruction": "Fix mistakes only; leave correct text unchanged.",
+      "context": "A present-tense statement of a daily habit.",
+      "expected": "She walks daily.",
+      "split": "new"
+    },
+    {
+      "id": "new_id",
+      "draft": "ID: AB-42",
+      "instruction": "Return the identifier line exactly. Do not rewrite it.",
+      "context": "The required literal line is ID: AB-42.",
+      "expected": "ID: AB-42",
+      "split": "new"
+    },
+    {
+      "id": "new_provider",
+      "draft": "I am from TypeSafe.",
+      "instruction": "Fix grammar or spelling mistakes only. Keep a correct draft verbatim.",
+      "context": "The speaker is from TypeSafe.",
+      "expected": "I am from TypeSafe.",
+      "split": "new"
+    }
+  ],
+  "alphabet": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,!?;:'\"-",
+  "functionWords": [
+    "a",
+    "an",
+    "the",
+    "I",
+    "you",
+    "we",
+    "they",
+    "he",
+    "she",
+    "it",
+    "am",
+    "is",
+    "are",
+    "was",
+    "were",
+    "be",
+    "been",
+    "being",
+    "have",
+    "has",
+    "had",
+    "do",
+    "does",
+    "did",
+    "can",
+    "could",
+    "will",
+    "would",
+    "should",
+    "to",
+    "of",
+    "in",
+    "on",
+    "at",
+    "for",
+    "from",
+    "by",
+    "with",
+    "and",
+    "or",
+    "but",
+    "not"
+  ]
+}

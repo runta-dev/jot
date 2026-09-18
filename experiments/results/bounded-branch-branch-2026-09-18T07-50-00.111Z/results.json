@@ -1,0 +1,50 @@
+[
+  {
+    "arm": "branch",
+    "id": "ice",
+    "user": "Why does ice melt in a warm room?",
+    "text": "Because heat transfer from air to ice causes melting",
+    "reason": "complete",
+    "requests": 34,
+    "inputTokens": 145774,
+    "outputTokens": 143874,
+    "ms": 12436,
+    "firstMs": 8404
+  },
+  {
+    "arm": "branch",
+    "id": "ice",
+    "user": "Explain it to a young child.",
+    "text": "Imagine that ice is cold and it gets warm and melts. It becomes water.",
+    "reason": "complete",
+    "requests": 61,
+    "inputTokens": 251708,
+    "outputTokens": 237505,
+    "ms": 20625,
+    "firstMs": 7181
+  },
+  {
+    "arm": "branch",
+    "id": "bird",
+    "user": "Write a short story about a bird missing its home.",
+    "text": "There was a bird that was lost and searching for its home. Then it flew away. But it returned home.",
+    "reason": "complete",
+    "requests": 75,
+    "inputTokens": 298083,
+    "outputTokens": 282571,
+    "ms": 28145,
+    "firstMs": 8855
+  },
+  {
+    "arm": "branch",
+    "id": "bird",
+    "user": "Give the story a surprising but happy ending.",
+    "text": "It found its family.",
+    "reason": "complete",
+    "requests": 26,
+    "inputTokens": 116994,
+    "outputTokens": 116081,
+    "ms": 10073,
+    "firstMs": 8303
+  }
+]

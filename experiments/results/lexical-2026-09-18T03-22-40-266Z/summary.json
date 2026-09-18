@@ -1,0 +1,488 @@
+{
+  "directory": "experiments/results/lexical-2026-09-18T03-22-40-266Z",
+  "rows": [
+    {
+      "id": "sky",
+      "pos": "N",
+      "repeat": 1,
+      "selected": "air",
+      "exactIllustrativeMatch": true,
+      "fullVocabularyCovered": [
+        "light",
+        "air",
+        "atmosphere"
+      ],
+      "shortlistCovered": [
+        "light",
+        "air"
+      ],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 10627,
+        "output_tokens": 2050
+      },
+      "elapsedMs": 1704
+    },
+    {
+      "id": "sky",
+      "pos": "N",
+      "repeat": 0,
+      "selected": "atmosphere",
+      "exactIllustrativeMatch": true,
+      "fullVocabularyCovered": [
+        "light",
+        "air",
+        "atmosphere"
+      ],
+      "shortlistCovered": [
+        "light",
+        "air",
+        "atmosphere"
+      ],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 10600,
+        "output_tokens": 2015
+      },
+      "elapsedMs": 1727
+    },
+    {
+      "id": "sky",
+      "pos": "V",
+      "repeat": 0,
+      "selected": "refract",
+      "exactIllustrativeMatch": false,
+      "fullVocabularyCovered": [
+        "scatter"
+      ],
+      "shortlistCovered": [],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 18559,
+        "output_tokens": 2358
+      },
+      "elapsedMs": 822
+    },
+    {
+      "id": "procrastination",
+      "pos": "N",
+      "repeat": 0,
+      "selected": "technique",
+      "exactIllustrativeMatch": false,
+      "fullVocabularyCovered": [
+        "task",
+        "step",
+        "goal",
+        "work",
+        "plan",
+        "time"
+      ],
+      "shortlistCovered": [],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 10629,
+        "output_tokens": 2039
+      },
+      "elapsedMs": 592
+    },
+    {
+      "id": "sky",
+      "pos": "V",
+      "repeat": 1,
+      "selected": "refract",
+      "exactIllustrativeMatch": false,
+      "fullVocabularyCovered": [
+        "scatter"
+      ],
+      "shortlistCovered": [],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 18557,
+        "output_tokens": 2354
+      },
+      "elapsedMs": 1831
+    },
+    {
+      "id": "procrastination",
+      "pos": "N",
+      "repeat": 1,
+      "selected": "task",
+      "exactIllustrativeMatch": true,
+      "fullVocabularyCovered": [
+        "task",
+        "step",
+        "goal",
+        "work",
+        "plan",
+        "time"
+      ],
+      "shortlistCovered": [
+        "task"
+      ],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 10566,
+        "output_tokens": 1985
+      },
+      "elapsedMs": 515
+    },
+    {
+      "id": "procrastination",
+      "pos": "V",
+      "repeat": 0,
+      "selected": "prioritize",
+      "exactIllustrativeMatch": false,
+      "fullVocabularyCovered": [
+        "start",
+        "begin",
+        "plan",
+        "focus",
+        "schedule",
+        "divide",
+        "break"
+      ],
+      "shortlistCovered": [],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 18552,
+        "output_tokens": 2344
+      },
+      "elapsedMs": 1066
+    },
+    {
+      "id": "procrastination",
+      "pos": "V",
+      "repeat": 1,
+      "selected": "recommend",
+      "exactIllustrativeMatch": false,
+      "fullVocabularyCovered": [
+        "start",
+        "begin",
+        "plan",
+        "focus",
+        "schedule",
+        "divide",
+        "break"
+      ],
+      "shortlistCovered": [],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 18511,
+        "output_tokens": 2299
+      },
+      "elapsedMs": 1025
+    },
+    {
+      "id": "tired",
+      "pos": "N",
+      "repeat": 0,
+      "selected": "sleep",
+      "exactIllustrativeMatch": true,
+      "fullVocabularyCovered": [
+        "sleep",
+        "rest"
+      ],
+      "shortlistCovered": [
+        "sleep"
+      ],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 10657,
+        "output_tokens": 2066
+      },
+      "elapsedMs": 608
+    },
+    {
+      "id": "tired",
+      "pos": "N",
+      "repeat": 1,
+      "selected": "help",
+      "exactIllustrativeMatch": false,
+      "fullVocabularyCovered": [
+        "sleep",
+        "rest"
+      ],
+      "shortlistCovered": [
+        "sleep"
+      ],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 10553,
+        "output_tokens": 1972
+      },
+      "elapsedMs": 621
+    },
+    {
+      "id": "tired",
+      "pos": "V",
+      "repeat": 0,
+      "selected": "recommend",
+      "exactIllustrativeMatch": false,
+      "fullVocabularyCovered": [
+        "sleep",
+        "rest"
+      ],
+      "shortlistCovered": [
+        "sleep"
+      ],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 18534,
+        "output_tokens": 2320
+      },
+      "elapsedMs": 670
+    },
+    {
+      "id": "tired",
+      "pos": "V",
+      "repeat": 1,
+      "selected": "rest",
+      "exactIllustrativeMatch": true,
+      "fullVocabularyCovered": [
+        "sleep",
+        "rest"
+      ],
+      "shortlistCovered": [
+        "rest"
+      ],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 18491,
+        "output_tokens": 2275
+      },
+      "elapsedMs": 648
+    },
+    {
+      "id": "plant",
+      "pos": "N",
+      "repeat": 0,
+      "selected": "energy",
+      "exactIllustrativeMatch": true,
+      "fullVocabularyCovered": [
+        "energy",
+        "food"
+      ],
+      "shortlistCovered": [
+        "energy"
+      ],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 10631,
+        "output_tokens": 2049
+      },
+      "elapsedMs": 651
+    },
+    {
+      "id": "plant",
+      "pos": "N",
+      "repeat": 1,
+      "selected": "synthesis",
+      "exactIllustrativeMatch": false,
+      "fullVocabularyCovered": [
+        "energy",
+        "food"
+      ],
+      "shortlistCovered": [],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 10610,
+        "output_tokens": 2041
+      },
+      "elapsedMs": 650
+    },
+    {
+      "id": "plant",
+      "pos": "V",
+      "repeat": 1,
+      "selected": "process",
+      "exactIllustrativeMatch": false,
+      "fullVocabularyCovered": [
+        "grow",
+        "produce"
+      ],
+      "shortlistCovered": [],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 18498,
+        "output_tokens": 2292
+      },
+      "elapsedMs": 591
+    },
+    {
+      "id": "plant",
+      "pos": "V",
+      "repeat": 0,
+      "selected": "enable",
+      "exactIllustrativeMatch": false,
+      "fullVocabularyCovered": [
+        "grow",
+        "produce"
+      ],
+      "shortlistCovered": [],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 18525,
+        "output_tokens": 2321
+      },
+      "elapsedMs": 1280
+    },
+    {
+      "id": "rust",
+      "pos": "N",
+      "repeat": 0,
+      "selected": "oxygen",
+      "exactIllustrativeMatch": true,
+      "fullVocabularyCovered": [
+        "oxygen",
+        "water"
+      ],
+      "shortlistCovered": [
+        "oxygen"
+      ],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 10755,
+        "output_tokens": 2167
+      },
+      "elapsedMs": 1454
+    },
+    {
+      "id": "rust",
+      "pos": "N",
+      "repeat": 1,
+      "selected": "oxygen",
+      "exactIllustrativeMatch": true,
+      "fullVocabularyCovered": [
+        "oxygen",
+        "water"
+      ],
+      "shortlistCovered": [
+        "oxygen"
+      ],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 10743,
+        "output_tokens": 2164
+      },
+      "elapsedMs": 793
+    },
+    {
+      "id": "rust",
+      "pos": "V",
+      "repeat": 0,
+      "selected": "oxidize",
+      "exactIllustrativeMatch": true,
+      "fullVocabularyCovered": [
+        "oxidize",
+        "corrode",
+        "rust"
+      ],
+      "shortlistCovered": [
+        "oxidize",
+        "corrode"
+      ],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 18491,
+        "output_tokens": 2293
+      },
+      "elapsedMs": 674
+    },
+    {
+      "id": "rust",
+      "pos": "V",
+      "repeat": 1,
+      "selected": "oxidize",
+      "exactIllustrativeMatch": true,
+      "fullVocabularyCovered": [
+        "oxidize",
+        "corrode",
+        "rust"
+      ],
+      "shortlistCovered": [
+        "oxidize",
+        "rust"
+      ],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 18512,
+        "output_tokens": 2312
+      },
+      "elapsedMs": 1168
+    },
+    {
+      "id": "ice",
+      "pos": "N",
+      "repeat": 0,
+      "selected": "density",
+      "exactIllustrativeMatch": true,
+      "fullVocabularyCovered": [
+        "density"
+      ],
+      "shortlistCovered": [
+        "density"
+      ],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 10592,
+        "output_tokens": 2009
+      },
+      "elapsedMs": 539
+    },
+    {
+      "id": "ice",
+      "pos": "N",
+      "repeat": 1,
+      "selected": "density",
+      "exactIllustrativeMatch": true,
+      "fullVocabularyCovered": [
+        "density"
+      ],
+      "shortlistCovered": [
+        "density"
+      ],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 10579,
+        "output_tokens": 2006
+      },
+      "elapsedMs": 709
+    },
+    {
+      "id": "ice",
+      "pos": "V",
+      "repeat": 0,
+      "selected": "expand",
+      "exactIllustrativeMatch": true,
+      "fullVocabularyCovered": [
+        "expand"
+      ],
+      "shortlistCovered": [
+        "expand"
+      ],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 18538,
+        "output_tokens": 2328
+      },
+      "elapsedMs": 1061
+    },
+    {
+      "id": "ice",
+      "pos": "V",
+      "repeat": 1,
+      "selected": "freeze",
+      "exactIllustrativeMatch": false,
+      "fullVocabularyCovered": [
+        "expand"
+      ],
+      "shortlistCovered": [],
+      "requests": 2,
+      "usage": {
+        "input_tokens": 18538,
+        "output_tokens": 2326
+      },
+      "elapsedMs": 742
+    }
+  ]
+}

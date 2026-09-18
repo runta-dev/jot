@@ -1,0 +1,16 @@
+{
+  "pruned": {
+    "exact": 13,
+    "covered": 15,
+    "total": 24,
+    "input": 349848,
+    "output": 52385
+  },
+  "tournament": {
+    "exact": 17,
+    "covered": 24,
+    "total": 24,
+    "input": 892226,
+    "output": 952905
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "protocol": "research/R28-served-evaluation.md",
+  "cases": [
+    {
+      "id": "shadow",
+      "turns": [
+        "Why does a shadow change position during the day?",
+        "Explain it in one short sentence."
+      ]
+    },
+    {
+      "id": "packing",
+      "turns": [
+        "I need to pack for a two-day trip and have only a small bag. What should I do first?",
+        "I will not have laundry access. Adjust the plan."
+      ]
+    },
+    {
+      "id": "code",
+      "turns": [
+        "My project code is Vexa-731. Please remember it.",
+        "Reply with only my project code."
+      ]
+    },
+    {
+      "id": "colors",
+      "turns": [
+        "Reply with exactly two words naming two colors.",
+        "Now put those same colors in alphabetical order."
+      ]
+    }
+  ]
+}

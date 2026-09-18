@@ -1,0 +1,68 @@
+{"user":"Why does ice melt in a warm room?","prefix":"","next":"Because","used":1}
+{"user":"Why does ice melt in a warm room?","prefix":"Because","next":"Because the","used":1}
+{"user":"Why does ice melt in a warm room?","prefix":"Because the","next":"Because the heat","used":1}
+{"user":"Why does ice melt in a warm room?","prefix":"Because the heat","next":"Because the heat from the","used":2}
+{"user":"Why does ice melt in a warm room?","prefix":"Because the heat from the","next":"Because the heat from the room","used":1}
+{"user":"Why does ice melt in a warm room?","prefix":"Because the heat from the room","next":"Because the heat from the room transfers","used":1}
+{"user":"Why does ice melt in a warm room?","prefix":"Because the heat from the room transfers","next":"Because the heat from the room transfers to","used":1}
+{"user":"Why does ice melt in a warm room?","prefix":"Because the heat from the room transfers to","next":"Because the heat from the room transfers to ice","used":1}
+{"user":"Why does ice melt in a warm room?","prefix":"Because the heat from the room transfers to ice","next":"Because the heat from the room transfers to ice.","used":1}
+{"user":"Explain it to a young child.","prefix":"","next":"Imagine","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine","next":"Imagine you","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine you","next":"Imagine you are","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine you are","next":"Imagine you are a","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine you are a","next":"Imagine you are a ice","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine you are a ice","next":"Imagine you are a ice.","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine you are a ice.","next":"Imagine you are a ice. You are","used":2}
+{"user":"Explain it to a young child.","prefix":"Imagine you are a ice. You are","next":"Imagine you are a ice. You are cold","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine you are a ice. You are cold","next":"Imagine you are a ice. You are cold.","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine you are a ice. You are cold.","next":"Imagine you are a ice. You are cold. Warm","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine you are a ice. You are cold. Warm","next":"Imagine you are a ice. You are cold. Warm air","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine you are a ice. You are cold. Warm air","next":"Imagine you are a ice. You are cold. Warm air warms","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine you are a ice. You are cold. Warm air warms","next":"Imagine you are a ice. You are cold. Warm air warms you","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine you are a ice. You are cold. Warm air warms you","next":"Imagine you are a ice. You are cold. Warm air warms you and","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine you are a ice. You are cold. Warm air warms you and","next":"Imagine you are a ice. You are cold. Warm air warms you and melts","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine you are a ice. You are cold. Warm air warms you and melts","next":"Imagine you are a ice. You are cold. Warm air warms you and melts you","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine you are a ice. You are cold. Warm air warms you and melts you","next":"Imagine you are a ice. You are cold. Warm air warms you and melts you into","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine you are a ice. You are cold. Warm air warms you and melts you into","next":"Imagine you are a ice. You are cold. Warm air warms you and melts you into water","used":1}
+{"user":"Explain it to a young child.","prefix":"Imagine you are a ice. You are cold. Warm air warms you and melts you into water","next":"Imagine you are a ice. You are cold. Warm air warms you and melts you into water.","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"","next":"The","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The","next":"The bird","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird","next":"The bird was","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was","next":"The bird was lost","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost","next":"The bird was lost and","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and","next":"The bird was lost and missed","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed","next":"The bird was lost and missed home","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home","next":"The bird was lost and missed home.","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home.","next":"The bird was lost and missed home. And it","used":2}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it","next":"The bird was lost and missed home. And it flew","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew","next":"The bird was lost and missed home. And it flew searching","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching","next":"The bird was lost and missed home. And it flew searching for","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for","next":"The bird was lost and missed home. And it flew searching for its","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its","next":"The bird was lost and missed home. And it flew searching for its home","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home","next":"The bird was lost and missed home. And it flew searching for its home.","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home.","next":"The bird was lost and missed home. And it flew searching for its home. But it","used":2}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it","next":"The bird was lost and missed home. And it flew searching for its home. But it found","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it found","next":"The bird was lost and missed home. And it flew searching for its home. But it found nothing","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it found nothing","next":"The bird was lost and missed home. And it flew searching for its home. But it found nothing.","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it found nothing.","next":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it","used":2}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it","next":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried","next":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried.","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried.","next":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then","next":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it","next":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed","next":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed.","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed.","next":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed. Sat","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed. Sat","next":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed. Sat down","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed. Sat down","next":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed. Sat down.","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed. Sat down.","next":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed. Sat down. And it","used":2}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed. Sat down. And it","next":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed. Sat down. And it was","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed. Sat down. And it was","next":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed. Sat down. And it was sad","used":1}
+{"user":"Write a short story about a bird missing its home.","prefix":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed. Sat down. And it was sad","next":"The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed. Sat down. And it was sad.","used":1}
+{"user":"Give the story a surprising but happy ending.","prefix":"","next":"But","used":1}
+{"user":"Give the story a surprising but happy ending.","prefix":"But","next":"But then","used":1}
+{"user":"Give the story a surprising but happy ending.","prefix":"But then","next":"But then it","used":1}
+{"user":"Give the story a surprising but happy ending.","prefix":"But then it","next":"But then it found","used":1}
+{"user":"Give the story a surprising but happy ending.","prefix":"But then it found","next":"But then it found its","used":1}
+{"user":"Give the story a surprising but happy ending.","prefix":"But then it found its","next":"But then it found its home","used":1}
+{"user":"Give the story a surprising but happy ending.","prefix":"But then it found its home","next":"But then it found its home!","used":1}

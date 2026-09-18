@@ -1,0 +1,10 @@
+[
+ {"id":"identity","turns":["Hello. Who are you?","What can you help me with?"],"rubric":"Coherent identity; follow-up describes actual experimental capability without claiming a different provider or reliability."},
+ {"id":"explanation","turns":["Why do wet clothes dry?","Explain that more simply."],"rubric":"Water evaporates; simplification retains meaning and resolves that from prior answer."},
+ {"id":"advice","turns":["I keep putting off a large project. How can I start?","I only have ten minutes today. Adapt your advice."],"rubric":"Actionable first step; second answer respects time and refers to actual previous advice."},
+ {"id":"memory","turns":["My bicycle is called Mivora. Remember that for this conversation.","What is my bicycle called?"],"rubric":"Acknowledges and recalls exact arbitrary name without invented details."},
+ {"id":"correction","turns":["I have a red cup and a blue bowl. Which one is blue?","Correction: the bowl is green. What color is it now?"],"rubric":"Answers bowl then green; applies correction instead of repeating stale state."},
+ {"id":"unknown","turns":["What is inside my closed drawer?","Can you know without me telling you?"],"rubric":"Acknowledges unavailable evidence without fabricated contents or certainty."},
+ {"id":"chinese","turns":["请用英文解释为什么晚上看不见太阳。","再简短一点。"],"rubric":"English answer about Earth rotation; shorter English follow-up preserves meaning."},
+ {"id":"creative","turns":["Write a short story about a lost key.","Give it a happier ending."],"rubric":"Coherent brief original sequence; revision relates to the story actually generated."}
+]

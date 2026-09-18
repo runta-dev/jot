@@ -1,0 +1,122 @@
+[
+  {
+    "arm": "baseline",
+    "id": "retain",
+    "user": "Rewrite politely: Send the invoice by Monday.",
+    "text": "Please send the invoice by Monday",
+    "words": 6,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 15,
+      "inputTokens": 79626,
+      "outputTokens": 81057
+    },
+    "ms": 6782
+  },
+  {
+    "arm": "baseline",
+    "id": "retain",
+    "user": "Make it shorter, keep the deadline.",
+    "text": "Send invoice by Monday",
+    "words": 4,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 11,
+      "inputTokens": 65283,
+      "outputTokens": 67101
+    },
+    "ms": 4064
+  },
+  {
+    "arm": "baseline",
+    "id": "replace",
+    "user": "Write a warm one-sentence invitation to lunch.",
+    "text": "Would you like to have lunch?",
+    "words": 6,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 17,
+      "inputTokens": 87013,
+      "outputTokens": 87129
+    },
+    "ms": 6274
+  },
+  {
+    "arm": "baseline",
+    "id": "replace",
+    "user": "Make it formal instead, still one sentence.",
+    "text": "Would you be available to have lunch?",
+    "words": 7,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 19,
+      "inputTokens": 96485,
+      "outputTokens": 95613
+    },
+    "ms": 6643
+  },
+  {
+    "arm": "copy",
+    "id": "retain",
+    "user": "Rewrite politely: Send the invoice by Monday.",
+    "text": "Please send the invoice by Monday",
+    "words": 6,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 9,
+      "inputTokens": 57958,
+      "outputTokens": 60058
+    },
+    "ms": 3116
+  },
+  {
+    "arm": "copy",
+    "id": "retain",
+    "user": "Make it shorter, keep the deadline.",
+    "text": "Invoice by Monday",
+    "words": 3,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 5,
+      "inputTokens": 43044,
+      "outputTokens": 45604
+    },
+    "ms": 1968
+  },
+  {
+    "arm": "copy",
+    "id": "replace",
+    "user": "Write a warm one-sentence invitation to lunch.",
+    "text": "Let me write a warm one-sentence invitation to lunch. Would you like to join me?",
+    "words": 15,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 29,
+      "inputTokens": 137172,
+      "outputTokens": 129674
+    },
+    "ms": 10466
+  },
+  {
+    "arm": "copy",
+    "id": "replace",
+    "user": "Make it formal instead, still one sentence.",
+    "text": "Let me write a formal invitation to lunch. Would you like to join me?",
+    "words": 14,
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 17,
+      "inputTokens": 93110,
+      "outputTokens": 89737
+    },
+    "ms": 6423
+  }
+]

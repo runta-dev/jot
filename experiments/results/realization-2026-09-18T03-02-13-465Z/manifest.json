@@ -1,0 +1,87 @@
+{
+  "protocol": "research/R5-realization-protocol.md",
+  "cases": [
+    {
+      "id": "identity",
+      "request": "Who are you? State your name and provider in one sentence.",
+      "facts": "name: Jev; provider: TypeSafe; kind: AI assistant",
+      "required": [
+        "Jev",
+        "TypeSafe"
+      ]
+    },
+    {
+      "id": "incident",
+      "request": "Summarize the incident in one sentence, including the status and when it happened.",
+      "facts": "entity: the health endpoint; event: returned HTTP 503; day: Monday; time: 09:00; cause: unknown",
+      "required": [
+        "health endpoint",
+        "503",
+        "Monday",
+        "09:00"
+      ]
+    },
+    {
+      "id": "past",
+      "request": "Tell me what Mira did and when, in one sentence.",
+      "facts": "agent: Mira; action: sent; object: the report; time: yesterday",
+      "required": [
+        "Mira",
+        "sent",
+        "report",
+        "yesterday"
+      ]
+    },
+    {
+      "id": "negation",
+      "request": "Explain the service status in one sentence.",
+      "facts": "entity: the service; property: available; available: false; time: now",
+      "required": [
+        "service",
+        "not available"
+      ]
+    },
+    {
+      "id": "plural",
+      "request": "Describe what the servers do in one sentence.",
+      "facts": "agents: the servers; number: plural; action: process; object: requests; tense: present",
+      "required": [
+        "servers",
+        "process",
+        "requests"
+      ]
+    },
+    {
+      "id": "future",
+      "request": "Describe Ana's plan in one sentence, including when.",
+      "facts": "agent: Ana; action: visit; object: the museum; time: tomorrow",
+      "required": [
+        "Ana",
+        "visit",
+        "museum",
+        "tomorrow"
+      ]
+    },
+    {
+      "id": "passive",
+      "request": "Summarize what happened to the package in one sentence.",
+      "facts": "entity: the package; action: delivered; time: yesterday; agent: unknown",
+      "required": [
+        "package",
+        "delivered",
+        "yesterday"
+      ]
+    },
+    {
+      "id": "cause",
+      "request": "Explain why the launch is delayed in one sentence.",
+      "facts": "entity: the launch; status: delayed; reason: the tests failed; time: now",
+      "required": [
+        "launch",
+        "delayed",
+        "tests failed"
+      ]
+    }
+  ],
+  "library": "jsrealb 5.6.0"
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "shadow",
+    "user": "Why does a shadow change position during the day?",
+    "text": "Because the sun moves around earth. As the angle changes, the shadow changes direction.",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 37,
+      "inputTokens": 165745,
+      "outputTokens": 161579,
+      "elapsed": 14356
+    },
+    "ms": 14376,
+    "firstMs": 2158
+  },
+  {
+    "id": "shadow",
+    "user": "Explain it in one short sentence.",
+    "text": "Because the sun moves around earth.",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 17,
+      "inputTokens": 88120,
+      "outputTokens": 88346,
+      "elapsed": 6948
+    },
+    "ms": 6951,
+    "firstMs": 1584
+  },
+  {
+    "id": "packing",
+    "user": "I need to pack for a two-day trip and have only a small bag. What should I do first?",
+    "text": "First, list everything you need. Then choose the most important. Next pack.",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 35,
+      "inputTokens": 159552,
+      "outputTokens": 153826,
+      "elapsed": 13997
+    },
+    "ms": 13998,
+    "firstMs": 1392
+  },
+  {
+    "id": "packing",
+    "user": "I will not have laundry access. Adjust the plan.",
+    "text": "Understood Adjust plan First, list everything considering laundry access. Next choose most important. Bring enough clothes.",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 43,
+      "inputTokens": 193782,
+      "outputTokens": 180386,
+      "elapsed": 16639
+    },
+    "ms": 16640,
+    "firstMs": 1810
+  },
+  {
+    "id": "code",
+    "user": "My project code is Vexa-731. Please remember it.",
+    "text": "Okay remembered",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 7,
+      "inputTokens": 49789,
+      "outputTokens": 52576,
+      "elapsed": 3071
+    },
+    "ms": 3072,
+    "firstMs": 1719
+  },
+  {
+    "id": "code",
+    "user": "Reply with only my project code.",
+    "text": "Vexa seven one",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 9,
+      "inputTokens": 57632,
+      "outputTokens": 59613,
+      "elapsed": 4433
+    },
+    "ms": 4435,
+    "firstMs": 1744
+  },
+  {
+    "id": "colors",
+    "user": "Reply with exactly two words naming two colors.",
+    "text": "Red black",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 7,
+      "inputTokens": 50995,
+      "outputTokens": 53529,
+      "elapsed": 2941
+    },
+    "ms": 2943,
+    "firstMs": 1434
+  },
+  {
+    "id": "colors",
+    "user": "Now put those same colors in alphabetical order.",
+    "text": "Black red",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 7,
+      "inputTokens": 50189,
+      "outputTokens": 52621,
+      "elapsed": 3921
+    },
+    "ms": 3923,
+    "firstMs": 1708
+  }
+]

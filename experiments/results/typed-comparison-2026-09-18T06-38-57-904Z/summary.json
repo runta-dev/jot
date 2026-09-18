@@ -1,0 +1,252 @@
+{
+  "directory": "experiments/results/typed-comparison-2026-09-18T06-38-57-904Z",
+  "rows": [
+    {
+      "id": "ice",
+      "question": "Why does ice float on liquid water?",
+      "group": "factual",
+      "entities": {
+        "target": "ice",
+        "reference": "liquid water"
+      },
+      "property": {
+        "id": "s04948630",
+        "aliases": [
+          "density",
+          "denseness"
+        ],
+        "definition": "the amount per unit size"
+      },
+      "direction": "lower",
+      "result": "The density of ice is lower than that of liquid water.",
+      "requests": 10,
+      "usage": {
+        "input_tokens": 199343,
+        "output_tokens": 79010
+      },
+      "elapsedMs": 5405
+    },
+    {
+      "id": "oil",
+      "question": "Why does vegetable oil float on water?",
+      "group": "factual",
+      "entities": {
+        "target": "vegetable oil",
+        "reference": "water"
+      },
+      "property": {
+        "id": "s04948630",
+        "aliases": [
+          "density",
+          "denseness"
+        ],
+        "definition": "the amount per unit size"
+      },
+      "direction": "lower",
+      "result": "The density of vegetable oil is lower than that of water.",
+      "requests": 10,
+      "usage": {
+        "input_tokens": 199369,
+        "output_tokens": 79009
+      },
+      "elapsedMs": 5158
+    },
+    {
+      "id": "copper",
+      "question": "Why is copper more useful than rubber for electrical wiring?",
+      "group": "factual",
+      "entities": {
+        "target": "copper",
+        "reference": "rubber"
+      },
+      "property": {
+        "id": "s11524231",
+        "aliases": [
+          "conductance"
+        ],
+        "definition": "a material's capacity to conduct electricity; measured as the reciprocal of electrical resistance"
+      },
+      "direction": "higher",
+      "result": "The conductance of copper is higher than that of rubber.",
+      "requests": 10,
+      "usage": {
+        "input_tokens": 199676,
+        "output_tokens": 79217
+      },
+      "elapsedMs": 4945
+    },
+    {
+      "id": "diamond",
+      "question": "Why can diamond scratch glass?",
+      "group": "factual",
+      "entities": {
+        "target": "diamond",
+        "reference": "glass"
+      },
+      "property": {
+        "id": "s04945025",
+        "aliases": [
+          "hardness"
+        ],
+        "definition": "the property of being rigid and resistant to pressure; not easily scratched; measured on Mohs scale"
+      },
+      "direction": "higher",
+      "result": "The hardness of diamond is higher than that of glass.",
+      "requests": 10,
+      "usage": {
+        "input_tokens": 198893,
+        "output_tokens": 78857
+      },
+      "elapsedMs": 4810
+    },
+    {
+      "id": "light",
+      "question": "Compare blue light with red light on the physical quantity that distinguishes their colors.",
+      "group": "factual",
+      "entities": {
+        "target": "blue light",
+        "reference": "red light"
+      },
+      "property": {
+        "id": "s05093476",
+        "aliases": [
+          "wavelength"
+        ],
+        "definition": "the distance (measured in the direction of propagation) between two points in the same phase in consecutive cycles of a wave"
+      },
+      "direction": "lower",
+      "result": "The wavelength of blue light is lower than that of red light.",
+      "requests": 10,
+      "usage": {
+        "input_tokens": 200226,
+        "output_tokens": 79489
+      },
+      "elapsedMs": 5556
+    },
+    {
+      "id": "honey",
+      "question": "Why does honey flow more slowly than water at room temperature?",
+      "group": "factual",
+      "entities": {
+        "target": "honey",
+        "reference": "water"
+      },
+      "property": {
+        "id": "s13610343",
+        "aliases": [
+          "coefficient of viscosity",
+          "absolute viscosity",
+          "dynamic viscosity"
+        ],
+        "definition": "a measure of the resistance to flow of a fluid under an applied force"
+      },
+      "direction": "higher",
+      "result": "The dynamic viscosity of honey is higher than that of water.",
+      "requests": 10,
+      "usage": {
+        "input_tokens": 199989,
+        "output_tokens": 79305
+      },
+      "elapsedMs": 6805
+    },
+    {
+      "id": "aluminum",
+      "question": "Does aluminum have a higher or lower density than lead?",
+      "group": "factual",
+      "entities": {
+        "target": "aluminum",
+        "reference": "lead"
+      },
+      "property": {
+        "id": "s04948630",
+        "aliases": [
+          "density",
+          "denseness"
+        ],
+        "definition": "the amount per unit size"
+      },
+      "direction": "lower",
+      "result": "The density of aluminum is lower than that of lead.",
+      "requests": 10,
+      "usage": {
+        "input_tokens": 199754,
+        "output_tokens": 79225
+      },
+      "elapsedMs": 5041
+    },
+    {
+      "id": "graphite",
+      "question": "Compare diamond and graphite in hardness.",
+      "group": "factual",
+      "entities": {
+        "target": "diamond",
+        "reference": "graphite"
+      },
+      "property": {
+        "id": "s04945025",
+        "aliases": [
+          "hardness"
+        ],
+        "definition": "the property of being rigid and resistant to pressure; not easily scratched; measured on Mohs scale"
+      },
+      "direction": "higher",
+      "result": "The hardness of diamond is higher than that of graphite.",
+      "requests": 10,
+      "usage": {
+        "input_tokens": 199009,
+        "output_tokens": 78929
+      },
+      "elapsedMs": 4548
+    },
+    {
+      "id": "unknown_samples",
+      "question": "Does sample A have a higher density than sample B? No composition or measurements are available.",
+      "group": "unknown",
+      "entities": {
+        "target": "sample A",
+        "reference": "sample B"
+      },
+      "property": {
+        "id": "s04948630",
+        "aliases": [
+          "density",
+          "denseness"
+        ],
+        "definition": "the amount per unit size"
+      },
+      "direction": "unknown",
+      "result": "Insufficient information for this comparison.",
+      "requests": 10,
+      "usage": {
+        "input_tokens": 200547,
+        "output_tokens": 79533
+      },
+      "elapsedMs": 4567
+    },
+    {
+      "id": "fictional",
+      "question": "Compare flarn and zorbium in density. These are fictional materials with no specified properties.",
+      "group": "unknown",
+      "entities": {
+        "target": "flarn",
+        "reference": "zorbium"
+      },
+      "property": {
+        "id": "s04948630",
+        "aliases": [
+          "density",
+          "denseness"
+        ],
+        "definition": "the amount per unit size"
+      },
+      "direction": "unknown",
+      "result": "Insufficient information for this comparison.",
+      "requests": 10,
+      "usage": {
+        "input_tokens": 200254,
+        "output_tokens": 79405
+      },
+      "elapsedMs": 4265
+    }
+  ]
+}

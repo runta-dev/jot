@@ -1,0 +1,23 @@
+{
+  "hash": "9c965d384526facc59260e94f8ccff1582633fa385004abe1455ed457062acbc",
+  "cases": [
+    {
+      "id": "identity",
+      "turns": [
+        "Hello. Who are you?",
+        "What can you help me with?"
+      ],
+      "rubric": "Coherent identity; follow-up describes actual experimental capability without claiming a different provider or reliability."
+    },
+    {
+      "id": "explanation",
+      "turns": [
+        "Why do wet clothes dry?",
+        "Explain that more simply."
+      ],
+      "rubric": "Water evaporates; simplification retains meaning and resolves that from prior answer."
+    }
+  ],
+  "format": "full",
+  "protocol": "research/R15.3-end-to-end-ablation.md"
+}

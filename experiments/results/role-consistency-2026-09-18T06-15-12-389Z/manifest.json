@@ -1,0 +1,6 @@
+{
+  "protocol": "research/R12.2-role-consistency-protocol.md",
+  "source": "experiments/results/binding-replay-2026-09-18T06-00-35-955Z",
+  "plans": "experiments/results/sense-advice-2026-09-18T05-43-39-184Z",
+  "threshold": 0.85
+}

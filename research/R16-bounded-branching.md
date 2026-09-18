@@ -1,0 +1,7 @@
+# R16: bounded branching in fresh development conversations
+
+Preregistered before inference. New development cases: (1) Why does ice melt in a warm room? / Explain it to a young child. (2) Write a short story about a bird missing its home. / Give the story a surprising but happy ending. No expected answer text supplied. These become development, not held-out, upon inspection.
+
+Two arms: morphology greedy vs identical decoder with top3 branches extended three steps at reply start or just after sentence punctuation, at most two branch events per reply. Committing the chosen extended fragment counts every generated word/punctuation against the same 40-step output budget. EOS terminates a branch. If insufficient remaining output budget, skip branching. Branch decision uses full continuations, not sequence probability products. Shared vocabulary selection procedure, actual arm-specific conversational history. Caps:180s and500k input tokens before each call (one call can cross token ceiling); all truncations explicit. Research-only corpus unchanged.
+
+Eight total replies, greedy arm then branching arm. Single samples, time confounding acknowledged. Assess task correctness, coherence, grammar, follow-up transformation, completion and costs separately. Success requires improvement on actual dialogue without new factual/constraint failure, not merely grammatical branches. No production acceptance from this small study. Save source snapshot in result directory for reproducibility.

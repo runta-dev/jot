@@ -1,0 +1,1415 @@
+{
+  "directory": "experiments/results/open-composition-2026-09-18T03-37-25-746Z",
+  "rows": [
+    {
+      "id": "sky",
+      "split": "development",
+      "retrieval": {
+        "requests": 9,
+        "usage": {
+          "input_tokens": 84772,
+          "output_tokens": 88915
+        },
+        "top": {
+          "N": [
+            {
+              "word": "atmosphere",
+              "probability": 0.3
+            },
+            {
+              "word": "optics",
+              "probability": 0.18000000000000002
+            },
+            {
+              "word": "cause",
+              "probability": 0.14
+            },
+            {
+              "word": "blue",
+              "probability": 0.1
+            },
+            {
+              "word": "light",
+              "probability": 0.08
+            },
+            {
+              "word": "physics",
+              "probability": 0.06
+            },
+            {
+              "word": "mechanism",
+              "probability": 0.05
+            },
+            {
+              "word": "sky",
+              "probability": 0.02
+            }
+          ],
+          "V": [
+            {
+              "word": "scatter",
+              "probability": 0.98
+            },
+            {
+              "word": "cause",
+              "probability": 0.02
+            },
+            {
+              "word": "shine",
+              "probability": 0
+            },
+            {
+              "word": "sun",
+              "probability": 0
+            },
+            {
+              "word": "solve",
+              "probability": 0
+            },
+            {
+              "word": "discuss",
+              "probability": 0
+            },
+            {
+              "word": "illuminate",
+              "probability": 0
+            },
+            {
+              "word": "gas",
+              "probability": 0
+            }
+          ],
+          "A": [
+            {
+              "word": "atmospheric",
+              "probability": 0.4
+            },
+            {
+              "word": "optical",
+              "probability": 0.21
+            },
+            {
+              "word": "scientific",
+              "probability": 0.18
+            },
+            {
+              "word": "blue",
+              "probability": 0.13
+            },
+            {
+              "word": "physical",
+              "probability": 0.04
+            },
+            {
+              "word": "molecular",
+              "probability": 0.03
+            },
+            {
+              "word": "characteristic",
+              "probability": 0.01
+            },
+            {
+              "word": "precise",
+              "probability": 0
+            }
+          ]
+        }
+      },
+      "request": "Why is the sky blue?",
+      "facts": "",
+      "slots": {
+        "subject": "sky",
+        "verb": "scatter",
+        "object": "blue",
+        "number": "s",
+        "subjectDet": "the",
+        "objectDet": "NONE",
+        "tense": "p",
+        "negated": false,
+        "voice": "active",
+        "modal": "NONE",
+        "objectNumber": "s"
+      },
+      "modifiers": [
+        {
+          "relation": "time",
+          "text": "light"
+        }
+      ],
+      "result": "The sky scatters blue light.",
+      "requests": 13,
+      "usage": {
+        "input_tokens": 99279,
+        "output_tokens": 95466
+      },
+      "elapsedMs": 6817
+    },
+    {
+      "id": "procrastination",
+      "split": "development",
+      "retrieval": {
+        "requests": 9,
+        "usage": {
+          "input_tokens": 84837,
+          "output_tokens": 88937
+        },
+        "top": {
+          "N": [
+            {
+              "word": "technique",
+              "probability": 0.55
+            },
+            {
+              "word": "strategy",
+              "probability": 0.3
+            },
+            {
+              "word": "method",
+              "probability": 0.05
+            },
+            {
+              "word": "productivity",
+              "probability": 0.04
+            },
+            {
+              "word": "step",
+              "probability": 0.02
+            },
+            {
+              "word": "remedy",
+              "probability": 0.02
+            },
+            {
+              "word": "workout",
+              "probability": 0.01
+            },
+            {
+              "word": "solution",
+              "probability": 0
+            }
+          ],
+          "V": [
+            {
+              "word": "stop",
+              "probability": 0.43
+            },
+            {
+              "word": "overcome",
+              "probability": 0.21000000000000002
+            },
+            {
+              "word": "start",
+              "probability": 0.03
+            },
+            {
+              "word": "procrastinate",
+              "probability": 0.03
+            },
+            {
+              "word": "cease",
+              "probability": 0.03
+            },
+            {
+              "word": "plan",
+              "probability": 0.03
+            },
+            {
+              "word": "counteract",
+              "probability": 0.01
+            },
+            {
+              "word": "eliminate",
+              "probability": 0.01
+            }
+          ],
+          "A": [
+            {
+              "word": "practical",
+              "probability": 0.49
+            },
+            {
+              "word": "effective",
+              "probability": 0.22
+            },
+            {
+              "word": "operational",
+              "probability": 0.17
+            },
+            {
+              "word": "concrete",
+              "probability": 0.02
+            },
+            {
+              "word": "realistic",
+              "probability": 0.02
+            },
+            {
+              "word": "systematic",
+              "probability": 0.02
+            },
+            {
+              "word": "working",
+              "probability": 0.01
+            },
+            {
+              "word": "instructional",
+              "probability": 0.01
+            }
+          ]
+        }
+      },
+      "request": "How can I stop procrastinating?",
+      "facts": "",
+      "slots": {
+        "subject": "you",
+        "verb": "stop",
+        "object": "procrastinating",
+        "number": "s",
+        "subjectDet": "NONE",
+        "objectDet": "NONE",
+        "tense": "p",
+        "negated": false,
+        "voice": "active",
+        "modal": "should",
+        "objectNumber": "s"
+      },
+      "modifiers": [],
+      "result": "You should stop procrastinating.",
+      "requests": 12,
+      "usage": {
+        "input_tokens": 95717,
+        "output_tokens": 94026
+      },
+      "elapsedMs": 4570
+    },
+    {
+      "id": "tired",
+      "split": "development",
+      "retrieval": {
+        "requests": 9,
+        "usage": {
+          "input_tokens": 84857,
+          "output_tokens": 88928
+        },
+        "top": {
+          "N": [
+            {
+              "word": "sleep",
+              "probability": 0.28
+            },
+            {
+              "word": "action",
+              "probability": 0.09999999999999999
+            },
+            {
+              "word": "coffee",
+              "probability": 0.08
+            },
+            {
+              "word": "recovery",
+              "probability": 0.06999999999999999
+            },
+            {
+              "word": "sleeping",
+              "probability": 0.060000000000000005
+            },
+            {
+              "word": "recommendation",
+              "probability": 0.060000000000000005
+            },
+            {
+              "word": "energy",
+              "probability": 0.05
+            },
+            {
+              "word": "remedy",
+              "probability": 0.04
+            }
+          ],
+          "V": [
+            {
+              "word": "nap",
+              "probability": 0.62
+            },
+            {
+              "word": "sleep",
+              "probability": 0.12
+            },
+            {
+              "word": "cope",
+              "probability": 0.060000000000000005
+            },
+            {
+              "word": "rest",
+              "probability": 0.05
+            },
+            {
+              "word": "recuperate",
+              "probability": 0.03
+            },
+            {
+              "word": "compensate",
+              "probability": 0.03
+            },
+            {
+              "word": "treat",
+              "probability": 0.02
+            },
+            {
+              "word": "invigorate",
+              "probability": 0.01
+            }
+          ],
+          "A": [
+            {
+              "word": "practical",
+              "probability": 0.42
+            },
+            {
+              "word": "tired",
+              "probability": 0.28
+            },
+            {
+              "word": "effective",
+              "probability": 0.13
+            },
+            {
+              "word": "operational",
+              "probability": 0.08
+            },
+            {
+              "word": "realistic",
+              "probability": 0.03
+            },
+            {
+              "word": "conditional",
+              "probability": 0.01
+            },
+            {
+              "word": "specific",
+              "probability": 0.01
+            },
+            {
+              "word": "concrete",
+              "probability": 0.01
+            }
+          ]
+        }
+      },
+      "request": "I feel tired after sleeping only four hours. What should I do?",
+      "facts": "",
+      "slots": {
+        "subject": "you",
+        "verb": "nap",
+        "object": null,
+        "number": "s",
+        "subjectDet": "NONE",
+        "objectDet": "NONE",
+        "tense": "p",
+        "negated": false,
+        "voice": "active",
+        "modal": "should",
+        "objectNumber": "s"
+      },
+      "modifiers": [],
+      "result": "You should nap.",
+      "requests": 12,
+      "usage": {
+        "input_tokens": 95243,
+        "output_tokens": 94279
+      },
+      "elapsedMs": 5057
+    },
+    {
+      "id": "plant",
+      "split": "development",
+      "retrieval": {
+        "requests": 9,
+        "usage": {
+          "input_tokens": 84787,
+          "output_tokens": 88927
+        },
+        "top": {
+          "N": [
+            {
+              "word": "energy",
+              "probability": 0.42
+            },
+            {
+              "word": "light",
+              "probability": 0.2
+            },
+            {
+              "word": "synthesis",
+              "probability": 0.13
+            },
+            {
+              "word": "food",
+              "probability": 0.060000000000000005
+            },
+            {
+              "word": "sunshine",
+              "probability": 0.060000000000000005
+            },
+            {
+              "word": "glucose",
+              "probability": 0.04
+            },
+            {
+              "word": "mechanism",
+              "probability": 0.02
+            },
+            {
+              "word": "process",
+              "probability": 0.02
+            }
+          ],
+          "V": [
+            {
+              "word": "synthesise",
+              "probability": 0.4
+            },
+            {
+              "word": "convert",
+              "probability": 0.22
+            },
+            {
+              "word": "synthesize",
+              "probability": 0.11
+            },
+            {
+              "word": "produce",
+              "probability": 0.05
+            },
+            {
+              "word": "process",
+              "probability": 0.04
+            },
+            {
+              "word": "transform",
+              "probability": 0.03
+            },
+            {
+              "word": "utilize",
+              "probability": 0.02
+            },
+            {
+              "word": "capture",
+              "probability": 0.02
+            }
+          ],
+          "A": [
+            {
+              "word": "biological",
+              "probability": 0.52
+            },
+            {
+              "word": "essential",
+              "probability": 0.18000000000000002
+            },
+            {
+              "word": "necessary",
+              "probability": 0.12
+            },
+            {
+              "word": "scientific",
+              "probability": 0.07
+            },
+            {
+              "word": "prerequisite",
+              "probability": 0.05
+            },
+            {
+              "word": "solar",
+              "probability": 0.03
+            },
+            {
+              "word": "crucial",
+              "probability": 0.01
+            },
+            {
+              "word": "fundamental",
+              "probability": 0.01
+            }
+          ]
+        }
+      },
+      "request": "Why do plants need sunlight?",
+      "facts": "",
+      "slots": {
+        "subject": "plants",
+        "verb": "convert",
+        "object": "sunlight",
+        "number": "p",
+        "subjectDet": "NONE",
+        "objectDet": "NONE",
+        "tense": "p",
+        "negated": false,
+        "voice": "active",
+        "modal": "NONE",
+        "objectNumber": "s"
+      },
+      "modifiers": [
+        {
+          "relation": "to",
+          "text": "energy"
+        }
+      ],
+      "result": "Plants convert sunlight to energy.",
+      "requests": 13,
+      "usage": {
+        "input_tokens": 98666,
+        "output_tokens": 95524
+      },
+      "elapsedMs": 7299
+    },
+    {
+      "id": "rust",
+      "split": "development",
+      "retrieval": {
+        "requests": 9,
+        "usage": {
+          "input_tokens": 84816,
+          "output_tokens": 88916
+        },
+        "top": {
+          "N": [
+            {
+              "word": "oxygen",
+              "probability": 0.41000000000000003
+            },
+            {
+              "word": "iron",
+              "probability": 0.3
+            },
+            {
+              "word": "oxide",
+              "probability": 0.09999999999999999
+            },
+            {
+              "word": "reaction",
+              "probability": 0.09999999999999999
+            },
+            {
+              "word": "mechanism",
+              "probability": 0.05
+            },
+            {
+              "word": "chemical",
+              "probability": 0.01
+            },
+            {
+              "word": "moisture",
+              "probability": 0.01
+            },
+            {
+              "word": "cause",
+              "probability": 0.01
+            }
+          ],
+          "V": [
+            {
+              "word": "oxidize",
+              "probability": 0.56
+            },
+            {
+              "word": "rust",
+              "probability": 0.25
+            },
+            {
+              "word": "corrode",
+              "probability": 0.15
+            },
+            {
+              "word": "react",
+              "probability": 0.01
+            },
+            {
+              "word": "oxidise",
+              "probability": 0.01
+            },
+            {
+              "word": "cause",
+              "probability": 0.01
+            },
+            {
+              "word": "select",
+              "probability": 0
+            },
+            {
+              "word": "attribute",
+              "probability": 0
+            }
+          ],
+          "A": [
+            {
+              "word": "chemical",
+              "probability": 0.97
+            },
+            {
+              "word": "wet",
+              "probability": 0.02
+            },
+            {
+              "word": "scientific",
+              "probability": 0.01
+            },
+            {
+              "word": "environmental",
+              "probability": 0
+            },
+            {
+              "word": "informative",
+              "probability": 0
+            },
+            {
+              "word": "accurate",
+              "probability": 0
+            },
+            {
+              "word": "thorough",
+              "probability": 0
+            },
+            {
+              "word": "structural",
+              "probability": 0
+            }
+          ]
+        }
+      },
+      "request": "Why does iron rust when exposed to moist air?",
+      "facts": "",
+      "slots": {
+        "subject": "iron",
+        "verb": "oxidize",
+        "object": null,
+        "number": "s",
+        "subjectDet": "NONE",
+        "objectDet": "NONE",
+        "tense": "p",
+        "negated": false,
+        "voice": "active",
+        "modal": "NONE",
+        "objectNumber": "s"
+      },
+      "modifiers": [
+        {
+          "relation": "with",
+          "text": "oxygen"
+        }
+      ],
+      "result": "Iron oxidizes with oxygen.",
+      "requests": 13,
+      "usage": {
+        "input_tokens": 101329,
+        "output_tokens": 96578
+      },
+      "elapsedMs": 7434
+    },
+    {
+      "id": "ice",
+      "split": "development",
+      "retrieval": {
+        "requests": 9,
+        "usage": {
+          "input_tokens": 84792,
+          "output_tokens": 88907
+        },
+        "top": {
+          "N": [
+            {
+              "word": "density",
+              "probability": 0.95
+            },
+            {
+              "word": "ice",
+              "probability": 0.03
+            },
+            {
+              "word": "cause",
+              "probability": 0.02
+            },
+            {
+              "word": "arbor",
+              "probability": 0
+            },
+            {
+              "word": "attribute",
+              "probability": 0
+            },
+            {
+              "word": "mechanics",
+              "probability": 0
+            },
+            {
+              "word": "parameter",
+              "probability": 0
+            },
+            {
+              "word": "basis",
+              "probability": 0
+            }
+          ],
+          "V": [
+            {
+              "word": "cause",
+              "probability": 0.43
+            },
+            {
+              "word": "float",
+              "probability": 0.21000000000000002
+            },
+            {
+              "word": "reason",
+              "probability": 0.08
+            },
+            {
+              "word": "expand",
+              "probability": 0.060000000000000005
+            },
+            {
+              "word": "buoy",
+              "probability": 0.060000000000000005
+            },
+            {
+              "word": "process",
+              "probability": 0.05
+            },
+            {
+              "word": "explain",
+              "probability": 0.03
+            },
+            {
+              "word": "bond",
+              "probability": 0.02
+            }
+          ],
+          "A": [
+            {
+              "word": "dense",
+              "probability": 0.34
+            },
+            {
+              "word": "molecular",
+              "probability": 0.23
+            },
+            {
+              "word": "physical",
+              "probability": 0.2
+            },
+            {
+              "word": "scientific",
+              "probability": 0.05
+            },
+            {
+              "word": "characteristic",
+              "probability": 0.04
+            },
+            {
+              "word": "structural",
+              "probability": 0.04
+            },
+            {
+              "word": "unusual",
+              "probability": 0.02
+            },
+            {
+              "word": "low",
+              "probability": 0.02
+            }
+          ]
+        }
+      },
+      "request": "Why does ice float on liquid water?",
+      "facts": "",
+      "slots": {
+        "subject": "ice",
+        "verb": "float",
+        "object": null,
+        "number": "s",
+        "subjectDet": "NONE",
+        "objectDet": "NONE",
+        "tense": "p",
+        "negated": false,
+        "voice": "active",
+        "modal": "NONE",
+        "objectNumber": "s"
+      },
+      "modifiers": [
+        {
+          "relation": "because",
+          "text": "molecular density"
+        }
+      ],
+      "result": "Ice floats because molecular density.",
+      "requests": 13,
+      "usage": {
+        "input_tokens": 99520,
+        "output_tokens": 96069
+      },
+      "elapsedMs": 6741
+    },
+    {
+      "id": "deadlines",
+      "split": "fresh",
+      "retrieval": {
+        "requests": 9,
+        "usage": {
+          "input_tokens": 84786,
+          "output_tokens": 88894
+        },
+        "top": {
+          "N": [
+            {
+              "word": "calendar",
+              "probability": 0.38
+            },
+            {
+              "word": "tracker",
+              "probability": 0.26
+            },
+            {
+              "word": "organizer",
+              "probability": 0.15000000000000002
+            },
+            {
+              "word": "deadline",
+              "probability": 0.11
+            },
+            {
+              "word": "planner",
+              "probability": 0.04
+            },
+            {
+              "word": "track",
+              "probability": 0.01
+            },
+            {
+              "word": "lists",
+              "probability": 0.01
+            },
+            {
+              "word": "reminder",
+              "probability": 0.01
+            }
+          ],
+          "V": [
+            {
+              "word": "track",
+              "probability": 0.91
+            },
+            {
+              "word": "calender",
+              "probability": 0.05
+            },
+            {
+              "word": "manage",
+              "probability": 0.02
+            },
+            {
+              "word": "organize",
+              "probability": 0.01
+            },
+            {
+              "word": "monitor",
+              "probability": 0.01
+            },
+            {
+              "word": "slate",
+              "probability": 0
+            },
+            {
+              "word": "route",
+              "probability": 0
+            },
+            {
+              "word": "store",
+              "probability": 0
+            }
+          ],
+          "A": [
+            {
+              "word": "organizational",
+              "probability": 0.27
+            },
+            {
+              "word": "practical",
+              "probability": 0.25
+            },
+            {
+              "word": "systematic",
+              "probability": 0.18
+            },
+            {
+              "word": "organized",
+              "probability": 0.12
+            },
+            {
+              "word": "tracked",
+              "probability": 0.08
+            },
+            {
+              "word": "operational",
+              "probability": 0.04
+            },
+            {
+              "word": "effective",
+              "probability": 0.04
+            },
+            {
+              "word": "temporal",
+              "probability": 0.01
+            }
+          ]
+        }
+      },
+      "request": "How can I keep track of several deadlines?",
+      "facts": "",
+      "slots": {
+        "subject": "you",
+        "verb": "track",
+        "object": "several deadlines",
+        "number": "s",
+        "subjectDet": "NONE",
+        "objectDet": "NONE",
+        "tense": "p",
+        "negated": false,
+        "voice": "active",
+        "modal": "can",
+        "objectNumber": "p"
+      },
+      "modifiers": [
+        {
+          "relation": "with",
+          "text": "calendar"
+        }
+      ],
+      "result": "You can track several deadlines with calendar.",
+      "requests": 13,
+      "usage": {
+        "input_tokens": 98738,
+        "output_tokens": 95287
+      },
+      "elapsedMs": 7040
+    },
+    {
+      "id": "fall",
+      "split": "fresh",
+      "retrieval": {
+        "requests": 9,
+        "usage": {
+          "input_tokens": 84780,
+          "output_tokens": 88895
+        },
+        "top": {
+          "N": [
+            {
+              "word": "gravity",
+              "probability": 1
+            },
+            {
+              "word": "equation",
+              "probability": 0
+            },
+            {
+              "word": "globe",
+              "probability": 0
+            },
+            {
+              "word": "energy",
+              "probability": 0
+            },
+            {
+              "word": "fall",
+              "probability": 0
+            },
+            {
+              "word": "factor",
+              "probability": 0
+            },
+            {
+              "word": "quantum",
+              "probability": 0
+            },
+            {
+              "word": "science",
+              "probability": 0
+            }
+          ],
+          "V": [
+            {
+              "word": "gravitate",
+              "probability": 0.68
+            },
+            {
+              "word": "force",
+              "probability": 0.15000000000000002
+            },
+            {
+              "word": "fall",
+              "probability": 0.07
+            },
+            {
+              "word": "cause",
+              "probability": 0.04
+            },
+            {
+              "word": "pull",
+              "probability": 0.04
+            },
+            {
+              "word": "attract",
+              "probability": 0.01
+            },
+            {
+              "word": "exist",
+              "probability": 0
+            },
+            {
+              "word": "explain",
+              "probability": 0
+            }
+          ],
+          "A": [
+            {
+              "word": "physical",
+              "probability": 0.5
+            },
+            {
+              "word": "scientific",
+              "probability": 0.42
+            },
+            {
+              "word": "fundamental",
+              "probability": 0.03
+            },
+            {
+              "word": "natural",
+              "probability": 0.02
+            },
+            {
+              "word": "accurate",
+              "probability": 0.02
+            },
+            {
+              "word": "empirical",
+              "probability": 0.01
+            },
+            {
+              "word": "objective",
+              "probability": 0
+            },
+            {
+              "word": "instructional",
+              "probability": 0
+            }
+          ]
+        }
+      },
+      "request": "Why does a ball fall when dropped?",
+      "facts": "",
+      "slots": {
+        "subject": "a ball",
+        "verb": "pull",
+        "object": null,
+        "number": "s",
+        "subjectDet": "the",
+        "objectDet": "NONE",
+        "tense": "p",
+        "negated": false,
+        "voice": "passive",
+        "modal": "NONE",
+        "objectNumber": "s"
+      },
+      "modifiers": [
+        {
+          "relation": "by",
+          "text": "gravity"
+        }
+      ],
+      "result": "A ball is pulled by gravity.",
+      "requests": 13,
+      "usage": {
+        "input_tokens": 99980,
+        "output_tokens": 95966
+      },
+      "elapsedMs": 7941
+    },
+    {
+      "id": "reading",
+      "split": "fresh",
+      "retrieval": {
+        "requests": 9,
+        "usage": {
+          "input_tokens": 84805,
+          "output_tokens": 88927
+        },
+        "top": {
+          "N": [
+            {
+              "word": "retention",
+              "probability": 0.67
+            },
+            {
+              "word": "technique",
+              "probability": 0.21000000000000002
+            },
+            {
+              "word": "strategy",
+              "probability": 0.060000000000000005
+            },
+            {
+              "word": "method",
+              "probability": 0.02
+            },
+            {
+              "word": "annotation",
+              "probability": 0.01
+            },
+            {
+              "word": "memory",
+              "probability": 0.01
+            },
+            {
+              "word": "recall",
+              "probability": 0.01
+            },
+            {
+              "word": "margin",
+              "probability": 0
+            }
+          ],
+          "V": [
+            {
+              "word": "retain",
+              "probability": 0.49
+            },
+            {
+              "word": "remember",
+              "probability": 0.28
+            },
+            {
+              "word": "study",
+              "probability": 0.060000000000000005
+            },
+            {
+              "word": "review",
+              "probability": 0.05
+            },
+            {
+              "word": "memorize",
+              "probability": 0.04
+            },
+            {
+              "word": "summarize",
+              "probability": 0.03
+            },
+            {
+              "word": "recall",
+              "probability": 0.02
+            },
+            {
+              "word": "associate",
+              "probability": 0.01
+            }
+          ],
+          "A": [
+            {
+              "word": "effective",
+              "probability": 0.45
+            },
+            {
+              "word": "cognitive",
+              "probability": 0.21
+            },
+            {
+              "word": "practical",
+              "probability": 0.19
+            },
+            {
+              "word": "operational",
+              "probability": 0.07
+            },
+            {
+              "word": "instructional",
+              "probability": 0.02
+            },
+            {
+              "word": "concrete",
+              "probability": 0.01
+            },
+            {
+              "word": "tutorial",
+              "probability": 0.01
+            },
+            {
+              "word": "systematic",
+              "probability": 0.01
+            }
+          ]
+        }
+      },
+      "request": "How can I remember what I read?",
+      "facts": "",
+      "slots": {
+        "subject": "you",
+        "verb": "summarize",
+        "object": "what I read",
+        "number": "s",
+        "subjectDet": "NONE",
+        "objectDet": "NONE",
+        "tense": "p",
+        "negated": false,
+        "voice": "active",
+        "modal": "can",
+        "objectNumber": "s"
+      },
+      "modifiers": [],
+      "result": "You can summarize what I read.",
+      "requests": 12,
+      "usage": {
+        "input_tokens": 95027,
+        "output_tokens": 93931
+      },
+      "elapsedMs": 6185
+    },
+    {
+      "id": "drying",
+      "split": "fresh",
+      "retrieval": {
+        "requests": 9,
+        "usage": {
+          "input_tokens": 84794,
+          "output_tokens": 88950
+        },
+        "top": {
+          "N": [
+            {
+              "word": "mechanism",
+              "probability": 0.41000000000000003
+            },
+            {
+              "word": "water",
+              "probability": 0.18000000000000002
+            },
+            {
+              "word": "process",
+              "probability": 0.13
+            },
+            {
+              "word": "moisture",
+              "probability": 0.06999999999999999
+            },
+            {
+              "word": "cause",
+              "probability": 0.060000000000000005
+            },
+            {
+              "word": "heat",
+              "probability": 0.04
+            },
+            {
+              "word": "phase",
+              "probability": 0.02
+            },
+            {
+              "word": "physics",
+              "probability": 0.01
+            }
+          ],
+          "V": [
+            {
+              "word": "evaporate",
+              "probability": 0.99
+            },
+            {
+              "word": "dry",
+              "probability": 0.01
+            },
+            {
+              "word": "precipitate",
+              "probability": 0
+            },
+            {
+              "word": "parch",
+              "probability": 0
+            },
+            {
+              "word": "saturate",
+              "probability": 0
+            },
+            {
+              "word": "phase",
+              "probability": 0
+            },
+            {
+              "word": "hot",
+              "probability": 0
+            },
+            {
+              "word": "emit",
+              "probability": 0
+            }
+          ],
+          "A": [
+            {
+              "word": "scientific",
+              "probability": 0.33
+            },
+            {
+              "word": "physical",
+              "probability": 0.29000000000000004
+            },
+            {
+              "word": "molecular",
+              "probability": 0.26
+            },
+            {
+              "word": "thermal",
+              "probability": 0.06
+            },
+            {
+              "word": "dry",
+              "probability": 0.04
+            },
+            {
+              "word": "wet",
+              "probability": 0.01
+            },
+            {
+              "word": "correct",
+              "probability": 0
+            },
+            {
+              "word": "instructional",
+              "probability": 0
+            }
+          ]
+        }
+      },
+      "request": "Why does wet clothing dry?",
+      "facts": "",
+      "slots": {
+        "subject": "wet clothing",
+        "verb": "evaporate",
+        "object": null,
+        "number": "s",
+        "subjectDet": "NONE",
+        "objectDet": "NONE",
+        "tense": "p",
+        "negated": false,
+        "voice": "active",
+        "modal": "NONE",
+        "objectNumber": "s"
+      },
+      "modifiers": [],
+      "result": "Wet clothing evaporates.",
+      "requests": 12,
+      "usage": {
+        "input_tokens": 96003,
+        "output_tokens": 94404
+      },
+      "elapsedMs": 5901
+    }
+  ]
+}

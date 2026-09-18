@@ -1,0 +1,1660 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "user_request": "Why do wet clothes dry?",
+    "partial_tree": {
+      "kind": "link",
+      "relation": "because",
+      "left": {
+        "kind": "clause",
+        "subject": {
+          "kind": "np",
+          "determiner": "the",
+          "plural": true,
+          "noun": {
+            "kind": "word",
+            "sort": "noun",
+            "value": "clothes"
+          }
+        },
+        "predicate": {
+          "kind": "vp",
+          "verb": {
+            "kind": "word",
+            "sort": "verb",
+            "value": "dry"
+          }
+        },
+        "past": false
+      },
+      "right": {
+        "kind": "clause",
+        "subject": {
+          "kind": "hole",
+          "sort": "np"
+        },
+        "predicate": {
+          "kind": "hole",
+          "sort": "vp"
+        },
+        "past": false
+      }
+    },
+    "selected_senses": [
+      {
+        "path": [
+          "left",
+          "predicate",
+          "verb"
+        ],
+        "lemma": "dry",
+        "offset": "00219829",
+        "lemmas": [
+          "dry",
+          "dry_out"
+        ],
+        "definition": "become dry or drier",
+        "examples": [
+          "The laundry dries in the sun"
+        ],
+        "lexFile": 30,
+        "frames": [
+          1
+        ]
+      }
+    ]
+  },
+  "questions": {
+    "next": {
+      "type": "choice",
+      "instructions": "Expand hole [\"right\",\"subject\"] so the complete tree will answer user_request. Every choice must respect existing bound roles and selected_senses. Choose UNSUPPORTED if no option permits an adequate response; do not force a false claim. Each option contains only the replacement subtree for the indicated hole; the complete existing tree remains in state.partial_tree.",
+      "criteria": {
+        "a0": {
+          "description": "I",
+          "replacement_subtree": {
+            "kind": "pronoun",
+            "value": "I"
+          }
+        },
+        "a1": {
+          "description": "you",
+          "replacement_subtree": {
+            "kind": "pronoun",
+            "value": "you"
+          }
+        },
+        "a2": {
+          "description": "he",
+          "replacement_subtree": {
+            "kind": "pronoun",
+            "value": "he"
+          }
+        },
+        "a3": {
+          "description": "she",
+          "replacement_subtree": {
+            "kind": "pronoun",
+            "value": "she"
+          }
+        },
+        "a4": {
+          "description": "it",
+          "replacement_subtree": {
+            "kind": "pronoun",
+            "value": "it"
+          }
+        },
+        "a5": {
+          "description": "we",
+          "replacement_subtree": {
+            "kind": "pronoun",
+            "value": "we"
+          }
+        },
+        "a6": {
+          "description": "they",
+          "replacement_subtree": {
+            "kind": "pronoun",
+            "value": "they"
+          }
+        },
+        "a7": {
+          "description": "adjective modifying noun phrase",
+          "replacement_subtree": {
+            "kind": "modified",
+            "adjective": {
+              "kind": "hole",
+              "sort": "adjective"
+            },
+            "head": {
+              "kind": "hole",
+              "sort": "np"
+            }
+          }
+        },
+        "a8": {
+          "description": "the singular water",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "water"
+            }
+          }
+        },
+        "a9": {
+          "description": "a singular water",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "water"
+            }
+          }
+        },
+        "a10": {
+          "description": "none singular water",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "water"
+            }
+          }
+        },
+        "a11": {
+          "description": "the plural water",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "water"
+            }
+          }
+        },
+        "a12": {
+          "description": "none plural water",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "water"
+            }
+          }
+        },
+        "a13": {
+          "description": "the singular thing",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "thing"
+            }
+          }
+        },
+        "a14": {
+          "description": "a singular thing",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "thing"
+            }
+          }
+        },
+        "a15": {
+          "description": "none singular thing",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "thing"
+            }
+          }
+        },
+        "a16": {
+          "description": "the plural thing",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "thing"
+            }
+          }
+        },
+        "a17": {
+          "description": "none plural thing",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "thing"
+            }
+          }
+        },
+        "a18": {
+          "description": "the singular air",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "air"
+            }
+          }
+        },
+        "a19": {
+          "description": "a singular air",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "air"
+            }
+          }
+        },
+        "a20": {
+          "description": "none singular air",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "air"
+            }
+          }
+        },
+        "a21": {
+          "description": "the plural air",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "air"
+            }
+          }
+        },
+        "a22": {
+          "description": "none plural air",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "air"
+            }
+          }
+        },
+        "a23": {
+          "description": "the singular drop",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "drop"
+            }
+          }
+        },
+        "a24": {
+          "description": "a singular drop",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "drop"
+            }
+          }
+        },
+        "a25": {
+          "description": "none singular drop",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "drop"
+            }
+          }
+        },
+        "a26": {
+          "description": "the plural drop",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "drop"
+            }
+          }
+        },
+        "a27": {
+          "description": "none plural drop",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "drop"
+            }
+          }
+        },
+        "a28": {
+          "description": "the singular clothes",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "clothes"
+            }
+          }
+        },
+        "a29": {
+          "description": "a singular clothes",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "clothes"
+            }
+          }
+        },
+        "a30": {
+          "description": "none singular clothes",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "clothes"
+            }
+          }
+        },
+        "a31": {
+          "description": "the plural clothes",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "clothes"
+            }
+          }
+        },
+        "a32": {
+          "description": "none plural clothes",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "clothes"
+            }
+          }
+        },
+        "a33": {
+          "description": "the singular sun",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "sun"
+            }
+          }
+        },
+        "a34": {
+          "description": "a singular sun",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "sun"
+            }
+          }
+        },
+        "a35": {
+          "description": "none singular sun",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "sun"
+            }
+          }
+        },
+        "a36": {
+          "description": "the plural sun",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "sun"
+            }
+          }
+        },
+        "a37": {
+          "description": "none plural sun",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "sun"
+            }
+          }
+        },
+        "a38": {
+          "description": "the singular wind",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "wind"
+            }
+          }
+        },
+        "a39": {
+          "description": "a singular wind",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "wind"
+            }
+          }
+        },
+        "a40": {
+          "description": "none singular wind",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "wind"
+            }
+          }
+        },
+        "a41": {
+          "description": "the plural wind",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "wind"
+            }
+          }
+        },
+        "a42": {
+          "description": "none plural wind",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "wind"
+            }
+          }
+        },
+        "a43": {
+          "description": "the singular gas",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "gas"
+            }
+          }
+        },
+        "a44": {
+          "description": "a singular gas",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "gas"
+            }
+          }
+        },
+        "a45": {
+          "description": "none singular gas",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "gas"
+            }
+          }
+        },
+        "a46": {
+          "description": "the plural gas",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "gas"
+            }
+          }
+        },
+        "a47": {
+          "description": "none plural gas",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "gas"
+            }
+          }
+        },
+        "a48": {
+          "description": "the singular heat",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "heat"
+            }
+          }
+        },
+        "a49": {
+          "description": "a singular heat",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "heat"
+            }
+          }
+        },
+        "a50": {
+          "description": "none singular heat",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "heat"
+            }
+          }
+        },
+        "a51": {
+          "description": "the plural heat",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "heat"
+            }
+          }
+        },
+        "a52": {
+          "description": "none plural heat",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "heat"
+            }
+          }
+        },
+        "a53": {
+          "description": "the singular wash",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "wash"
+            }
+          }
+        },
+        "a54": {
+          "description": "a singular wash",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "wash"
+            }
+          }
+        },
+        "a55": {
+          "description": "none singular wash",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "wash"
+            }
+          }
+        },
+        "a56": {
+          "description": "the plural wash",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "wash"
+            }
+          }
+        },
+        "a57": {
+          "description": "none plural wash",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "wash"
+            }
+          }
+        },
+        "a58": {
+          "description": "the singular wet",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "wet"
+            }
+          }
+        },
+        "a59": {
+          "description": "none singular wet",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "wet"
+            }
+          }
+        },
+        "a60": {
+          "description": "the singular weather",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "weather"
+            }
+          }
+        },
+        "a61": {
+          "description": "a singular weather",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "weather"
+            }
+          }
+        },
+        "a62": {
+          "description": "none singular weather",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "weather"
+            }
+          }
+        },
+        "a63": {
+          "description": "the plural weather",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "weather"
+            }
+          }
+        },
+        "a64": {
+          "description": "none plural weather",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "weather"
+            }
+          }
+        },
+        "a65": {
+          "description": "the singular material",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "material"
+            }
+          }
+        },
+        "a66": {
+          "description": "a singular material",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "material"
+            }
+          }
+        },
+        "a67": {
+          "description": "none singular material",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "material"
+            }
+          }
+        },
+        "a68": {
+          "description": "the plural material",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "material"
+            }
+          }
+        },
+        "a69": {
+          "description": "none plural material",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "material"
+            }
+          }
+        },
+        "a70": {
+          "description": "the singular effect",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "effect"
+            }
+          }
+        },
+        "a71": {
+          "description": "a singular effect",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "effect"
+            }
+          }
+        },
+        "a72": {
+          "description": "none singular effect",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "effect"
+            }
+          }
+        },
+        "a73": {
+          "description": "the plural effect",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "effect"
+            }
+          }
+        },
+        "a74": {
+          "description": "none plural effect",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "effect"
+            }
+          }
+        },
+        "a75": {
+          "description": "the singular object",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "object"
+            }
+          }
+        },
+        "a76": {
+          "description": "a singular object",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "object"
+            }
+          }
+        },
+        "a77": {
+          "description": "none singular object",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "object"
+            }
+          }
+        },
+        "a78": {
+          "description": "the plural object",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "object"
+            }
+          }
+        },
+        "a79": {
+          "description": "none plural object",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "object"
+            }
+          }
+        },
+        "a80": {
+          "description": "the singular explanation",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "explanation"
+            }
+          }
+        },
+        "a81": {
+          "description": "a singular explanation",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "explanation"
+            }
+          }
+        },
+        "a82": {
+          "description": "none singular explanation",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "explanation"
+            }
+          }
+        },
+        "a83": {
+          "description": "the plural explanation",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "explanation"
+            }
+          }
+        },
+        "a84": {
+          "description": "none plural explanation",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "explanation"
+            }
+          }
+        },
+        "a85": {
+          "description": "the singular temperature",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "temperature"
+            }
+          }
+        },
+        "a86": {
+          "description": "a singular temperature",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "temperature"
+            }
+          }
+        },
+        "a87": {
+          "description": "none singular temperature",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "temperature"
+            }
+          }
+        },
+        "a88": {
+          "description": "the plural temperature",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "temperature"
+            }
+          }
+        },
+        "a89": {
+          "description": "none plural temperature",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "temperature"
+            }
+          }
+        },
+        "a90": {
+          "description": "the singular sweat",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "sweat"
+            }
+          }
+        },
+        "a91": {
+          "description": "a singular sweat",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "sweat"
+            }
+          }
+        },
+        "a92": {
+          "description": "none singular sweat",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "sweat"
+            }
+          }
+        },
+        "a93": {
+          "description": "the plural sweat",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "sweat"
+            }
+          }
+        },
+        "a94": {
+          "description": "none plural sweat",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "sweat"
+            }
+          }
+        },
+        "a95": {
+          "description": "the singular laundry",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "laundry"
+            }
+          }
+        },
+        "a96": {
+          "description": "a singular laundry",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "laundry"
+            }
+          }
+        },
+        "a97": {
+          "description": "none singular laundry",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "laundry"
+            }
+          }
+        },
+        "a98": {
+          "description": "the plural laundry",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "laundry"
+            }
+          }
+        },
+        "a99": {
+          "description": "none plural laundry",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "laundry"
+            }
+          }
+        },
+        "a100": {
+          "description": "the singular atmosphere",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "atmosphere"
+            }
+          }
+        },
+        "a101": {
+          "description": "a singular atmosphere",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "atmosphere"
+            }
+          }
+        },
+        "a102": {
+          "description": "none singular atmosphere",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "atmosphere"
+            }
+          }
+        },
+        "a103": {
+          "description": "the plural atmosphere",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "atmosphere"
+            }
+          }
+        },
+        "a104": {
+          "description": "none plural atmosphere",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "atmosphere"
+            }
+          }
+        },
+        "a105": {
+          "description": "the singular dressing",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "dressing"
+            }
+          }
+        },
+        "a106": {
+          "description": "a singular dressing",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "dressing"
+            }
+          }
+        },
+        "a107": {
+          "description": "none singular dressing",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "dressing"
+            }
+          }
+        },
+        "a108": {
+          "description": "the plural dressing",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "dressing"
+            }
+          }
+        },
+        "a109": {
+          "description": "none plural dressing",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "dressing"
+            }
+          }
+        },
+        "a110": {
+          "description": "the singular covering",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "covering"
+            }
+          }
+        },
+        "a111": {
+          "description": "a singular covering",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "covering"
+            }
+          }
+        },
+        "a112": {
+          "description": "none singular covering",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "covering"
+            }
+          }
+        },
+        "a113": {
+          "description": "the plural covering",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "covering"
+            }
+          }
+        },
+        "a114": {
+          "description": "none plural covering",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "covering"
+            }
+          }
+        },
+        "a115": {
+          "description": "the singular item",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "item"
+            }
+          }
+        },
+        "a116": {
+          "description": "a singular item",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "item"
+            }
+          }
+        },
+        "a117": {
+          "description": "none singular item",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "item"
+            }
+          }
+        },
+        "a118": {
+          "description": "the plural item",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "item"
+            }
+          }
+        },
+        "a119": {
+          "description": "none plural item",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "item"
+            }
+          }
+        },
+        "a120": {
+          "description": "the singular jersey",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "jersey"
+            }
+          }
+        },
+        "a121": {
+          "description": "a singular jersey",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "a",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "jersey"
+            }
+          }
+        },
+        "a122": {
+          "description": "none singular jersey",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": false,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "jersey"
+            }
+          }
+        },
+        "a123": {
+          "description": "the plural jersey",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "the",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "jersey"
+            }
+          }
+        },
+        "a124": {
+          "description": "none plural jersey",
+          "replacement_subtree": {
+            "kind": "np",
+            "determiner": "none",
+            "plural": true,
+            "noun": {
+              "kind": "word",
+              "sort": "noun",
+              "value": "jersey"
+            }
+          }
+        },
+        "UNSUPPORTED": "Available structures or lexical candidates cannot express the needed answer."
+      }
+    }
+  }
+}

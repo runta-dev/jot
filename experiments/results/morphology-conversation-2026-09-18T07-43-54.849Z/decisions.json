@@ -1,0 +1,9094 @@
+[
+  {
+    "id": "memory",
+    "user": "My bicycle is called Mivora. Remember that for this conversation.",
+    "prefix": "",
+    "selected": "Noted",
+    "confidence": 0.32,
+    "candidates": [
+      {
+        "text": "Noted",
+        "p": 0.35
+      },
+      {
+        "text": "Sure",
+        "p": 0.18
+      },
+      {
+        "text": "Ok",
+        "p": 0.11
+      },
+      {
+        "text": "Yes",
+        "p": 0.07
+      },
+      {
+        "text": "Recorded",
+        "p": 0.06
+      },
+      {
+        "text": "Certainly",
+        "p": 0.06
+      },
+      {
+        "text": "Remembered",
+        "p": 0.04
+      },
+      {
+        "text": "Absolutely",
+        "p": 0.03
+      },
+      {
+        "text": "Mivora",
+        "p": 0.03
+      },
+      {
+        "text": "Remembering",
+        "p": 0.01
+      },
+      {
+        "text": "Remember",
+        "p": 0.01
+      },
+      {
+        "text": "Kept",
+        "p": 0.01
+      },
+      {
+        "text": "Remembers",
+        "p": 0.01
+      },
+      {
+        "text": "[END]",
+        "p": 0.01
+      },
+      {
+        "text": "Records",
+        "p": 0.01
+      },
+      {
+        "text": "That",
+        "p": 0.01
+      },
+      {
+        "text": "Recording",
+        "p": 0
+      },
+      {
+        "text": "Totally",
+        "p": 0
+      },
+      {
+        "text": "Keeping",
+        "p": 0
+      },
+      {
+        "text": "Yeses",
+        "p": 0
+      },
+      {
+        "text": "Learned",
+        "p": 0
+      },
+      {
+        "text": "Keep",
+        "p": 0
+      },
+      {
+        "text": "Keeps",
+        "p": 0
+      },
+      {
+        "text": "Record",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "memory",
+    "user": "My bicycle is called Mivora. Remember that for this conversation.",
+    "prefix": "Noted",
+    "selected": "[END]",
+    "confidence": 0.5,
+    "candidates": [
+      {
+        "text": "[END]",
+        "p": 0.52
+      },
+      {
+        "text": ".",
+        "p": 0.28
+      },
+      {
+        "text": " Mivora",
+        "p": 0.12
+      },
+      {
+        "text": "!",
+        "p": 0.03
+      },
+      {
+        "text": " saved",
+        "p": 0.02
+      },
+      {
+        "text": ",",
+        "p": 0.01
+      },
+      {
+        "text": " remember",
+        "p": 0.01
+      },
+      {
+        "text": " Remember",
+        "p": 0.01
+      },
+      {
+        "text": " yeses",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " minds",
+        "p": 0
+      },
+      {
+        "text": " that",
+        "p": 0
+      },
+      {
+        "text": " bicycle",
+        "p": 0
+      },
+      {
+        "text": " mind",
+        "p": 0
+      },
+      {
+        "text": " minding",
+        "p": 0
+      },
+      {
+        "text": " noted",
+        "p": 0
+      },
+      {
+        "text": " called",
+        "p": 0
+      },
+      {
+        "text": " bicycled",
+        "p": 0
+      },
+      {
+        "text": " for",
+        "p": 0
+      },
+      {
+        "text": " ok",
+        "p": 0
+      },
+      {
+        "text": " recorded",
+        "p": 0
+      },
+      {
+        "text": " bicycles",
+        "p": 0
+      },
+      {
+        "text": " yes",
+        "p": 0
+      },
+      {
+        "text": " remembering",
+        "p": 0
+      },
+      {
+        "text": " certainly",
+        "p": 0
+      },
+      {
+        "text": " remembers",
+        "p": 0
+      },
+      {
+        "text": " bicycling",
+        "p": 0
+      },
+      {
+        "text": " minded",
+        "p": 0
+      },
+      {
+        "text": " absolutely",
+        "p": 0
+      },
+      {
+        "text": " sure",
+        "p": 0
+      },
+      {
+        "text": " remembered",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "memory",
+    "user": "What is my bicycle called?",
+    "prefix": "",
+    "selected": "Mivora",
+    "confidence": 0.72,
+    "candidates": [
+      {
+        "text": "Mivora",
+        "p": 0.74
+      },
+      {
+        "text": "Your",
+        "p": 0.11
+      },
+      {
+        "text": "My",
+        "p": 0.05
+      },
+      {
+        "text": "The",
+        "p": 0.03
+      },
+      {
+        "text": "Yours",
+        "p": 0.02
+      },
+      {
+        "text": "Is",
+        "p": 0.02
+      },
+      {
+        "text": "[END]",
+        "p": 0.01
+      },
+      {
+        "text": "Im",
+        "p": 0.01
+      },
+      {
+        "text": "Mine",
+        "p": 0.01
+      },
+      {
+        "text": "Bicycles",
+        "p": 0
+      },
+      {
+        "text": "Called",
+        "p": 0
+      },
+      {
+        "text": "Mines",
+        "p": 0
+      },
+      {
+        "text": "Mined",
+        "p": 0
+      },
+      {
+        "text": "Bicycled",
+        "p": 0
+      },
+      {
+        "text": "Remembers",
+        "p": 0
+      },
+      {
+        "text": "Told",
+        "p": 0
+      },
+      {
+        "text": "S",
+        "p": 0
+      },
+      {
+        "text": "Telling",
+        "p": 0
+      },
+      {
+        "text": "Remember",
+        "p": 0
+      },
+      {
+        "text": "Bicycling",
+        "p": 0
+      },
+      {
+        "text": "Bicycle",
+        "p": 0
+      },
+      {
+        "text": "Tells",
+        "p": 0
+      },
+      {
+        "text": "Remembering",
+        "p": 0
+      },
+      {
+        "text": "Tell",
+        "p": 0
+      },
+      {
+        "text": "Named",
+        "p": 0
+      },
+      {
+        "text": "Mining",
+        "p": 0
+      },
+      {
+        "text": "Remembered",
+        "p": 0
+      },
+      {
+        "text": "What",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "memory",
+    "user": "What is my bicycle called?",
+    "prefix": "Mivora",
+    "selected": "[END]",
+    "confidence": 0.95,
+    "candidates": [
+      {
+        "text": "[END]",
+        "p": 0.96
+      },
+      {
+        "text": ".",
+        "p": 0.04
+      },
+      {
+        "text": " yeses",
+        "p": 0
+      },
+      {
+        "text": " na",
+        "p": 0
+      },
+      {
+        "text": " s",
+        "p": 0
+      },
+      {
+        "text": " null",
+        "p": 0
+      },
+      {
+        "text": " called",
+        "p": 0
+      },
+      {
+        "text": " bicycling",
+        "p": 0
+      },
+      {
+        "text": " bicycles",
+        "p": 0
+      },
+      {
+        "text": " yet",
+        "p": 0
+      },
+      {
+        "text": " nothings",
+        "p": 0
+      },
+      {
+        "text": " word",
+        "p": 0
+      },
+      {
+        "text": " wording",
+        "p": 0
+      },
+      {
+        "text": " nothing",
+        "p": 0
+      },
+      {
+        "text": " is",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " wrong",
+        "p": 0
+      },
+      {
+        "text": " words",
+        "p": 0
+      },
+      {
+        "text": " My",
+        "p": 0
+      },
+      {
+        "text": " bicycle",
+        "p": 0
+      },
+      {
+        "text": " wronged",
+        "p": 0
+      },
+      {
+        "text": " wronging",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " other",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " worded",
+        "p": 0
+      },
+      {
+        "text": " wrongs",
+        "p": 0
+      },
+      {
+        "text": " yes",
+        "p": 0
+      },
+      {
+        "text": " bicycled",
+        "p": 0
+      },
+      {
+        "text": " Mivora",
+        "p": 0
+      },
+      {
+        "text": " named",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "请用英文解释为什么晚上看不见太阳。",
+    "prefix": "",
+    "selected": "Because",
+    "confidence": 0.7,
+    "candidates": [
+      {
+        "text": "Because",
+        "p": 0.72
+      },
+      {
+        "text": "Well",
+        "p": 0.060000000000000005
+      },
+      {
+        "text": "It",
+        "p": 0.060000000000000005
+      },
+      {
+        "text": "Earth",
+        "p": 0.04
+      },
+      {
+        "text": "We",
+        "p": 0.03
+      },
+      {
+        "text": "Why",
+        "p": 0.03
+      },
+      {
+        "text": "The",
+        "p": 0.02
+      },
+      {
+        "text": "At",
+        "p": 0.02
+      },
+      {
+        "text": "To",
+        "p": 0.01
+      },
+      {
+        "text": "Simply",
+        "p": 0.01
+      },
+      {
+        "text": "Welled",
+        "p": 0
+      },
+      {
+        "text": "Causes",
+        "p": 0
+      },
+      {
+        "text": "As",
+        "p": 0
+      },
+      {
+        "text": "Could",
+        "p": 0
+      },
+      {
+        "text": "Tell",
+        "p": 0
+      },
+      {
+        "text": "Happens",
+        "p": 0
+      },
+      {
+        "text": "Cause",
+        "p": 0
+      },
+      {
+        "text": "Earths",
+        "p": 0
+      },
+      {
+        "text": "Cans",
+        "p": 0
+      },
+      {
+        "text": "Caused",
+        "p": 0
+      },
+      {
+        "text": "Whys",
+        "p": 0
+      },
+      {
+        "text": "Wells",
+        "p": 0
+      },
+      {
+        "text": "Causing",
+        "p": 0
+      },
+      {
+        "text": "Welling",
+        "p": 0
+      },
+      {
+        "text": "Explained",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": "Told",
+        "p": 0
+      },
+      {
+        "text": "Telling",
+        "p": 0
+      },
+      {
+        "text": "Explain",
+        "p": 0
+      },
+      {
+        "text": "Explains",
+        "p": 0
+      },
+      {
+        "text": "Earthing",
+        "p": 0
+      },
+      {
+        "text": "Earthed",
+        "p": 0
+      },
+      {
+        "text": "Can",
+        "p": 0
+      },
+      {
+        "text": "Explaining",
+        "p": 0
+      },
+      {
+        "text": "Tells",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "请用英文解释为什么晚上看不见太阳。",
+    "prefix": "Because",
+    "selected": " earth",
+    "confidence": 0.5,
+    "candidates": [
+      {
+        "text": " earth",
+        "p": 0.52
+      },
+      {
+        "text": " the",
+        "p": 0.28
+      },
+      {
+        "text": " it",
+        "p": 0.07
+      },
+      {
+        "text": " night",
+        "p": 0.03
+      },
+      {
+        "text": " turn",
+        "p": 0.02
+      },
+      {
+        "text": " turns",
+        "p": 0.02
+      },
+      {
+        "text": " as",
+        "p": 0.01
+      },
+      {
+        "text": ".",
+        "p": 0.01
+      },
+      {
+        "text": " that",
+        "p": 0.01
+      },
+      {
+        "text": " turning",
+        "p": 0.01
+      },
+      {
+        "text": " earths",
+        "p": 0.01
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " leaves",
+        "p": 0
+      },
+      {
+        "text": " earthing",
+        "p": 0
+      },
+      {
+        "text": " caused",
+        "p": 0
+      },
+      {
+        "text": " blocks",
+        "p": 0
+      },
+      {
+        "text": " because",
+        "p": 0
+      },
+      {
+        "text": " causes",
+        "p": 0
+      },
+      {
+        "text": " earthed",
+        "p": 0
+      },
+      {
+        "text": " goes",
+        "p": 0
+      },
+      {
+        "text": " turned",
+        "p": 0
+      },
+      {
+        "text": " below",
+        "p": 0
+      },
+      {
+        "text": " cause",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " since",
+        "p": 0
+      },
+      {
+        "text": " causing",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " bc",
+        "p": 0
+      },
+      {
+        "text": " nights",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "请用英文解释为什么晚上看不见太阳。",
+    "prefix": "Because earth",
+    "selected": " turns",
+    "confidence": 0.63,
+    "candidates": [
+      {
+        "text": " turns",
+        "p": 0.65
+      },
+      {
+        "text": " turned",
+        "p": 0.09
+      },
+      {
+        "text": " moves",
+        "p": 0.09
+      },
+      {
+        "text": " is",
+        "p": 0.08
+      },
+      {
+        "text": " blocks",
+        "p": 0.03
+      },
+      {
+        "text": " s",
+        "p": 0.02
+      },
+      {
+        "text": " turning",
+        "p": 0.02
+      },
+      {
+        "text": " side",
+        "p": 0.01
+      },
+      {
+        "text": " turn",
+        "p": 0.01
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      },
+      {
+        "text": " planets",
+        "p": 0
+      },
+      {
+        "text": " motion",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " gets",
+        "p": 0
+      },
+      {
+        "text": " move",
+        "p": 0
+      },
+      {
+        "text": " siding",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " motions",
+        "p": 0
+      },
+      {
+        "text": " planet",
+        "p": 0
+      },
+      {
+        "text": " motioned",
+        "p": 0
+      },
+      {
+        "text": " makes",
+        "p": 0
+      },
+      {
+        "text": " moving",
+        "p": 0
+      },
+      {
+        "text": " sides",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " motioning",
+        "p": 0
+      },
+      {
+        "text": " moved",
+        "p": 0
+      },
+      {
+        "text": " of",
+        "p": 0
+      },
+      {
+        "text": " leaves",
+        "p": 0
+      },
+      {
+        "text": ".",
+        "p": 0
+      },
+      {
+        "text": " goes",
+        "p": 0
+      },
+      {
+        "text": " sided",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "请用英文解释为什么晚上看不见太阳。",
+    "prefix": "Because earth turns",
+    "selected": " away",
+    "confidence": 0.41,
+    "candidates": [
+      {
+        "text": " away",
+        "p": 0.44
+      },
+      {
+        "text": ".",
+        "p": 0.23
+      },
+      {
+        "text": " around",
+        "p": 0.08
+      },
+      {
+        "text": ",",
+        "p": 0.07
+      },
+      {
+        "text": "[END]",
+        "p": 0.04
+      },
+      {
+        "text": " round",
+        "p": 0.04
+      },
+      {
+        "text": " and",
+        "p": 0.03
+      },
+      {
+        "text": " leaving",
+        "p": 0.02
+      },
+      {
+        "text": " to",
+        "p": 0.01
+      },
+      {
+        "text": " makes",
+        "p": 0.01
+      },
+      {
+        "text": " moves",
+        "p": 0.01
+      },
+      {
+        "text": " blocks",
+        "p": 0.01
+      },
+      {
+        "text": " goes",
+        "p": 0.01
+      },
+      {
+        "text": " turns",
+        "p": 0
+      },
+      {
+        "text": " turned",
+        "p": 0
+      },
+      {
+        "text": " bodies",
+        "p": 0
+      },
+      {
+        "text": " rounding",
+        "p": 0
+      },
+      {
+        "text": " brings",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " moved",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " moving",
+        "p": 0
+      },
+      {
+        "text": " s",
+        "p": 0
+      },
+      {
+        "text": " turn",
+        "p": 0
+      },
+      {
+        "text": " rounds",
+        "p": 0
+      },
+      {
+        "text": " does",
+        "p": 0
+      },
+      {
+        "text": " move",
+        "p": 0
+      },
+      {
+        "text": " rounded",
+        "p": 0
+      },
+      {
+        "text": " turning",
+        "p": 0
+      },
+      {
+        "text": " body",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "请用英文解释为什么晚上看不见太阳。",
+    "prefix": "Because earth turns away",
+    "selected": ".",
+    "confidence": 0.45,
+    "candidates": [
+      {
+        "text": ".",
+        "p": 0.48
+      },
+      {
+        "text": " from",
+        "p": 0.24000000000000002
+      },
+      {
+        "text": "[END]",
+        "p": 0.12
+      },
+      {
+        "text": ",",
+        "p": 0.06
+      },
+      {
+        "text": " and",
+        "p": 0.05
+      },
+      {
+        "text": " makes",
+        "p": 0.01
+      },
+      {
+        "text": " to",
+        "p": 0.01
+      },
+      {
+        "text": " behind",
+        "p": 0.01
+      },
+      {
+        "text": " away",
+        "p": 0.01
+      },
+      {
+        "text": " the",
+        "p": 0.01
+      },
+      {
+        "text": " planets",
+        "p": 0
+      },
+      {
+        "text": " brings",
+        "p": 0
+      },
+      {
+        "text": " happens",
+        "p": 0
+      },
+      {
+        "text": " body",
+        "p": 0
+      },
+      {
+        "text": " moves",
+        "p": 0
+      },
+      {
+        "text": " behinds",
+        "p": 0
+      },
+      {
+        "text": " move",
+        "p": 0
+      },
+      {
+        "text": " moving",
+        "p": 0
+      },
+      {
+        "text": " sided",
+        "p": 0
+      },
+      {
+        "text": " over",
+        "p": 0
+      },
+      {
+        "text": " side",
+        "p": 0
+      },
+      {
+        "text": " siding",
+        "p": 0
+      },
+      {
+        "text": " planet",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " sides",
+        "p": 0
+      },
+      {
+        "text": " moved",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " s",
+        "p": 0
+      },
+      {
+        "text": " overs",
+        "p": 0
+      },
+      {
+        "text": " bodies",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "请用英文解释为什么晚上看不见太阳。",
+    "prefix": "Because earth turns away.",
+    "selected": " The",
+    "confidence": 0.5,
+    "candidates": [
+      {
+        "text": " The",
+        "p": 0.53
+      },
+      {
+        "text": "[END]",
+        "p": 0.2
+      },
+      {
+        "text": " Side",
+        "p": 0.08
+      },
+      {
+        "text": " And",
+        "p": 0.04
+      },
+      {
+        "text": " Makes",
+        "p": 0.03
+      },
+      {
+        "text": " Moves",
+        "p": 0.02
+      },
+      {
+        "text": " Behind",
+        "p": 0.02
+      },
+      {
+        "text": " To",
+        "p": 0.02
+      },
+      {
+        "text": " From",
+        "p": 0.01
+      },
+      {
+        "text": " Happens",
+        "p": 0.01
+      },
+      {
+        "text": " Move",
+        "p": 0.01
+      },
+      {
+        "text": " Brings",
+        "p": 0.01
+      },
+      {
+        "text": " Moving",
+        "p": 0.01
+      },
+      {
+        "text": " S",
+        "p": 0.01
+      },
+      {
+        "text": " Body",
+        "p": 0
+      },
+      {
+        "text": " Planets",
+        "p": 0
+      },
+      {
+        "text": " Siding",
+        "p": 0
+      },
+      {
+        "text": " Bodies",
+        "p": 0
+      },
+      {
+        "text": " Sided",
+        "p": 0
+      },
+      {
+        "text": " Skied",
+        "p": 0
+      },
+      {
+        "text": " Skies",
+        "p": 0
+      },
+      {
+        "text": " Away",
+        "p": 0
+      },
+      {
+        "text": " Planet",
+        "p": 0
+      },
+      {
+        "text": " Sides",
+        "p": 0
+      },
+      {
+        "text": " Behinds",
+        "p": 0
+      },
+      {
+        "text": " Skying",
+        "p": 0
+      },
+      {
+        "text": " Moved",
+        "p": 0
+      },
+      {
+        "text": " Sky",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "请用英文解释为什么晚上看不见太阳。",
+    "prefix": "Because earth turns away. The",
+    "selected": " side",
+    "confidence": 0.43,
+    "candidates": [
+      {
+        "text": " side",
+        "p": 0.44
+      },
+      {
+        "text": " planet",
+        "p": 0.11
+      },
+      {
+        "text": " turning",
+        "p": 0.1
+      },
+      {
+        "text": " turns",
+        "p": 0.07
+      },
+      {
+        "text": "[END]",
+        "p": 0.04
+      },
+      {
+        "text": " turn",
+        "p": 0.03
+      },
+      {
+        "text": " sides",
+        "p": 0.03
+      },
+      {
+        "text": " s",
+        "p": 0.03
+      },
+      {
+        "text": " moves",
+        "p": 0.02
+      },
+      {
+        "text": " causes",
+        "p": 0.02
+      },
+      {
+        "text": " behind",
+        "p": 0.02
+      },
+      {
+        "text": " cause",
+        "p": 0.01
+      },
+      {
+        "text": " causing",
+        "p": 0.01
+      },
+      {
+        "text": " move",
+        "p": 0.01
+      },
+      {
+        "text": " makes",
+        "p": 0.01
+      },
+      {
+        "text": " away",
+        "p": 0.01
+      },
+      {
+        "text": " moving",
+        "p": 0.01
+      },
+      {
+        "text": ".",
+        "p": 0.01
+      },
+      {
+        "text": " does",
+        "p": 0.01
+      },
+      {
+        "text": " body",
+        "p": 0.01
+      },
+      {
+        "text": " bodies",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " caused",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " happens",
+        "p": 0
+      },
+      {
+        "text": " siding",
+        "p": 0
+      },
+      {
+        "text": " that",
+        "p": 0
+      },
+      {
+        "text": " turned",
+        "p": 0
+      },
+      {
+        "text": " moved",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " planets",
+        "p": 0
+      },
+      {
+        "text": " sided",
+        "p": 0
+      },
+      {
+        "text": " behinds",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "请用英文解释为什么晚上看不见太阳。",
+    "prefix": "Because earth turns away. The side",
+    "selected": " that",
+    "confidence": 0.49,
+    "candidates": [
+      {
+        "text": " that",
+        "p": 0.52
+      },
+      {
+        "text": " of",
+        "p": 0.11
+      },
+      {
+        "text": " away",
+        "p": 0.1
+      },
+      {
+        "text": " we",
+        "p": 0.06
+      },
+      {
+        "text": " is",
+        "p": 0.05
+      },
+      {
+        "text": " the",
+        "p": 0.03
+      },
+      {
+        "text": " turned",
+        "p": 0.03
+      },
+      {
+        "text": " not",
+        "p": 0.03
+      },
+      {
+        "text": " night",
+        "p": 0.02
+      },
+      {
+        "text": " no",
+        "p": 0.02
+      },
+      {
+        "text": " nos",
+        "p": 0.01
+      },
+      {
+        "text": ".",
+        "p": 0.01
+      },
+      {
+        "text": " becomes",
+        "p": 0.01
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " halves",
+        "p": 0
+      },
+      {
+        "text": " nt",
+        "p": 0
+      },
+      {
+        "text": " siding",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " side",
+        "p": 0
+      },
+      {
+        "text": " sides",
+        "p": 0
+      },
+      {
+        "text": " nights",
+        "p": 0
+      },
+      {
+        "text": " half",
+        "p": 0
+      },
+      {
+        "text": " sided",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " below",
+        "p": 0
+      },
+      {
+        "text": " behind",
+        "p": 0
+      },
+      {
+        "text": " behinds",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "请用英文解释为什么晚上看不见太阳。",
+    "prefix": "Because earth turns away. The side that",
+    "selected": " is",
+    "confidence": 0.62,
+    "candidates": [
+      {
+        "text": " is",
+        "p": 0.64
+      },
+      {
+        "text": " becomes",
+        "p": 0.15000000000000002
+      },
+      {
+        "text": " gets",
+        "p": 0.05
+      },
+      {
+        "text": " no",
+        "p": 0.04
+      },
+      {
+        "text": " we",
+        "p": 0.02
+      },
+      {
+        "text": " half",
+        "p": 0.02
+      },
+      {
+        "text": " not",
+        "p": 0.02
+      },
+      {
+        "text": " turned",
+        "p": 0.02
+      },
+      {
+        "text": " night",
+        "p": 0.01
+      },
+      {
+        "text": " s",
+        "p": 0.01
+      },
+      {
+        "text": " the",
+        "p": 0.01
+      },
+      {
+        "text": " nos",
+        "p": 0.01
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " siding",
+        "p": 0
+      },
+      {
+        "text": " side",
+        "p": 0
+      },
+      {
+        "text": ".",
+        "p": 0
+      },
+      {
+        "text": " sides",
+        "p": 0
+      },
+      {
+        "text": " of",
+        "p": 0
+      },
+      {
+        "text": " moving",
+        "p": 0
+      },
+      {
+        "text": " sided",
+        "p": 0
+      },
+      {
+        "text": " that",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " away",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " nights",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " halves",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "请用英文解释为什么晚上看不见太阳。",
+    "prefix": "Because earth turns away. The side that is",
+    "selected": " turned",
+    "confidence": 0.27,
+    "candidates": [
+      {
+        "text": " turned",
+        "p": 0.31
+      },
+      {
+        "text": " night",
+        "p": 0.22
+      },
+      {
+        "text": " away",
+        "p": 0.11
+      },
+      {
+        "text": " not",
+        "p": 0.11
+      },
+      {
+        "text": " in",
+        "p": 0.11
+      },
+      {
+        "text": " the",
+        "p": 0.03
+      },
+      {
+        "text": " no",
+        "p": 0.02
+      },
+      {
+        "text": " behind",
+        "p": 0.02
+      },
+      {
+        "text": " moving",
+        "p": 0.01
+      },
+      {
+        "text": " blocks",
+        "p": 0.01
+      },
+      {
+        "text": " half",
+        "p": 0.01
+      },
+      {
+        "text": " becomes",
+        "p": 0.01
+      },
+      {
+        "text": " ins",
+        "p": 0.01
+      },
+      {
+        "text": " is",
+        "p": 0.01
+      },
+      {
+        "text": ".",
+        "p": 0.01
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " of",
+        "p": 0
+      },
+      {
+        "text": " below",
+        "p": 0
+      },
+      {
+        "text": " nights",
+        "p": 0
+      },
+      {
+        "text": " nos",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " halves",
+        "p": 0
+      },
+      {
+        "text": " that",
+        "p": 0
+      },
+      {
+        "text": " behinds",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "请用英文解释为什么晚上看不见太阳。",
+    "prefix": "Because earth turns away. The side that is turned",
+    "selected": " away",
+    "confidence": 0.58,
+    "candidates": [
+      {
+        "text": " away",
+        "p": 0.6
+      },
+      {
+        "text": " is",
+        "p": 0.16
+      },
+      {
+        "text": " becomes",
+        "p": 0.11
+      },
+      {
+        "text": " night",
+        "p": 0.03
+      },
+      {
+        "text": " not",
+        "p": 0.02
+      },
+      {
+        "text": ".",
+        "p": 0.02
+      },
+      {
+        "text": " no",
+        "p": 0.01
+      },
+      {
+        "text": " that",
+        "p": 0.01
+      },
+      {
+        "text": " below",
+        "p": 0.01
+      },
+      {
+        "text": " off",
+        "p": 0.01
+      },
+      {
+        "text": ",",
+        "p": 0.01
+      },
+      {
+        "text": " hidden",
+        "p": 0.01
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " of",
+        "p": 0
+      },
+      {
+        "text": " halves",
+        "p": 0
+      },
+      {
+        "text": " half",
+        "p": 0
+      },
+      {
+        "text": " missing",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " turned",
+        "p": 0
+      },
+      {
+        "text": " nos",
+        "p": 0
+      },
+      {
+        "text": " nt",
+        "p": 0
+      },
+      {
+        "text": " gone",
+        "p": 0
+      },
+      {
+        "text": " nights",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "请用英文解释为什么晚上看不见太阳。",
+    "prefix": "Because earth turns away. The side that is turned away",
+    "selected": " is",
+    "confidence": 0.58,
+    "candidates": [
+      {
+        "text": " is",
+        "p": 0.61
+      },
+      {
+        "text": " from",
+        "p": 0.21000000000000002
+      },
+      {
+        "text": " becomes",
+        "p": 0.1
+      },
+      {
+        "text": ".",
+        "p": 0.03
+      },
+      {
+        "text": " the",
+        "p": 0.01
+      },
+      {
+        "text": " no",
+        "p": 0.01
+      },
+      {
+        "text": ",",
+        "p": 0.01
+      },
+      {
+        "text": " night",
+        "p": 0.01
+      },
+      {
+        "text": " not",
+        "p": 0.01
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " seeing",
+        "p": 0
+      },
+      {
+        "text": " nights",
+        "p": 0
+      },
+      {
+        "text": " halves",
+        "p": 0
+      },
+      {
+        "text": " that",
+        "p": 0
+      },
+      {
+        "text": " makes",
+        "p": 0
+      },
+      {
+        "text": " happens",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " missing",
+        "p": 0
+      },
+      {
+        "text": " half",
+        "p": 0
+      },
+      {
+        "text": " of",
+        "p": 0
+      },
+      {
+        "text": " turned",
+        "p": 0
+      },
+      {
+        "text": " nos",
+        "p": 0
+      },
+      {
+        "text": " away",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "请用英文解释为什么晚上看不见太阳。",
+    "prefix": "Because earth turns away. The side that is turned away is",
+    "selected": " night",
+    "confidence": 0.71,
+    "candidates": [
+      {
+        "text": " night",
+        "p": 0.73
+      },
+      {
+        "text": " dark",
+        "p": 0.19
+      },
+      {
+        "text": " in",
+        "p": 0.03
+      },
+      {
+        "text": " the",
+        "p": 0.03
+      },
+      {
+        "text": " hidden",
+        "p": 0.01
+      },
+      {
+        "text": " not",
+        "p": 0.01
+      },
+      {
+        "text": " nt",
+        "p": 0
+      },
+      {
+        "text": " that",
+        "p": 0
+      },
+      {
+        "text": " unable",
+        "p": 0
+      },
+      {
+        "text": " blacking",
+        "p": 0
+      },
+      {
+        "text": " nights",
+        "p": 0
+      },
+      {
+        "text": " is",
+        "p": 0
+      },
+      {
+        "text": " blacked",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " ins",
+        "p": 0
+      },
+      {
+        "text": ".",
+        "p": 0
+      },
+      {
+        "text": " nos",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " becomes",
+        "p": 0
+      },
+      {
+        "text": " half",
+        "p": 0
+      },
+      {
+        "text": " turned",
+        "p": 0
+      },
+      {
+        "text": " missing",
+        "p": 0
+      },
+      {
+        "text": " blacks",
+        "p": 0
+      },
+      {
+        "text": " no",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " halves",
+        "p": 0
+      },
+      {
+        "text": " black",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "请用英文解释为什么晚上看不见太阳。",
+    "prefix": "Because earth turns away. The side that is turned away is night",
+    "selected": ".",
+    "confidence": 0.58,
+    "candidates": [
+      {
+        "text": ".",
+        "p": 0.61
+      },
+      {
+        "text": "[END]",
+        "p": 0.33
+      },
+      {
+        "text": " and",
+        "p": 0.02
+      },
+      {
+        "text": " so",
+        "p": 0.01
+      },
+      {
+        "text": ",",
+        "p": 0.01
+      },
+      {
+        "text": " to",
+        "p": 0.01
+      },
+      {
+        "text": " because",
+        "p": 0.01
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " happens",
+        "p": 0
+      },
+      {
+        "text": " blocks",
+        "p": 0
+      },
+      {
+        "text": " none",
+        "p": 0
+      },
+      {
+        "text": " appear",
+        "p": 0
+      },
+      {
+        "text": " of",
+        "p": 0
+      },
+      {
+        "text": " makes",
+        "p": 0
+      },
+      {
+        "text": " nights",
+        "p": 0
+      },
+      {
+        "text": " night",
+        "p": 0
+      },
+      {
+        "text": " appearing",
+        "p": 0
+      },
+      {
+        "text": " appeared",
+        "p": 0
+      },
+      {
+        "text": " null",
+        "p": 0
+      },
+      {
+        "text": " that",
+        "p": 0
+      },
+      {
+        "text": " is",
+        "p": 0
+      },
+      {
+        "text": " becomes",
+        "p": 0
+      },
+      {
+        "text": " appears",
+        "p": 0
+      },
+      {
+        "text": " then",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "请用英文解释为什么晚上看不见太阳。",
+    "prefix": "Because earth turns away. The side that is turned away is night.",
+    "selected": "[END]",
+    "confidence": 0.59,
+    "candidates": [
+      {
+        "text": "[END]",
+        "p": 0.62
+      },
+      {
+        "text": " So",
+        "p": 0.15
+      },
+      {
+        "text": " And",
+        "p": 0.08
+      },
+      {
+        "text": " That",
+        "p": 0.03
+      },
+      {
+        "text": " Thus",
+        "p": 0.03
+      },
+      {
+        "text": " On",
+        "p": 0.02
+      },
+      {
+        "text": " Means",
+        "p": 0.02
+      },
+      {
+        "text": " Then",
+        "p": 0.01
+      },
+      {
+        "text": " Not",
+        "p": 0.01
+      },
+      {
+        "text": " None",
+        "p": 0.01
+      },
+      {
+        "text": " Since",
+        "p": 0.01
+      },
+      {
+        "text": " Simply",
+        "p": 0.01
+      },
+      {
+        "text": " Becomes",
+        "p": 0
+      },
+      {
+        "text": " Makes",
+        "p": 0
+      },
+      {
+        "text": " Happens",
+        "p": 0
+      },
+      {
+        "text": " Of",
+        "p": 0
+      },
+      {
+        "text": " Null",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "再简短一点。",
+    "prefix": "",
+    "selected": "Because",
+    "confidence": 0.18,
+    "candidates": [
+      {
+        "text": "Because",
+        "p": 0.22
+      },
+      {
+        "text": "Earth",
+        "p": 0.18000000000000002
+      },
+      {
+        "text": "Bc",
+        "p": 0.16
+      },
+      {
+        "text": "Turns",
+        "p": 0.08
+      },
+      {
+        "text": "[END]",
+        "p": 0.08
+      },
+      {
+        "text": "Turn",
+        "p": 0.06
+      },
+      {
+        "text": "Just",
+        "p": 0.05
+      },
+      {
+        "text": "Away",
+        "p": 0.03
+      },
+      {
+        "text": "The",
+        "p": 0.03
+      },
+      {
+        "text": "Turning",
+        "p": 0.03
+      },
+      {
+        "text": "Goes",
+        "p": 0.01
+      },
+      {
+        "text": "Turned",
+        "p": 0.01
+      },
+      {
+        "text": "Earths",
+        "p": 0.01
+      },
+      {
+        "text": "Night",
+        "p": 0.01
+      },
+      {
+        "text": "Side",
+        "p": 0.01
+      },
+      {
+        "text": "Backs",
+        "p": 0.01
+      },
+      {
+        "text": "As",
+        "p": 0.01
+      },
+      {
+        "text": "Siding",
+        "p": 0.01
+      },
+      {
+        "text": "Earthed",
+        "p": 0
+      },
+      {
+        "text": "Back",
+        "p": 0
+      },
+      {
+        "text": "Sides",
+        "p": 0
+      },
+      {
+        "text": "Happens",
+        "p": 0
+      },
+      {
+        "text": "Earthing",
+        "p": 0
+      },
+      {
+        "text": "Backing",
+        "p": 0
+      },
+      {
+        "text": "Nights",
+        "p": 0
+      },
+      {
+        "text": "Sided",
+        "p": 0
+      },
+      {
+        "text": "Backed",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "再简短一点。",
+    "prefix": "Because",
+    "selected": " earth",
+    "confidence": 0.48,
+    "candidates": [
+      {
+        "text": " earth",
+        "p": 0.5
+      },
+      {
+        "text": " the",
+        "p": 0.12
+      },
+      {
+        "text": " half",
+        "p": 0.08
+      },
+      {
+        "text": " turns",
+        "p": 0.060000000000000005
+      },
+      {
+        "text": " away",
+        "p": 0.05
+      },
+      {
+        "text": ".",
+        "p": 0.05
+      },
+      {
+        "text": " The",
+        "p": 0.03
+      },
+      {
+        "text": " side",
+        "p": 0.02
+      },
+      {
+        "text": " night",
+        "p": 0.02
+      },
+      {
+        "text": " turning",
+        "p": 0.02
+      },
+      {
+        "text": " turn",
+        "p": 0.01
+      },
+      {
+        "text": ",",
+        "p": 0.01
+      },
+      {
+        "text": " faces",
+        "p": 0.01
+      },
+      {
+        "text": " earths",
+        "p": 0.01
+      },
+      {
+        "text": " face",
+        "p": 0.01
+      },
+      {
+        "text": " downed",
+        "p": 0
+      },
+      {
+        "text": " rounded",
+        "p": 0
+      },
+      {
+        "text": " nights",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " rounding",
+        "p": 0
+      },
+      {
+        "text": " sided",
+        "p": 0
+      },
+      {
+        "text": " siding",
+        "p": 0
+      },
+      {
+        "text": " down",
+        "p": 0
+      },
+      {
+        "text": " round",
+        "p": 0
+      },
+      {
+        "text": " because",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " as",
+        "p": 0
+      },
+      {
+        "text": " downing",
+        "p": 0
+      },
+      {
+        "text": " turned",
+        "p": 0
+      },
+      {
+        "text": " downs",
+        "p": 0
+      },
+      {
+        "text": " facing",
+        "p": 0
+      },
+      {
+        "text": " goes",
+        "p": 0
+      },
+      {
+        "text": " halves",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " rounds",
+        "p": 0
+      },
+      {
+        "text": " earthing",
+        "p": 0
+      },
+      {
+        "text": " earthed",
+        "p": 0
+      },
+      {
+        "text": " sides",
+        "p": 0
+      },
+      {
+        "text": " faced",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "再简短一点。",
+    "prefix": "Because earth",
+    "selected": " turns",
+    "confidence": 0.82,
+    "candidates": [
+      {
+        "text": " turns",
+        "p": 0.83
+      },
+      {
+        "text": ".",
+        "p": 0.05
+      },
+      {
+        "text": " turn",
+        "p": 0.04
+      },
+      {
+        "text": " moves",
+        "p": 0.03
+      },
+      {
+        "text": " r",
+        "p": 0.02
+      },
+      {
+        "text": " turning",
+        "p": 0.01
+      },
+      {
+        "text": " away",
+        "p": 0.01
+      },
+      {
+        "text": " face",
+        "p": 0.01
+      },
+      {
+        "text": " ar",
+        "p": 0
+      },
+      {
+        "text": " roll",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " makes",
+        "p": 0
+      },
+      {
+        "text": " facing",
+        "p": 0
+      },
+      {
+        "text": " rounds",
+        "p": 0
+      },
+      {
+        "text": " rolls",
+        "p": 0
+      },
+      {
+        "text": " goes",
+        "p": 0
+      },
+      {
+        "text": " is",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " round",
+        "p": 0
+      },
+      {
+        "text": " moved",
+        "p": 0
+      },
+      {
+        "text": " faced",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " rolling",
+        "p": 0
+      },
+      {
+        "text": " move",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      },
+      {
+        "text": " rounding",
+        "p": 0
+      },
+      {
+        "text": " moving",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " rounded",
+        "p": 0
+      },
+      {
+        "text": " turned",
+        "p": 0
+      },
+      {
+        "text": " faces",
+        "p": 0
+      },
+      {
+        "text": " rolled",
+        "p": 0
+      },
+      {
+        "text": " s",
+        "p": 0
+      },
+      {
+        "text": " der",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "再简短一点。",
+    "prefix": "Because earth turns",
+    "selected": " away",
+    "confidence": 0.39,
+    "candidates": [
+      {
+        "text": " away",
+        "p": 0.43
+      },
+      {
+        "text": ".",
+        "p": 0.34
+      },
+      {
+        "text": "[END]",
+        "p": 0.16
+      },
+      {
+        "text": " around",
+        "p": 0.04
+      },
+      {
+        "text": " round",
+        "p": 0.01
+      },
+      {
+        "text": " the",
+        "p": 0.01
+      },
+      {
+        "text": " night",
+        "p": 0.01
+      },
+      {
+        "text": " rounding",
+        "p": 0
+      },
+      {
+        "text": " off",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " goes",
+        "p": 0
+      },
+      {
+        "text": " nights",
+        "p": 0
+      },
+      {
+        "text": " rounds",
+        "p": 0
+      },
+      {
+        "text": " null",
+        "p": 0
+      },
+      {
+        "text": " to",
+        "p": 0
+      },
+      {
+        "text": " none",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " from",
+        "p": 0
+      },
+      {
+        "text": " rounded",
+        "p": 0
+      },
+      {
+        "text": " other",
+        "p": 0
+      },
+      {
+        "text": " s",
+        "p": 0
+      },
+      {
+        "text": " turns",
+        "p": 0
+      },
+      {
+        "text": " happens",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "chinese",
+    "user": "再简短一点。",
+    "prefix": "Because earth turns away",
+    "selected": "[END]",
+    "confidence": 0.68,
+    "candidates": [
+      {
+        "text": "[END]",
+        "p": 0.7
+      },
+      {
+        "text": ".",
+        "p": 0.22
+      },
+      {
+        "text": " night",
+        "p": 0.04
+      },
+      {
+        "text": ",",
+        "p": 0.02
+      },
+      {
+        "text": " and",
+        "p": 0.01
+      },
+      {
+        "text": " becomes",
+        "p": 0.01
+      },
+      {
+        "text": " null",
+        "p": 0
+      },
+      {
+        "text": " Because",
+        "p": 0
+      },
+      {
+        "text": " makes",
+        "p": 0
+      },
+      {
+        "text": " dark",
+        "p": 0
+      },
+      {
+        "text": " gone",
+        "p": 0
+      },
+      {
+        "text": " at",
+        "p": 0
+      },
+      {
+        "text": " because",
+        "p": 0
+      },
+      {
+        "text": " other",
+        "p": 0
+      },
+      {
+        "text": " The",
+        "p": 0
+      },
+      {
+        "text": " happens",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " none",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " then",
+        "p": 0
+      },
+      {
+        "text": " goes",
+        "p": 0
+      },
+      {
+        "text": " nights",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "",
+    "selected": "Once",
+    "confidence": 0.51,
+    "candidates": [
+      {
+        "text": "Once",
+        "p": 0.54
+      },
+      {
+        "text": "Write",
+        "p": 0.13
+      },
+      {
+        "text": "A",
+        "p": 0.08
+      },
+      {
+        "text": "There",
+        "p": 0.06
+      },
+      {
+        "text": "She",
+        "p": 0.03
+      },
+      {
+        "text": "The",
+        "p": 0.03
+      },
+      {
+        "text": "W",
+        "p": 0.03
+      },
+      {
+        "text": "Lost",
+        "p": 0.03
+      },
+      {
+        "text": "St",
+        "p": 0.02
+      },
+      {
+        "text": "Writing",
+        "p": 0.01
+      },
+      {
+        "text": "Short",
+        "p": 0.01
+      },
+      {
+        "text": "About",
+        "p": 0.01
+      },
+      {
+        "text": "None",
+        "p": 0.01
+      },
+      {
+        "text": "Story",
+        "p": 0.01
+      },
+      {
+        "text": "Wrote",
+        "p": 0
+      },
+      {
+        "text": "Written",
+        "p": 0
+      },
+      {
+        "text": "Writes",
+        "p": 0
+      },
+      {
+        "text": "Keeping",
+        "p": 0
+      },
+      {
+        "text": "Shorted",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": "Shorts",
+        "p": 0
+      },
+      {
+        "text": "Begins",
+        "p": 0
+      },
+      {
+        "text": "Shorting",
+        "p": 0
+      },
+      {
+        "text": "Stories",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once",
+    "selected": " there",
+    "confidence": 0.84,
+    "candidates": [
+      {
+        "text": " there",
+        "p": 0.85
+      },
+      {
+        "text": " a",
+        "p": 0.06999999999999999
+      },
+      {
+        "text": ",",
+        "p": 0.04
+      },
+      {
+        "text": " long",
+        "p": 0.02
+      },
+      {
+        "text": ".",
+        "p": 0.01
+      },
+      {
+        "text": " was",
+        "p": 0.01
+      },
+      {
+        "text": " as",
+        "p": 0
+      },
+      {
+        "text": " happens",
+        "p": 0
+      },
+      {
+        "text": " day",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      },
+      {
+        "text": " happened",
+        "p": 0
+      },
+      {
+        "text": " nights",
+        "p": 0
+      },
+      {
+        "text": " firsts",
+        "p": 0
+      },
+      {
+        "text": " times",
+        "p": 0
+      },
+      {
+        "text": " ago",
+        "p": 0
+      },
+      {
+        "text": " days",
+        "p": 0
+      },
+      {
+        "text": " timing",
+        "p": 0
+      },
+      {
+        "text": " longed",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " did",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " timed",
+        "p": 0
+      },
+      {
+        "text": " first",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " had",
+        "p": 0
+      },
+      {
+        "text": " longs",
+        "p": 0
+      },
+      {
+        "text": " time",
+        "p": 0
+      },
+      {
+        "text": " night",
+        "p": 0
+      },
+      {
+        "text": " about",
+        "p": 0
+      },
+      {
+        "text": " longing",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there",
+    "selected": " was",
+    "confidence": 0.89,
+    "candidates": [
+      {
+        "text": " was",
+        "p": 0.9
+      },
+      {
+        "text": " lived",
+        "p": 0.09
+      },
+      {
+        "text": " be",
+        "p": 0.01
+      },
+      {
+        "text": " been",
+        "p": 0
+      },
+      {
+        "text": ".",
+        "p": 0
+      },
+      {
+        "text": " had",
+        "p": 0
+      },
+      {
+        "text": " st",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " to",
+        "p": 0
+      },
+      {
+        "text": " re",
+        "p": 0
+      },
+      {
+        "text": " time",
+        "p": 0
+      },
+      {
+        "text": " were",
+        "p": 0
+      },
+      {
+        "text": " of",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " am",
+        "p": 0
+      },
+      {
+        "text": " timing",
+        "p": 0
+      },
+      {
+        "text": " girl",
+        "p": 0
+      },
+      {
+        "text": " ago",
+        "p": 0
+      },
+      {
+        "text": " timed",
+        "p": 0
+      },
+      {
+        "text": " res",
+        "p": 0
+      },
+      {
+        "text": " a",
+        "p": 0
+      },
+      {
+        "text": " are",
+        "p": 0
+      },
+      {
+        "text": " times",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": " is",
+        "p": 0
+      },
+      {
+        "text": " girls",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " there",
+        "p": 0
+      },
+      {
+        "text": " r",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " being",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was",
+    "selected": " a",
+    "confidence": 0.88,
+    "candidates": [
+      {
+        "text": " a",
+        "p": 0.89
+      },
+      {
+        "text": " girl",
+        "p": 0.06
+      },
+      {
+        "text": " lady",
+        "p": 0.02
+      },
+      {
+        "text": " key",
+        "p": 0.01
+      },
+      {
+        "text": " little",
+        "p": 0.01
+      },
+      {
+        "text": " kid",
+        "p": 0.01
+      },
+      {
+        "text": " ladies",
+        "p": 0
+      },
+      {
+        "text": " being",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": " were",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " there",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " lived",
+        "p": 0
+      },
+      {
+        "text": " she",
+        "p": 0
+      },
+      {
+        "text": " people",
+        "p": 0
+      },
+      {
+        "text": " girls",
+        "p": 0
+      },
+      {
+        "text": " times",
+        "p": 0
+      },
+      {
+        "text": " kidding",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " keying",
+        "p": 0
+      },
+      {
+        "text": " kidded",
+        "p": 0
+      },
+      {
+        "text": " who",
+        "p": 0
+      },
+      {
+        "text": " ago",
+        "p": 0
+      },
+      {
+        "text": " keyed",
+        "p": 0
+      },
+      {
+        "text": " are",
+        "p": 0
+      },
+      {
+        "text": " timed",
+        "p": 0
+      },
+      {
+        "text": " timing",
+        "p": 0
+      },
+      {
+        "text": " kids",
+        "p": 0
+      },
+      {
+        "text": " keys",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " time",
+        "p": 0
+      },
+      {
+        "text": " is",
+        "p": 0
+      },
+      {
+        "text": " been",
+        "p": 0
+      },
+      {
+        "text": " person",
+        "p": 0
+      },
+      {
+        "text": ".",
+        "p": 0
+      },
+      {
+        "text": " be",
+        "p": 0
+      },
+      {
+        "text": " am",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a",
+    "selected": " key",
+    "confidence": 0.91,
+    "candidates": [
+      {
+        "text": " key",
+        "p": 0.92
+      },
+      {
+        "text": " lost",
+        "p": 0.03
+      },
+      {
+        "text": " girl",
+        "p": 0.02
+      },
+      {
+        "text": " master",
+        "p": 0.01
+      },
+      {
+        "text": " time",
+        "p": 0.01
+      },
+      {
+        "text": " woman",
+        "p": 0.01
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " friends",
+        "p": 0
+      },
+      {
+        "text": " timing",
+        "p": 0
+      },
+      {
+        "text": " pieced",
+        "p": 0
+      },
+      {
+        "text": " ladies",
+        "p": 0
+      },
+      {
+        "text": " friend",
+        "p": 0
+      },
+      {
+        "text": " kidded",
+        "p": 0
+      },
+      {
+        "text": " person",
+        "p": 0
+      },
+      {
+        "text": " thing",
+        "p": 0
+      },
+      {
+        "text": " pieces",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " piece",
+        "p": 0
+      },
+      {
+        "text": " mastering",
+        "p": 0
+      },
+      {
+        "text": " things",
+        "p": 0
+      },
+      {
+        "text": " girls",
+        "p": 0
+      },
+      {
+        "text": " keying",
+        "p": 0
+      },
+      {
+        "text": " keyed",
+        "p": 0
+      },
+      {
+        "text": " mastered",
+        "p": 0
+      },
+      {
+        "text": " times",
+        "p": 0
+      },
+      {
+        "text": " keys",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " women",
+        "p": 0
+      },
+      {
+        "text": " masters",
+        "p": 0
+      },
+      {
+        "text": ".",
+        "p": 0
+      },
+      {
+        "text": " kidding",
+        "p": 0
+      },
+      {
+        "text": " people",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": " ones",
+        "p": 0
+      },
+      {
+        "text": " lady",
+        "p": 0
+      },
+      {
+        "text": " kids",
+        "p": 0
+      },
+      {
+        "text": " kid",
+        "p": 0
+      },
+      {
+        "text": " little",
+        "p": 0
+      },
+      {
+        "text": " one",
+        "p": 0
+      },
+      {
+        "text": " piecing",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " timed",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key",
+    "selected": " that",
+    "confidence": 0.22,
+    "candidates": [
+      {
+        "text": " that",
+        "p": 0.26
+      },
+      {
+        "text": ",",
+        "p": 0.24000000000000002
+      },
+      {
+        "text": ".",
+        "p": 0.21
+      },
+      {
+        "text": " lost",
+        "p": 0.13
+      },
+      {
+        "text": " to",
+        "p": 0.05
+      },
+      {
+        "text": " which",
+        "p": 0.04
+      },
+      {
+        "text": " and",
+        "p": 0.03
+      },
+      {
+        "text": " missing",
+        "p": 0.01
+      },
+      {
+        "text": " metal",
+        "p": 0.01
+      },
+      {
+        "text": " los",
+        "p": 0.01
+      },
+      {
+        "text": " for",
+        "p": 0.01
+      },
+      {
+        "text": " gone",
+        "p": 0
+      },
+      {
+        "text": " old",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": " metals",
+        "p": 0
+      },
+      {
+        "text": " ago",
+        "p": 0
+      },
+      {
+        "text": " valuable",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " metalled",
+        "p": 0
+      },
+      {
+        "text": " valuables",
+        "p": 0
+      },
+      {
+        "text": " is",
+        "p": 0
+      },
+      {
+        "text": " metalling",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that",
+    "selected": " was",
+    "confidence": 0.93,
+    "candidates": [
+      {
+        "text": " was",
+        "p": 0.9400000000000001
+      },
+      {
+        "text": " had",
+        "p": 0.02
+      },
+      {
+        "text": " los",
+        "p": 0.01
+      },
+      {
+        "text": " lived",
+        "p": 0.01
+      },
+      {
+        "text": " lost",
+        "p": 0.01
+      },
+      {
+        "text": " be",
+        "p": 0
+      },
+      {
+        "text": " am",
+        "p": 0
+      },
+      {
+        "text": " are",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " is",
+        "p": 0
+      },
+      {
+        "text": " been",
+        "p": 0
+      },
+      {
+        "text": " gone",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      },
+      {
+        "text": " did",
+        "p": 0
+      },
+      {
+        "text": ".",
+        "p": 0
+      },
+      {
+        "text": " were",
+        "p": 0
+      },
+      {
+        "text": " goes",
+        "p": 0
+      },
+      {
+        "text": " found",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": " left",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " being",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " beings",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was",
+    "selected": " lost",
+    "confidence": 0.96,
+    "candidates": [
+      {
+        "text": " lost",
+        "p": 0.98
+      },
+      {
+        "text": " missing",
+        "p": 0.01
+      },
+      {
+        "text": " los",
+        "p": 0.01
+      },
+      {
+        "text": " loss",
+        "p": 0
+      },
+      {
+        "text": " been",
+        "p": 0
+      },
+      {
+        "text": " gone",
+        "p": 0
+      },
+      {
+        "text": " away",
+        "p": 0
+      },
+      {
+        "text": " are",
+        "p": 0
+      },
+      {
+        "text": " were",
+        "p": 0
+      },
+      {
+        "text": ".",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " needed",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " outs",
+        "p": 0
+      },
+      {
+        "text": " yours",
+        "p": 0
+      },
+      {
+        "text": " found",
+        "p": 0
+      },
+      {
+        "text": " am",
+        "p": 0
+      },
+      {
+        "text": " out",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " outing",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " your",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " losses",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": " being",
+        "p": 0
+      },
+      {
+        "text": " valuables",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " be",
+        "p": 0
+      },
+      {
+        "text": " is",
+        "p": 0
+      },
+      {
+        "text": " outed",
+        "p": 0
+      },
+      {
+        "text": " valuable",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost",
+    "selected": ",",
+    "confidence": 0.34,
+    "candidates": [
+      {
+        "text": ",",
+        "p": 0.37
+      },
+      {
+        "text": ".",
+        "p": 0.31
+      },
+      {
+        "text": " and",
+        "p": 0.29000000000000004
+      },
+      {
+        "text": " found",
+        "p": 0.02
+      },
+      {
+        "text": " where",
+        "p": 0.01
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " did",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      },
+      {
+        "text": " then",
+        "p": 0
+      },
+      {
+        "text": " gone",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " ago",
+        "p": 0
+      },
+      {
+        "text": " placed",
+        "p": 0
+      },
+      {
+        "text": " placing",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " been",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " around",
+        "p": 0
+      },
+      {
+        "text": " to",
+        "p": 0
+      },
+      {
+        "text": " happened",
+        "p": 0
+      },
+      {
+        "text": " away",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": " finally",
+        "p": 0
+      },
+      {
+        "text": " places",
+        "p": 0
+      },
+      {
+        "text": " place",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost,",
+    "selected": " it",
+    "confidence": 0.62,
+    "candidates": [
+      {
+        "text": " it",
+        "p": 0.64
+      },
+      {
+        "text": " and",
+        "p": 0.19
+      },
+      {
+        "text": " the",
+        "p": 0.07
+      },
+      {
+        "text": " there",
+        "p": 0.06
+      },
+      {
+        "text": " where",
+        "p": 0.01
+      },
+      {
+        "text": " was",
+        "p": 0.01
+      },
+      {
+        "text": " then",
+        "p": 0.01
+      },
+      {
+        "text": " ago",
+        "p": 0.01
+      },
+      {
+        "text": " found",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " around",
+        "p": 0
+      },
+      {
+        "text": " places",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " did",
+        "p": 0
+      },
+      {
+        "text": " place",
+        "p": 0
+      },
+      {
+        "text": " away",
+        "p": 0
+      },
+      {
+        "text": " placing",
+        "p": 0
+      },
+      {
+        "text": " happened",
+        "p": 0
+      },
+      {
+        "text": " gone",
+        "p": 0
+      },
+      {
+        "text": " placed",
+        "p": 0
+      },
+      {
+        "text": " been",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it",
+    "selected": " was",
+    "confidence": 0.79,
+    "candidates": [
+      {
+        "text": " was",
+        "p": 0.8
+      },
+      {
+        "text": " became",
+        "p": 0.07
+      },
+      {
+        "text": " looked",
+        "p": 0.05
+      },
+      {
+        "text": " happened",
+        "p": 0.01
+      },
+      {
+        "text": " did",
+        "p": 0.01
+      },
+      {
+        "text": " had",
+        "p": 0.01
+      },
+      {
+        "text": " then",
+        "p": 0.01
+      },
+      {
+        "text": " be",
+        "p": 0.01
+      },
+      {
+        "text": " is",
+        "p": 0.01
+      },
+      {
+        "text": " found",
+        "p": 0.01
+      },
+      {
+        "text": " being",
+        "p": 0
+      },
+      {
+        "text": " which",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": " ago",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " could",
+        "p": 0
+      },
+      {
+        "text": " were",
+        "p": 0
+      },
+      {
+        "text": " am",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " happen",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": ".",
+        "p": 0
+      },
+      {
+        "text": " been",
+        "p": 0
+      },
+      {
+        "text": " are",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " happens",
+        "p": 0
+      },
+      {
+        "text": " happening",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was",
+    "selected": " valuable",
+    "confidence": 0.13,
+    "candidates": [
+      {
+        "text": " valuable",
+        "p": 0.16
+      },
+      {
+        "text": " gone",
+        "p": 0.14
+      },
+      {
+        "text": " missing",
+        "p": 0.13
+      },
+      {
+        "text": " the",
+        "p": 0.13
+      },
+      {
+        "text": " old",
+        "p": 0.11
+      },
+      {
+        "text": " lost",
+        "p": 0.09
+      },
+      {
+        "text": " golden",
+        "p": 0.08
+      },
+      {
+        "text": " very",
+        "p": 0.05
+      },
+      {
+        "text": " metal",
+        "p": 0.04
+      },
+      {
+        "text": " black",
+        "p": 0.02
+      },
+      {
+        "text": ".",
+        "p": 0.02
+      },
+      {
+        "text": " longed",
+        "p": 0.01
+      },
+      {
+        "text": " placed",
+        "p": 0.01
+      },
+      {
+        "text": ",",
+        "p": 0.01
+      },
+      {
+        "text": " metals",
+        "p": 0
+      },
+      {
+        "text": " blacked",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": " places",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " things",
+        "p": 0
+      },
+      {
+        "text": " ago",
+        "p": 0
+      },
+      {
+        "text": " metalled",
+        "p": 0
+      },
+      {
+        "text": " blacking",
+        "p": 0
+      },
+      {
+        "text": " long",
+        "p": 0
+      },
+      {
+        "text": " longs",
+        "p": 0
+      },
+      {
+        "text": " been",
+        "p": 0
+      },
+      {
+        "text": " thing",
+        "p": 0
+      },
+      {
+        "text": " metalling",
+        "p": 0
+      },
+      {
+        "text": " place",
+        "p": 0
+      },
+      {
+        "text": " placing",
+        "p": 0
+      },
+      {
+        "text": " blacks",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " valuables",
+        "p": 0
+      },
+      {
+        "text": " longing",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable",
+    "selected": ".",
+    "confidence": 0.48,
+    "candidates": [
+      {
+        "text": ".",
+        "p": 0.51
+      },
+      {
+        "text": " and",
+        "p": 0.25
+      },
+      {
+        "text": ",",
+        "p": 0.09999999999999999
+      },
+      {
+        "text": " because",
+        "p": 0.06
+      },
+      {
+        "text": " but",
+        "p": 0.03
+      },
+      {
+        "text": " to",
+        "p": 0.02
+      },
+      {
+        "text": " golden",
+        "p": 0.01
+      },
+      {
+        "text": " for",
+        "p": 0.01
+      },
+      {
+        "text": "[END]",
+        "p": 0.01
+      },
+      {
+        "text": " then",
+        "p": 0
+      },
+      {
+        "text": " important",
+        "p": 0
+      },
+      {
+        "text": " valuables",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " it",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      },
+      {
+        "text": " so",
+        "p": 0
+      },
+      {
+        "text": " valuable",
+        "p": 0
+      },
+      {
+        "text": " needed",
+        "p": 0
+      },
+      {
+        "text": " however",
+        "p": 0
+      },
+      {
+        "text": " very",
+        "p": 0
+      },
+      {
+        "text": " of",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable.",
+    "selected": " It",
+    "confidence": 0.25,
+    "candidates": [
+      {
+        "text": " It",
+        "p": 0.31
+      },
+      {
+        "text": " Then",
+        "p": 0.22
+      },
+      {
+        "text": " But",
+        "p": 0.15
+      },
+      {
+        "text": " Its",
+        "p": 0.11
+      },
+      {
+        "text": " And",
+        "p": 0.07
+      },
+      {
+        "text": " So",
+        "p": 0.05
+      },
+      {
+        "text": " However",
+        "p": 0.02
+      },
+      {
+        "text": " Because",
+        "p": 0.02
+      },
+      {
+        "text": " Searching",
+        "p": 0.01
+      },
+      {
+        "text": "[END]",
+        "p": 0.01
+      },
+      {
+        "text": " Looking",
+        "p": 0.01
+      },
+      {
+        "text": " To",
+        "p": 0.01
+      },
+      {
+        "text": " Problem",
+        "p": 0.01
+      },
+      {
+        "text": " Important",
+        "p": 0
+      },
+      {
+        "text": " Needed",
+        "p": 0
+      },
+      {
+        "text": " Very",
+        "p": 0
+      },
+      {
+        "text": " Ago",
+        "p": 0
+      },
+      {
+        "text": " Problems",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It",
+    "selected": " was",
+    "confidence": 0.67,
+    "candidates": [
+      {
+        "text": " was",
+        "p": 0.7
+      },
+      {
+        "text": " had",
+        "p": 0.17
+      },
+      {
+        "text": " found",
+        "p": 0.03
+      },
+      {
+        "text": " could",
+        "p": 0.03
+      },
+      {
+        "text": ".",
+        "p": 0.02
+      },
+      {
+        "text": " needed",
+        "p": 0.02
+      },
+      {
+        "text": " then",
+        "p": 0.01
+      },
+      {
+        "text": " happened",
+        "p": 0.01
+      },
+      {
+        "text": " has",
+        "p": 0.01
+      },
+      {
+        "text": " did",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " searching",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " very",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " been",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " its",
+        "p": 0
+      },
+      {
+        "text": " important",
+        "p": 0
+      },
+      {
+        "text": " it",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was",
+    "selected": " very",
+    "confidence": 0.19,
+    "candidates": [
+      {
+        "text": " very",
+        "p": 0.23
+      },
+      {
+        "text": " golden",
+        "p": 0.23
+      },
+      {
+        "text": " metal",
+        "p": 0.19
+      },
+      {
+        "text": " needed",
+        "p": 0.15
+      },
+      {
+        "text": " important",
+        "p": 0.13
+      },
+      {
+        "text": " something",
+        "p": 0.01
+      },
+      {
+        "text": " because",
+        "p": 0.01
+      },
+      {
+        "text": ",",
+        "p": 0.01
+      },
+      {
+        "text": " valuable",
+        "p": 0.01
+      },
+      {
+        "text": " to",
+        "p": 0.01
+      },
+      {
+        "text": ".",
+        "p": 0.01
+      },
+      {
+        "text": " of",
+        "p": 0.01
+      },
+      {
+        "text": " metalled",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": " long",
+        "p": 0
+      },
+      {
+        "text": " metalling",
+        "p": 0
+      },
+      {
+        "text": " longs",
+        "p": 0
+      },
+      {
+        "text": " thing",
+        "p": 0
+      },
+      {
+        "text": " been",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " longed",
+        "p": 0
+      },
+      {
+        "text": " things",
+        "p": 0
+      },
+      {
+        "text": " valuables",
+        "p": 0
+      },
+      {
+        "text": " its",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": " metals",
+        "p": 0
+      },
+      {
+        "text": " longing",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very",
+    "selected": " important",
+    "confidence": 0.39,
+    "candidates": [
+      {
+        "text": " important",
+        "p": 0.42
+      },
+      {
+        "text": " special",
+        "p": 0.2
+      },
+      {
+        "text": " valuable",
+        "p": 0.19
+      },
+      {
+        "text": " useful",
+        "p": 0.06999999999999999
+      },
+      {
+        "text": " small",
+        "p": 0.05
+      },
+      {
+        "text": " old",
+        "p": 0.04
+      },
+      {
+        "text": " golden",
+        "p": 0.01
+      },
+      {
+        "text": ",",
+        "p": 0.01
+      },
+      {
+        "text": " very",
+        "p": 0.01
+      },
+      {
+        "text": " valuables",
+        "p": 0
+      },
+      {
+        "text": " reals",
+        "p": 0
+      },
+      {
+        "text": " metalling",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " much",
+        "p": 0
+      },
+      {
+        "text": " longs",
+        "p": 0
+      },
+      {
+        "text": ".",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " metal",
+        "p": 0
+      },
+      {
+        "text": " longing",
+        "p": 0
+      },
+      {
+        "text": " metalled",
+        "p": 0
+      },
+      {
+        "text": " longed",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": " long",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " metals",
+        "p": 0
+      },
+      {
+        "text": " specials",
+        "p": 0
+      },
+      {
+        "text": " real",
+        "p": 0
+      },
+      {
+        "text": " great",
+        "p": 0
+      },
+      {
+        "text": " smalls",
+        "p": 0
+      },
+      {
+        "text": " wonderful",
+        "p": 0
+      },
+      {
+        "text": " big",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very important",
+    "selected": ".",
+    "confidence": 0.35,
+    "candidates": [
+      {
+        "text": ".",
+        "p": 0.39
+      },
+      {
+        "text": " to",
+        "p": 0.23
+      },
+      {
+        "text": " because",
+        "p": 0.22
+      },
+      {
+        "text": " and",
+        "p": 0.06
+      },
+      {
+        "text": ",",
+        "p": 0.03
+      },
+      {
+        "text": " but",
+        "p": 0.02
+      },
+      {
+        "text": " for",
+        "p": 0.02
+      },
+      {
+        "text": "!",
+        "p": 0.01
+      },
+      {
+        "text": " then",
+        "p": 0.01
+      },
+      {
+        "text": "[END]",
+        "p": 0.01
+      },
+      {
+        "text": " problems",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " doors",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " however",
+        "p": 0
+      },
+      {
+        "text": " problem",
+        "p": 0
+      },
+      {
+        "text": " needed",
+        "p": 0
+      },
+      {
+        "text": " so",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " door",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " found",
+        "p": 0
+      },
+      {
+        "text": " ago",
+        "p": 0
+      },
+      {
+        "text": " of",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very important.",
+    "selected": " Then",
+    "confidence": 0.19,
+    "candidates": [
+      {
+        "text": " Then",
+        "p": 0.24000000000000002
+      },
+      {
+        "text": " It",
+        "p": 0.24000000000000002
+      },
+      {
+        "text": " The",
+        "p": 0.21
+      },
+      {
+        "text": " Finally",
+        "p": 0.11
+      },
+      {
+        "text": " And",
+        "p": 0.06
+      },
+      {
+        "text": " However",
+        "p": 0.05
+      },
+      {
+        "text": " So",
+        "p": 0.03
+      },
+      {
+        "text": " To",
+        "p": 0.01
+      },
+      {
+        "text": " Because",
+        "p": 0.01
+      },
+      {
+        "text": " Found",
+        "p": 0.01
+      },
+      {
+        "text": " Looking",
+        "p": 0.01
+      },
+      {
+        "text": " For",
+        "p": 0.01
+      },
+      {
+        "text": "[END]",
+        "p": 0.01
+      },
+      {
+        "text": " Ago",
+        "p": 0
+      },
+      {
+        "text": " Needed",
+        "p": 0
+      },
+      {
+        "text": " Happened",
+        "p": 0
+      },
+      {
+        "text": " Founds",
+        "p": 0
+      },
+      {
+        "text": " Problem",
+        "p": 0
+      },
+      {
+        "text": " Founded",
+        "p": 0
+      },
+      {
+        "text": " Problems",
+        "p": 0
+      },
+      {
+        "text": " Founding",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very important. Then",
+    "selected": " the",
+    "confidence": 0.42,
+    "candidates": [
+      {
+        "text": " the",
+        "p": 0.44
+      },
+      {
+        "text": ",",
+        "p": 0.14
+      },
+      {
+        "text": " it",
+        "p": 0.13
+      },
+      {
+        "text": " he",
+        "p": 0.12
+      },
+      {
+        "text": " they",
+        "p": 0.1
+      },
+      {
+        "text": " looked",
+        "p": 0.01
+      },
+      {
+        "text": " look",
+        "p": 0.01
+      },
+      {
+        "text": " searching",
+        "p": 0.01
+      },
+      {
+        "text": ".",
+        "p": 0.01
+      },
+      {
+        "text": " search",
+        "p": 0.01
+      },
+      {
+        "text": " finally",
+        "p": 0.01
+      },
+      {
+        "text": " searched",
+        "p": 0.01
+      },
+      {
+        "text": " then",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": " searches",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " however",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " did",
+        "p": 0
+      },
+      {
+        "text": " looks",
+        "p": 0
+      },
+      {
+        "text": " looking",
+        "p": 0
+      },
+      {
+        "text": " happened",
+        "p": 0
+      },
+      {
+        "text": " so",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very important. Then the",
+    "selected": " search",
+    "confidence": 0.21,
+    "candidates": [
+      {
+        "text": " search",
+        "p": 0.25
+      },
+      {
+        "text": " person",
+        "p": 0.25
+      },
+      {
+        "text": " girl",
+        "p": 0.22
+      },
+      {
+        "text": " finder",
+        "p": 0.11
+      },
+      {
+        "text": " people",
+        "p": 0.03
+      },
+      {
+        "text": " searched",
+        "p": 0.03
+      },
+      {
+        "text": " looked",
+        "p": 0.02
+      },
+      {
+        "text": ".",
+        "p": 0.01
+      },
+      {
+        "text": " finders",
+        "p": 0.01
+      },
+      {
+        "text": " searches",
+        "p": 0.01
+      },
+      {
+        "text": " the",
+        "p": 0.01
+      },
+      {
+        "text": " he",
+        "p": 0.01
+      },
+      {
+        "text": " searching",
+        "p": 0.01
+      },
+      {
+        "text": " happened",
+        "p": 0.01
+      },
+      {
+        "text": " look",
+        "p": 0.01
+      },
+      {
+        "text": " they",
+        "p": 0.01
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " looks",
+        "p": 0
+      },
+      {
+        "text": " girls",
+        "p": 0
+      },
+      {
+        "text": " did",
+        "p": 0
+      },
+      {
+        "text": " looking",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " she",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " it",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very important. Then the search",
+    "selected": " began",
+    "confidence": 0.61,
+    "candidates": [
+      {
+        "text": " began",
+        "p": 0.63
+      },
+      {
+        "text": " started",
+        "p": 0.33
+      },
+      {
+        "text": " begins",
+        "p": 0.03
+      },
+      {
+        "text": " for",
+        "p": 0.01
+      },
+      {
+        "text": " being",
+        "p": 0
+      },
+      {
+        "text": " beginning",
+        "p": 0
+      },
+      {
+        "text": " begun",
+        "p": 0
+      },
+      {
+        "text": ".",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " ing",
+        "p": 0
+      },
+      {
+        "text": " start",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": " beings",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " starting",
+        "p": 0
+      },
+      {
+        "text": " finding",
+        "p": 0
+      },
+      {
+        "text": " happened",
+        "p": 0
+      },
+      {
+        "text": " searching",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": " did",
+        "p": 0
+      },
+      {
+        "text": " begin",
+        "p": 0
+      },
+      {
+        "text": " around",
+        "p": 0
+      },
+      {
+        "text": " looking",
+        "p": 0
+      },
+      {
+        "text": " looked",
+        "p": 0
+      },
+      {
+        "text": " findings",
+        "p": 0
+      },
+      {
+        "text": " starts",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very important. Then the search began",
+    "selected": ".",
+    "confidence": 0.59,
+    "candidates": [
+      {
+        "text": ".",
+        "p": 0.6
+      },
+      {
+        "text": " and",
+        "p": 0.21
+      },
+      {
+        "text": " for",
+        "p": 0.05
+      },
+      {
+        "text": ",",
+        "p": 0.04
+      },
+      {
+        "text": " to",
+        "p": 0.03
+      },
+      {
+        "text": " quickly",
+        "p": 0.03
+      },
+      {
+        "text": " around",
+        "p": 0.01
+      },
+      {
+        "text": " hunting",
+        "p": 0.01
+      },
+      {
+        "text": " looking",
+        "p": 0.01
+      },
+      {
+        "text": "[END]",
+        "p": 0.01
+      },
+      {
+        "text": " ing",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": " about",
+        "p": 0
+      },
+      {
+        "text": " searching",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      },
+      {
+        "text": " looked",
+        "p": 0
+      },
+      {
+        "text": " finally",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " soon",
+        "p": 0
+      },
+      {
+        "text": " then",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very important. Then the search began.",
+    "selected": " The",
+    "confidence": 0.25,
+    "candidates": [
+      {
+        "text": " The",
+        "p": 0.3
+      },
+      {
+        "text": " It",
+        "p": 0.19
+      },
+      {
+        "text": " Soon",
+        "p": 0.16
+      },
+      {
+        "text": " Finally",
+        "p": 0.07
+      },
+      {
+        "text": " Quickly",
+        "p": 0.05
+      },
+      {
+        "text": " And",
+        "p": 0.05
+      },
+      {
+        "text": " Looked",
+        "p": 0.03
+      },
+      {
+        "text": " Around",
+        "p": 0.03
+      },
+      {
+        "text": " Then",
+        "p": 0.02
+      },
+      {
+        "text": " For",
+        "p": 0.02
+      },
+      {
+        "text": " Looking",
+        "p": 0.02
+      },
+      {
+        "text": "[END]",
+        "p": 0.02
+      },
+      {
+        "text": " Hunting",
+        "p": 0.01
+      },
+      {
+        "text": " Searching",
+        "p": 0.01
+      },
+      {
+        "text": " To",
+        "p": 0.01
+      },
+      {
+        "text": " Being",
+        "p": 0.01
+      },
+      {
+        "text": " Beings",
+        "p": 0
+      },
+      {
+        "text": " Was",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very important. Then the search began. The",
+    "selected": " search",
+    "confidence": 0.36,
+    "candidates": [
+      {
+        "text": " search",
+        "p": 0.39
+      },
+      {
+        "text": " journey",
+        "p": 0.22
+      },
+      {
+        "text": " trail",
+        "p": 0.08
+      },
+      {
+        "text": " looked",
+        "p": 0.07
+      },
+      {
+        "text": " adventure",
+        "p": 0.06
+      },
+      {
+        "text": " they",
+        "p": 0.05
+      },
+      {
+        "text": " searched",
+        "p": 0.04
+      },
+      {
+        "text": " investigation",
+        "p": 0.04
+      },
+      {
+        "text": " searching",
+        "p": 0.01
+      },
+      {
+        "text": ".",
+        "p": 0.01
+      },
+      {
+        "text": " around",
+        "p": 0.01
+      },
+      {
+        "text": " hunting",
+        "p": 0.01
+      },
+      {
+        "text": " adventures",
+        "p": 0.01
+      },
+      {
+        "text": " trails",
+        "p": 0
+      },
+      {
+        "text": " searches",
+        "p": 0
+      },
+      {
+        "text": " being",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " journeys",
+        "p": 0
+      },
+      {
+        "text": " journeyed",
+        "p": 0
+      },
+      {
+        "text": " looking",
+        "p": 0
+      },
+      {
+        "text": " adventured",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " journeying",
+        "p": 0
+      },
+      {
+        "text": " investigations",
+        "p": 0
+      },
+      {
+        "text": " to",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " trailed",
+        "p": 0
+      },
+      {
+        "text": " adventuring",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      },
+      {
+        "text": " beings",
+        "p": 0
+      },
+      {
+        "text": " trailing",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very important. Then the search began. The search",
+    "selected": " was",
+    "confidence": 0.62,
+    "candidates": [
+      {
+        "text": " was",
+        "p": 0.64
+      },
+      {
+        "text": " for",
+        "p": 0.17
+      },
+      {
+        "text": ".",
+        "p": 0.06999999999999999
+      },
+      {
+        "text": " looked",
+        "p": 0.05
+      },
+      {
+        "text": " searched",
+        "p": 0.02
+      },
+      {
+        "text": " did",
+        "p": 0.02
+      },
+      {
+        "text": " journeyed",
+        "p": 0.01
+      },
+      {
+        "text": " journey",
+        "p": 0.01
+      },
+      {
+        "text": " around",
+        "p": 0.01
+      },
+      {
+        "text": " journeys",
+        "p": 0
+      },
+      {
+        "text": " adventured",
+        "p": 0
+      },
+      {
+        "text": " ing",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " investigation",
+        "p": 0
+      },
+      {
+        "text": " investigations",
+        "p": 0
+      },
+      {
+        "text": " adventure",
+        "p": 0
+      },
+      {
+        "text": " searching",
+        "p": 0
+      },
+      {
+        "text": " adventuring",
+        "p": 0
+      },
+      {
+        "text": " beings",
+        "p": 0
+      },
+      {
+        "text": " adventures",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": " journeying",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " search",
+        "p": 0
+      },
+      {
+        "text": " searches",
+        "p": 0
+      },
+      {
+        "text": " being",
+        "p": 0
+      },
+      {
+        "text": " hunting",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " looking",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very important. Then the search began. The search was",
+    "selected": " long",
+    "confidence": 0.37,
+    "candidates": [
+      {
+        "text": " long",
+        "p": 0.4
+      },
+      {
+        "text": " on",
+        "p": 0.2
+      },
+      {
+        "text": " for",
+        "p": 0.13
+      },
+      {
+        "text": " very",
+        "p": 0.09
+      },
+      {
+        "text": " ing",
+        "p": 0.03
+      },
+      {
+        "text": " around",
+        "p": 0.02
+      },
+      {
+        "text": " journeying",
+        "p": 0.02
+      },
+      {
+        "text": " journey",
+        "p": 0.02
+      },
+      {
+        "text": ".",
+        "p": 0.02
+      },
+      {
+        "text": " adventuring",
+        "p": 0.01
+      },
+      {
+        "text": " performed",
+        "p": 0.01
+      },
+      {
+        "text": " to",
+        "p": 0.01
+      },
+      {
+        "text": " investigation",
+        "p": 0.01
+      },
+      {
+        "text": " adventure",
+        "p": 0.01
+      },
+      {
+        "text": " being",
+        "p": 0.01
+      },
+      {
+        "text": " hunting",
+        "p": 0.01
+      },
+      {
+        "text": " searching",
+        "p": 0
+      },
+      {
+        "text": " investigations",
+        "p": 0
+      },
+      {
+        "text": " longs",
+        "p": 0
+      },
+      {
+        "text": " been",
+        "p": 0
+      },
+      {
+        "text": " journeyed",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " longed",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " beings",
+        "p": 0
+      },
+      {
+        "text": " adventures",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": " journeys",
+        "p": 0
+      },
+      {
+        "text": " longing",
+        "p": 0
+      },
+      {
+        "text": " adventured",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very important. Then the search began. The search was long",
+    "selected": ".",
+    "confidence": 0.41,
+    "candidates": [
+      {
+        "text": ".",
+        "p": 0.44
+      },
+      {
+        "text": " and",
+        "p": 0.38
+      },
+      {
+        "text": ",",
+        "p": 0.09
+      },
+      {
+        "text": " journey",
+        "p": 0.03
+      },
+      {
+        "text": " to",
+        "p": 0.02
+      },
+      {
+        "text": " yet",
+        "p": 0.01
+      },
+      {
+        "text": " over",
+        "p": 0.01
+      },
+      {
+        "text": " hours",
+        "p": 0.01
+      },
+      {
+        "text": " found",
+        "p": 0.01
+      },
+      {
+        "text": " journeys",
+        "p": 0
+      },
+      {
+        "text": " been",
+        "p": 0
+      },
+      {
+        "text": " very",
+        "p": 0
+      },
+      {
+        "text": " finally",
+        "p": 0
+      },
+      {
+        "text": " then",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " adventure",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " adventuring",
+        "p": 0
+      },
+      {
+        "text": " adventured",
+        "p": 0
+      },
+      {
+        "text": " st",
+        "p": 0
+      },
+      {
+        "text": " adventures",
+        "p": 0
+      },
+      {
+        "text": " journeying",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " overs",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " days",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " journeyed",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very important. Then the search began. The search was long.",
+    "selected": " Finally",
+    "confidence": 0.74,
+    "candidates": [
+      {
+        "text": " Finally",
+        "p": 0.76
+      },
+      {
+        "text": " Soon",
+        "p": 0.08
+      },
+      {
+        "text": " Then",
+        "p": 0.05
+      },
+      {
+        "text": " The",
+        "p": 0.03
+      },
+      {
+        "text": " And",
+        "p": 0.02
+      },
+      {
+        "text": " Days",
+        "p": 0.02
+      },
+      {
+        "text": " Found",
+        "p": 0.01
+      },
+      {
+        "text": " End",
+        "p": 0.01
+      },
+      {
+        "text": " However",
+        "p": 0.01
+      },
+      {
+        "text": "[END]",
+        "p": 0.01
+      },
+      {
+        "text": " Ends",
+        "p": 0
+      },
+      {
+        "text": " Looking",
+        "p": 0
+      },
+      {
+        "text": " Ending",
+        "p": 0
+      },
+      {
+        "text": " Founds",
+        "p": 0
+      },
+      {
+        "text": " Ended",
+        "p": 0
+      },
+      {
+        "text": " Searching",
+        "p": 0
+      },
+      {
+        "text": " Been",
+        "p": 0
+      },
+      {
+        "text": " Founding",
+        "p": 0
+      },
+      {
+        "text": " Stilled",
+        "p": 0
+      },
+      {
+        "text": " Stilling",
+        "p": 0
+      },
+      {
+        "text": " Still",
+        "p": 0
+      },
+      {
+        "text": " Was",
+        "p": 0
+      },
+      {
+        "text": " Founded",
+        "p": 0
+      },
+      {
+        "text": " Yet",
+        "p": 0
+      },
+      {
+        "text": " Stills",
+        "p": 0
+      },
+      {
+        "text": " To",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very important. Then the search began. The search was long. Finally",
+    "selected": " found",
+    "confidence": 0.5,
+    "candidates": [
+      {
+        "text": " found",
+        "p": 0.52
+      },
+      {
+        "text": " it",
+        "p": 0.2
+      },
+      {
+        "text": ",",
+        "p": 0.14
+      },
+      {
+        "text": " the",
+        "p": 0.08
+      },
+      {
+        "text": " discovered",
+        "p": 0.03
+      },
+      {
+        "text": ".",
+        "p": 0.01
+      },
+      {
+        "text": " over",
+        "p": 0.01
+      },
+      {
+        "text": " there",
+        "p": 0.01
+      },
+      {
+        "text": " discovering",
+        "p": 0
+      },
+      {
+        "text": " did",
+        "p": 0
+      },
+      {
+        "text": " finds",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": " discover",
+        "p": 0
+      },
+      {
+        "text": " find",
+        "p": 0
+      },
+      {
+        "text": " outing",
+        "p": 0
+      },
+      {
+        "text": " overs",
+        "p": 0
+      },
+      {
+        "text": " out",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " finally",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " outs",
+        "p": 0
+      },
+      {
+        "text": " happened",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " outed",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " finding",
+        "p": 0
+      },
+      {
+        "text": " saved",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " findings",
+        "p": 0
+      },
+      {
+        "text": " discovers",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " returned",
+        "p": 0
+      },
+      {
+        "text": " soon",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very important. Then the search began. The search was long. Finally found",
+    "selected": " it",
+    "confidence": 0.56,
+    "candidates": [
+      {
+        "text": " it",
+        "p": 0.58
+      },
+      {
+        "text": ".",
+        "p": 0.36
+      },
+      {
+        "text": " and",
+        "p": 0.02
+      },
+      {
+        "text": "!",
+        "p": 0.01
+      },
+      {
+        "text": " the",
+        "p": 0.01
+      },
+      {
+        "text": " back",
+        "p": 0.01
+      },
+      {
+        "text": "[END]",
+        "p": 0.01
+      },
+      {
+        "text": " keying",
+        "p": 0
+      },
+      {
+        "text": " keyed",
+        "p": 0
+      },
+      {
+        "text": " to",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": " placed",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " found",
+        "p": 0
+      },
+      {
+        "text": " however",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " after",
+        "p": 0
+      },
+      {
+        "text": " places",
+        "p": 0
+      },
+      {
+        "text": " keys",
+        "p": 0
+      },
+      {
+        "text": " backed",
+        "p": 0
+      },
+      {
+        "text": " key",
+        "p": 0
+      },
+      {
+        "text": " finally",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " happened",
+        "p": 0
+      },
+      {
+        "text": " d",
+        "p": 0
+      },
+      {
+        "text": " backs",
+        "p": 0
+      },
+      {
+        "text": " saved",
+        "p": 0
+      },
+      {
+        "text": " backing",
+        "p": 0
+      },
+      {
+        "text": " returned",
+        "p": 0
+      },
+      {
+        "text": " place",
+        "p": 0
+      },
+      {
+        "text": " placing",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very important. Then the search began. The search was long. Finally found it",
+    "selected": ".",
+    "confidence": 0.74,
+    "candidates": [
+      {
+        "text": ".",
+        "p": 0.76
+      },
+      {
+        "text": "!",
+        "p": 0.09
+      },
+      {
+        "text": "[END]",
+        "p": 0.08
+      },
+      {
+        "text": " back",
+        "p": 0.02
+      },
+      {
+        "text": " and",
+        "p": 0.02
+      },
+      {
+        "text": ",",
+        "p": 0.01
+      },
+      {
+        "text": " was",
+        "p": 0.01
+      },
+      {
+        "text": " because",
+        "p": 0.01
+      },
+      {
+        "text": " overs",
+        "p": 0
+      },
+      {
+        "text": " backed",
+        "p": 0
+      },
+      {
+        "text": " backs",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      },
+      {
+        "text": " over",
+        "p": 0
+      },
+      {
+        "text": " finally",
+        "p": 0
+      },
+      {
+        "text": " backing",
+        "p": 0
+      },
+      {
+        "text": " now",
+        "p": 0
+      },
+      {
+        "text": " happened",
+        "p": 0
+      },
+      {
+        "text": " wonderful",
+        "p": 0
+      },
+      {
+        "text": " just",
+        "p": 0
+      },
+      {
+        "text": " however",
+        "p": 0
+      },
+      {
+        "text": " null",
+        "p": 0
+      },
+      {
+        "text": " then",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " saved",
+        "p": 0
+      },
+      {
+        "text": " it",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "prefix": "Once there was a key that was lost, it was valuable. It was very important. Then the search began. The search was long. Finally found it.",
+    "selected": "[END]",
+    "confidence": 0.27,
+    "candidates": [
+      {
+        "text": "[END]",
+        "p": 0.31
+      },
+      {
+        "text": " It",
+        "p": 0.19
+      },
+      {
+        "text": " Then",
+        "p": 0.08
+      },
+      {
+        "text": " The",
+        "p": 0.07
+      },
+      {
+        "text": " Now",
+        "p": 0.07
+      },
+      {
+        "text": " Over",
+        "p": 0.07
+      },
+      {
+        "text": " And",
+        "p": 0.05
+      },
+      {
+        "text": " Wonderful",
+        "p": 0.04
+      },
+      {
+        "text": " Great",
+        "p": 0.03
+      },
+      {
+        "text": " Back",
+        "p": 0.02
+      },
+      {
+        "text": " So",
+        "p": 0.02
+      },
+      {
+        "text": " However",
+        "p": 0.01
+      },
+      {
+        "text": " Null",
+        "p": 0.01
+      },
+      {
+        "text": " Returned",
+        "p": 0.01
+      },
+      {
+        "text": " Was",
+        "p": 0.01
+      },
+      {
+        "text": " Found",
+        "p": 0.01
+      },
+      {
+        "text": " Backed",
+        "p": 0
+      },
+      {
+        "text": " Backing",
+        "p": 0
+      },
+      {
+        "text": " Because",
+        "p": 0
+      },
+      {
+        "text": " Founded",
+        "p": 0
+      },
+      {
+        "text": " Overs",
+        "p": 0
+      },
+      {
+        "text": " Founding",
+        "p": 0
+      },
+      {
+        "text": " Founds",
+        "p": 0
+      },
+      {
+        "text": " Backs",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "",
+    "selected": "Once",
+    "confidence": 0.16,
+    "candidates": [
+      {
+        "text": "Once",
+        "p": 0.2
+      },
+      {
+        "text": "Finally",
+        "p": 0.18
+      },
+      {
+        "text": "And",
+        "p": 0.13
+      },
+      {
+        "text": "Then",
+        "p": 0.09
+      },
+      {
+        "text": "Write",
+        "p": 0.07
+      },
+      {
+        "text": "Happy",
+        "p": 0.06
+      },
+      {
+        "text": "It",
+        "p": 0.06
+      },
+      {
+        "text": "The",
+        "p": 0.05
+      },
+      {
+        "text": "Found",
+        "p": 0.05
+      },
+      {
+        "text": "[END]",
+        "p": 0.04
+      },
+      {
+        "text": "Was",
+        "p": 0.02
+      },
+      {
+        "text": "Ends",
+        "p": 0.01
+      },
+      {
+        "text": "Founds",
+        "p": 0.01
+      },
+      {
+        "text": "Wonderful",
+        "p": 0.01
+      },
+      {
+        "text": "Wrote",
+        "p": 0.01
+      },
+      {
+        "text": "Writing",
+        "p": 0.01
+      },
+      {
+        "text": "Stories",
+        "p": 0
+      },
+      {
+        "text": "Founding",
+        "p": 0
+      },
+      {
+        "text": "Writes",
+        "p": 0
+      },
+      {
+        "text": "Written",
+        "p": 0
+      },
+      {
+        "text": "Story",
+        "p": 0
+      },
+      {
+        "text": "Founded",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once",
+    "selected": " there",
+    "confidence": 0.72,
+    "candidates": [
+      {
+        "text": " there",
+        "p": 0.74
+      },
+      {
+        "text": " a",
+        "p": 0.13
+      },
+      {
+        "text": " was",
+        "p": 0.03
+      },
+      {
+        "text": ".",
+        "p": 0.02
+      },
+      {
+        "text": " Finally",
+        "p": 0.02
+      },
+      {
+        "text": ",",
+        "p": 0.02
+      },
+      {
+        "text": " found",
+        "p": 0.02
+      },
+      {
+        "text": " happy",
+        "p": 0.01
+      },
+      {
+        "text": "[END]",
+        "p": 0.01
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " ones",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " writing",
+        "p": 0
+      },
+      {
+        "text": " long",
+        "p": 0
+      },
+      {
+        "text": " write",
+        "p": 0
+      },
+      {
+        "text": " finally",
+        "p": 0
+      },
+      {
+        "text": " Once",
+        "p": 0
+      },
+      {
+        "text": " written",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " once",
+        "p": 0
+      },
+      {
+        "text": " longed",
+        "p": 0
+      },
+      {
+        "text": " of",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " then",
+        "p": 0
+      },
+      {
+        "text": " longing",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " ended",
+        "p": 0
+      },
+      {
+        "text": " longs",
+        "p": 0
+      },
+      {
+        "text": " wrote",
+        "p": 0
+      },
+      {
+        "text": " t",
+        "p": 0
+      },
+      {
+        "text": " writes",
+        "p": 0
+      },
+      {
+        "text": " one",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there",
+    "selected": " was",
+    "confidence": 0.76,
+    "candidates": [
+      {
+        "text": " was",
+        "p": 0.78
+      },
+      {
+        "text": " one",
+        "p": 0.060000000000000005
+      },
+      {
+        "text": ",",
+        "p": 0.05
+      },
+      {
+        "text": " a",
+        "p": 0.03
+      },
+      {
+        "text": " happy",
+        "p": 0.02
+      },
+      {
+        "text": " Finally",
+        "p": 0.01
+      },
+      {
+        "text": "[END]",
+        "p": 0.01
+      },
+      {
+        "text": " and",
+        "p": 0.01
+      },
+      {
+        "text": ".",
+        "p": 0.01
+      },
+      {
+        "text": " finally",
+        "p": 0.01
+      },
+      {
+        "text": " about",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " writes",
+        "p": 0
+      },
+      {
+        "text": " once",
+        "p": 0
+      },
+      {
+        "text": " writing",
+        "p": 0
+      },
+      {
+        "text": " ones",
+        "p": 0
+      },
+      {
+        "text": " found",
+        "p": 0
+      },
+      {
+        "text": " e",
+        "p": 0
+      },
+      {
+        "text": " write",
+        "p": 0
+      },
+      {
+        "text": " wrote",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " Once",
+        "p": 0
+      },
+      {
+        "text": " written",
+        "p": 0
+      },
+      {
+        "text": " It",
+        "p": 0
+      },
+      {
+        "text": " there",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " then",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there was",
+    "selected": " a",
+    "confidence": 0.74,
+    "candidates": [
+      {
+        "text": " a",
+        "p": 0.76
+      },
+      {
+        "text": " key",
+        "p": 0.06999999999999999
+      },
+      {
+        "text": " happy",
+        "p": 0.03
+      },
+      {
+        "text": " happier",
+        "p": 0.03
+      },
+      {
+        "text": ".",
+        "p": 0.02
+      },
+      {
+        "text": "[END]",
+        "p": 0.02
+      },
+      {
+        "text": " finally",
+        "p": 0.02
+      },
+      {
+        "text": " Finally",
+        "p": 0.01
+      },
+      {
+        "text": " the",
+        "p": 0.01
+      },
+      {
+        "text": " wonderful",
+        "p": 0.01
+      },
+      {
+        "text": ",",
+        "p": 0.01
+      },
+      {
+        "text": " found",
+        "p": 0.01
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " once",
+        "p": 0
+      },
+      {
+        "text": " Once",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " there",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " keys",
+        "p": 0
+      },
+      {
+        "text": " associations",
+        "p": 0
+      },
+      {
+        "text": " keying",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": " about",
+        "p": 0
+      },
+      {
+        "text": " keyed",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " It",
+        "p": 0
+      },
+      {
+        "text": " association",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there was a",
+    "selected": " key",
+    "confidence": 0.65,
+    "candidates": [
+      {
+        "text": " key",
+        "p": 0.67
+      },
+      {
+        "text": " lost",
+        "p": 0.2
+      },
+      {
+        "text": " time",
+        "p": 0.04
+      },
+      {
+        "text": " happy",
+        "p": 0.04
+      },
+      {
+        "text": "[END]",
+        "p": 0.01
+      },
+      {
+        "text": ".",
+        "p": 0.01
+      },
+      {
+        "text": " owner",
+        "p": 0.01
+      },
+      {
+        "text": " story",
+        "p": 0.01
+      },
+      {
+        "text": " It",
+        "p": 0
+      },
+      {
+        "text": " timing",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " there",
+        "p": 0
+      },
+      {
+        "text": " one",
+        "p": 0
+      },
+      {
+        "text": " found",
+        "p": 0
+      },
+      {
+        "text": " Once",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " once",
+        "p": 0
+      },
+      {
+        "text": " Finally",
+        "p": 0
+      },
+      {
+        "text": " stories",
+        "p": 0
+      },
+      {
+        "text": " a",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " times",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " keying",
+        "p": 0
+      },
+      {
+        "text": " owners",
+        "p": 0
+      },
+      {
+        "text": " keys",
+        "p": 0
+      },
+      {
+        "text": " timed",
+        "p": 0
+      },
+      {
+        "text": " ones",
+        "p": 0
+      },
+      {
+        "text": " keyed",
+        "p": 0
+      },
+      {
+        "text": " finally",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there was a key",
+    "selected": " that",
+    "confidence": 0.47,
+    "candidates": [
+      {
+        "text": " that",
+        "p": 0.5
+      },
+      {
+        "text": ".",
+        "p": 0.13
+      },
+      {
+        "text": " lost",
+        "p": 0.1
+      },
+      {
+        "text": ",",
+        "p": 0.09
+      },
+      {
+        "text": " and",
+        "p": 0.03
+      },
+      {
+        "text": " found",
+        "p": 0.03
+      },
+      {
+        "text": " was",
+        "p": 0.02
+      },
+      {
+        "text": " a",
+        "p": 0.01
+      },
+      {
+        "text": " the",
+        "p": 0.01
+      },
+      {
+        "text": " eventually",
+        "p": 0.01
+      },
+      {
+        "text": " happy",
+        "p": 0.01
+      },
+      {
+        "text": " s",
+        "p": 0.01
+      },
+      {
+        "text": " find",
+        "p": 0.01
+      },
+      {
+        "text": " finding",
+        "p": 0.01
+      },
+      {
+        "text": " It",
+        "p": 0.01
+      },
+      {
+        "text": " Finally",
+        "p": 0.01
+      },
+      {
+        "text": "!",
+        "p": 0.01
+      },
+      {
+        "text": " keyed",
+        "p": 0
+      },
+      {
+        "text": " key",
+        "p": 0
+      },
+      {
+        "text": " valuables",
+        "p": 0
+      },
+      {
+        "text": " finally",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " keys",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " keying",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " valuable",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " finds",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there was a key that",
+    "selected": " was",
+    "confidence": 0.5,
+    "candidates": [
+      {
+        "text": " was",
+        "p": 0.53
+      },
+      {
+        "text": " lost",
+        "p": 0.28
+      },
+      {
+        "text": " finally",
+        "p": 0.05
+      },
+      {
+        "text": " eventually",
+        "p": 0.04
+      },
+      {
+        "text": ".",
+        "p": 0.02
+      },
+      {
+        "text": " Finally",
+        "p": 0.01
+      },
+      {
+        "text": " found",
+        "p": 0.01
+      },
+      {
+        "text": " happy",
+        "p": 0.01
+      },
+      {
+        "text": " returns",
+        "p": 0.01
+      },
+      {
+        "text": "[END]",
+        "p": 0.01
+      },
+      {
+        "text": " returned",
+        "p": 0.01
+      },
+      {
+        "text": " a",
+        "p": 0.01
+      },
+      {
+        "text": " that",
+        "p": 0
+      },
+      {
+        "text": " finding",
+        "p": 0
+      },
+      {
+        "text": " valuables",
+        "p": 0
+      },
+      {
+        "text": " find",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " been",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " valuable",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": " once",
+        "p": 0
+      },
+      {
+        "text": " finds",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there was a key that was",
+    "selected": " lost",
+    "confidence": 0.61,
+    "candidates": [
+      {
+        "text": " lost",
+        "p": 0.63
+      },
+      {
+        "text": " valuable",
+        "p": 0.23
+      },
+      {
+        "text": " found",
+        "p": 0.08
+      },
+      {
+        "text": " happy",
+        "p": 0.02
+      },
+      {
+        "text": " a",
+        "p": 0.01
+      },
+      {
+        "text": " finally",
+        "p": 0.01
+      },
+      {
+        "text": " lose",
+        "p": 0.01
+      },
+      {
+        "text": " eventually",
+        "p": 0.01
+      },
+      {
+        "text": " keys",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": ".",
+        "p": 0
+      },
+      {
+        "text": " association",
+        "p": 0
+      },
+      {
+        "text": " valuables",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " losing",
+        "p": 0
+      },
+      {
+        "text": " key",
+        "p": 0
+      },
+      {
+        "text": " loses",
+        "p": 0
+      },
+      {
+        "text": " associations",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " zum",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " keying",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " yourself",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": " Finally",
+        "p": 0
+      },
+      {
+        "text": " keyed",
+        "p": 0
+      },
+      {
+        "text": " been",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there was a key that was lost",
+    "selected": ",",
+    "confidence": 0.36,
+    "candidates": [
+      {
+        "text": ",",
+        "p": 0.39
+      },
+      {
+        "text": " it",
+        "p": 0.14
+      },
+      {
+        "text": ".",
+        "p": 0.11
+      },
+      {
+        "text": " but",
+        "p": 0.09
+      },
+      {
+        "text": " and",
+        "p": 0.08
+      },
+      {
+        "text": " It",
+        "p": 0.04
+      },
+      {
+        "text": " eventually",
+        "p": 0.02
+      },
+      {
+        "text": " Finally",
+        "p": 0.02
+      },
+      {
+        "text": " found",
+        "p": 0.02
+      },
+      {
+        "text": " finally",
+        "p": 0.02
+      },
+      {
+        "text": " valuable",
+        "p": 0.01
+      },
+      {
+        "text": "[END]",
+        "p": 0.01
+      },
+      {
+        "text": " that",
+        "p": 0.01
+      },
+      {
+        "text": " was",
+        "p": 0.01
+      },
+      {
+        "text": " then",
+        "p": 0.01
+      },
+      {
+        "text": "!",
+        "p": 0.01
+      },
+      {
+        "text": " returned",
+        "p": 0.01
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " ends",
+        "p": 0
+      },
+      {
+        "text": " valuables",
+        "p": 0
+      },
+      {
+        "text": " lost",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there was a key that was lost,",
+    "selected": " it",
+    "confidence": 0.47,
+    "candidates": [
+      {
+        "text": " it",
+        "p": 0.49
+      },
+      {
+        "text": " but",
+        "p": 0.11
+      },
+      {
+        "text": " and",
+        "p": 0.07
+      },
+      {
+        "text": " finally",
+        "p": 0.06
+      },
+      {
+        "text": " eventually",
+        "p": 0.05
+      },
+      {
+        "text": " It",
+        "p": 0.04
+      },
+      {
+        "text": " the",
+        "p": 0.04
+      },
+      {
+        "text": " valuable",
+        "p": 0.03
+      },
+      {
+        "text": " a",
+        "p": 0.03
+      },
+      {
+        "text": " was",
+        "p": 0.03
+      },
+      {
+        "text": " Finally",
+        "p": 0.01
+      },
+      {
+        "text": " returns",
+        "p": 0.01
+      },
+      {
+        "text": " that",
+        "p": 0.01
+      },
+      {
+        "text": " found",
+        "p": 0.01
+      },
+      {
+        "text": " then",
+        "p": 0.01
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " valuables",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " lost",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there was a key that was lost, it",
+    "selected": " was",
+    "confidence": 0.78,
+    "candidates": [
+      {
+        "text": " was",
+        "p": 0.8
+      },
+      {
+        "text": " finally",
+        "p": 0.08
+      },
+      {
+        "text": " eventually",
+        "p": 0.04
+      },
+      {
+        "text": " returned",
+        "p": 0.04
+      },
+      {
+        "text": ".",
+        "p": 0.01
+      },
+      {
+        "text": " found",
+        "p": 0.01
+      },
+      {
+        "text": " ended",
+        "p": 0.01
+      },
+      {
+        "text": " be",
+        "p": 0
+      },
+      {
+        "text": " valuable",
+        "p": 0
+      },
+      {
+        "text": " am",
+        "p": 0
+      },
+      {
+        "text": " It",
+        "p": 0
+      },
+      {
+        "text": " s",
+        "p": 0
+      },
+      {
+        "text": " important",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " been",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " y",
+        "p": 0
+      },
+      {
+        "text": " is",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " were",
+        "p": 0
+      },
+      {
+        "text": " are",
+        "p": 0
+      },
+      {
+        "text": " Finally",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " being",
+        "p": 0
+      },
+      {
+        "text": " lost",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " valuables",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there was a key that was lost, it was",
+    "selected": " valuable",
+    "confidence": 0.63,
+    "candidates": [
+      {
+        "text": " valuable",
+        "p": 0.64
+      },
+      {
+        "text": " found",
+        "p": 0.13
+      },
+      {
+        "text": " very",
+        "p": 0.06
+      },
+      {
+        "text": " finally",
+        "p": 0.04
+      },
+      {
+        "text": " happy",
+        "p": 0.04
+      },
+      {
+        "text": " important",
+        "p": 0.02
+      },
+      {
+        "text": " returned",
+        "p": 0.02
+      },
+      {
+        "text": " wonderful",
+        "p": 0.01
+      },
+      {
+        "text": ".",
+        "p": 0.01
+      },
+      {
+        "text": " the",
+        "p": 0.01
+      },
+      {
+        "text": "[END]",
+        "p": 0.01
+      },
+      {
+        "text": " happier",
+        "p": 0.01
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " valuables",
+        "p": 0
+      },
+      {
+        "text": " recovery",
+        "p": 0
+      },
+      {
+        "text": " needed",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": ",",
+        "p": 0
+      },
+      {
+        "text": " recoveries",
+        "p": 0
+      },
+      {
+        "text": " missing",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " lost",
+        "p": 0
+      },
+      {
+        "text": "!",
+        "p": 0
+      },
+      {
+        "text": " Finally",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there was a key that was lost, it was valuable",
+    "selected": ".",
+    "confidence": 0.39,
+    "candidates": [
+      {
+        "text": ".",
+        "p": 0.43
+      },
+      {
+        "text": " and",
+        "p": 0.23
+      },
+      {
+        "text": "!",
+        "p": 0.07
+      },
+      {
+        "text": " but",
+        "p": 0.06
+      },
+      {
+        "text": ",",
+        "p": 0.05
+      },
+      {
+        "text": " finally",
+        "p": 0.04
+      },
+      {
+        "text": " eventually",
+        "p": 0.03
+      },
+      {
+        "text": " found",
+        "p": 0.02
+      },
+      {
+        "text": " then",
+        "p": 0.02
+      },
+      {
+        "text": " Finally",
+        "p": 0.01
+      },
+      {
+        "text": " very",
+        "p": 0.01
+      },
+      {
+        "text": " the",
+        "p": 0.01
+      },
+      {
+        "text": " ended",
+        "p": 0.01
+      },
+      {
+        "text": "[END]",
+        "p": 0.01
+      },
+      {
+        "text": " important",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " successful",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": " of",
+        "p": 0
+      },
+      {
+        "text": " it",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " lost",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there was a key that was lost, it was valuable.",
+    "selected": " Finally",
+    "confidence": 0.22,
+    "candidates": [
+      {
+        "text": " Finally",
+        "p": 0.26
+      },
+      {
+        "text": " Then",
+        "p": 0.25
+      },
+      {
+        "text": " It",
+        "p": 0.14
+      },
+      {
+        "text": " And",
+        "p": 0.09
+      },
+      {
+        "text": " Eventually",
+        "p": 0.07
+      },
+      {
+        "text": " Happy",
+        "p": 0.07
+      },
+      {
+        "text": " Found",
+        "p": 0.06
+      },
+      {
+        "text": " Returned",
+        "p": 0.02
+      },
+      {
+        "text": " Came",
+        "p": 0.01
+      },
+      {
+        "text": " Was",
+        "p": 0.01
+      },
+      {
+        "text": " Very",
+        "p": 0.01
+      },
+      {
+        "text": " Important",
+        "p": 0.01
+      },
+      {
+        "text": " Valuables",
+        "p": 0
+      },
+      {
+        "text": " Founding",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " Valuable",
+        "p": 0
+      },
+      {
+        "text": " Lost",
+        "p": 0
+      },
+      {
+        "text": " Founds",
+        "p": 0
+      },
+      {
+        "text": " Founded",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there was a key that was lost, it was valuable. Finally",
+    "selected": " found",
+    "confidence": 0.33,
+    "candidates": [
+      {
+        "text": " found",
+        "p": 0.36
+      },
+      {
+        "text": " it",
+        "p": 0.26
+      },
+      {
+        "text": ",",
+        "p": 0.16
+      },
+      {
+        "text": " the",
+        "p": 0.12
+      },
+      {
+        "text": " happy",
+        "p": 0.03
+      },
+      {
+        "text": "!",
+        "p": 0.02
+      },
+      {
+        "text": " got",
+        "p": 0.02
+      },
+      {
+        "text": " find",
+        "p": 0.01
+      },
+      {
+        "text": " returned",
+        "p": 0.01
+      },
+      {
+        "text": " successfully",
+        "p": 0.01
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " finally",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": " Finally",
+        "p": 0
+      },
+      {
+        "text": " finding",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " and",
+        "p": 0
+      },
+      {
+        "text": " wonderful",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": ".",
+        "p": 0
+      },
+      {
+        "text": " ended",
+        "p": 0
+      },
+      {
+        "text": " eventually",
+        "p": 0
+      },
+      {
+        "text": " findings",
+        "p": 0
+      },
+      {
+        "text": " finds",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there was a key that was lost, it was valuable. Finally found",
+    "selected": "!",
+    "confidence": 0.42,
+    "candidates": [
+      {
+        "text": "!",
+        "p": 0.45
+      },
+      {
+        "text": " it",
+        "p": 0.39
+      },
+      {
+        "text": " and",
+        "p": 0.06999999999999999
+      },
+      {
+        "text": ".",
+        "p": 0.04
+      },
+      {
+        "text": " happy",
+        "p": 0.03
+      },
+      {
+        "text": ",",
+        "p": 0.01
+      },
+      {
+        "text": " successfully",
+        "p": 0.01
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " with",
+        "p": 0
+      },
+      {
+        "text": " founded",
+        "p": 0
+      },
+      {
+        "text": " successful",
+        "p": 0
+      },
+      {
+        "text": " found",
+        "p": 0
+      },
+      {
+        "text": " It",
+        "p": 0
+      },
+      {
+        "text": " righting",
+        "p": 0
+      },
+      {
+        "text": " wonderful",
+        "p": 0
+      },
+      {
+        "text": " righted",
+        "p": 0
+      },
+      {
+        "text": " founding",
+        "p": 0
+      },
+      {
+        "text": " very",
+        "p": 0
+      },
+      {
+        "text": " now",
+        "p": 0
+      },
+      {
+        "text": " right",
+        "p": 0
+      },
+      {
+        "text": " rights",
+        "p": 0
+      },
+      {
+        "text": " was",
+        "p": 0
+      },
+      {
+        "text": " the",
+        "p": 0
+      },
+      {
+        "text": " finally",
+        "p": 0
+      },
+      {
+        "text": " great",
+        "p": 0
+      },
+      {
+        "text": " founds",
+        "p": 0
+      },
+      {
+        "text": "[END]",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there was a key that was lost, it was valuable. Finally found!",
+    "selected": " Happy",
+    "confidence": 0.14,
+    "candidates": [
+      {
+        "text": " Happy",
+        "p": 0.2
+      },
+      {
+        "text": " Wonderful",
+        "p": 0.19
+      },
+      {
+        "text": " Great",
+        "p": 0.14
+      },
+      {
+        "text": "[END]",
+        "p": 0.13
+      },
+      {
+        "text": " It",
+        "p": 0.07
+      },
+      {
+        "text": " And",
+        "p": 0.07
+      },
+      {
+        "text": " Now",
+        "p": 0.06
+      },
+      {
+        "text": " Then",
+        "p": 0.06
+      },
+      {
+        "text": " So",
+        "p": 0.03
+      },
+      {
+        "text": " Forever",
+        "p": 0.02
+      },
+      {
+        "text": " With",
+        "p": 0.01
+      },
+      {
+        "text": " Successfully",
+        "p": 0.01
+      },
+      {
+        "text": " Right",
+        "p": 0.01
+      },
+      {
+        "text": " Really",
+        "p": 0
+      },
+      {
+        "text": " Righting",
+        "p": 0
+      },
+      {
+        "text": " Finally",
+        "p": 0
+      },
+      {
+        "text": " Righted",
+        "p": 0
+      },
+      {
+        "text": " Rights",
+        "p": 0
+      },
+      {
+        "text": " Was",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there was a key that was lost, it was valuable. Finally found! Happy",
+    "selected": "!",
+    "confidence": 0.39,
+    "candidates": [
+      {
+        "text": "!",
+        "p": 0.42
+      },
+      {
+        "text": ".",
+        "p": 0.29
+      },
+      {
+        "text": "[END]",
+        "p": 0.12
+      },
+      {
+        "text": " forever",
+        "p": 0.05
+      },
+      {
+        "text": " now",
+        "p": 0.03
+      },
+      {
+        "text": " and",
+        "p": 0.02
+      },
+      {
+        "text": " really",
+        "p": 0.01
+      },
+      {
+        "text": " great",
+        "p": 0.01
+      },
+      {
+        "text": " ends",
+        "p": 0.01
+      },
+      {
+        "text": " s",
+        "p": 0.01
+      },
+      {
+        "text": " was",
+        "p": 0.01
+      },
+      {
+        "text": " wonderful",
+        "p": 0.01
+      },
+      {
+        "text": ",",
+        "p": 0.01
+      },
+      {
+        "text": " very",
+        "p": 0
+      },
+      {
+        "text": " fining",
+        "p": 0
+      },
+      {
+        "text": " null",
+        "p": 0
+      },
+      {
+        "text": " fines",
+        "p": 0
+      },
+      {
+        "text": " fine",
+        "p": 0
+      },
+      {
+        "text": "?",
+        "p": 0
+      },
+      {
+        "text": " fined",
+        "p": 0
+      },
+      {
+        "text": " finished",
+        "p": 0
+      },
+      {
+        "text": " it",
+        "p": 0
+      },
+      {
+        "text": " happy",
+        "p": 0
+      },
+      {
+        "text": " truly",
+        "p": 0
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "prefix": "Once there was a key that was lost, it was valuable. Finally found! Happy!",
+    "selected": "[END]",
+    "confidence": 0.52,
+    "candidates": [
+      {
+        "text": "[END]",
+        "p": 0.53
+      },
+      {
+        "text": " Forever",
+        "p": 0.16
+      },
+      {
+        "text": " Wonderful",
+        "p": 0.08
+      },
+      {
+        "text": " Great",
+        "p": 0.04
+      },
+      {
+        "text": " And",
+        "p": 0.03
+      },
+      {
+        "text": " It",
+        "p": 0.03
+      },
+      {
+        "text": " Now",
+        "p": 0.03
+      },
+      {
+        "text": " Then",
+        "p": 0.02
+      },
+      {
+        "text": " Ends",
+        "p": 0.02
+      },
+      {
+        "text": " Very",
+        "p": 0.01
+      },
+      {
+        "text": " Truly",
+        "p": 0.01
+      },
+      {
+        "text": " Happy",
+        "p": 0.01
+      },
+      {
+        "text": " Was",
+        "p": 0.01
+      },
+      {
+        "text": " Really",
+        "p": 0.01
+      },
+      {
+        "text": " Right",
+        "p": 0.01
+      },
+      {
+        "text": " Righting",
+        "p": 0
+      },
+      {
+        "text": " Rights",
+        "p": 0
+      },
+      {
+        "text": " Fines",
+        "p": 0
+      },
+      {
+        "text": " Fine",
+        "p": 0
+      },
+      {
+        "text": " Fining",
+        "p": 0
+      },
+      {
+        "text": " Fined",
+        "p": 0
+      },
+      {
+        "text": " Null",
+        "p": 0
+      },
+      {
+        "text": " Righted",
+        "p": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,5910 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "user_request": "Why do wet clothes dry?",
+    "partial_tree": {
+      "kind": "link",
+      "relation": "because",
+      "left": {
+        "kind": "clause",
+        "subject": {
+          "kind": "np",
+          "determiner": "the",
+          "plural": true,
+          "noun": {
+            "kind": "word",
+            "sort": "noun",
+            "value": "clothes"
+          }
+        },
+        "predicate": {
+          "kind": "vp",
+          "verb": {
+            "kind": "word",
+            "sort": "verb",
+            "value": "dry"
+          }
+        },
+        "past": false
+      },
+      "right": {
+        "kind": "clause",
+        "subject": {
+          "kind": "hole",
+          "sort": "np"
+        },
+        "predicate": {
+          "kind": "hole",
+          "sort": "vp"
+        },
+        "past": false
+      }
+    },
+    "selected_senses": [
+      {
+        "path": [
+          "left",
+          "predicate",
+          "verb"
+        ],
+        "lemma": "dry",
+        "offset": "00219829",
+        "lemmas": [
+          "dry",
+          "dry_out"
+        ],
+        "definition": "become dry or drier",
+        "examples": [
+          "The laundry dries in the sun"
+        ],
+        "lexFile": 30,
+        "frames": [
+          1
+        ]
+      }
+    ]
+  },
+  "questions": {
+    "next": {
+      "type": "choice",
+      "instructions": "Expand hole [\"right\",\"subject\"] so the complete tree will answer user_request. Every choice must respect existing bound roles and selected_senses. Choose UNSUPPORTED if no option permits an adequate response; do not force a false claim.",
+      "criteria": {
+        "a0": {
+          "description": "I",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "pronoun",
+                "value": "I"
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a1": {
+          "description": "you",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "pronoun",
+                "value": "you"
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a2": {
+          "description": "he",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "pronoun",
+                "value": "he"
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a3": {
+          "description": "she",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "pronoun",
+                "value": "she"
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a4": {
+          "description": "it",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "pronoun",
+                "value": "it"
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a5": {
+          "description": "we",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "pronoun",
+                "value": "we"
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a6": {
+          "description": "they",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "pronoun",
+                "value": "they"
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a7": {
+          "description": "adjective modifying noun phrase",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "modified",
+                "adjective": {
+                  "kind": "hole",
+                  "sort": "adjective"
+                },
+                "head": {
+                  "kind": "hole",
+                  "sort": "np"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a8": {
+          "description": "the singular water",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "water"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a9": {
+          "description": "a singular water",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "water"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a10": {
+          "description": "none singular water",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "water"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a11": {
+          "description": "the plural water",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "water"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a12": {
+          "description": "none plural water",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "water"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a13": {
+          "description": "the singular thing",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "thing"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a14": {
+          "description": "a singular thing",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "thing"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a15": {
+          "description": "none singular thing",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "thing"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a16": {
+          "description": "the plural thing",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "thing"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a17": {
+          "description": "none plural thing",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "thing"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a18": {
+          "description": "the singular air",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "air"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a19": {
+          "description": "a singular air",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "air"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a20": {
+          "description": "none singular air",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "air"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a21": {
+          "description": "the plural air",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "air"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a22": {
+          "description": "none plural air",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "air"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a23": {
+          "description": "the singular drop",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "drop"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a24": {
+          "description": "a singular drop",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "drop"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a25": {
+          "description": "none singular drop",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "drop"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a26": {
+          "description": "the plural drop",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "drop"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a27": {
+          "description": "none plural drop",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "drop"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a28": {
+          "description": "the singular clothes",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a29": {
+          "description": "a singular clothes",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a30": {
+          "description": "none singular clothes",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a31": {
+          "description": "the plural clothes",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a32": {
+          "description": "none plural clothes",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a33": {
+          "description": "the singular sun",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "sun"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a34": {
+          "description": "a singular sun",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "sun"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a35": {
+          "description": "none singular sun",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "sun"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a36": {
+          "description": "the plural sun",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "sun"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a37": {
+          "description": "none plural sun",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "sun"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a38": {
+          "description": "the singular wind",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "wind"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a39": {
+          "description": "a singular wind",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "wind"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a40": {
+          "description": "none singular wind",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "wind"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a41": {
+          "description": "the plural wind",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "wind"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a42": {
+          "description": "none plural wind",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "wind"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a43": {
+          "description": "the singular gas",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "gas"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a44": {
+          "description": "a singular gas",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "gas"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a45": {
+          "description": "none singular gas",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "gas"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a46": {
+          "description": "the plural gas",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "gas"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a47": {
+          "description": "none plural gas",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "gas"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a48": {
+          "description": "the singular heat",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "heat"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a49": {
+          "description": "a singular heat",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "heat"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a50": {
+          "description": "none singular heat",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "heat"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a51": {
+          "description": "the plural heat",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "heat"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a52": {
+          "description": "none plural heat",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "heat"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a53": {
+          "description": "the singular wash",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "wash"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a54": {
+          "description": "a singular wash",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "wash"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a55": {
+          "description": "none singular wash",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "wash"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a56": {
+          "description": "the plural wash",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "wash"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a57": {
+          "description": "none plural wash",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "wash"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a58": {
+          "description": "the singular wet",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "wet"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a59": {
+          "description": "none singular wet",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "wet"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a60": {
+          "description": "the singular weather",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "weather"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a61": {
+          "description": "a singular weather",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "weather"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a62": {
+          "description": "none singular weather",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "weather"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a63": {
+          "description": "the plural weather",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "weather"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a64": {
+          "description": "none plural weather",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "weather"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a65": {
+          "description": "the singular material",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "material"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a66": {
+          "description": "a singular material",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "material"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a67": {
+          "description": "none singular material",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "material"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a68": {
+          "description": "the plural material",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "material"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a69": {
+          "description": "none plural material",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "material"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a70": {
+          "description": "the singular effect",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "effect"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a71": {
+          "description": "a singular effect",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "effect"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a72": {
+          "description": "none singular effect",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "effect"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a73": {
+          "description": "the plural effect",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "effect"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a74": {
+          "description": "none plural effect",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "effect"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a75": {
+          "description": "the singular object",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "object"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a76": {
+          "description": "a singular object",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "object"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a77": {
+          "description": "none singular object",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "object"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a78": {
+          "description": "the plural object",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "object"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a79": {
+          "description": "none plural object",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "object"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a80": {
+          "description": "the singular explanation",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "explanation"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a81": {
+          "description": "a singular explanation",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "explanation"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a82": {
+          "description": "none singular explanation",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "explanation"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a83": {
+          "description": "the plural explanation",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "explanation"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a84": {
+          "description": "none plural explanation",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "explanation"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a85": {
+          "description": "the singular temperature",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "temperature"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a86": {
+          "description": "a singular temperature",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "temperature"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a87": {
+          "description": "none singular temperature",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "temperature"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a88": {
+          "description": "the plural temperature",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "temperature"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a89": {
+          "description": "none plural temperature",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "temperature"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a90": {
+          "description": "the singular sweat",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "sweat"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a91": {
+          "description": "a singular sweat",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "sweat"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a92": {
+          "description": "none singular sweat",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "sweat"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a93": {
+          "description": "the plural sweat",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "sweat"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a94": {
+          "description": "none plural sweat",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "sweat"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a95": {
+          "description": "the singular laundry",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "laundry"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a96": {
+          "description": "a singular laundry",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "laundry"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a97": {
+          "description": "none singular laundry",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "laundry"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a98": {
+          "description": "the plural laundry",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "laundry"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a99": {
+          "description": "none plural laundry",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "laundry"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a100": {
+          "description": "the singular atmosphere",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "atmosphere"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a101": {
+          "description": "a singular atmosphere",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "atmosphere"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a102": {
+          "description": "none singular atmosphere",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "atmosphere"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a103": {
+          "description": "the plural atmosphere",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "atmosphere"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a104": {
+          "description": "none plural atmosphere",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "atmosphere"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a105": {
+          "description": "the singular dressing",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "dressing"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a106": {
+          "description": "a singular dressing",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "dressing"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a107": {
+          "description": "none singular dressing",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "dressing"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a108": {
+          "description": "the plural dressing",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "dressing"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a109": {
+          "description": "none plural dressing",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "dressing"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a110": {
+          "description": "the singular covering",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "covering"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a111": {
+          "description": "a singular covering",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "covering"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a112": {
+          "description": "none singular covering",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "covering"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a113": {
+          "description": "the plural covering",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "covering"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a114": {
+          "description": "none plural covering",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "covering"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a115": {
+          "description": "the singular item",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "item"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a116": {
+          "description": "a singular item",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "item"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a117": {
+          "description": "none singular item",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "item"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a118": {
+          "description": "the plural item",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "item"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a119": {
+          "description": "none plural item",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "item"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a120": {
+          "description": "the singular jersey",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "jersey"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a121": {
+          "description": "a singular jersey",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "a",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "jersey"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a122": {
+          "description": "none singular jersey",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": false,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "jersey"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a123": {
+          "description": "the plural jersey",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "jersey"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "a124": {
+          "description": "none plural jersey",
+          "tree": {
+            "kind": "link",
+            "relation": "because",
+            "left": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "the",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "clothes"
+                }
+              },
+              "predicate": {
+                "kind": "vp",
+                "verb": {
+                  "kind": "word",
+                  "sort": "verb",
+                  "value": "dry"
+                }
+              },
+              "past": false
+            },
+            "right": {
+              "kind": "clause",
+              "subject": {
+                "kind": "np",
+                "determiner": "none",
+                "plural": true,
+                "noun": {
+                  "kind": "word",
+                  "sort": "noun",
+                  "value": "jersey"
+                }
+              },
+              "predicate": {
+                "kind": "hole",
+                "sort": "vp"
+              },
+              "past": false
+            }
+          }
+        },
+        "UNSUPPORTED": "Available structures or lexical candidates cannot express the needed answer."
+      }
+    }
+  }
+}

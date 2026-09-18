@@ -1,0 +1,114 @@
+[
+  {
+    "arm": "baseline",
+    "id": "retain",
+    "user": "Rewrite politely: Send the invoice by Monday.",
+    "text": "Please send the invoice by Monday",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 15,
+      "inputTokens": 79372,
+      "outputTokens": 80665
+    },
+    "ms": 7248
+  },
+  {
+    "arm": "baseline",
+    "id": "retain",
+    "user": "Make it shorter, keep the deadline.",
+    "text": "Send Monday",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 7,
+      "inputTokens": 50204,
+      "outputTokens": 52614
+    },
+    "ms": 2909
+  },
+  {
+    "arm": "baseline",
+    "id": "replace",
+    "user": "Write a warm one-sentence invitation to lunch.",
+    "text": "Would you like to have lunch? Together.",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 21,
+      "inputTokens": 103297,
+      "outputTokens": 102292
+    },
+    "ms": 7893
+  },
+  {
+    "arm": "baseline",
+    "id": "replace",
+    "user": "Make it formal instead, still one sentence.",
+    "text": "Would you like to have lunch? Please.",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 21,
+      "inputTokens": 105042,
+      "outputTokens": 103391
+    },
+    "ms": 7533
+  },
+  {
+    "arm": "requirements",
+    "id": "retain",
+    "user": "Rewrite politely: Send the invoice by Monday.",
+    "text": "Please send the invoice by Monday.",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 17,
+      "inputTokens": 89666,
+      "outputTokens": 88237
+    },
+    "ms": 8010
+  },
+  {
+    "arm": "requirements",
+    "id": "retain",
+    "user": "Make it shorter, keep the deadline.",
+    "text": "Send Monday",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 7,
+      "inputTokens": 51596,
+      "outputTokens": 52783
+    },
+    "ms": 2839
+  },
+  {
+    "arm": "requirements",
+    "id": "replace",
+    "user": "Write a warm one-sentence invitation to lunch.",
+    "text": "Would you like to have lunch?",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 17,
+      "inputTokens": 89786,
+      "outputTokens": 87557
+    },
+    "ms": 6738
+  },
+  {
+    "arm": "requirements",
+    "id": "replace",
+    "user": "Make it formal instead, still one sentence.",
+    "text": "Would you be pleased to join me for lunch?",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 23,
+      "inputTokens": 115457,
+      "outputTokens": 109904
+    },
+    "ms": 8323
+  }
+]

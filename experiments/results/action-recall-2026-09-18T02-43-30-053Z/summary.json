@@ -1,0 +1,415 @@
+{
+  "directory": "experiments/results/action-recall-2026-09-18T02-43-30-053Z",
+  "correct": 24,
+  "total": 24,
+  "rows": [
+    {
+      "id": "name",
+      "split": "development",
+      "draft": "I am Jv.",
+      "expected": "I am Jev.",
+      "selected": "I am Jev.",
+      "action": "insert_character",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 286,
+      "requests": 4,
+      "usage": {
+        "input_tokens": 8382,
+        "output_tokens": 3621
+      },
+      "elapsedMs": 5101
+    },
+    {
+      "id": "missing_subject",
+      "split": "development",
+      "draft": "How can help you?",
+      "expected": "How can I help you?",
+      "selected": "How can I help you?",
+      "action": "insert_word",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 167,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 6282,
+        "output_tokens": 2710
+      },
+      "elapsedMs": 546
+    },
+    {
+      "id": "duplicate_word",
+      "split": "development",
+      "draft": "The report is is ready.",
+      "expected": "The report is ready.",
+      "selected": "The report is ready.",
+      "action": "delete_word",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 4,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 3742,
+        "output_tokens": 1290
+      },
+      "elapsedMs": 621
+    },
+    {
+      "id": "whitespace",
+      "split": "development",
+      "draft": "The project is     ready.",
+      "expected": "The project is ready.",
+      "selected": "The project is ready.",
+      "action": "normalize_spaces",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 3,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 3856,
+        "output_tokens": 1334
+      },
+      "elapsedMs": 656
+    },
+    {
+      "id": "keep_negation",
+      "split": "development",
+      "draft": "The service is not available.",
+      "expected": "The service is not available.",
+      "selected": "The service is not available.",
+      "action": "replace_word",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 84,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 5913,
+        "output_tokens": 2324
+      },
+      "elapsedMs": 1073
+    },
+    {
+      "id": "keep_literal",
+      "split": "development",
+      "draft": "print(\"a  b\")",
+      "expected": "print(\"a  b\")",
+      "selected": "print(\"a  b\")",
+      "action": "insert_character",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 145,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 5519,
+        "output_tokens": 2254
+      },
+      "elapsedMs": 717
+    },
+    {
+      "id": "keep_number",
+      "split": "development",
+      "draft": "The total is $1,250.",
+      "expected": "The total is $1,250.",
+      "selected": "The total is $1,250.",
+      "action": "unchanged",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 143,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 7192,
+        "output_tokens": 2567
+      },
+      "elapsedMs": 598
+    },
+    {
+      "id": "new_missing",
+      "split": "new",
+      "draft": "Ths is fine.",
+      "expected": "This is fine.",
+      "selected": "This is fine.",
+      "action": "insert_character",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 286,
+      "requests": 4,
+      "usage": {
+        "input_tokens": 8780,
+        "output_tokens": 3773
+      },
+      "elapsedMs": 1026
+    },
+    {
+      "id": "new_agreement",
+      "split": "new",
+      "draft": "We is ready.",
+      "expected": "We are ready.",
+      "selected": "We are ready.",
+      "action": "replace_word",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 224,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 6623,
+        "output_tokens": 3111
+      },
+      "elapsedMs": 653
+    },
+    {
+      "id": "new_duplicate",
+      "split": "new",
+      "draft": "They have have arrived.",
+      "expected": "They have arrived.",
+      "selected": "They have arrived.",
+      "action": "delete_word",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 4,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 3579,
+        "output_tokens": 1263
+      },
+      "elapsedMs": 589
+    },
+    {
+      "id": "new_spaces",
+      "split": "new",
+      "draft": "I can  help.",
+      "expected": "I can help.",
+      "selected": "I can help.",
+      "action": "unchanged",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 2,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 2462,
+        "output_tokens": 774
+      },
+      "elapsedMs": 506
+    },
+    {
+      "id": "typo",
+      "split": "development",
+      "draft": "Helo!",
+      "expected": "Hello!",
+      "selected": "Hello!",
+      "action": "replace_character",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 286,
+      "requests": 4,
+      "usage": {
+        "input_tokens": 7470,
+        "output_tokens": 3451
+      },
+      "elapsedMs": 12292
+    },
+    {
+      "id": "new_question",
+      "split": "new",
+      "draft": "Are you ready.",
+      "expected": "Are you ready?",
+      "selected": "Are you ready?",
+      "action": "replace_character",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 143,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 5217,
+        "output_tokens": 2304
+      },
+      "elapsedMs": 796
+    },
+    {
+      "id": "new_correct",
+      "split": "new",
+      "draft": "She walks daily.",
+      "expected": "She walks daily.",
+      "selected": "She walks daily.",
+      "action": "unchanged",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 85,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 4238,
+        "output_tokens": 1756
+      },
+      "elapsedMs": 807
+    },
+    {
+      "id": "new_id",
+      "split": "new",
+      "draft": "ID: AB-42",
+      "expected": "ID: AB-42",
+      "selected": "ID: AB-42",
+      "action": "unchanged",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 85,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 3676,
+        "output_tokens": 1453
+      },
+      "elapsedMs": 494
+    },
+    {
+      "id": "new_provider",
+      "split": "new",
+      "draft": "I am from TypeSafe.",
+      "expected": "I am from TypeSafe.",
+      "selected": "I am from TypeSafe.",
+      "action": "unchanged",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 143,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 6322,
+        "output_tokens": 2526
+      },
+      "elapsedMs": 576
+    },
+    {
+      "id": "fresh_duplicate",
+      "split": "fresh",
+      "draft": "It is is working.",
+      "expected": "It is working.",
+      "selected": "It is working.",
+      "action": "delete_word",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 4,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 3033,
+        "output_tokens": 1019
+      },
+      "elapsedMs": 581
+    },
+    {
+      "id": "fresh_missing",
+      "split": "fresh",
+      "draft": "Good mornng.",
+      "expected": "Good morning.",
+      "selected": "Good morning.",
+      "action": "insert_character",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 286,
+      "requests": 4,
+      "usage": {
+        "input_tokens": 8526,
+        "output_tokens": 3737
+      },
+      "elapsedMs": 995
+    },
+    {
+      "id": "fresh_agreement",
+      "split": "fresh",
+      "draft": "We was late.",
+      "expected": "We were late.",
+      "selected": "We were late.",
+      "action": "replace_word",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 226,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 6701,
+        "output_tokens": 3133
+      },
+      "elapsedMs": 605
+    },
+    {
+      "id": "fresh_spaces",
+      "split": "fresh",
+      "draft": "That is  fine.",
+      "expected": "That is fine.",
+      "selected": "That is fine.",
+      "action": "unchanged",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 2,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 2651,
+        "output_tokens": 854
+      },
+      "elapsedMs": 604
+    },
+    {
+      "id": "fresh_question",
+      "split": "fresh",
+      "draft": "Where is it.",
+      "expected": "Where is it?",
+      "selected": "Where is it?",
+      "action": "replace_character",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 143,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 5058,
+        "output_tokens": 2224
+      },
+      "elapsedMs": 543
+    },
+    {
+      "id": "fresh_correct",
+      "split": "fresh",
+      "draft": "Do not change this.",
+      "expected": "Do not change this.",
+      "selected": "Do not change this.",
+      "action": "unchanged",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 85,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 4826,
+        "output_tokens": 1905
+      },
+      "elapsedMs": 515
+    },
+    {
+      "id": "fresh_literal",
+      "split": "fresh",
+      "draft": "print(\"x  y\")",
+      "expected": "print(\"x  y\")",
+      "selected": "print(\"x  y\")",
+      "action": "insert_character",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 145,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 5519,
+        "output_tokens": 2254
+      },
+      "elapsedMs": 536
+    },
+    {
+      "id": "fresh_amount",
+      "split": "fresh",
+      "draft": "The fee is $2,040.",
+      "expected": "The fee is $2,040.",
+      "selected": "The fee is $2,040.",
+      "action": "unchanged",
+      "correct": true,
+      "goldCovered": true,
+      "proposalCount": 3,
+      "requests": 2,
+      "usage": {
+        "input_tokens": 3507,
+        "output_tokens": 1051
+      },
+      "elapsedMs": 476
+    }
+  ]
+}

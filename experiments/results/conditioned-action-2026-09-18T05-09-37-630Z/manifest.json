@@ -1,0 +1,45 @@
+{
+  "protocol": "research/R10-conditioned-action-protocol.md",
+  "cases": [
+    {
+      "id": "procrastination",
+      "question": "How can I stop procrastinating?",
+      "split": "development"
+    },
+    {
+      "id": "reading",
+      "question": "How can I remember what I read?",
+      "split": "development"
+    },
+    {
+      "id": "deadlines",
+      "question": "How can I keep track of several deadlines?",
+      "split": "development"
+    },
+    {
+      "id": "project",
+      "question": "I feel overwhelmed by a large project. What is a useful first step?",
+      "split": "fresh"
+    },
+    {
+      "id": "vocabulary",
+      "question": "How can I remember new vocabulary?",
+      "split": "fresh"
+    },
+    {
+      "id": "desk",
+      "question": "How can I make my cluttered desk easier to work at?",
+      "split": "fresh"
+    },
+    {
+      "id": "distractions",
+      "question": "I keep getting distracted while working. What can I try?",
+      "split": "fresh"
+    },
+    {
+      "id": "draft",
+      "question": "I am struggling to begin a first draft. What is a useful first step?",
+      "split": "fresh"
+    }
+  ]
+}

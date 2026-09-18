@@ -1,0 +1,7 @@
+{
+  "server/word-reply.ts": "e2c1b6770a524277a9cf9120242b1348b47dda9c7eeb89055659c1603fe773fa",
+  "server/typesafe.ts": "a470da240bfd24479d21a362da99eb530ff5c1203e4ba701753db86ef7f6a819",
+  "server/inflections.ts": "e370d4286eb6515cedbb9f60f82a3fd55cc9621d25e11a61e692568f5e1ad9a2",
+  "server/data/conversation-words.json": "3ec00746b765586053b56d48c730b1e54f8beee428fbb6829470bf7f61bbce7e",
+  "package-lock.json": "016c573ab7c96a869d05346e25427f98542718bf3e8fba17d383b2bcb6143436"
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "arm": "baseline",
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "text": "Because water becomes gas. Heat makes it gas. Molecular movement increases.",
+    "reason": "complete",
+    "requests": 31,
+    "inputTokens": 135874,
+    "outputTokens": 135731,
+    "ms": 12073,
+    "firstMs": 2176
+  },
+  {
+    "arm": "baseline",
+    "id": "explanation",
+    "user": "Explain that more simply.",
+    "text": "Because water becomes gas.",
+    "reason": "complete",
+    "requests": 13,
+    "inputTokens": 70642,
+    "outputTokens": 72472,
+    "ms": 5001,
+    "firstMs": 1525
+  },
+  {
+    "arm": "baseline",
+    "id": "memory",
+    "user": "My bicycle is called Mivora. Remember that for this conversation.",
+    "text": "Sure",
+    "reason": "complete",
+    "requests": 5,
+    "inputTokens": 41582,
+    "outputTokens": 44750,
+    "ms": 2146,
+    "firstMs": 1480
+  },
+  {
+    "arm": "baseline",
+    "id": "memory",
+    "user": "What is my bicycle called?",
+    "text": "Mivora",
+    "reason": "complete",
+    "requests": 5,
+    "inputTokens": 41954,
+    "outputTokens": 44894,
+    "ms": 2053,
+    "firstMs": 1329
+  },
+  {
+    "arm": "baseline",
+    "id": "correction",
+    "user": "I have a red cup and a blue bowl. Which one is blue?",
+    "text": "The bowl",
+    "reason": "complete",
+    "requests": 7,
+    "inputTokens": 48356,
+    "outputTokens": 51315,
+    "ms": 3154,
+    "firstMs": 1647
+  },
+  {
+    "arm": "baseline",
+    "id": "correction",
+    "user": "Correction: the bowl is green. What color is it now?",
+    "text": "Green",
+    "reason": "complete",
+    "requests": 5,
+    "inputTokens": 41869,
+    "outputTokens": 44788,
+    "ms": 2464,
+    "firstMs": 1840
+  }
+]

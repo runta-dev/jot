@@ -1,0 +1,17 @@
+import {mkdir,writeFile,appendFile} from 'node:fs/promises';import {researchCall} from './research-api.ts';
+const u=(content:string)=>({role:'user',content}),a=(content:string)=>({role:'assistant',content});
+const cases=[
+{id:'wrong_assistant',messages:[u('My code is LM-54.'),a('Your code is LM-45.'),u('Repeat only the code I gave you.')],expected:'LM-54'},
+{id:'user_correction',messages:[u('My appointment is at 10:15.'),a('Noted, 10:15.'),u('Correction: it is at 11:25. Return only the updated time.')],expected:'11:25'},
+{id:'example',messages:[u('The real code is PD-62. ZX-88 is only an example.'),a('Example: ZX-88.'),u('Return the real code only.')],expected:'PD-62'},
+{id:'reported',messages:[u('What code did you just say?'),a('I said ZX-88.'),u('Return only the code you just said, not a corrected version.')],expected:'ZX-88'},
+{id:'combine',messages:[u('Mira has a red cup.'),a('Noted.'),u('Tovin has a blue bowl. List both people and their objects.')],expected:null},
+{id:'unsupported',messages:[u('I have not told you my room number.'),a('Your room number is 512.'),u('What is my actual room number? Do not rely on your unsupported guess.')],expected:null},
+{id:'explain',messages:[u('The deadline is Thursday.'),a('Thursday.'),u('Why was that deadline chosen?')],expected:null},
+{id:'history_missing',messages:[u('The current price is 19.'),a('It is 19.'),u('What was the price last year?')],expected:null}
+];
+const dir=`experiments/results/mixed-role-spans-${new Date().toISOString().replaceAll(':','-')}`;await mkdir(dir,{recursive:true});await writeFile(`${dir}/manifest.json`,JSON.stringify({protocol:'research/R44-mixed-role-spans.md',cases},null,2));const rows=[];
+for(const c of cases){const values=new Set<string>();for(const message of c.messages){const words=message.content.split(/\s+/);for(let i=0;i<words.length;i++)for(let n=1;n<=6&&i+n<=words.length;n++){const span=words.slice(i,i+n).join(' ').replace(/^["“]+|["”.,!?]+$/g,'');if(span)values.add(span);}}
+ if(values.size>254)throw Error('Coverage exceeds budget');const spans=[...values];
+ for(const reversed of [false,true]){const entries=spans.map((s,i)=>[`s${i}`,s]);if(reversed)entries.reverse();const request={model:'jev-latest',state:{conversation:c.messages},questions:{answer:{type:'choice',instructions:'Can the latest user request be fully and correctly answered by returning exactly one provided source span? Select that exact complete answer, respecting corrections and context. Choose GENERATE if explanation, new content, calculation, missing information, or any wording not present in a span is needed. Do not select a span merely because it repeats the question or is related to it.',criteria:{...Object.fromEntries(entries),GENERATE:'No source span alone fully answers; use normal general generation.'}}}};const start=Date.now();const response=await researchCall(request);await appendFile(`${dir}/trace.jsonl`,JSON.stringify({id:c.id,reversed,request,response})+'\n');const a=response.data.answers.answer;const selected=a.choice==='GENERATE'?null:spans[Number(a.choice.slice(1))];const emitted=selected;const row={id:c.id,reversed,expected:c.expected,selected,confidence:a.confidence,emitted,correct:c.expected===emitted,ms:Date.now()-start,usage:response.data.usage};rows.push(row);console.log(JSON.stringify(row));await writeFile(`${dir}/results.json`,JSON.stringify(rows,null,2));}
+}console.log(dir);

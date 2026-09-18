@@ -1,0 +1,242 @@
+[
+  {
+    "source": "bounded-branch-greedy-2026-09-18T07-49-04.111Z",
+    "user": "Why does ice melt in a warm room?",
+    "text": "Because the heat causes melting. Transfer energy to ice.",
+    "expectedAdequate": false,
+    "answers": {
+      "adequate": {
+        "type": "noul",
+        "noul": 0.68
+      },
+      "grammar": {
+        "type": "noul",
+        "noul": 0.84
+      },
+      "constraints": {
+        "type": "noul",
+        "noul": 0.65
+      }
+    }
+  },
+  {
+    "source": "bounded-branch-greedy-2026-09-18T07-49-04.111Z",
+    "user": "Explain it to a young child.",
+    "text": "Imagine ice is like snow and heat makes it melt. Water is liquid. It becomes water.",
+    "expectedAdequate": true,
+    "answers": {
+      "adequate": {
+        "type": "noul",
+        "noul": 0.52
+      },
+      "grammar": {
+        "type": "noul",
+        "noul": 0.7
+      },
+      "constraints": {
+        "type": "noul",
+        "noul": 0.55
+      }
+    }
+  },
+  {
+    "source": "bounded-branch-greedy-2026-09-18T07-49-04.111Z",
+    "user": "Write a short story about a bird missing its home.",
+    "text": "A bird misses its home. It feels lost. It flies searching for home. But then it found its home.",
+    "expectedAdequate": false,
+    "answers": {
+      "adequate": {
+        "type": "noul",
+        "noul": 0.54
+      },
+      "grammar": {
+        "type": "noul",
+        "noul": 0.87
+      },
+      "constraints": {
+        "type": "noul",
+        "noul": 0.57
+      }
+    }
+  },
+  {
+    "source": "bounded-branch-greedy-2026-09-18T07-49-04.111Z",
+    "user": "Give the story a surprising but happy ending.",
+    "text": "But then it finds its home was actually house. And it became happy.",
+    "expectedAdequate": false,
+    "answers": {
+      "adequate": {
+        "type": "noul",
+        "noul": 0.51
+      },
+      "grammar": {
+        "type": "noul",
+        "noul": 0.48
+      },
+      "constraints": {
+        "type": "noul",
+        "noul": 0.56
+      }
+    }
+  },
+  {
+    "source": "bounded-branch-branch-2026-09-18T07-50-00.111Z",
+    "user": "Why does ice melt in a warm room?",
+    "text": "Because heat transfer from air to ice causes melting",
+    "expectedAdequate": true,
+    "answers": {
+      "adequate": {
+        "type": "noul",
+        "noul": 0.87
+      },
+      "grammar": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "constraints": {
+        "type": "noul",
+        "noul": 0.86
+      }
+    }
+  },
+  {
+    "source": "bounded-branch-branch-2026-09-18T07-50-00.111Z",
+    "user": "Explain it to a young child.",
+    "text": "Imagine that ice is cold and it gets warm and melts. It becomes water.",
+    "expectedAdequate": true,
+    "answers": {
+      "adequate": {
+        "type": "noul",
+        "noul": 0.57
+      },
+      "grammar": {
+        "type": "noul",
+        "noul": 0.89
+      },
+      "constraints": {
+        "type": "noul",
+        "noul": 0.64
+      }
+    }
+  },
+  {
+    "source": "bounded-branch-branch-2026-09-18T07-50-00.111Z",
+    "user": "Write a short story about a bird missing its home.",
+    "text": "There was a bird that was lost and searching for its home. Then it flew away. But it returned home.",
+    "expectedAdequate": null,
+    "answers": {
+      "adequate": {
+        "type": "noul",
+        "noul": 0.43
+      },
+      "grammar": {
+        "type": "noul",
+        "noul": 0.88
+      },
+      "constraints": {
+        "type": "noul",
+        "noul": 0.51
+      }
+    }
+  },
+  {
+    "source": "bounded-branch-branch-2026-09-18T07-50-00.111Z",
+    "user": "Give the story a surprising but happy ending.",
+    "text": "It found its family.",
+    "expectedAdequate": false,
+    "answers": {
+      "adequate": {
+        "type": "noul",
+        "noul": 0.62
+      },
+      "grammar": {
+        "type": "noul",
+        "noul": 0.82
+      },
+      "constraints": {
+        "type": "noul",
+        "noul": 0.3
+      }
+    }
+  },
+  {
+    "source": "broad-diagnostic-2026-09-18T07-39-21.753Z",
+    "user": "I keep putting off a large project. How can I start?",
+    "text": "Well first, split into tasks. Then pick one. Now start.",
+    "expectedAdequate": true,
+    "answers": {
+      "adequate": {
+        "type": "noul",
+        "noul": 0.64
+      },
+      "grammar": {
+        "type": "noul",
+        "noul": 0.89
+      },
+      "constraints": {
+        "type": "noul",
+        "noul": 0.66
+      }
+    }
+  },
+  {
+    "source": "broad-diagnostic-2026-09-18T07-39-21.753Z",
+    "user": "I only have ten minutes today. Adapt your advice.",
+    "text": "First, pick one small task. Spend ten minutes doing it.",
+    "expectedAdequate": true,
+    "answers": {
+      "adequate": {
+        "type": "noul",
+        "noul": 0.9
+      },
+      "grammar": {
+        "type": "noul",
+        "noul": 0.97
+      },
+      "constraints": {
+        "type": "noul",
+        "noul": 0.94
+      }
+    }
+  },
+  {
+    "source": "broad-diagnostic-2026-09-18T07-39-21.753Z",
+    "user": "What is inside my closed drawer?",
+    "text": "Unknown",
+    "expectedAdequate": true,
+    "answers": {
+      "adequate": {
+        "type": "noul",
+        "noul": 0.68
+      },
+      "grammar": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "constraints": {
+        "type": "noul",
+        "noul": 0.68
+      }
+    }
+  },
+  {
+    "source": "broad-diagnostic-2026-09-18T07-39-21.753Z",
+    "user": "Can you know without me telling you?",
+    "text": "No",
+    "expectedAdequate": true,
+    "answers": {
+      "adequate": {
+        "type": "noul",
+        "noul": 0.88
+      },
+      "grammar": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "constraints": {
+        "type": "noul",
+        "noul": 0.87
+      }
+    }
+  }
+]

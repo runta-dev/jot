@@ -1,0 +1,32 @@
+{
+  "model": "jev-latest",
+  "lexiconHash": "9c965d384526facc59260e94f8ccff1582633fa385004abe1455ed457062acbc",
+  "lexiconSize": 4096,
+  "protocol": "research/R2.1-hierarchy-protocol.md",
+  "prompts": [
+    {
+      "id": "greeting",
+      "text": "hello"
+    },
+    {
+      "id": "identity",
+      "text": "Who are you? State your name and provider."
+    },
+    {
+      "id": "capital",
+      "text": "What is the capital of France? Reply with just the city name."
+    },
+    {
+      "id": "arithmetic",
+      "text": "What is 2 + 2? Reply with one number."
+    },
+    {
+      "id": "opposite",
+      "text": "What is the opposite of hot? Reply with one word."
+    },
+    {
+      "id": "summary",
+      "text": "Summarize in one short sentence: On Monday at 09:00, the health endpoint returned HTTP 503. The cause is unknown."
+    }
+  ]
+}

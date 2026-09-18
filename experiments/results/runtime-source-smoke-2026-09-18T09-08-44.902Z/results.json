@@ -1,0 +1,38 @@
+[
+  {
+    "prompt": "My code is ravo-319. Return only my code.",
+    "text": "ravo-319",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 1,
+      "inputTokens": 1214,
+      "outputTokens": 396
+    },
+    "ms": 1395
+  },
+  {
+    "prompt": "Repeat exactly \"blue  river!\"",
+    "text": "blue  river!",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 1,
+      "inputTokens": 628,
+      "outputTokens": 144
+    },
+    "ms": 325
+  },
+  {
+    "prompt": "Why does a metal spoon feel colder than wood at the same temperature?",
+    "text": "Because metal leads better. Steals heat away faster.",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 24,
+      "inputTokens": 112704,
+      "outputTokens": 110669
+    },
+    "ms": 9201
+  }
+]

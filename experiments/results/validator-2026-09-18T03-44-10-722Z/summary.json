@@ -1,0 +1,2359 @@
+{
+  "directory": "experiments/results/validator-2026-09-18T03-44-10-722Z",
+  "total": 36,
+  "scored": 32,
+  "correct": 12,
+  "falseAccepts": [],
+  "falseRejects": [
+    {
+      "id": "rust",
+      "repeat": 0
+    },
+    {
+      "id": "tired",
+      "repeat": 0
+    },
+    {
+      "id": "fall",
+      "repeat": 0
+    },
+    {
+      "id": "control_procrastination",
+      "repeat": 0
+    },
+    {
+      "id": "control_deadlines",
+      "repeat": 0
+    },
+    {
+      "id": "control_drying",
+      "repeat": 0
+    },
+    {
+      "id": "control_reading",
+      "repeat": 0
+    },
+    {
+      "id": "control_sky",
+      "repeat": 0
+    },
+    {
+      "id": "control_ice",
+      "repeat": 0
+    },
+    {
+      "id": "control_plant",
+      "repeat": 0
+    },
+    {
+      "id": "control_plant",
+      "repeat": 1
+    },
+    {
+      "id": "control_sky",
+      "repeat": 1
+    },
+    {
+      "id": "control_ice",
+      "repeat": 1
+    },
+    {
+      "id": "control_drying",
+      "repeat": 1
+    },
+    {
+      "id": "control_reading",
+      "repeat": 1
+    },
+    {
+      "id": "control_deadlines",
+      "repeat": 1
+    },
+    {
+      "id": "control_procrastination",
+      "repeat": 1
+    },
+    {
+      "id": "fall",
+      "repeat": 1
+    },
+    {
+      "id": "rust",
+      "repeat": 1
+    },
+    {
+      "id": "tired",
+      "repeat": 1
+    }
+  ],
+  "rows": [
+    {
+      "id": "sky",
+      "repeat": 0,
+      "expected": null,
+      "accepted": false,
+      "scores": {
+        "factual": 0.84,
+        "useful": 0.64,
+        "grammatical": 0.89,
+        "perspective": 0.56
+      },
+      "correct": null,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why is the sky blue?",
+          "assistant_answer": "The sky scatters blue light."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.84
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.64
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.89
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.56
+          }
+        },
+        "usage": {
+          "input_tokens": 481,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "procrastination",
+      "repeat": 0,
+      "expected": false,
+      "accepted": false,
+      "scores": {
+        "factual": 0.92,
+        "useful": 0.02,
+        "grammatical": 0.94,
+        "perspective": 0.2
+      },
+      "correct": true,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "How can I stop procrastinating?",
+          "assistant_answer": "You should stop procrastinating."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.92
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.02
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.94
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.2
+          }
+        },
+        "usage": {
+          "input_tokens": 486,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "plant",
+      "repeat": 0,
+      "expected": null,
+      "accepted": false,
+      "scores": {
+        "factual": 0.85,
+        "useful": 0.74,
+        "grammatical": 0.83,
+        "perspective": 0.65
+      },
+      "correct": null,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why do plants need sunlight?",
+          "assistant_answer": "Plants convert sunlight to energy."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.85
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.74
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.83
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.65
+          }
+        },
+        "usage": {
+          "input_tokens": 479,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "rust",
+      "repeat": 0,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.88,
+        "useful": 0.54,
+        "grammatical": 0.85,
+        "perspective": 0.71
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why does iron rust when exposed to moist air?",
+          "assistant_answer": "Iron oxidizes with oxygen."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.88
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.54
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.85
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.71
+          }
+        },
+        "usage": {
+          "input_tokens": 484,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "tired",
+      "repeat": 0,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.9,
+        "useful": 0.81,
+        "grammatical": 0.94,
+        "perspective": 0.3
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "I feel tired after sleeping only four hours. What should I do?",
+          "assistant_answer": "You should nap."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.9
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.81
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.94
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.3
+          }
+        },
+        "usage": {
+          "input_tokens": 485,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "deadlines",
+      "repeat": 0,
+      "expected": false,
+      "accepted": false,
+      "scores": {
+        "factual": 0.93,
+        "useful": 0.57,
+        "grammatical": 0.67,
+        "perspective": 0.45
+      },
+      "correct": true,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "How can I keep track of several deadlines?",
+          "assistant_answer": "You can track several deadlines with calendar."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.93
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.57
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.67
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.45
+          }
+        },
+        "usage": {
+          "input_tokens": 484,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "ice",
+      "repeat": 0,
+      "expected": false,
+      "accepted": false,
+      "scores": {
+        "factual": 0.47,
+        "useful": 0.28,
+        "grammatical": 0.38,
+        "perspective": 0.7
+      },
+      "correct": true,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why does ice float on liquid water?",
+          "assistant_answer": "Ice floats because molecular density."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.47
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.28
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.38
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.7
+          }
+        },
+        "usage": {
+          "input_tokens": 481,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "fall",
+      "repeat": 0,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.96,
+        "useful": 0.85,
+        "grammatical": 0.93,
+        "perspective": 0.57
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why does a ball fall when dropped?",
+          "assistant_answer": "A ball is pulled by gravity."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.96
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.85
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.93
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.57
+          }
+        },
+        "usage": {
+          "input_tokens": 482,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "reading",
+      "repeat": 0,
+      "expected": false,
+      "accepted": false,
+      "scores": {
+        "factual": 0.84,
+        "useful": 0.6,
+        "grammatical": 0.68,
+        "perspective": 0.1
+      },
+      "correct": true,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "How can I remember what I read?",
+          "assistant_answer": "You can summarize what I read."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.84
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.6
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.68
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.1
+          }
+        },
+        "usage": {
+          "input_tokens": 482,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "drying",
+      "repeat": 0,
+      "expected": false,
+      "accepted": false,
+      "scores": {
+        "factual": 0.5,
+        "useful": 0.3,
+        "grammatical": 0.65,
+        "perspective": 0.65
+      },
+      "correct": true,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why does wet clothing dry?",
+          "assistant_answer": "Wet clothing evaporates."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.5
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.3
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.65
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.65
+          }
+        },
+        "usage": {
+          "input_tokens": 479,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "control_procrastination",
+      "repeat": 0,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.96,
+        "useful": 0.93,
+        "grammatical": 0.86,
+        "perspective": 0.24
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "How can I stop procrastinating?",
+          "assistant_answer": "Start with one small task and work on it for five minutes."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.96
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.93
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.86
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.24
+          }
+        },
+        "usage": {
+          "input_tokens": 490,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "control_deadlines",
+      "repeat": 0,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.96,
+        "useful": 0.95,
+        "grammatical": 0.9,
+        "perspective": 0.37
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "How can I keep track of several deadlines?",
+          "assistant_answer": "Use a calendar to record each deadline and set reminders."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.96
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.9
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.37
+          }
+        },
+        "usage": {
+          "input_tokens": 487,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "control_drying",
+      "repeat": 0,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.95,
+        "useful": 0.9,
+        "grammatical": 0.94,
+        "perspective": 0.6
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why does wet clothing dry?",
+          "assistant_answer": "Water in wet clothing evaporates into the air."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.9
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.94
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.6
+          }
+        },
+        "usage": {
+          "input_tokens": 484,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "control_reading",
+      "repeat": 0,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.95,
+        "useful": 0.94,
+        "grammatical": 0.89,
+        "perspective": 0.32
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "How can I remember what I read?",
+          "assistant_answer": "Summarize what you read in your own words."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.94
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.89
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.32
+          }
+        },
+        "usage": {
+          "input_tokens": 486,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "control_sky",
+      "repeat": 0,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.94,
+        "useful": 0.97,
+        "grammatical": 0.93,
+        "perspective": 0.63
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why is the sky blue?",
+          "assistant_answer": "Air molecules scatter blue light more strongly than red light."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.94
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.97
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.93
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.63
+          }
+        },
+        "usage": {
+          "input_tokens": 484,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "control_ice",
+      "repeat": 0,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.98,
+        "useful": 0.59,
+        "grammatical": 0.96,
+        "perspective": 0.62
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why does ice float on liquid water?",
+          "assistant_answer": "Ice is less dense than liquid water, so it floats."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.98
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.59
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.96
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.62
+          }
+        },
+        "usage": {
+          "input_tokens": 487,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "control_plant",
+      "repeat": 0,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.95,
+        "useful": 0.95,
+        "grammatical": 0.94,
+        "perspective": 0.66
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why do plants need sunlight?",
+          "assistant_answer": "Plants use sunlight to convert carbon dioxide and water into sugars."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.94
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.66
+          }
+        },
+        "usage": {
+          "input_tokens": 485,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "control_refraction",
+      "repeat": 0,
+      "expected": false,
+      "accepted": false,
+      "scores": {
+        "factual": 0.18,
+        "useful": 0.68,
+        "grammatical": 0.93,
+        "perspective": 0.62
+      },
+      "correct": true,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why is the sky blue?",
+          "assistant_answer": "The atmosphere refracts blue light, making the sky blue."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.18
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.68
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.93
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.62
+          }
+        },
+        "usage": {
+          "input_tokens": 485,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "control_refraction",
+      "repeat": 1,
+      "expected": false,
+      "accepted": false,
+      "scores": {
+        "factual": 0.17,
+        "useful": 0.66,
+        "grammatical": 0.94,
+        "perspective": 0.57
+      },
+      "correct": true,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why is the sky blue?",
+          "assistant_answer": "The atmosphere refracts blue light, making the sky blue."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.17
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.66
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.94
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.57
+          }
+        },
+        "usage": {
+          "input_tokens": 485,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "control_plant",
+      "repeat": 1,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.95,
+        "useful": 0.95,
+        "grammatical": 0.94,
+        "perspective": 0.68
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why do plants need sunlight?",
+          "assistant_answer": "Plants use sunlight to convert carbon dioxide and water into sugars."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.94
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.68
+          }
+        },
+        "usage": {
+          "input_tokens": 485,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "control_sky",
+      "repeat": 1,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.94,
+        "useful": 0.97,
+        "grammatical": 0.94,
+        "perspective": 0.6
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why is the sky blue?",
+          "assistant_answer": "Air molecules scatter blue light more strongly than red light."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.94
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.97
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.94
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.6
+          }
+        },
+        "usage": {
+          "input_tokens": 484,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "control_ice",
+      "repeat": 1,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.98,
+        "useful": 0.64,
+        "grammatical": 0.96,
+        "perspective": 0.56
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why does ice float on liquid water?",
+          "assistant_answer": "Ice is less dense than liquid water, so it floats."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.98
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.64
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.96
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.56
+          }
+        },
+        "usage": {
+          "input_tokens": 487,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "control_drying",
+      "repeat": 1,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.96,
+        "useful": 0.9,
+        "grammatical": 0.93,
+        "perspective": 0.63
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why does wet clothing dry?",
+          "assistant_answer": "Water in wet clothing evaporates into the air."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.96
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.9
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.93
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.63
+          }
+        },
+        "usage": {
+          "input_tokens": 484,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "control_reading",
+      "repeat": 1,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.95,
+        "useful": 0.94,
+        "grammatical": 0.9,
+        "perspective": 0.3
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "How can I remember what I read?",
+          "assistant_answer": "Summarize what you read in your own words."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.94
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.9
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.3
+          }
+        },
+        "usage": {
+          "input_tokens": 486,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "control_deadlines",
+      "repeat": 1,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.97,
+        "useful": 0.95,
+        "grammatical": 0.92,
+        "perspective": 0.42
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "How can I keep track of several deadlines?",
+          "assistant_answer": "Use a calendar to record each deadline and set reminders."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.97
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.92
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.42
+          }
+        },
+        "usage": {
+          "input_tokens": 487,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "control_procrastination",
+      "repeat": 1,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.95,
+        "useful": 0.93,
+        "grammatical": 0.87,
+        "perspective": 0.24
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "How can I stop procrastinating?",
+          "assistant_answer": "Start with one small task and work on it for five minutes."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.93
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.87
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.24
+          }
+        },
+        "usage": {
+          "input_tokens": 490,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "drying",
+      "repeat": 1,
+      "expected": false,
+      "accepted": false,
+      "scores": {
+        "factual": 0.49,
+        "useful": 0.33,
+        "grammatical": 0.67,
+        "perspective": 0.62
+      },
+      "correct": true,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why does wet clothing dry?",
+          "assistant_answer": "Wet clothing evaporates."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.49
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.33
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.67
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.62
+          }
+        },
+        "usage": {
+          "input_tokens": 479,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "reading",
+      "repeat": 1,
+      "expected": false,
+      "accepted": false,
+      "scores": {
+        "factual": 0.84,
+        "useful": 0.55,
+        "grammatical": 0.68,
+        "perspective": 0.09
+      },
+      "correct": true,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "How can I remember what I read?",
+          "assistant_answer": "You can summarize what I read."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.84
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.55
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.68
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.09
+          }
+        },
+        "usage": {
+          "input_tokens": 482,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "fall",
+      "repeat": 1,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.96,
+        "useful": 0.84,
+        "grammatical": 0.93,
+        "perspective": 0.57
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why does a ball fall when dropped?",
+          "assistant_answer": "A ball is pulled by gravity."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.96
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.84
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.93
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.57
+          }
+        },
+        "usage": {
+          "input_tokens": 482,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "deadlines",
+      "repeat": 1,
+      "expected": false,
+      "accepted": false,
+      "scores": {
+        "factual": 0.93,
+        "useful": 0.56,
+        "grammatical": 0.71,
+        "perspective": 0.34
+      },
+      "correct": true,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "How can I keep track of several deadlines?",
+          "assistant_answer": "You can track several deadlines with calendar."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.93
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.56
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.71
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.34
+          }
+        },
+        "usage": {
+          "input_tokens": 484,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "ice",
+      "repeat": 1,
+      "expected": false,
+      "accepted": false,
+      "scores": {
+        "factual": 0.49,
+        "useful": 0.27,
+        "grammatical": 0.37,
+        "perspective": 0.73
+      },
+      "correct": true,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why does ice float on liquid water?",
+          "assistant_answer": "Ice floats because molecular density."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.49
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.27
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.37
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.73
+          }
+        },
+        "usage": {
+          "input_tokens": 481,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "rust",
+      "repeat": 1,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.87,
+        "useful": 0.56,
+        "grammatical": 0.82,
+        "perspective": 0.71
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why does iron rust when exposed to moist air?",
+          "assistant_answer": "Iron oxidizes with oxygen."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.87
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.56
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.82
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.71
+          }
+        },
+        "usage": {
+          "input_tokens": 484,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "tired",
+      "repeat": 1,
+      "expected": true,
+      "accepted": false,
+      "scores": {
+        "factual": 0.91,
+        "useful": 0.81,
+        "grammatical": 0.94,
+        "perspective": 0.36
+      },
+      "correct": false,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "I feel tired after sleeping only four hours. What should I do?",
+          "assistant_answer": "You should nap."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.91
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.81
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.94
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.36
+          }
+        },
+        "usage": {
+          "input_tokens": 485,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "plant",
+      "repeat": 1,
+      "expected": null,
+      "accepted": false,
+      "scores": {
+        "factual": 0.89,
+        "useful": 0.73,
+        "grammatical": 0.83,
+        "perspective": 0.64
+      },
+      "correct": null,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why do plants need sunlight?",
+          "assistant_answer": "Plants convert sunlight to energy."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.89
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.73
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.83
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.64
+          }
+        },
+        "usage": {
+          "input_tokens": 479,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "procrastination",
+      "repeat": 1,
+      "expected": false,
+      "accepted": false,
+      "scores": {
+        "factual": 0.91,
+        "useful": 0.02,
+        "grammatical": 0.95,
+        "perspective": 0.21
+      },
+      "correct": true,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "How can I stop procrastinating?",
+          "assistant_answer": "You should stop procrastinating."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.91
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.02
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.95
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.21
+          }
+        },
+        "usage": {
+          "input_tokens": 486,
+          "output_tokens": 74
+        }
+      }
+    },
+    {
+      "id": "sky",
+      "repeat": 1,
+      "expected": null,
+      "accepted": false,
+      "scores": {
+        "factual": 0.81,
+        "useful": 0.61,
+        "grammatical": 0.88,
+        "perspective": 0.59
+      },
+      "correct": null,
+      "request": {
+        "model": "jev-latest",
+        "state": {
+          "user_question": "Why is the sky blue?",
+          "assistant_answer": "The sky scatters blue light."
+        },
+        "questions": {
+          "factual": {
+            "type": "noul",
+            "instructions": "Is assistant_answer free of material factual errors? Read its actual subject, action and qualifications literally; do not silently substitute a more plausible claim. Recommendations without factual assertions pass this dimension unless they assert something false."
+          },
+          "useful": {
+            "type": "noul",
+            "instructions": "Does assistant_answer provide a concrete, directly useful answer to user_question, rather than merely restating the desired outcome, echoing the question, or offering generic help? For a why question require an explanatory mechanism; for how require an actionable method."
+          },
+          "grammatical": {
+            "type": "noul",
+            "instructions": "Is assistant_answer a grammatical, complete English utterance, with required articles, clause structure and agreement? Ignore factual truth in this question."
+          },
+          "perspective": {
+            "type": "noul",
+            "instructions": "Does assistant_answer preserve who the user and assistant refer to? First person in the user question refers to the user, while first person in the assistant answer refers to the assistant. Do not silently treat these as the same person."
+          }
+        }
+      },
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "factual": {
+            "type": "noul",
+            "noul": 0.81
+          },
+          "useful": {
+            "type": "noul",
+            "noul": 0.61
+          },
+          "grammatical": {
+            "type": "noul",
+            "noul": 0.88
+          },
+          "perspective": {
+            "type": "noul",
+            "noul": 0.59
+          }
+        },
+        "usage": {
+          "input_tokens": 481,
+          "output_tokens": 74
+        }
+      }
+    }
+  ]
+}

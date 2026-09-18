@@ -1,0 +1,5 @@
+import {readFile,mkdir,appendFile} from 'node:fs/promises';import {parse} from 'dotenv';import {generateWordReply} from '../server/word-reply.ts';import {makeEvaluator,type Evaluate} from '../server/typesafe.ts';
+const env=parse(await readFile('.env','utf8'));const key=process.env.TYPESAFE_API_KEY||process.env.JEV_API_KEY||env.TYPESAFE_API_KEY||env.JEV_API_KEY;if(!key)throw Error('No key');
+const dir=`experiments/results/shadow-trace-${new Date().toISOString().replaceAll(':','-')}`;await mkdir(dir,{recursive:true});
+const inner=makeEvaluator(key);const evaluate:Evaluate=async(request,signal)=>{const response=await inner(request,signal);await appendFile(`${dir}/trace.jsonl`,JSON.stringify({request,response})+'\n');return response;};
+let text='';const started=Date.now();for await(const event of generateWordReply(key,[{role:'user',content:'Why does a shadow change position during the day?'}],new AbortController().signal,{evaluate})){await appendFile(`${dir}/events.jsonl`,JSON.stringify(event)+'\n');if(event.type==='character')text+=event.character;else console.log(JSON.stringify({text,...event,ms:Date.now()-started}));}console.log(dir);

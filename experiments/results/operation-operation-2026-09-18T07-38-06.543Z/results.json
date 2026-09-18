@@ -1,0 +1,104 @@
+[
+  {
+    "arm": "operation",
+    "operation": {
+      "kind": "answer",
+      "instruction": "Answer the latest question using conversation context.",
+      "confidence": 1
+    },
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "text": "Because water becomes gas.",
+    "reason": "complete",
+    "requests": 14,
+    "inputTokens": 71849,
+    "outputTokens": 73271,
+    "ms": 5867,
+    "firstMs": 2605
+  },
+  {
+    "arm": "operation",
+    "operation": {
+      "kind": "simplify",
+      "instruction": "Explain the preceding answer in easier language; do not add unnecessary complexity.",
+      "confidence": 1
+    },
+    "id": "explanation",
+    "user": "Explain that more simply.",
+    "text": "Because water becomes gas.",
+    "reason": "complete",
+    "requests": 14,
+    "inputTokens": 72045,
+    "outputTokens": 72671,
+    "ms": 4486,
+    "firstMs": 1485
+  },
+  {
+    "arm": "operation",
+    "operation": {
+      "kind": "other",
+      "instruction": "Follow the latest request using conversation context; none of the other descriptions fits.",
+      "confidence": 0.99
+    },
+    "id": "memory",
+    "user": "My bicycle is called Mivora. Remember that for this conversation.",
+    "text": "Sure",
+    "reason": "complete",
+    "requests": 6,
+    "inputTokens": 42720,
+    "outputTokens": 45131,
+    "ms": 2275,
+    "firstMs": 1763
+  },
+  {
+    "arm": "operation",
+    "operation": {
+      "kind": "answer",
+      "instruction": "Answer the latest question using conversation context.",
+      "confidence": 1
+    },
+    "id": "memory",
+    "user": "What is my bicycle called?",
+    "text": "Mivora",
+    "reason": "complete",
+    "requests": 6,
+    "inputTokens": 42789,
+    "outputTokens": 44938,
+    "ms": 2050,
+    "firstMs": 1508
+  },
+  {
+    "arm": "operation",
+    "operation": {
+      "kind": "answer",
+      "instruction": "Answer the latest question using conversation context.",
+      "confidence": 1
+    },
+    "id": "correction",
+    "user": "I have a red cup and a blue bowl. Which one is blue?",
+    "text": "Bowl",
+    "reason": "complete",
+    "requests": 6,
+    "inputTokens": 42334,
+    "outputTokens": 44722,
+    "ms": 2319,
+    "firstMs": 1671
+  },
+  {
+    "arm": "operation",
+    "operation": {
+      "kind": "correct",
+      "instruction": "Apply the latest correction and use the updated facts rather than stale information.",
+      "confidence": 0.65
+    },
+    "id": "correction",
+    "user": "Correction: the bowl is green. What color is it now?",
+    "text": "Green",
+    "reason": "complete",
+    "requests": 6,
+    "inputTokens": 42701,
+    "outputTokens": 44770,
+    "ms": 2114,
+    "firstMs": 1477
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "protocol": "research/R8-open-composition-protocol.md",
+  "cases": [
+    {
+      "id": "sky",
+      "request": "Why is the sky blue?",
+      "facts": "",
+      "split": "development"
+    },
+    {
+      "id": "procrastination",
+      "request": "How can I stop procrastinating?",
+      "facts": "",
+      "split": "development"
+    },
+    {
+      "id": "tired",
+      "request": "I feel tired after sleeping only four hours. What should I do?",
+      "facts": "",
+      "split": "development"
+    },
+    {
+      "id": "plant",
+      "request": "Why do plants need sunlight?",
+      "facts": "",
+      "split": "development"
+    },
+    {
+      "id": "rust",
+      "request": "Why does iron rust when exposed to moist air?",
+      "facts": "",
+      "split": "development"
+    },
+    {
+      "id": "ice",
+      "request": "Why does ice float on liquid water?",
+      "facts": "",
+      "split": "development"
+    },
+    {
+      "id": "deadlines",
+      "request": "How can I keep track of several deadlines?",
+      "facts": "",
+      "split": "fresh"
+    },
+    {
+      "id": "fall",
+      "request": "Why does a ball fall when dropped?",
+      "facts": "",
+      "split": "fresh"
+    },
+    {
+      "id": "reading",
+      "request": "How can I remember what I read?",
+      "facts": "",
+      "split": "fresh"
+    },
+    {
+      "id": "drying",
+      "request": "Why does wet clothing dry?",
+      "facts": "",
+      "split": "fresh"
+    }
+  ],
+  "library": "jsrealb 5.6.0"
+}

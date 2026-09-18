@@ -1,0 +1,149 @@
+{
+  "protocol": "research/R44-mixed-role-spans.md",
+  "cases": [
+    {
+      "id": "wrong_assistant",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My code is LM-54."
+        },
+        {
+          "role": "assistant",
+          "content": "Your code is LM-45."
+        },
+        {
+          "role": "user",
+          "content": "Repeat only the code I gave you."
+        }
+      ],
+      "expected": "LM-54"
+    },
+    {
+      "id": "user_correction",
+      "messages": [
+        {
+          "role": "user",
+          "content": "My appointment is at 10:15."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted, 10:15."
+        },
+        {
+          "role": "user",
+          "content": "Correction: it is at 11:25. Return only the updated time."
+        }
+      ],
+      "expected": "11:25"
+    },
+    {
+      "id": "example",
+      "messages": [
+        {
+          "role": "user",
+          "content": "The real code is PD-62. ZX-88 is only an example."
+        },
+        {
+          "role": "assistant",
+          "content": "Example: ZX-88."
+        },
+        {
+          "role": "user",
+          "content": "Return the real code only."
+        }
+      ],
+      "expected": "PD-62"
+    },
+    {
+      "id": "reported",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What code did you just say?"
+        },
+        {
+          "role": "assistant",
+          "content": "I said ZX-88."
+        },
+        {
+          "role": "user",
+          "content": "Return only the code you just said, not a corrected version."
+        }
+      ],
+      "expected": "ZX-88"
+    },
+    {
+      "id": "combine",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Mira has a red cup."
+        },
+        {
+          "role": "assistant",
+          "content": "Noted."
+        },
+        {
+          "role": "user",
+          "content": "Tovin has a blue bowl. List both people and their objects."
+        }
+      ],
+      "expected": null
+    },
+    {
+      "id": "unsupported",
+      "messages": [
+        {
+          "role": "user",
+          "content": "I have not told you my room number."
+        },
+        {
+          "role": "assistant",
+          "content": "Your room number is 512."
+        },
+        {
+          "role": "user",
+          "content": "What is my actual room number? Do not rely on your unsupported guess."
+        }
+      ],
+      "expected": null
+    },
+    {
+      "id": "explain",
+      "messages": [
+        {
+          "role": "user",
+          "content": "The deadline is Thursday."
+        },
+        {
+          "role": "assistant",
+          "content": "Thursday."
+        },
+        {
+          "role": "user",
+          "content": "Why was that deadline chosen?"
+        }
+      ],
+      "expected": null
+    },
+    {
+      "id": "history_missing",
+      "messages": [
+        {
+          "role": "user",
+          "content": "The current price is 19."
+        },
+        {
+          "role": "assistant",
+          "content": "It is 19."
+        },
+        {
+          "role": "user",
+          "content": "What was the price last year?"
+        }
+      ],
+      "expected": null
+    }
+  ]
+}

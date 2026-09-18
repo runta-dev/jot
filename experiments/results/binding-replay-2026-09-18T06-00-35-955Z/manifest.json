@@ -1,0 +1,22 @@
+{
+  "protocol": "research/R12.1-binding-replay-protocol.md",
+  "source": "experiments/results/sense-advice-2026-09-18T05-43-39-184Z",
+  "caseIds": [
+    "procrastination",
+    "reading",
+    "deadlines",
+    "project",
+    "vocabulary",
+    "desk",
+    "distractions",
+    "draft",
+    "meeting",
+    "files",
+    "scrolling",
+    "homework",
+    "notes",
+    "habit",
+    "trip",
+    "complex"
+  ]
+}

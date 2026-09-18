@@ -1,0 +1,1510 @@
+[
+  {
+    "n": 0,
+    "id": "identity",
+    "user": "Hello. Who are you?",
+    "prefix": "",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c4",
+        "text": "I",
+        "confidence": 0.26
+      },
+      "full_grounded": {
+        "choice": "c4",
+        "text": "I",
+        "confidence": 0.25
+      },
+      "fragment_base": {
+        "choice": "c0",
+        "text": "Hello",
+        "confidence": 0.34
+      },
+      "fragment_grounded": {
+        "choice": "c0",
+        "text": "Hello",
+        "confidence": 0.35
+      }
+    }
+  },
+  {
+    "n": 0,
+    "id": "identity",
+    "user": "Hello. Who are you?",
+    "prefix": "",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c4",
+        "text": "I",
+        "confidence": 0.43
+      },
+      "full_grounded": {
+        "choice": "c4",
+        "text": "I",
+        "confidence": 0.39
+      },
+      "fragment_base": {
+        "choice": "c0",
+        "text": "Hello",
+        "confidence": 0.37
+      },
+      "fragment_grounded": {
+        "choice": "c0",
+        "text": "Hello",
+        "confidence": 0.36
+      }
+    }
+  },
+  {
+    "n": 1,
+    "id": "identity",
+    "user": "Hello. Who are you?",
+    "prefix": "Hello",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c8",
+        "text": "Hello im",
+        "confidence": 0.33
+      },
+      "full_grounded": {
+        "choice": "c8",
+        "text": "Hello im",
+        "confidence": 0.34
+      },
+      "fragment_base": {
+        "choice": "c4",
+        "text": "Hello I",
+        "confidence": 0.43
+      },
+      "fragment_grounded": {
+        "choice": "c4",
+        "text": "Hello I",
+        "confidence": 0.45
+      }
+    }
+  },
+  {
+    "n": 1,
+    "id": "identity",
+    "user": "Hello. Who are you?",
+    "prefix": "Hello",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c4",
+        "text": "Hello I",
+        "confidence": 0.48
+      },
+      "full_grounded": {
+        "choice": "c4",
+        "text": "Hello I",
+        "confidence": 0.52
+      },
+      "fragment_base": {
+        "choice": "c4",
+        "text": "Hello I",
+        "confidence": 0.6
+      },
+      "fragment_grounded": {
+        "choice": "c4",
+        "text": "Hello I",
+        "confidence": 0.53
+      }
+    }
+  },
+  {
+    "n": 2,
+    "id": "identity",
+    "user": "Hello. Who are you?",
+    "prefix": "Hello I",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c12",
+        "text": "Hello I am",
+        "confidence": 0.89
+      },
+      "full_grounded": {
+        "choice": "c12",
+        "text": "Hello I am",
+        "confidence": 0.83
+      },
+      "fragment_base": {
+        "choice": "c12",
+        "text": "Hello I am",
+        "confidence": 0.4
+      },
+      "fragment_grounded": {
+        "choice": "c12",
+        "text": "Hello I am",
+        "confidence": 0.36
+      }
+    }
+  },
+  {
+    "n": 2,
+    "id": "identity",
+    "user": "Hello. Who are you?",
+    "prefix": "Hello I",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c12",
+        "text": "Hello I am",
+        "confidence": 0.83
+      },
+      "full_grounded": {
+        "choice": "c12",
+        "text": "Hello I am",
+        "confidence": 0.86
+      },
+      "fragment_base": {
+        "choice": "c12",
+        "text": "Hello I am",
+        "confidence": 0.24
+      },
+      "fragment_grounded": {
+        "choice": "c12",
+        "text": "Hello I am",
+        "confidence": 0.2
+      }
+    }
+  },
+  {
+    "n": 3,
+    "id": "identity",
+    "user": "Hello. Who are you?",
+    "prefix": "Hello I am",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c8",
+        "text": "Hello I am Jev",
+        "confidence": 0.98
+      },
+      "full_grounded": {
+        "choice": "c8",
+        "text": "Hello I am Jev",
+        "confidence": 0.98
+      },
+      "fragment_base": {
+        "choice": "c8",
+        "text": "Hello I am Jev",
+        "confidence": 0.86
+      },
+      "fragment_grounded": {
+        "choice": "c8",
+        "text": "Hello I am Jev",
+        "confidence": 0.83
+      }
+    }
+  },
+  {
+    "n": 3,
+    "id": "identity",
+    "user": "Hello. Who are you?",
+    "prefix": "Hello I am",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c8",
+        "text": "Hello I am Jev",
+        "confidence": 0.98
+      },
+      "full_grounded": {
+        "choice": "c8",
+        "text": "Hello I am Jev",
+        "confidence": 0.98
+      },
+      "fragment_base": {
+        "choice": "c8",
+        "text": "Hello I am Jev",
+        "confidence": 0.79
+      },
+      "fragment_grounded": {
+        "choice": "c8",
+        "text": "Hello I am Jev",
+        "confidence": 0.8
+      }
+    }
+  },
+  {
+    "n": 4,
+    "id": "identity",
+    "user": "Hello. Who are you?",
+    "prefix": "Hello I am Jev",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.67
+      },
+      "full_grounded": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.63
+      },
+      "fragment_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.73
+      },
+      "fragment_grounded": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.56
+      }
+    }
+  },
+  {
+    "n": 4,
+    "id": "identity",
+    "user": "Hello. Who are you?",
+    "prefix": "Hello I am Jev",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.6
+      },
+      "full_grounded": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.58
+      },
+      "fragment_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.67
+      },
+      "fragment_grounded": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.55
+      }
+    }
+  },
+  {
+    "n": 5,
+    "id": "identity",
+    "user": "What can you help me with?",
+    "prefix": "",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c5",
+        "text": "I",
+        "confidence": 0.65
+      },
+      "full_grounded": {
+        "choice": "c5",
+        "text": "I",
+        "confidence": 0.59
+      },
+      "fragment_base": {
+        "choice": "c5",
+        "text": "I",
+        "confidence": 0.66
+      },
+      "fragment_grounded": {
+        "choice": "c5",
+        "text": "I",
+        "confidence": 0.68
+      }
+    }
+  },
+  {
+    "n": 5,
+    "id": "identity",
+    "user": "What can you help me with?",
+    "prefix": "",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c5",
+        "text": "I",
+        "confidence": 0.57
+      },
+      "full_grounded": {
+        "choice": "c5",
+        "text": "I",
+        "confidence": 0.54
+      },
+      "fragment_base": {
+        "choice": "c5",
+        "text": "I",
+        "confidence": 0.58
+      },
+      "fragment_grounded": {
+        "choice": "c5",
+        "text": "I",
+        "confidence": 0.62
+      }
+    }
+  },
+  {
+    "n": 6,
+    "id": "identity",
+    "user": "What can you help me with?",
+    "prefix": "I",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c4",
+        "text": "I can",
+        "confidence": 0.94
+      },
+      "full_grounded": {
+        "choice": "c4",
+        "text": "I can",
+        "confidence": 0.91
+      },
+      "fragment_base": {
+        "choice": "c4",
+        "text": "I can",
+        "confidence": 0.33
+      },
+      "fragment_grounded": {
+        "choice": "c4",
+        "text": "I can",
+        "confidence": 0.32
+      }
+    }
+  },
+  {
+    "n": 6,
+    "id": "identity",
+    "user": "What can you help me with?",
+    "prefix": "I",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c4",
+        "text": "I can",
+        "confidence": 0.89
+      },
+      "full_grounded": {
+        "choice": "c4",
+        "text": "I can",
+        "confidence": 0.86
+      },
+      "fragment_base": {
+        "choice": "c4",
+        "text": "I can",
+        "confidence": 0.49
+      },
+      "fragment_grounded": {
+        "choice": "c4",
+        "text": "I can",
+        "confidence": 0.49
+      }
+    }
+  },
+  {
+    "n": 7,
+    "id": "identity",
+    "user": "What can you help me with?",
+    "prefix": "I can",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c12",
+        "text": "I can help",
+        "confidence": 0.81
+      },
+      "full_grounded": {
+        "choice": "c12",
+        "text": "I can help",
+        "confidence": 0.76
+      },
+      "fragment_base": {
+        "choice": "c12",
+        "text": "I can help",
+        "confidence": 0.39
+      },
+      "fragment_grounded": {
+        "choice": "c12",
+        "text": "I can help",
+        "confidence": 0.35
+      }
+    }
+  },
+  {
+    "n": 7,
+    "id": "identity",
+    "user": "What can you help me with?",
+    "prefix": "I can",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c12",
+        "text": "I can help",
+        "confidence": 0.83
+      },
+      "full_grounded": {
+        "choice": "c12",
+        "text": "I can help",
+        "confidence": 0.71
+      },
+      "fragment_base": {
+        "choice": "c0",
+        "text": "I can able",
+        "confidence": 0.35
+      },
+      "fragment_grounded": {
+        "choice": "c0",
+        "text": "I can able",
+        "confidence": 0.32
+      }
+    }
+  },
+  {
+    "n": 8,
+    "id": "identity",
+    "user": "What can you help me with?",
+    "prefix": "I can help",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c0",
+        "text": "I can help with",
+        "confidence": 0.52
+      },
+      "full_grounded": {
+        "choice": "c8",
+        "text": "I can help you",
+        "confidence": 0.5
+      },
+      "fragment_base": {
+        "choice": "c0",
+        "text": "I can help with",
+        "confidence": 0.34
+      },
+      "fragment_grounded": {
+        "choice": "c0",
+        "text": "I can help with",
+        "confidence": 0.21
+      }
+    }
+  },
+  {
+    "n": 8,
+    "id": "identity",
+    "user": "What can you help me with?",
+    "prefix": "I can help",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c0",
+        "text": "I can help with",
+        "confidence": 0.59
+      },
+      "full_grounded": {
+        "choice": "c0",
+        "text": "I can help with",
+        "confidence": 0.72
+      },
+      "fragment_base": {
+        "choice": "c8",
+        "text": "I can help you",
+        "confidence": 0.15
+      },
+      "fragment_grounded": {
+        "choice": "c0",
+        "text": "I can help with",
+        "confidence": 0.23
+      }
+    }
+  },
+  {
+    "n": 9,
+    "id": "identity",
+    "user": "What can you help me with?",
+    "prefix": "I can help with",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c8",
+        "text": "I can help with anything",
+        "confidence": 0.47
+      },
+      "full_grounded": {
+        "choice": "c15",
+        "text": "I can help with programming",
+        "confidence": 0.54
+      },
+      "fragment_base": {
+        "choice": "c0",
+        "text": "I can help with various",
+        "confidence": 0.45
+      },
+      "fragment_grounded": {
+        "choice": "c0",
+        "text": "I can help with various",
+        "confidence": 0.29
+      }
+    }
+  },
+  {
+    "n": 9,
+    "id": "identity",
+    "user": "What can you help me with?",
+    "prefix": "I can help with",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c15",
+        "text": "I can help with programming",
+        "confidence": 0.38
+      },
+      "full_grounded": {
+        "choice": "c15",
+        "text": "I can help with programming",
+        "confidence": 0.65
+      },
+      "fragment_base": {
+        "choice": "c0",
+        "text": "I can help with various",
+        "confidence": 0.25
+      },
+      "fragment_grounded": {
+        "choice": "c0",
+        "text": "I can help with various",
+        "confidence": 0.14
+      }
+    }
+  },
+  {
+    "n": 10,
+    "id": "identity",
+    "user": "What can you help me with?",
+    "prefix": "I can help with anything",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.31
+      },
+      "full_grounded": {
+        "choice": "c16",
+        "text": "I can help with anything.",
+        "confidence": 0.23
+      },
+      "fragment_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.34
+      },
+      "fragment_grounded": {
+        "choice": "c13",
+        "text": "I can help with anything specifically",
+        "confidence": 0.38
+      }
+    }
+  },
+  {
+    "n": 10,
+    "id": "identity",
+    "user": "What can you help me with?",
+    "prefix": "I can help with anything",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c16",
+        "text": "I can help with anything.",
+        "confidence": 0.29
+      },
+      "full_grounded": {
+        "choice": "c10",
+        "text": "I can help with anything you",
+        "confidence": 0.19
+      },
+      "fragment_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.26
+      },
+      "fragment_grounded": {
+        "choice": "c13",
+        "text": "I can help with anything specifically",
+        "confidence": 0.16
+      }
+    }
+  },
+  {
+    "n": 11,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c12",
+        "text": "Because",
+        "confidence": 0.52
+      },
+      "full_grounded": {
+        "choice": "c12",
+        "text": "Because",
+        "confidence": 0.53
+      },
+      "fragment_base": {
+        "choice": "c12",
+        "text": "Because",
+        "confidence": 0.47
+      },
+      "fragment_grounded": {
+        "choice": "c12",
+        "text": "Because",
+        "confidence": 0.53
+      }
+    }
+  },
+  {
+    "n": 11,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c12",
+        "text": "Because",
+        "confidence": 0.49
+      },
+      "full_grounded": {
+        "choice": "c12",
+        "text": "Because",
+        "confidence": 0.46
+      },
+      "fragment_base": {
+        "choice": "c12",
+        "text": "Because",
+        "confidence": 0.54
+      },
+      "fragment_grounded": {
+        "choice": "c12",
+        "text": "Because",
+        "confidence": 0.56
+      }
+    }
+  },
+  {
+    "n": 12,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "Because",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c0",
+        "text": "Because the",
+        "confidence": 0.44
+      },
+      "full_grounded": {
+        "choice": "c4",
+        "text": "Because water",
+        "confidence": 0.29
+      },
+      "fragment_base": {
+        "choice": "c4",
+        "text": "Because water",
+        "confidence": 0.21
+      },
+      "fragment_grounded": {
+        "choice": "c4",
+        "text": "Because water",
+        "confidence": 0.14
+      }
+    }
+  },
+  {
+    "n": 12,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "Because",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c0",
+        "text": "Because the",
+        "confidence": 0.51
+      },
+      "full_grounded": {
+        "choice": "c0",
+        "text": "Because the",
+        "confidence": 0.53
+      },
+      "fragment_base": {
+        "choice": "c0",
+        "text": "Because the",
+        "confidence": 0.26
+      },
+      "fragment_grounded": {
+        "choice": "c0",
+        "text": "Because the",
+        "confidence": 0.21
+      }
+    }
+  },
+  {
+    "n": 13,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "Because the",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c4",
+        "text": "Because the water",
+        "confidence": 0.68
+      },
+      "full_grounded": {
+        "choice": "c4",
+        "text": "Because the water",
+        "confidence": 0.64
+      },
+      "fragment_base": {
+        "choice": "c4",
+        "text": "Because the water",
+        "confidence": 0.54
+      },
+      "fragment_grounded": {
+        "choice": "c4",
+        "text": "Because the water",
+        "confidence": 0.5
+      }
+    }
+  },
+  {
+    "n": 13,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "Because the",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c4",
+        "text": "Because the water",
+        "confidence": 0.68
+      },
+      "full_grounded": {
+        "choice": "c4",
+        "text": "Because the water",
+        "confidence": 0.64
+      },
+      "fragment_base": {
+        "choice": "c4",
+        "text": "Because the water",
+        "confidence": 0.54
+      },
+      "fragment_grounded": {
+        "choice": "c4",
+        "text": "Because the water",
+        "confidence": 0.53
+      }
+    }
+  },
+  {
+    "n": 14,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "Because the water",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c2",
+        "text": "Because the water changes",
+        "confidence": 0.38
+      },
+      "full_grounded": {
+        "choice": "c2",
+        "text": "Because the water changes",
+        "confidence": 0.36
+      },
+      "fragment_base": {
+        "choice": "c0",
+        "text": "Because the water from",
+        "confidence": 0.12
+      },
+      "fragment_grounded": {
+        "choice": "c2",
+        "text": "Because the water changes",
+        "confidence": 0.14
+      }
+    }
+  },
+  {
+    "n": 14,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "Because the water",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c12",
+        "text": "Because the water is",
+        "confidence": 0.39
+      },
+      "full_grounded": {
+        "choice": "c12",
+        "text": "Because the water is",
+        "confidence": 0.45
+      },
+      "fragment_base": {
+        "choice": "c1",
+        "text": "Because the water becomes",
+        "confidence": 0.17
+      },
+      "fragment_grounded": {
+        "choice": "c1",
+        "text": "Because the water becomes",
+        "confidence": 0.17
+      }
+    }
+  },
+  {
+    "n": 15,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "Because the water changes",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c8",
+        "text": "Because the water changes state",
+        "confidence": 0.68
+      },
+      "full_grounded": {
+        "choice": "c8",
+        "text": "Because the water changes state",
+        "confidence": 0.67
+      },
+      "fragment_base": {
+        "choice": "c5",
+        "text": "Because the water changes into",
+        "confidence": 0.27
+      },
+      "fragment_grounded": {
+        "choice": "c5",
+        "text": "Because the water changes into",
+        "confidence": 0.32
+      }
+    }
+  },
+  {
+    "n": 15,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "Because the water changes",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c8",
+        "text": "Because the water changes state",
+        "confidence": 0.52
+      },
+      "full_grounded": {
+        "choice": "c8",
+        "text": "Because the water changes state",
+        "confidence": 0.51
+      },
+      "fragment_base": {
+        "choice": "c0",
+        "text": "Because the water changes from",
+        "confidence": 0.29
+      },
+      "fragment_grounded": {
+        "choice": "c0",
+        "text": "Because the water changes from",
+        "confidence": 0.23
+      }
+    }
+  },
+  {
+    "n": 16,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "Because the water changes state",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c0",
+        "text": "Because the water changes state from",
+        "confidence": 0.33
+      },
+      "full_grounded": {
+        "choice": "c12",
+        "text": "Because the water changes state to",
+        "confidence": 0.33
+      },
+      "fragment_base": {
+        "choice": "c0",
+        "text": "Because the water changes state from",
+        "confidence": 0.31
+      },
+      "fragment_grounded": {
+        "choice": "c0",
+        "text": "Because the water changes state from",
+        "confidence": 0.26
+      }
+    }
+  },
+  {
+    "n": 16,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "Because the water changes state",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c0",
+        "text": "Because the water changes state from",
+        "confidence": 0.28
+      },
+      "full_grounded": {
+        "choice": "c0",
+        "text": "Because the water changes state from",
+        "confidence": 0.28
+      },
+      "fragment_base": {
+        "choice": "c4",
+        "text": "Because the water changes state into",
+        "confidence": 0.32
+      },
+      "fragment_grounded": {
+        "choice": "c4",
+        "text": "Because the water changes state into",
+        "confidence": 0.32
+      }
+    }
+  },
+  {
+    "n": 17,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "Because the water changes state to",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c8",
+        "text": "Because the water changes state to gas",
+        "confidence": 0.98
+      },
+      "full_grounded": {
+        "choice": "c8",
+        "text": "Because the water changes state to gas",
+        "confidence": 0.98
+      },
+      "fragment_base": {
+        "choice": "c8",
+        "text": "Because the water changes state to gas",
+        "confidence": 0.84
+      },
+      "fragment_grounded": {
+        "choice": "c8",
+        "text": "Because the water changes state to gas",
+        "confidence": 0.78
+      }
+    }
+  },
+  {
+    "n": 17,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "Because the water changes state to",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c8",
+        "text": "Because the water changes state to gas",
+        "confidence": 0.84
+      },
+      "full_grounded": {
+        "choice": "c8",
+        "text": "Because the water changes state to gas",
+        "confidence": 0.89
+      },
+      "fragment_base": {
+        "choice": "c8",
+        "text": "Because the water changes state to gas",
+        "confidence": 0.62
+      },
+      "fragment_grounded": {
+        "choice": "c8",
+        "text": "Because the water changes state to gas",
+        "confidence": 0.66
+      }
+    }
+  },
+  {
+    "n": 18,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "Because the water changes state to gas",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c16",
+        "text": "Because the water changes state to gas.",
+        "confidence": 0.47
+      },
+      "full_grounded": {
+        "choice": "c16",
+        "text": "Because the water changes state to gas.",
+        "confidence": 0.36
+      },
+      "fragment_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.25
+      },
+      "fragment_grounded": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.17
+      }
+    }
+  },
+  {
+    "n": 18,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "Because the water changes state to gas",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.34
+      },
+      "full_grounded": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.34
+      },
+      "fragment_base": {
+        "choice": "c16",
+        "text": "Because the water changes state to gas.",
+        "confidence": 0.25
+      },
+      "fragment_grounded": {
+        "choice": "c16",
+        "text": "Because the water changes state to gas.",
+        "confidence": 0.21
+      }
+    }
+  },
+  {
+    "n": 19,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "Because the water changes state to gas.",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.46
+      },
+      "full_grounded": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.24
+      },
+      "fragment_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.32
+      },
+      "fragment_grounded": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.22
+      }
+    }
+  },
+  {
+    "n": 19,
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "prefix": "Because the water changes state to gas.",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.48
+      },
+      "full_grounded": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.3
+      },
+      "fragment_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.56
+      },
+      "fragment_grounded": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.32
+      }
+    }
+  },
+  {
+    "n": 20,
+    "id": "explanation",
+    "user": "Explain that more simply.",
+    "prefix": "",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c0",
+        "text": "Because",
+        "confidence": 0.5
+      },
+      "full_grounded": {
+        "choice": "c0",
+        "text": "Because",
+        "confidence": 0.38
+      },
+      "fragment_base": {
+        "choice": "c0",
+        "text": "Because",
+        "confidence": 0.43
+      },
+      "fragment_grounded": {
+        "choice": "c0",
+        "text": "Because",
+        "confidence": 0.38
+      }
+    }
+  },
+  {
+    "n": 20,
+    "id": "explanation",
+    "user": "Explain that more simply.",
+    "prefix": "",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c0",
+        "text": "Because",
+        "confidence": 0.6
+      },
+      "full_grounded": {
+        "choice": "c0",
+        "text": "Because",
+        "confidence": 0.62
+      },
+      "fragment_base": {
+        "choice": "c0",
+        "text": "Because",
+        "confidence": 0.62
+      },
+      "fragment_grounded": {
+        "choice": "c0",
+        "text": "Because",
+        "confidence": 0.62
+      }
+    }
+  },
+  {
+    "n": 21,
+    "id": "explanation",
+    "user": "Explain that more simply.",
+    "prefix": "Because",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c4",
+        "text": "Because water",
+        "confidence": 0.46
+      },
+      "full_grounded": {
+        "choice": "c4",
+        "text": "Because water",
+        "confidence": 0.42
+      },
+      "fragment_base": {
+        "choice": "c4",
+        "text": "Because water",
+        "confidence": 0.35
+      },
+      "fragment_grounded": {
+        "choice": "c4",
+        "text": "Because water",
+        "confidence": 0.33
+      }
+    }
+  },
+  {
+    "n": 21,
+    "id": "explanation",
+    "user": "Explain that more simply.",
+    "prefix": "Because",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c0",
+        "text": "Because the",
+        "confidence": 0.58
+      },
+      "full_grounded": {
+        "choice": "c0",
+        "text": "Because the",
+        "confidence": 0.6
+      },
+      "fragment_base": {
+        "choice": "c0",
+        "text": "Because the",
+        "confidence": 0.35
+      },
+      "fragment_grounded": {
+        "choice": "c0",
+        "text": "Because the",
+        "confidence": 0.32
+      }
+    }
+  },
+  {
+    "n": 22,
+    "id": "explanation",
+    "user": "Explain that more simply.",
+    "prefix": "Because water",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c12",
+        "text": "Because water becomes",
+        "confidence": 0.34
+      },
+      "full_grounded": {
+        "choice": "c12",
+        "text": "Because water becomes",
+        "confidence": 0.4
+      },
+      "fragment_base": {
+        "choice": "c5",
+        "text": "Because water goes",
+        "confidence": 0.18
+      },
+      "fragment_grounded": {
+        "choice": "c4",
+        "text": "Because water changes",
+        "confidence": 0.17
+      }
+    }
+  },
+  {
+    "n": 22,
+    "id": "explanation",
+    "user": "Explain that more simply.",
+    "prefix": "Because water",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c5",
+        "text": "Because water goes",
+        "confidence": 0.19
+      },
+      "full_grounded": {
+        "choice": "c4",
+        "text": "Because water changes",
+        "confidence": 0.22
+      },
+      "fragment_base": {
+        "choice": "c5",
+        "text": "Because water goes",
+        "confidence": 0.2
+      },
+      "fragment_grounded": {
+        "choice": "c5",
+        "text": "Because water goes",
+        "confidence": 0.19
+      }
+    }
+  },
+  {
+    "n": 23,
+    "id": "explanation",
+    "user": "Explain that more simply.",
+    "prefix": "Because water becomes",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c8",
+        "text": "Because water becomes gas",
+        "confidence": 0.78
+      },
+      "full_grounded": {
+        "choice": "c8",
+        "text": "Because water becomes gas",
+        "confidence": 0.83
+      },
+      "fragment_base": {
+        "choice": "c8",
+        "text": "Because water becomes gas",
+        "confidence": 0.43
+      },
+      "fragment_grounded": {
+        "choice": "c8",
+        "text": "Because water becomes gas",
+        "confidence": 0.48
+      }
+    }
+  },
+  {
+    "n": 23,
+    "id": "explanation",
+    "user": "Explain that more simply.",
+    "prefix": "Because water becomes",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c8",
+        "text": "Because water becomes gas",
+        "confidence": 0.58
+      },
+      "full_grounded": {
+        "choice": "c8",
+        "text": "Because water becomes gas",
+        "confidence": 0.69
+      },
+      "fragment_base": {
+        "choice": "c8",
+        "text": "Because water becomes gas",
+        "confidence": 0.33
+      },
+      "fragment_grounded": {
+        "choice": "c8",
+        "text": "Because water becomes gas",
+        "confidence": 0.36
+      }
+    }
+  },
+  {
+    "n": 24,
+    "id": "explanation",
+    "user": "Explain that more simply.",
+    "prefix": "Because water becomes gas",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "c16",
+        "text": "Because water becomes gas.",
+        "confidence": 0.47
+      },
+      "full_grounded": {
+        "choice": "c16",
+        "text": "Because water becomes gas.",
+        "confidence": 0.44
+      },
+      "fragment_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.27
+      },
+      "fragment_grounded": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.23
+      }
+    }
+  },
+  {
+    "n": 24,
+    "id": "explanation",
+    "user": "Explain that more simply.",
+    "prefix": "Because water becomes gas",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "c16",
+        "text": "Because water becomes gas.",
+        "confidence": 0.39
+      },
+      "full_grounded": {
+        "choice": "c16",
+        "text": "Because water becomes gas.",
+        "confidence": 0.49
+      },
+      "fragment_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.29
+      },
+      "fragment_grounded": {
+        "choice": "c16",
+        "text": "Because water becomes gas.",
+        "confidence": 0.21
+      }
+    }
+  },
+  {
+    "n": 25,
+    "id": "explanation",
+    "user": "Explain that more simply.",
+    "prefix": "Because water becomes gas.",
+    "reversed": false,
+    "selected": {
+      "full_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.4
+      },
+      "full_grounded": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.3
+      },
+      "fragment_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.37
+      },
+      "fragment_grounded": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.33
+      }
+    }
+  },
+  {
+    "n": 25,
+    "id": "explanation",
+    "user": "Explain that more simply.",
+    "prefix": "Because water becomes gas.",
+    "reversed": true,
+    "selected": {
+      "full_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.39
+      },
+      "full_grounded": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.3
+      },
+      "fragment_base": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.39
+      },
+      "fragment_grounded": {
+        "choice": "END",
+        "text": "Stop without adding text: the current reply already answers the user adequately.",
+        "confidence": 0.25
+      }
+    }
+  }
+]

@@ -1,0 +1,103 @@
+{
+  "protocol": "research/R15.6-morphology-protocol.md",
+  "cases": [
+    [
+      "earth",
+      "The earth",
+      "turn",
+      [
+        "turns"
+      ]
+    ],
+    [
+      "dog",
+      "The dog",
+      "run",
+      [
+        "runs"
+      ]
+    ],
+    [
+      "dogs",
+      "The dogs",
+      "run",
+      [
+        "run"
+      ]
+    ],
+    [
+      "past",
+      "Yesterday she",
+      "go",
+      [
+        "went"
+      ]
+    ],
+    [
+      "children",
+      "The children",
+      "be",
+      [
+        "are",
+        "were"
+      ]
+    ],
+    [
+      "child",
+      "The child",
+      "be",
+      [
+        "is",
+        "was"
+      ]
+    ],
+    [
+      "plural",
+      "There are two",
+      "mouse",
+      [
+        "mice"
+      ]
+    ],
+    [
+      "singular",
+      "There is one",
+      "mouse",
+      [
+        "mouse"
+      ]
+    ],
+    [
+      "modal",
+      "They can",
+      "swim",
+      [
+        "swim"
+      ]
+    ],
+    [
+      "gerund",
+      "She enjoys",
+      "swim",
+      [
+        "swimming"
+      ]
+    ],
+    [
+      "name",
+      "The bicycle is named",
+      "Mivora",
+      [
+        "Mivora"
+      ]
+    ],
+    [
+      "mass",
+      "They drink",
+      "water",
+      [
+        "water"
+      ]
+    ]
+  ]
+}

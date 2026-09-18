@@ -1,0 +1,56 @@
+{
+  "protocol": "research/R9-role-binding-protocol.md",
+  "source": "experiments/results/open-composition-2026-09-18T03-37-25-746Z",
+  "cases": [
+    {
+      "id": "sky",
+      "question": "Why is the sky blue?",
+      "baseline": "The sky scatters blue light."
+    },
+    {
+      "id": "procrastination",
+      "question": "How can I stop procrastinating?",
+      "baseline": "You should stop procrastinating."
+    },
+    {
+      "id": "tired",
+      "question": "I feel tired after sleeping only four hours. What should I do?",
+      "baseline": "You should nap."
+    },
+    {
+      "id": "plant",
+      "question": "Why do plants need sunlight?",
+      "baseline": "Plants convert sunlight to energy."
+    },
+    {
+      "id": "rust",
+      "question": "Why does iron rust when exposed to moist air?",
+      "baseline": "Iron oxidizes with oxygen."
+    },
+    {
+      "id": "ice",
+      "question": "Why does ice float on liquid water?",
+      "baseline": "Ice floats because molecular density."
+    },
+    {
+      "id": "deadlines",
+      "question": "How can I keep track of several deadlines?",
+      "baseline": "You can track several deadlines with calendar."
+    },
+    {
+      "id": "fall",
+      "question": "Why does a ball fall when dropped?",
+      "baseline": "A ball is pulled by gravity."
+    },
+    {
+      "id": "reading",
+      "question": "How can I remember what I read?",
+      "baseline": "You can summarize what I read."
+    },
+    {
+      "id": "drying",
+      "question": "Why does wet clothing dry?",
+      "baseline": "Wet clothing evaporates."
+    }
+  ]
+}

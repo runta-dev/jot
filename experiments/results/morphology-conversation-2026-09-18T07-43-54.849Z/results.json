@@ -1,0 +1,74 @@
+[
+  {
+    "format": "full",
+    "id": "memory",
+    "user": "My bicycle is called Mivora. Remember that for this conversation.",
+    "text": "Noted",
+    "reason": "complete",
+    "requests": 5,
+    "inputTokens": 41903,
+    "outputTokens": 44921,
+    "ms": 3621,
+    "firstMs": 2782
+  },
+  {
+    "format": "full",
+    "id": "memory",
+    "user": "What is my bicycle called?",
+    "text": "Mivora",
+    "reason": "complete",
+    "requests": 5,
+    "inputTokens": 42335,
+    "outputTokens": 45098,
+    "ms": 2169,
+    "firstMs": 1430
+  },
+  {
+    "format": "full",
+    "id": "chinese",
+    "user": "请用英文解释为什么晚上看不见太阳。",
+    "text": "Because earth turns away. The side that is turned away is night.",
+    "reason": "complete",
+    "requests": 31,
+    "inputTokens": 136961,
+    "outputTokens": 134952,
+    "ms": 11721,
+    "firstMs": 1356
+  },
+  {
+    "format": "full",
+    "id": "chinese",
+    "user": "再简短一点。",
+    "text": "Because earth turns away",
+    "reason": "complete",
+    "requests": 11,
+    "inputTokens": 63983,
+    "outputTokens": 65602,
+    "ms": 4752,
+    "firstMs": 1531
+  },
+  {
+    "format": "full",
+    "id": "creative",
+    "user": "Write a short story about a lost key.",
+    "text": "Once there was a key that was lost, it was valuable. It was very important. Then the search began. The search was long. Finally found it.",
+    "reason": "complete",
+    "requests": 67,
+    "inputTokens": 278942,
+    "outputTokens": 262525,
+    "ms": 26731,
+    "firstMs": 1337
+  },
+  {
+    "format": "full",
+    "id": "creative",
+    "user": "Give it a happier ending.",
+    "text": "Once there was a key that was lost, it was valuable. Finally found! Happy!",
+    "reason": "complete",
+    "requests": 39,
+    "inputTokens": 169295,
+    "outputTokens": 162778,
+    "ms": 14253,
+    "firstMs": 1261
+  }
+]

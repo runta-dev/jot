@@ -1,0 +1,6 @@
+{"type":"tool_call","call":{"id":"5f3b1b84-eabc-4193-a813-b4203211bcdc","name":"calculate","arguments":{"left":"6","operator":"add","right":"7"}},"requests":2,"inputTokens":2867,"outputTokens":155,"elapsed":1733}
+{"type":"tool_result","message":{"role":"tool","toolCallId":"5f3b1b84-eabc-4193-a813-b4203211bcdc","name":"calculate","result":{"status":"ok","text":"13","value":"13"}},"requests":2,"inputTokens":2867,"outputTokens":155,"elapsed":1733}
+{"type":"tool_call","call":{"id":"c403db18-9fad-4cc1-a41a-bbe734315bfa","name":"calculate","arguments":{"left":"13","operator":"multiply","right":"2"}},"requests":4,"inputTokens":6179,"outputTokens":336,"elapsed":3352}
+{"type":"tool_result","message":{"role":"tool","toolCallId":"c403db18-9fad-4cc1-a41a-bbe734315bfa","name":"calculate","result":{"status":"ok","text":"26","value":"26"}},"requests":4,"inputTokens":6179,"outputTokens":336,"elapsed":3352}
+{"type":"replace","content":"26","requests":5,"inputTokens":8111,"outputTokens":396,"elapsed":3992}
+{"type":"done","reason":"complete","requests":5,"inputTokens":8111,"outputTokens":396,"elapsed":3992}

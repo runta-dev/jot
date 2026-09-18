@@ -1,0 +1,7 @@
+# R44 mixed-role span selection
+
+Evidence: ../experiments/results/mixed-role-spans-2026-09-18T09-06-16.184Z/. Eight cases × two orders:8/8 exact-source answers and8/8 GENERATE controls. Raw choice handles wrong assistant restatement, user correction, example-versus-real identifier, reported assistant wording, and avoids partial answer for combining facts. No false direct answer in this small development probe. Selection confidence can be low for correct options, reinforcing prior finding that concentration is not sufficiency.
+
+Local gate passes, but this is not final general-chat reliability. Across R42/R43/R44 raw selections are promising only within mechanically supplied source spans, with limited context length and authored controls. Values are extracted from task data; not invented or supplied by another model. No language-generation-quality claim.
+
+Next prepare a bounded experimental runtime optimization: only if exhaustive source spans fit the question budget, offer span/GENERATE; otherwise bypass directly to current general generator. No truncation of span coverage, no topic-specific fast handlers, no replacement of open-ended generation. Cancellation/error/usage accounting and live HTTP/browser tests required before enabling. State and prior chat storage preserved. Measure added fallback overhead and exact-answer latency; retain all known general decoder failures. No final completion claim.

@@ -1,0 +1,30 @@
+{
+  "protocol": "research/R46-source-runtime-regression.md",
+  "cases": [
+    {
+      "id": "arithmetic",
+      "text": "What is 6 plus 7? Reply with the result."
+    },
+    {
+      "id": "physics",
+      "text": "Why does a ball fall when I let go of it?"
+    },
+    {
+      "id": "creative",
+      "text": "Write one original sentence about a fox finding a lantern."
+    },
+    {
+      "id": "combine",
+      "text": "Neri has a yellow bag. Olan has a green hat. List both people and their items."
+    },
+    {
+      "id": "quote",
+      "text": "Repeat exactly \"bright  moon!\""
+    },
+    {
+      "id": "unknown",
+      "text": "What is in my sealed envelope? I have not described its contents."
+    }
+  ],
+  "rounds": 1
+}

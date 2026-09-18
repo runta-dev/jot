@@ -1,0 +1,26 @@
+{
+  "protocol": "research/R38-scoped-copy.md",
+  "cases": [
+    {
+      "id": "deadline",
+      "turns": [
+        "Rewrite politely: \"Send the report by Tuesday.\"",
+        "Change the deadline to Thursday and keep it polite."
+      ]
+    },
+    {
+      "id": "invitation",
+      "turns": [
+        "Write a friendly one-sentence invitation to dinner.",
+        "Make it formal, still one sentence."
+      ]
+    },
+    {
+      "id": "quoted",
+      "turns": [
+        "Shorten this without changing its meaning: \"Please return the library book before Friday.\"",
+        "Now change Friday to Monday, preserving the rest."
+      ]
+    }
+  ]
+}

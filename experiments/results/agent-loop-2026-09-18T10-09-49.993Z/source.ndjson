@@ -1,0 +1,4 @@
+{"type":"tool_call","call":{"id":"6553e6a4-d592-45ab-a0e4-3a0a27bb7448","name":"read_context","arguments":{"spanId":"s23"}},"requests":2,"inputTokens":3014,"outputTokens":436,"elapsed":732}
+{"type":"tool_result","message":{"role":"tool","toolCallId":"6553e6a4-d592-45ab-a0e4-3a0a27bb7448","name":"read_context","result":{"status":"ok","text":"vela-938","data":{"source":"conversation","spanId":"s23"}}},"requests":2,"inputTokens":3014,"outputTokens":436,"elapsed":732}
+{"type":"replace","content":"vela-938","requests":3,"inputTokens":4455,"outputTokens":487,"elapsed":1313}
+{"type":"done","reason":"complete","requests":3,"inputTokens":4455,"outputTokens":487,"elapsed":1313}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "stated",
+    "text": "16:20",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 5,
+      "inputTokens": 43722,
+      "outputTokens": 45734
+    },
+    "ms": 3537
+  },
+  {
+    "id": "missing",
+    "text": "Unfortunately the room hasn't been announced",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 15,
+      "inputTokens": 81265,
+      "outputTokens": 80810
+    },
+    "ms": 5215
+  },
+  {
+    "id": "conflict",
+    "text": "Mixed evidence because there are two times. Check. However, need to confirm. Contact staff.",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 41,
+      "inputTokens": 188414,
+      "outputTokens": 174240
+    },
+    "ms": 15769
+  },
+  {
+    "id": "corrected",
+    "text": "17:40",
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 5,
+      "inputTokens": 43762,
+      "outputTokens": 45603
+    },
+    "ms": 2454
+  }
+]

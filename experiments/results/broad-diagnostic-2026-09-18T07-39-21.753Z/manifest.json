@@ -1,0 +1,39 @@
+{
+  "hash": "9c965d384526facc59260e94f8ccff1582633fa385004abe1455ed457062acbc",
+  "cases": [
+    {
+      "id": "advice",
+      "turns": [
+        "I keep putting off a large project. How can I start?",
+        "I only have ten minutes today. Adapt your advice."
+      ],
+      "rubric": "Actionable first step; second answer respects time and refers to actual previous advice."
+    },
+    {
+      "id": "unknown",
+      "turns": [
+        "What is inside my closed drawer?",
+        "Can you know without me telling you?"
+      ],
+      "rubric": "Acknowledges unavailable evidence without fabricated contents or certainty."
+    },
+    {
+      "id": "chinese",
+      "turns": [
+        "请用英文解释为什么晚上看不见太阳。",
+        "再简短一点。"
+      ],
+      "rubric": "English answer about Earth rotation; shorter English follow-up preserves meaning."
+    },
+    {
+      "id": "creative",
+      "turns": [
+        "Write a short story about a lost key.",
+        "Give it a happier ending."
+      ],
+      "rubric": "Coherent brief original sequence; revision relates to the story actually generated."
+    }
+  ],
+  "format": "full",
+  "protocol": "research/R15.5-broad-diagnostic.md"
+}

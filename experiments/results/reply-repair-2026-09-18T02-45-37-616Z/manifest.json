@@ -1,0 +1,90 @@
+{
+  "protocol": "research/R4-generated-reply-repair-protocol.md",
+  "cases": [
+    {
+      "id": "word_identity",
+      "taskId": "identity",
+      "mode": "word",
+      "prompt": "Who are you? State your name and provider.",
+      "draft": ""
+    },
+    {
+      "id": "word_capital",
+      "taskId": "capital",
+      "mode": "word",
+      "prompt": "What is the capital of France? Reply with just the city name.",
+      "draft": "Paris"
+    },
+    {
+      "id": "word_arithmetic",
+      "taskId": "arithmetic",
+      "mode": "word",
+      "prompt": "What is 2 + 2? Reply with one number.",
+      "draft": "4"
+    },
+    {
+      "id": "word_greeting",
+      "taskId": "greeting",
+      "mode": "word",
+      "prompt": "hello",
+      "draft": "How can help you?"
+    },
+    {
+      "id": "word_opposite",
+      "taskId": "opposite",
+      "mode": "word",
+      "prompt": "What is the opposite of hot? Reply with one word.",
+      "draft": "Cold"
+    },
+    {
+      "id": "word_summary",
+      "taskId": "summary",
+      "mode": "word",
+      "prompt": "Summarize in one short sentence: On Monday at 09:00, the health endpoint returned HTTP 503. The cause is unknown.",
+      "draft": "On Monday at 09: 00 HTTP 503 is was been is endpoint endpoint the of"
+    },
+    {
+      "id": "char_identity",
+      "taskId": "identity",
+      "mode": "char",
+      "prompt": "Who are you? State your name and provider.",
+      "draft": "I    "
+    },
+    {
+      "id": "char_greeting",
+      "taskId": "greeting",
+      "mode": "char",
+      "prompt": "hello",
+      "draft": "Hllooo    "
+    },
+    {
+      "id": "char_arithmetic",
+      "taskId": "arithmetic",
+      "mode": "char",
+      "prompt": "What is 2 + 2? Reply with one number.",
+      "draft": "4"
+    },
+    {
+      "id": "char_opposite",
+      "taskId": "opposite",
+      "mode": "char",
+      "prompt": "What is the opposite of hot? Reply with one word.",
+      "draft": "Ceo"
+    },
+    {
+      "id": "char_capital",
+      "taskId": "capital",
+      "mode": "char",
+      "prompt": "What is the capital of France? Reply with just the city name.",
+      "draft": "CaaaCCCCCC"
+    },
+    {
+      "id": "char_summary",
+      "taskId": "summary",
+      "mode": "char",
+      "prompt": "Summarize in one short sentence: On Monday at 09:00, the health endpoint returned HTTP 503. The cause is unknown.",
+      "draft": "SA    "
+    }
+  ],
+  "maxIterations": 3
+}

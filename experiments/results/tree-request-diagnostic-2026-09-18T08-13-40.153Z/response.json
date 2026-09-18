@@ -1,0 +1,7 @@
+{
+  "status": 400,
+  "choices": 126,
+  "requestBytes": 63631,
+  "ms": 1697,
+  "body": "{\"detail\":{\"error_type\":\"max_tokens_exceeded\"}}"
+}

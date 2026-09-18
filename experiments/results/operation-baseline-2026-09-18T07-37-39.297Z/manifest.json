@@ -1,0 +1,31 @@
+{
+  "hash": "9c965d384526facc59260e94f8ccff1582633fa385004abe1455ed457062acbc",
+  "cases": [
+    {
+      "id": "explanation",
+      "turns": [
+        "Why do wet clothes dry?",
+        "Explain that more simply."
+      ],
+      "rubric": "Water evaporates; simplification retains meaning and resolves that from prior answer."
+    },
+    {
+      "id": "memory",
+      "turns": [
+        "My bicycle is called Mivora. Remember that for this conversation.",
+        "What is my bicycle called?"
+      ],
+      "rubric": "Acknowledges and recalls exact arbitrary name without invented details."
+    },
+    {
+      "id": "correction",
+      "turns": [
+        "I have a red cup and a blue bowl. Which one is blue?",
+        "Correction: the bowl is green. What color is it now?"
+      ],
+      "rubric": "Answers bowl then green; applies correction instead of repeating stale state."
+    }
+  ],
+  "arm": "baseline",
+  "protocol": "research/R15.4-operation-protocol.md"
+}

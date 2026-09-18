@@ -1,0 +1,174 @@
+[
+  {
+    "id": "multi_step",
+    "text": "26",
+    "calls": [
+      {
+        "id": "5f3b1b84-eabc-4193-a813-b4203211bcdc",
+        "name": "calculate",
+        "arguments": {
+          "left": "6",
+          "operator": "add",
+          "right": "7"
+        }
+      },
+      {
+        "id": "c403db18-9fad-4cc1-a41a-bbe734315bfa",
+        "name": "calculate",
+        "arguments": {
+          "left": "13",
+          "operator": "multiply",
+          "right": "2"
+        }
+      }
+    ],
+    "results": [
+      {
+        "role": "tool",
+        "toolCallId": "5f3b1b84-eabc-4193-a813-b4203211bcdc",
+        "name": "calculate",
+        "result": {
+          "status": "ok",
+          "text": "13",
+          "value": "13"
+        }
+      },
+      {
+        "role": "tool",
+        "toolCallId": "c403db18-9fad-4cc1-a41a-bbe734315bfa",
+        "name": "calculate",
+        "result": {
+          "status": "ok",
+          "text": "26",
+          "value": "26"
+        }
+      }
+    ],
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 5,
+      "inputTokens": 8111,
+      "outputTokens": 396,
+      "elapsed": 3992
+    },
+    "ms": 4020
+  },
+  {
+    "id": "source",
+    "text": "vela-938",
+    "calls": [
+      {
+        "id": "6553e6a4-d592-45ab-a0e4-3a0a27bb7448",
+        "name": "read_context",
+        "arguments": {
+          "spanId": "s23"
+        }
+      }
+    ],
+    "results": [
+      {
+        "role": "tool",
+        "toolCallId": "6553e6a4-d592-45ab-a0e4-3a0a27bb7448",
+        "name": "read_context",
+        "result": {
+          "status": "ok",
+          "text": "vela-938",
+          "data": {
+            "source": "conversation",
+            "spanId": "s23"
+          }
+        }
+      }
+    ],
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 3,
+      "inputTokens": 4455,
+      "outputTokens": 487,
+      "elapsed": 1313
+    },
+    "ms": 1316
+  },
+  {
+    "id": "context",
+    "text": "6 7",
+    "calls": [
+      {
+        "id": "0d43d83b-eb20-4380-876e-5aa6b4c9968c",
+        "name": "read_context",
+        "arguments": {
+          "spanId": "NONE"
+        }
+      },
+      {
+        "id": "a37324ae-c227-4bbc-8c1d-ffe04eef3602",
+        "name": "compose_reply",
+        "arguments": {}
+      }
+    ],
+    "results": [
+      {
+        "role": "tool",
+        "toolCallId": "0d43d83b-eb20-4380-876e-5aa6b4c9968c",
+        "name": "read_context",
+        "result": {
+          "status": "error",
+          "error": "No complete answer found in conversation."
+        }
+      },
+      {
+        "role": "tool",
+        "toolCallId": "a37324ae-c227-4bbc-8c1d-ffe04eef3602",
+        "name": "compose_reply",
+        "result": {
+          "status": "ok",
+          "text": "6 7",
+          "reason": "complete"
+        }
+      }
+    ],
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 11,
+      "inputTokens": 58611,
+      "outputTokens": 53756,
+      "elapsed": 5835
+    },
+    "ms": 5838
+  },
+  {
+    "id": "compose",
+    "text": "Because of the force of the earth pulling it down",
+    "calls": [
+      {
+        "id": "3c0e9f85-fe44-485b-b87f-5ee9b1a03137",
+        "name": "compose_reply",
+        "arguments": {}
+      }
+    ],
+    "results": [
+      {
+        "role": "tool",
+        "toolCallId": "3c0e9f85-fe44-485b-b87f-5ee9b1a03137",
+        "name": "compose_reply",
+        "result": {
+          "status": "ok",
+          "text": "Because of the force of the earth pulling it down",
+          "reason": "complete"
+        }
+      }
+    ],
+    "done": {
+      "type": "done",
+      "reason": "complete",
+      "requests": 25,
+      "inputTokens": 115254,
+      "outputTokens": 111743,
+      "elapsed": 10231
+    },
+    "ms": 10234
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "protocol": "research/R32-source-controls.md",
+  "cases": [
+    {
+      "id": "stated",
+      "question": "What time does the laboratory tour start?",
+      "evidence": [
+        {
+          "id": "schedule",
+          "text": "The laboratory tour starts at 16:20."
+        }
+      ]
+    },
+    {
+      "id": "missing",
+      "question": "Which room is the laboratory tour in?",
+      "evidence": [
+        {
+          "id": "schedule",
+          "text": "The laboratory tour starts at 16:20. The room has not been announced."
+        }
+      ]
+    },
+    {
+      "id": "conflict",
+      "question": "What time does the laboratory tour start?",
+      "evidence": [
+        {
+          "id": "notice-A",
+          "text": "The laboratory tour starts at 16:20."
+        },
+        {
+          "id": "notice-B",
+          "text": "The laboratory tour starts at 17:40."
+        }
+      ]
+    },
+    {
+      "id": "corrected",
+      "question": "What time does the laboratory tour start now?",
+      "evidence": [
+        {
+          "id": "old",
+          "text": "The laboratory tour starts at 16:20."
+        },
+        {
+          "id": "correction",
+          "text": "Correction: the laboratory tour now starts at 17:40, replacing the earlier 16:20 announcement."
+        }
+      ]
+    }
+  ]
+}

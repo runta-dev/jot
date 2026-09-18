@@ -1,0 +1,205 @@
+{
+  "measuredAt": "2026-09-18T01:56:38.092Z",
+  "samples": [
+    "Hello!",
+    "I'm Jev, an AI assistant by TypeSafe.",
+    "The capital of France is Paris.",
+    "What would you like to work on today?",
+    "Water evaporates, cools into clouds, and falls as rain.",
+    "Could you clarify what you mean?",
+    "A tokenizer splits text into reusable pieces called tokens.",
+    "The answer is 42.",
+    "Keep the full conversation and the reply so far in state.",
+    "I am not sure. Let me explain what I do know."
+  ],
+  "results": [
+    {
+      "name": "gpt2",
+      "model": "openai-community/gpt2",
+      "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+      "vocabulary": 50257,
+      "englishCharacters": 376,
+      "englishTokens": 92,
+      "englishRoundTrips": 10,
+      "example": {
+        "text": "I'm Jev, an AI assistant by TypeSafe.",
+        "ids": [
+          40,
+          1101,
+          449,
+          1990,
+          11,
+          281,
+          9552,
+          8796,
+          416,
+          5994,
+          31511,
+          13
+        ],
+        "tokens": [
+          "I",
+          "'m",
+          "ĠJ",
+          "ev",
+          ",",
+          "Ġan",
+          "ĠAI",
+          "Ġassistant",
+          "Ġby",
+          "ĠType",
+          "Safe",
+          "."
+        ]
+      },
+      "edgeCases": [
+        {
+          "text": " Hello  world!\n\nNext line.\tEnd.",
+          "decoded": " Hello  world!\n\nNext line.\tEnd.",
+          "exact": true
+        },
+        {
+          "text": "const x = 1;\n  return x + 2;",
+          "decoded": "const x = 1;\n  return x + 2;",
+          "exact": true
+        },
+        {
+          "text": "你好，世界！",
+          "decoded": "你好，世界！",
+          "exact": true
+        },
+        {
+          "text": "🙂 café",
+          "decoded": "🙂 café",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "name": "t5",
+      "model": "google-t5/t5-small",
+      "revision": "df1b051c49625cf57a3d0d8d3863ed4d13564fe4",
+      "vocabulary": 32100,
+      "englishCharacters": 376,
+      "englishTokens": 96,
+      "englishRoundTrips": 10,
+      "example": {
+        "text": "I'm Jev, an AI assistant by TypeSafe.",
+        "ids": [
+          27,
+          31,
+          51,
+          1022,
+          208,
+          6,
+          46,
+          7833,
+          6165,
+          57,
+          6632,
+          27437,
+          5
+        ],
+        "tokens": [
+          "▁I",
+          "'",
+          "m",
+          "▁Je",
+          "v",
+          ",",
+          "▁an",
+          "▁AI",
+          "▁assistant",
+          "▁by",
+          "▁Type",
+          "Safe",
+          "."
+        ]
+      },
+      "edgeCases": [
+        {
+          "text": " Hello  world!\n\nNext line.\tEnd.",
+          "decoded": "Hello world! Next line. End.",
+          "exact": false
+        },
+        {
+          "text": "const x = 1;\n  return x + 2;",
+          "decoded": "const x = 1; return x + 2;",
+          "exact": false
+        },
+        {
+          "text": "你好，世界！",
+          "decoded": "<unk>,<unk>!",
+          "exact": false
+        },
+        {
+          "text": "🙂 café",
+          "decoded": "<unk> café",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "name": "smollm",
+      "model": "HuggingFaceTB/SmolLM2-135M",
+      "revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+      "vocabulary": 49152,
+      "englishCharacters": 376,
+      "englishTokens": 91,
+      "englishRoundTrips": 10,
+      "example": {
+        "text": "I'm Jev, an AI assistant by TypeSafe.",
+        "ids": [
+          57,
+          5248,
+          530,
+          3345,
+          28,
+          354,
+          5646,
+          11173,
+          411,
+          7090,
+          34806,
+          30
+        ],
+        "tokens": [
+          "I",
+          "'m",
+          "ĠJ",
+          "ev",
+          ",",
+          "Ġan",
+          "ĠAI",
+          "Ġassistant",
+          "Ġby",
+          "ĠType",
+          "Safe",
+          "."
+        ]
+      },
+      "edgeCases": [
+        {
+          "text": " Hello  world!\n\nNext line.\tEnd.",
+          "decoded": " Hello  world!\n\nNext line.\tEnd.",
+          "exact": true
+        },
+        {
+          "text": "const x = 1;\n  return x + 2;",
+          "decoded": "const x = 1;\n  return x + 2;",
+          "exact": true
+        },
+        {
+          "text": "你好，世界！",
+          "decoded": "你好，世界！",
+          "exact": true
+        },
+        {
+          "text": "🙂 café",
+          "decoded": "🙂 café",
+          "exact": true
+        }
+      ]
+    }
+  ]
+}

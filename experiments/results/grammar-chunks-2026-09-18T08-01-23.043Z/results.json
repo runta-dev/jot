@@ -1,0 +1,50 @@
+[
+  {
+    "arm": "greedy",
+    "id": "ice",
+    "user": "Why does ice melt in a warm room?",
+    "text": "Because the heat from the room transfers to ice.",
+    "reason": "complete",
+    "requests": 21,
+    "inputTokens": 104504,
+    "outputTokens": 103887,
+    "ms": 8826,
+    "firstMs": 2438
+  },
+  {
+    "arm": "greedy",
+    "id": "ice",
+    "user": "Explain it to a young child.",
+    "text": "Imagine you are a ice. You are cold. Warm air warms you and melts you into water.",
+    "reason": "complete",
+    "requests": 41,
+    "inputTokens": 185503,
+    "outputTokens": 174513,
+    "ms": 18975,
+    "firstMs": 2053
+  },
+  {
+    "arm": "greedy",
+    "id": "bird",
+    "user": "Write a short story about a bird missing its home.",
+    "text": "The bird was lost and missed home. And it flew searching for its home. But it found nothing. And it cried. Then it landed. Sat down. And it was sad.",
+    "reason": "complete",
+    "requests": 69,
+    "inputTokens": 293718,
+    "outputTokens": 271078,
+    "ms": 33396,
+    "firstMs": 1999
+  },
+  {
+    "arm": "greedy",
+    "id": "bird",
+    "user": "Give the story a surprising but happy ending.",
+    "text": "But then it found its home!",
+    "reason": "complete",
+    "requests": 17,
+    "inputTokens": 88394,
+    "outputTokens": 88064,
+    "ms": 6606,
+    "firstMs": 1768
+  }
+]

@@ -1,0 +1,121 @@
+{
+  "model": "jev-latest",
+  "repeats": 2,
+  "methods": [
+    "raw",
+    "opaque",
+    "contextual",
+    "remaining"
+  ],
+  "cases": [
+    {
+      "id": "copy_1",
+      "source": "Hi",
+      "prefix": "",
+      "expected": "H"
+    },
+    {
+      "id": "copy_2",
+      "source": "Hi",
+      "prefix": "H",
+      "expected": "i"
+    },
+    {
+      "id": "copy_3",
+      "source": "Hi",
+      "prefix": "Hi",
+      "expected": "<EOS>"
+    },
+    {
+      "id": "copy_4",
+      "source": "Hello!",
+      "prefix": "H",
+      "expected": "e"
+    },
+    {
+      "id": "copy_5",
+      "source": "Hello!",
+      "prefix": "Hel",
+      "expected": "l"
+    },
+    {
+      "id": "copy_6",
+      "source": "Hello!",
+      "prefix": "Hello",
+      "expected": "!"
+    },
+    {
+      "id": "copy_7",
+      "source": "I am Jev.",
+      "prefix": "I",
+      "expected": " "
+    },
+    {
+      "id": "copy_8",
+      "source": "I am Jev.",
+      "prefix": "I ",
+      "expected": "a"
+    },
+    {
+      "id": "copy_9",
+      "source": "I am Jev.",
+      "prefix": "I am J",
+      "expected": "e"
+    },
+    {
+      "id": "copy_10",
+      "source": "a  b",
+      "prefix": "a",
+      "expected": " "
+    },
+    {
+      "id": "copy_11",
+      "source": "a  b",
+      "prefix": "a ",
+      "expected": " "
+    },
+    {
+      "id": "copy_12",
+      "source": "a  b",
+      "prefix": "a  ",
+      "expected": "b"
+    },
+    {
+      "id": "copy_13",
+      "source": "A\nB",
+      "prefix": "A",
+      "expected": "\n"
+    },
+    {
+      "id": "copy_14",
+      "source": "A\nB",
+      "prefix": "A\n",
+      "expected": "B"
+    },
+    {
+      "id": "copy_15",
+      "source": "Q7-z",
+      "prefix": "Q",
+      "expected": "7"
+    },
+    {
+      "id": "copy_16",
+      "source": "Q7-z",
+      "prefix": "Q7",
+      "expected": "-"
+    },
+    {
+      "id": "copy_17",
+      "source": "Q7-z",
+      "prefix": "Q7-",
+      "expected": "z"
+    },
+    {
+      "id": "copy_18",
+      "source": "Q7-z",
+      "prefix": "Q7-z",
+      "expected": "<EOS>"
+    }
+  ],
+  "protocol": "research/R1-copy-protocol.md"
+}

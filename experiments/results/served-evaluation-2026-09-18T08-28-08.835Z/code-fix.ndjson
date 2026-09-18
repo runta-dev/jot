@@ -1,0 +1,2 @@
+{"type":"character","character":"Vexa-731","count":8,"step":{"choice":"Vexa-731","confidence":0.97,"alternatives":[{"char":"Vexa-731","probability":0.98},{"char":"Zeroed","probability":0},{"char":"Zero","probability":0},{"char":"Get","probability":0}]},"requests":3,"inputTokens":35521,"outputTokens":38648,"elapsed":2758}
+{"type":"done","reason":"complete","requests":5,"inputTokens":43163,"outputTokens":45790,"elapsed":3701}

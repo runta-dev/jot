@@ -1,0 +1,243 @@
+{
+  "directory": "experiments/results/copy-2026-09-18T02-19-57-383Z",
+  "modelVersions": [
+    "jev-1.13.0"
+  ],
+  "wallMs": 16921,
+  "methods": {
+    "raw": {
+      "correct": 25,
+      "total": 36,
+      "errors": 0,
+      "passed95PercentGate": false,
+      "failures": [
+        {
+          "caseId": "copy_1",
+          "prefix": "",
+          "expected": "H",
+          "selected": "i"
+        },
+        {
+          "caseId": "copy_5",
+          "prefix": "Hel",
+          "expected": "l",
+          "selected": "o"
+        },
+        {
+          "caseId": "copy_7",
+          "prefix": "I",
+          "expected": " ",
+          "selected": "m"
+        },
+        {
+          "caseId": "copy_7",
+          "prefix": "I",
+          "expected": " ",
+          "selected": "m"
+        },
+        {
+          "caseId": "copy_8",
+          "prefix": "I ",
+          "expected": "a",
+          "selected": "m"
+        },
+        {
+          "caseId": "copy_9",
+          "prefix": "I am J",
+          "expected": "e",
+          "selected": "v"
+        },
+        {
+          "caseId": "copy_9",
+          "prefix": "I am J",
+          "expected": "e",
+          "selected": "v"
+        },
+        {
+          "caseId": "copy_12",
+          "prefix": "a  ",
+          "expected": "b",
+          "selected": " "
+        },
+        {
+          "caseId": "copy_12",
+          "prefix": "a  ",
+          "expected": "b",
+          "selected": " "
+        },
+        {
+          "caseId": "copy_14",
+          "prefix": "A\n",
+          "expected": "B",
+          "selected": "\n"
+        },
+        {
+          "caseId": "copy_14",
+          "prefix": "A\n",
+          "expected": "B",
+          "selected": "\n"
+        }
+      ]
+    },
+    "opaque": {
+      "correct": 25,
+      "total": 36,
+      "errors": 0,
+      "passed95PercentGate": false,
+      "failures": [
+        {
+          "caseId": "copy_5",
+          "prefix": "Hel",
+          "expected": "l",
+          "selected": "o"
+        },
+        {
+          "caseId": "copy_7",
+          "prefix": "I",
+          "expected": " ",
+          "selected": "m"
+        },
+        {
+          "caseId": "copy_7",
+          "prefix": "I",
+          "expected": " ",
+          "selected": "m"
+        },
+        {
+          "caseId": "copy_8",
+          "prefix": "I ",
+          "expected": "a",
+          "selected": "m"
+        },
+        {
+          "caseId": "copy_8",
+          "prefix": "I ",
+          "expected": "a",
+          "selected": "m"
+        },
+        {
+          "caseId": "copy_9",
+          "prefix": "I am J",
+          "expected": "e",
+          "selected": "v"
+        },
+        {
+          "caseId": "copy_9",
+          "prefix": "I am J",
+          "expected": "e",
+          "selected": "v"
+        },
+        {
+          "caseId": "copy_12",
+          "prefix": "a  ",
+          "expected": "b",
+          "selected": " "
+        },
+        {
+          "caseId": "copy_12",
+          "prefix": "a  ",
+          "expected": "b",
+          "selected": " "
+        },
+        {
+          "caseId": "copy_14",
+          "prefix": "A\n",
+          "expected": "B",
+          "selected": "\n"
+        },
+        {
+          "caseId": "copy_14",
+          "prefix": "A\n",
+          "expected": "B",
+          "selected": "\n"
+        }
+      ]
+    },
+    "contextual": {
+      "correct": 31,
+      "total": 36,
+      "errors": 0,
+      "passed95PercentGate": false,
+      "failures": [
+        {
+          "caseId": "copy_4",
+          "prefix": "H",
+          "expected": "e",
+          "selected": "o"
+        },
+        {
+          "caseId": "copy_4",
+          "prefix": "H",
+          "expected": "e",
+          "selected": "o"
+        },
+        {
+          "caseId": "copy_5",
+          "prefix": "Hel",
+          "expected": "l",
+          "selected": "o"
+        },
+        {
+          "caseId": "copy_8",
+          "prefix": "I ",
+          "expected": "a",
+          "selected": "m"
+        },
+        {
+          "caseId": "copy_11",
+          "prefix": "a ",
+          "expected": " ",
+          "selected": "b"
+        }
+      ]
+    },
+    "remaining": {
+      "correct": 30,
+      "total": 36,
+      "errors": 0,
+      "passed95PercentGate": false,
+      "failures": [
+        {
+          "caseId": "copy_8",
+          "prefix": "I ",
+          "expected": "a",
+          "selected": "m"
+        },
+        {
+          "caseId": "copy_10",
+          "prefix": "a",
+          "expected": " ",
+          "selected": "b"
+        },
+        {
+          "caseId": "copy_11",
+          "prefix": "a ",
+          "expected": " ",
+          "selected": "b"
+        },
+        {
+          "caseId": "copy_11",
+          "prefix": "a ",
+          "expected": " ",
+          "selected": "b"
+        },
+        {
+          "caseId": "copy_13",
+          "prefix": "A",
+          "expected": "\n",
+          "selected": "B"
+        },
+        {
+          "caseId": "copy_13",
+          "prefix": "A",
+          "expected": "\n",
+          "selected": "B"
+        }
+      ]
+    }
+  },
+  "usage": {
+    "input_tokens": 337146,
+    "output_tokens": 130780
+  }
+}

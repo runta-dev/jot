@@ -1,0 +1,27 @@
+{
+  "protocol": "research/R4-generated-reply-repair-protocol.md",
+  "cases": [
+    {
+      "id": "word_arithmetic",
+      "taskId": "arithmetic",
+      "mode": "word",
+      "prompt": "What is 2 + 2? Reply with one number.",
+      "draft": "4"
+    },
+    {
+      "id": "char_arithmetic",
+      "taskId": "arithmetic",
+      "mode": "char",
+      "prompt": "What is 2 + 2? Reply with one number.",
+      "draft": "4"
+    },
+    {
+      "id": "char_capital",
+      "taskId": "capital",
+      "mode": "char",
+      "prompt": "What is the capital of France? Reply with just the city name.",
+      "draft": "CaaaCCCCCC"
+    }
+  ],
+  "maxIterations": 3
+}

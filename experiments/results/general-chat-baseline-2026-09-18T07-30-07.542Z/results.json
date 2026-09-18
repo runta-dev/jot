@@ -1,0 +1,38 @@
+[
+  {
+    "id": "identity",
+    "user": "Hello. Who are you?",
+    "text": "Hllllooo    ",
+    "reason": "repetition",
+    "requests": 12,
+    "ms": 4138,
+    "firstMs": 1025
+  },
+  {
+    "id": "identity",
+    "user": "What can you help me with?",
+    "text": "Hllllll",
+    "reason": "repetition",
+    "requests": 7,
+    "ms": 2048,
+    "firstMs": 355
+  },
+  {
+    "id": "explanation",
+    "user": "Why do wet clothes dry?",
+    "text": "A    ",
+    "reason": "repetition",
+    "requests": 5,
+    "ms": 1357,
+    "firstMs": 272
+  },
+  {
+    "id": "explanation",
+    "user": "Explain that more simply.",
+    "text": "A    ",
+    "reason": "repetition",
+    "requests": 5,
+    "ms": 1485,
+    "firstMs": 323
+  }
+]

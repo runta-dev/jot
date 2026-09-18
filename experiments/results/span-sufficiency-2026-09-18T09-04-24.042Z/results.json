@@ -1,0 +1,422 @@
+[
+  {
+    "id": "name",
+    "reversed": false,
+    "expected": "Belori",
+    "selected": "Belori",
+    "confidence": 0.96,
+    "sufficient": 0.94,
+    "emitted": "Belori",
+    "correct": true,
+    "ms": 1284,
+    "usage": {
+      "input_tokens": 866,
+      "output_tokens": 279
+    }
+  },
+  {
+    "id": "name",
+    "reversed": true,
+    "expected": "Belori",
+    "selected": "Belori",
+    "confidence": 0.91,
+    "sufficient": 0.94,
+    "emitted": "Belori",
+    "correct": true,
+    "ms": 599,
+    "usage": {
+      "input_tokens": 866,
+      "output_tokens": 279
+    }
+  },
+  {
+    "id": "version",
+    "reversed": false,
+    "expected": "v7.4.2",
+    "selected": "v7.4.2",
+    "confidence": 0.62,
+    "sufficient": 0.81,
+    "emitted": null,
+    "correct": false,
+    "ms": 710,
+    "usage": {
+      "input_tokens": 847,
+      "output_tokens": 252
+    }
+  },
+  {
+    "id": "version",
+    "reversed": true,
+    "expected": "v7.4.2",
+    "selected": "v7.4.2",
+    "confidence": 0.55,
+    "sufficient": 0.83,
+    "emitted": null,
+    "correct": false,
+    "ms": 619,
+    "usage": {
+      "input_tokens": 847,
+      "output_tokens": 252
+    }
+  },
+  {
+    "id": "time",
+    "reversed": false,
+    "expected": "19:45",
+    "selected": "19:45",
+    "confidence": 0.94,
+    "sufficient": 0.93,
+    "emitted": "19:45",
+    "correct": true,
+    "ms": 562,
+    "usage": {
+      "input_tokens": 824,
+      "output_tokens": 242
+    }
+  },
+  {
+    "id": "time",
+    "reversed": true,
+    "expected": "19:45",
+    "selected": "19:45",
+    "confidence": 0.93,
+    "sufficient": 0.92,
+    "emitted": "19:45",
+    "correct": true,
+    "ms": 680,
+    "usage": {
+      "input_tokens": 824,
+      "output_tokens": 242
+    }
+  },
+  {
+    "id": "changed",
+    "reversed": false,
+    "expected": "407",
+    "selected": "407",
+    "confidence": 0.71,
+    "sufficient": 0.82,
+    "emitted": null,
+    "correct": false,
+    "ms": 691,
+    "usage": {
+      "input_tokens": 1098,
+      "output_tokens": 378
+    }
+  },
+  {
+    "id": "changed",
+    "reversed": true,
+    "expected": "407",
+    "selected": "407",
+    "confidence": 0.59,
+    "sufficient": 0.82,
+    "emitted": null,
+    "correct": false,
+    "ms": 783,
+    "usage": {
+      "input_tokens": 1098,
+      "output_tokens": 378
+    }
+  },
+  {
+    "id": "phrase",
+    "reversed": false,
+    "expected": "quiet blue lake",
+    "selected": "quiet blue lake",
+    "confidence": 0.6,
+    "sufficient": 0.66,
+    "emitted": null,
+    "correct": false,
+    "ms": 664,
+    "usage": {
+      "input_tokens": 636,
+      "output_tokens": 153
+    }
+  },
+  {
+    "id": "phrase",
+    "reversed": true,
+    "expected": "quiet blue lake",
+    "selected": "quiet blue lake",
+    "confidence": 0.75,
+    "sufficient": 0.66,
+    "emitted": null,
+    "correct": false,
+    "ms": 641,
+    "usage": {
+      "input_tokens": 636,
+      "output_tokens": 153
+    }
+  },
+  {
+    "id": "selection",
+    "reversed": false,
+    "expected": "purple",
+    "selected": "purple",
+    "confidence": 0.85,
+    "sufficient": 0.88,
+    "emitted": null,
+    "correct": false,
+    "ms": 631,
+    "usage": {
+      "input_tokens": 1209,
+      "output_tokens": 459
+    }
+  },
+  {
+    "id": "selection",
+    "reversed": true,
+    "expected": "purple",
+    "selected": "purple",
+    "confidence": 0.63,
+    "sufficient": 0.87,
+    "emitted": null,
+    "correct": false,
+    "ms": 669,
+    "usage": {
+      "input_tokens": 1209,
+      "output_tokens": 459
+    }
+  },
+  {
+    "id": "owner",
+    "reversed": false,
+    "expected": "Tovin",
+    "selected": "Tovin",
+    "confidence": 0.61,
+    "sufficient": 0.91,
+    "emitted": "Tovin",
+    "correct": true,
+    "ms": 717,
+    "usage": {
+      "input_tokens": 1211,
+      "output_tokens": 432
+    }
+  },
+  {
+    "id": "owner",
+    "reversed": true,
+    "expected": "Tovin",
+    "selected": "Tovin",
+    "confidence": 0.53,
+    "sufficient": 0.91,
+    "emitted": "Tovin",
+    "correct": true,
+    "ms": 608,
+    "usage": {
+      "input_tokens": 1211,
+      "output_tokens": 432
+    }
+  },
+  {
+    "id": "unicode",
+    "reversed": false,
+    "expected": "Névora",
+    "selected": "Névora",
+    "confidence": 0.96,
+    "sufficient": 0.93,
+    "emitted": "Névora",
+    "correct": true,
+    "ms": 729,
+    "usage": {
+      "input_tokens": 708,
+      "output_tokens": 188
+    }
+  },
+  {
+    "id": "unicode",
+    "reversed": true,
+    "expected": "Névora",
+    "selected": "Névora",
+    "confidence": 0.92,
+    "sufficient": 0.93,
+    "emitted": "Névora",
+    "correct": true,
+    "ms": 684,
+    "usage": {
+      "input_tokens": 708,
+      "output_tokens": 188
+    }
+  },
+  {
+    "id": "conflict",
+    "reversed": false,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.97,
+    "sufficient": null,
+    "emitted": null,
+    "correct": true,
+    "ms": 279,
+    "usage": {
+      "input_tokens": 1994,
+      "output_tokens": 783
+    }
+  },
+  {
+    "id": "conflict",
+    "reversed": true,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.96,
+    "sufficient": null,
+    "emitted": null,
+    "correct": true,
+    "ms": 322,
+    "usage": {
+      "input_tokens": 1994,
+      "output_tokens": 783
+    }
+  },
+  {
+    "id": "stale",
+    "reversed": false,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.98,
+    "sufficient": null,
+    "emitted": null,
+    "correct": true,
+    "ms": 364,
+    "usage": {
+      "input_tokens": 977,
+      "output_tokens": 333
+    }
+  },
+  {
+    "id": "stale",
+    "reversed": true,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.98,
+    "sufficient": null,
+    "emitted": null,
+    "correct": true,
+    "ms": 307,
+    "usage": {
+      "input_tokens": 977,
+      "output_tokens": 333
+    }
+  },
+  {
+    "id": "presupposition",
+    "reversed": false,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.99,
+    "sufficient": null,
+    "emitted": null,
+    "correct": true,
+    "ms": 312,
+    "usage": {
+      "input_tokens": 834,
+      "output_tokens": 261
+    }
+  },
+  {
+    "id": "presupposition",
+    "reversed": true,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.99,
+    "sufficient": null,
+    "emitted": null,
+    "correct": true,
+    "ms": 346,
+    "usage": {
+      "input_tokens": 834,
+      "output_tokens": 261
+    }
+  },
+  {
+    "id": "transform",
+    "reversed": false,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.44,
+    "sufficient": null,
+    "emitted": null,
+    "correct": true,
+    "ms": 272,
+    "usage": {
+      "input_tokens": 1190,
+      "output_tokens": 441
+    }
+  },
+  {
+    "id": "transform",
+    "reversed": true,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.67,
+    "sufficient": null,
+    "emitted": null,
+    "correct": true,
+    "ms": 271,
+    "usage": {
+      "input_tokens": 1190,
+      "output_tokens": 441
+    }
+  },
+  {
+    "id": "knowledge",
+    "reversed": false,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.99,
+    "sufficient": null,
+    "emitted": null,
+    "correct": true,
+    "ms": 294,
+    "usage": {
+      "input_tokens": 827,
+      "output_tokens": 261
+    }
+  },
+  {
+    "id": "knowledge",
+    "reversed": true,
+    "expected": null,
+    "selected": null,
+    "confidence": 1,
+    "sufficient": null,
+    "emitted": null,
+    "correct": true,
+    "ms": 259,
+    "usage": {
+      "input_tokens": 827,
+      "output_tokens": 261
+    }
+  },
+  {
+    "id": "newcontent",
+    "reversed": false,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.98,
+    "sufficient": null,
+    "emitted": null,
+    "correct": true,
+    "ms": 304,
+    "usage": {
+      "input_tokens": 929,
+      "output_tokens": 315
+    }
+  },
+  {
+    "id": "newcontent",
+    "reversed": true,
+    "expected": null,
+    "selected": null,
+    "confidence": 0.99,
+    "sufficient": null,
+    "emitted": null,
+    "correct": true,
+    "ms": 233,
+    "usage": {
+      "input_tokens": 929,
+      "output_tokens": 315
+    }
+  }
+]
