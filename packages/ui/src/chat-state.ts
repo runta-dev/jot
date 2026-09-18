@@ -1,4 +1,4 @@
-import type {AgentEvent} from '@jev-chat/agent';
+import type {AgentEvent} from '@jot/agent';
 import type {ToolEntry} from './ToolCalls';
 export type Message={id:string;role:'user'|'assistant';content:string;count?:number;elapsed?:number;status?:string;toolCalls?:ToolEntry[]};
 /** UI consumes the public agent protocol, not provider-specific response shapes. */

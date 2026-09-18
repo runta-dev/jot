@@ -2,8 +2,8 @@
 
 ```
 packages/ui ──HTTP / agent event types──> server
-                                         ├── @jev-chat/agent
-                                         └── @jev-chat/jev-core
+                                         ├── @jot/agent
+                                         └── @jot/jev-core
 ```
 
 - `packages/ui`: React interface, chat persistence, stream event reducer, Errand-inspired tool activity rows. Only imports agent protocol **types**. No provider client or tool execution.
@@ -15,10 +15,10 @@ The reference is pi's `packages/agent/src/agent-loop.ts`: assistant calls → to
 
 Tools declare names/descriptions/JSON parameters and an executor. Tool names and arguments are selected by Jev; no request-text branch in the core loop. Numeric tool arguments can use previous calculation results, enabling multi-step calls. Every call has an ID paired with its result. Invalid arguments cannot execute; tool errors return to the loop; cancellation and usage/turn limits stop it explicitly.
 
-Tool traces are stored with existing chat messages and replayed on later turns, including failed/interrupted tool-only turns. The browser storage key remains `jev.chats`. The HTTP layer validates replayed traces as client-supplied history; this local prototype is not an authenticated multi-user server.
+Tool traces are stored with existing chat messages and replayed on later turns, including failed/interrupted tool-only turns. The browser storage key remains `jev.chats`. The HTTP layer validates replayed traces as client-supplied history; this local application is not an authenticated multi-user server.
 
 UI rows show running/completed/failed/stopped states, concise summaries, and expandable actual arguments/results. Styling references `errand-website/components/Demo.tsx` (`agent-updates`, `update-list`) and its neutral border/typography system. Provider stream details remain out of the main message flow.
 
-`npm test` includes dependency-boundary checks and all package tests. `npm run build` typechecks each workspace. Agent and Jev-core tests also run independently. A few `server/*.ts` re-export files preserve recorded research import paths; they contain no alternate runtime implementation.
+`npm test` includes dependency-boundary checks and all package tests. `npm run build` typechecks each workspace. Agent and Jev-core tests also run independently. Runtime imports use the workspace package exports directly.
 
 This refactor improves the application structure and tool lifecycle. It does not resolve Jev's remaining open-ended text quality limitations.

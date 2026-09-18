@@ -15,14 +15,8 @@ import {
 import "./style.css";
 import {ToolCalls} from "./ToolCalls";
 import {applyAgentEvent,type Message} from "./chat-state";
-import type {AgentEvent,Selection} from "@jev-chat/agent";
+import type {AgentEvent,Selection} from "@jot/agent";
 
-// Retire the comparison preview without deleting its separately stored history.
-const url = new URL(window.location.href);
-if (url.searchParams.get("experiment") === "compare") {
-  url.searchParams.delete("experiment");
-  window.history.replaceState(window.history.state, "", url);
-}
 const storageKey = "jev.chats";
 type CharacterChoice = Selection;
 type Chat = { id: string; title: string; messages: Message[]; updated: number };
@@ -259,17 +253,6 @@ function App() {
     <div className="app">
       {sidebar && <div className="scrim" onClick={() => setSidebar(false)} />}
       <aside className={`sidebar ${sidebar ? "open" : ""}`}>
-        <a
-          className="brand"
-          href="/"
-          onClick={(e) => {
-            e.preventDefault();
-            startNew();
-          }}
-          aria-label="Jot home"
-        >
-          <img className="brand-wordmark" src="/brand/jot-wordmark.svg" alt="Jot" width="88" height="32" />
-        </a>
         <button className="new-chat" onClick={startNew} disabled={busy}>
           <Plus size={16} />
           <span>New chat</span>
@@ -376,8 +359,6 @@ function App() {
                     m.content && (
                       <div className="message-meta">
                         <span>{((m.elapsed || 0) / 1000).toFixed(1)}s</span>
-                        {m.status === "unknown" && <span>· Insufficient data</span>}
-                        {m.status === "missing_entities" && <span>· More information needed</span>}
                         {m.status === "repetition" && (
                           <span>· Repetition detected, stopped</span>
                         )}

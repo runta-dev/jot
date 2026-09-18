@@ -1,5 +1,5 @@
 import {Check,ChevronRight,LoaderCircle,Minus,AlertCircle,Calculator,FileSearch,PenLine,Wrench} from 'lucide-react';
-import type {ToolCall,ToolResult} from '@jev-chat/agent';
+import type {ToolCall,ToolResult} from '@jot/agent';
 export type ToolEntry=ToolCall&{result?:ToolResult;startedAt?:number;finishedAt?:number};
 const names:Record<string,{label:string;active:string;icon:typeof Calculator}>={
  calculate:{label:'Calculation',active:'Calculating',icon:Calculator},

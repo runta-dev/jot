@@ -12,13 +12,12 @@ Jev picks the next move. Jot runs the loop.
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Powered by Jev](https://img.shields.io/badge/powered_by-Jev-c66a2b?style=flat-square)](https://typesafe.ai/)
-[![Experimental](https://img.shields.io/badge/status-experimental-777777?style=flat-square)](#the-honest-part)
 
-[Quick start](#quick-start) · [The loop](#the-loop) · [Packages](#packages) · [Research](#research)
+[Quick start](#quick-start) · [The loop](#the-loop) · [Packages](#packages)
 
 </div>
 
----
+<img src="docs/assets/divider.svg" alt="" width="100%" height="1">
 
 ## Introducing Jot
 
@@ -98,31 +97,15 @@ packages/
 ├── agent/       Provider-independent agent loop, messages, and tool contracts
 └── jev-core/    TypeSafe client, Jev word generation, and inflections
 server/          HTTP server, Jev model adapter, and application tools
-research/        Hypotheses, protocols, assessments, and rejected approaches
-experiments/     Reproducible experiments and recorded results
 ```
 
 The UI consumes agent events. The agent loop knows neither React nor Jev’s API. The server wires the loop, provider, and tools together.
 
-## The honest part
+## Development
 
-**Jot is an experiment, not a reliable general-purpose assistant yet.**
+Keep UI, agent loop, and provider code in their respective packages. New capabilities belong in tools, not request-specific response branches.
 
-Jev is a decision model, not a conventional text generator. We have observed incorrect facts, awkward sentences, and missed instructions. Successful tool execution does not prove that the final answer is good. A clean UI does not change that.
-
-The text composer uses a bounded word vocabulary plus conversation-derived candidates and inflections. It can miss words and end with an incomplete answer. Exact source selection and deterministic arithmetic improve particular tasks; they do not establish open-ended reasoning quality.
-
-The current prototype bounds agent turns, generation steps, time, and input-token usage. See [the implementation](server/chat-reply.ts) and [generation limits](packages/jev-core/src/word-reply.ts). There is no public-hosting or multi-user security claim.
-
-## Research
-
-The workflow is simple:
-
-**Hypothesis → preregistered test → real API calls → keep the evidence.**
-
-We retain failures, distinguish candidate coverage from selection accuracy, and test complete conversations rather than counting attractive examples. [The research log](research/README.md) includes the approaches that did not work, too.
-
-Contributing a generation idea? Include a falsifiable hypothesis, a baseline, fresh evaluation cases, and the quality/latency/token trade-off. Keep provider credentials out of code and traces. Read [AGENTS.md](AGENTS.md) and the installed [TypeSafe skill](.agents/skills/typesafe-ai/SKILL.md) before changing the integration.
+Read [AGENTS.md](AGENTS.md) and the [TypeSafe skill](.agents/skills/typesafe-ai/SKILL.md) before changing the integration. Keep credentials out of code and logs, and run `npm test` and `npm run build` before submitting changes.
 
 ## Credits
 

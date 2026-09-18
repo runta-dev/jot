@@ -1,5 +1,0 @@
-# R36 verbatim user requirements
-
-Preregistered before calls. Two fresh two-turn conversations, each generated independently in baseline and explicit-requirements arms. (A) Rewrite politely: Send the invoice by Monday. / Make it shorter, keep the deadline. (B) Write a warm one-sentence invitation to lunch. / Make it formal instead, still one sentence.
-
-Baseline exact current server decoder. Variant adds verbatim user_requests array to state, and a generic instruction to honor latest request while retaining earlier requirements unless explicitly replaced. This combines salience and instruction wording (not separable causal attribution). No summarizer, generated requirement text, specialist handler, or authored reply. Full actual history retained in both. Same vocabulary/budgets. One run per arm, sequential; report all8 outputs, format, deadline, tone retention/replacement and usage. Do not count mere duplication of old tone as success when replaced. No runtime change without evidence of benefit/no regressions; small developmental test not final gate.

@@ -1,4 +1,4 @@
-# @jev-chat/agent
+# @jot/agent
 
 Minimal provider-independent loop inspired by pi: call the model, execute its tool call, append the tool result, repeat until an answer. No Jev, React, HTTP, or filesystem dependency.
 
@@ -6,4 +6,4 @@ Public contracts are in `src/types.ts`: `Model`, `Tool`, `ToolFactory`, `AgentMe
 
 `runAgentLoop(messages, { model, tools, signal, maxTurns, usage })` emits tool calls, results, streamed draft text, final replacement, and termination. The application owns provider usage limits; `BudgetReached` ends the loop with an explicit budget reason.
 
-Run `npm test --workspace=@jev-chat/agent` independently. No API key required.
+Run `npm test --workspace=@jot/agent` independently. No API key required.

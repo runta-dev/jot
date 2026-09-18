@@ -1,9 +1,11 @@
-import {test} from 'node:test';import assert from 'node:assert/strict';import {calculateExactRequest as calc} from './arithmetic.ts';
-test('exact arithmetic covers signed integers, decimals and rational division',()=>{
- for(const [input,expected]of [['What is 6 plus 7? Reply with the result.','13'],['0.1 + 0.2','0.3'],['-3 times -4','12'],['6--7','13'],['1 divided by 8','0.125'],['1/3','1/3'],['9007199254740993 + 1','9007199254740994'],['10 − 13','-3'],['0/5','0'],['Please calculate 8 × 7.','56']])assert.equal(calc(input)?.answer,expected);
+import {test} from 'node:test';import assert from 'node:assert/strict';import {calculateOperands as calc,type ArithmeticOperator} from './arithmetic.ts';
+test('tool arguments compute exact integers, decimals and chained rational results',()=>{
+ const cases:[string,ArithmeticOperator,string,string][]=[['6','add','7','13'],['0.1','add','0.2','0.3'],['-3','multiply','-4','12'],['6','subtract','-7','13'],['1','divide','8','0.125'],['1','divide','3','1/3'],['1/3','add','1/6','0.5'],['9007199254740993','add','1','9007199254740994'],['10','subtract','13','-3'],['0','divide','5','0']];
+ for(const [a,op,b,expected]of cases)assert.equal(calc(a,op,b),expected);
 });
-test('zero division is explicit, never Infinity or a model guess',()=>{assert.equal(calc('3/0')?.answer,'Division by zero is undefined.');assert.equal(calc('0/0')?.answer,'Division by zero is undefined.');});
-test('rejects partial matches, quoting, code and unsupported requirements',()=>{
- for(const input of ['Do not calculate 2+2','What is 2+2? Explain why.','"2+2"','2+2 in French','2+2*3','Math.sin(2)','2;process.exit()','1e20 + 1','2 + unknown','(2+3)*4','2+2 = 4','Tell me a story about 2+2'])assert.equal(calc(input),null,input);
+test('zero division produces an explicit tool result, never Infinity',()=>{assert.equal(calc('3','divide','0'),'Division by zero is undefined.');assert.equal(calc('0','divide','0'),'Division by zero is undefined.');});
+test('unsupported operands and operators cannot execute code or partial expressions',()=>{
+ for(const value of ['2+2','Math.sin(2)','2;process.exit()','1e20','2 apples','(2)','1/0'])assert.throws(()=>calc(value,'add','1'));
+ assert.throws(()=>calc('1','unsupported' as ArithmeticOperator,'2'));
 });
-test('bounded grammar excludes unbounded numbers',()=>{assert.equal(calc('1'.repeat(31)+'+1'),null);assert.equal(calc('0.'+'1'.repeat(13)+'+1'),null);});
+test('tool operand lengths and decimal precision are bounded',()=>{assert.throws(()=>calc('1'.repeat(91),'add','1'));assert.throws(()=>calc('0.'+'1'.repeat(31),'add','1'));});

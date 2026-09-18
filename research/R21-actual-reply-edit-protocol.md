@@ -1,3 +1,0 @@
-# R21 mechanical repair of real replies
-
-Preregistered before calls. All four R20 outputs, exactly as generated, original conversations from trace. Use existing repairDraft (top2 edit actions, locations, mechanical character/function-word changes, original retained). At most3 edits, stop unchanged/cycle/error. No supplied corrections, new content words, external generator or hand-selected repair sites. This tests surface editing and no-change preservation, not creation of a missing surprising event. Record revisions, full API payloads, tokens/calls/latency. Cases already development; no held-out claim. Inspect whether selected action is appropriate, correction available, and selected edit helps. Do not silently drop unchanged failures. No production change.

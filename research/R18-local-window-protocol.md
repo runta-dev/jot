@@ -1,5 +1,0 @@
-# R18 local candidate window
-
-Preregistered before inference. Hypothesis: repeated long prefix in every option distracts from local composition and increases tokens; presenting only last eight whitespace-delimited prefix words plus appended word improves grammar while full original prefix/history remain in state.
-
-Baseline: R16 greedy morphology method. Variant changes only rendered option descriptions (last8 words, ellipsis if truncated), with an explicit statement that these are suffixes and full reply is in state. Code commits the associated full continuation, never the displayed suffix. Same two R16 conversations (four turns), same vocabulary/grounding/budgets. Single historical-baseline comparison; no robust causal claim. Assess complete outputs for facts, grammar, contextual edits, and requested surprise. Retain all traces and costs. No production gate relaxation. A >255-options failure must remain an error, not silently prune alternatives. Tests verify displayed text never replaces full prefix.

@@ -1,5 +1,5 @@
-import {runAgentLoop,BudgetReached,type ChatMessage,type ToolFactory,type AgentEvent} from '@jev-chat/agent';
-import {makeEvaluator,type Evaluate} from '@jev-chat/jev-core';
+import {runAgentLoop,BudgetReached,type ChatMessage,type ToolFactory,type AgentEvent} from '@jot/agent';
+import {makeEvaluator,type Evaluate} from '@jot/jev-core';
 import {createJevModel} from './jev-agent.ts';
 import {createAgentTools} from './agent-tools.ts';
 export {sourceSpans} from './source-spans.ts';

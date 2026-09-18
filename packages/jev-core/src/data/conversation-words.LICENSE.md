@@ -11,4 +11,4 @@ Data license: Creative Commons Attribution-ShareAlike 4.0 International, https:/
 
 Deterministic inflections are supplied by jsRealB5.6.0 (Guy Lapalme, Université de Montréal), ISC license; its package retains its own copyright/license. No learned generative model supplies answer candidates.
 
-Additional changes (R33): normalized 12 truncated negative-auxiliary corpus tokens to apostrophe-t spellings, deduplicated. Ambiguous don/won/haven and user-provided text are not rewritten.
+Additional changes: normalized 12 truncated negative-auxiliary corpus tokens to apostrophe-t spellings, deduplicated. Ambiguous don/won/haven and user-provided text are not rewritten.

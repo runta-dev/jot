@@ -1,4 +1,4 @@
-import type {Message} from './jev.ts';
+import type {ChatMessage as Message} from '@jot/agent';
 /** Exhaustive bounded source spans; null means skip, never silently truncate. */
 export function sourceSpans(messages:Message[]):string[]|null{
  const values=new Set<string>();let size=0;

@@ -1,3 +1,0 @@
-# R43 independent exact-span sufficiency
-
-Preregistered before calls. Fresh8 positive cases and6 no-complete-span controls, two option orders. Same mechanically enumerated1–6word candidates as R42, original-user data only. First Choice selects span/GENERATE, no confidence threshold. If span selected, separate Noul checks whether returning it alone completely answers latest request without unsupported inference, stale facts, missing transformation or ignored conflict. Emit only Noul>=0.9. Threshold fixed before calls, not fitted to R42. Gate:>=14/16 positive exact emissions and zero false emissions on12 negatives. Falling back is allowed but costs calls; no claim of generated knowledge or general-chat completeness. No runtime integration this turn.

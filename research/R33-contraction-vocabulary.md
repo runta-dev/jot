@@ -1,5 +1,0 @@
-# R33 corpus contraction fragments
-
-Preregistered before calls. Audit runtime corpus: didn97,doesn179,isn189,wasn250,wouldn267,couldn327,aren396,shouldn553,weren658,hasn782,hadn1143,mustn2486 (zero-based). These can be selected as ordinary words and explain part of observed malformed English. Test mapping these12 base-corpus-only tokens to their apostrophe-t forms; no changes to messages/source excerpts/identity tokens. Do not map ambiguous don/won/haven (valid words/names) or globally rewrite text. No after-the-fact corrected answers.
-
-Repeat four R32 synthetic evidence controls, current improved colon-preserving context extraction in both baseline and cleaned arm. Same generator, vocab length may shrink after deduplication; source provenance and generic instruction unchanged. Save exact original/cleaned vocabulary checksum. Evaluate malformed fragments, uncertainty/conflict/correction semantics, and absence of new grammar regressions. Eight outputs, one sample each; no reliability claim. Candidate cleanliness can justify a narrow data fix if no observed regressions, but not a factual-quality claim. No runtime data edit before inspection.

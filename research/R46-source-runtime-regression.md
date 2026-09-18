@@ -1,3 +1,0 @@
-# R46 served source/fallback boundary regression
-
-Preregistered before calls. Six independent new HTTP requests to current wrapper: arithmetic, physics explanation, original creative sentence, combine separated facts, precise quoted punctuation/whitespace, unknown private contents. No actual reference answers sent except source task data. Need distinguish source decision error from fallback generation error via request count and raw events; count alone is indirect, so inspect wrapper trace separately if ambiguous. Expected extraction only literal quote; all other tasks require generated answer or uncertainty. A wrong answer is not automatically a routing bug. Single run, no production-quality claim, all failures retained. Save implementation hashes.

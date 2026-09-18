@@ -2,7 +2,7 @@ import express from "express";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { parse } from "dotenv";
-import { parseMessages } from "./jev.ts";
+import { parseMessages } from "./messages.ts";
 import { generateChatReply } from "./chat-reply.ts";
 let raw = "";
 try {

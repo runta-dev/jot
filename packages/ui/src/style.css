@@ -1177,32 +1177,6 @@ header {
     font-size: 32px;
   }
 }
-.position-grid {
-  display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
-  gap: 6px;
-  margin-top: 12px;
-}
-.position-grid > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 7px;
-  padding: 7px 3px;
-  background: #fff;
-  border: 1px solid #e5e5e5;
-  border-radius: 5px;
-  min-width: 0;
-}
-.position-grid span {
-  font-size: 9px;
-  color: #a3a3a3;
-}
-.position-grid code {
-  font-size: 12px;
-  color: #333;
-}
-
 /* Errand-inspired activity rows: compact, quiet, with details on demand. */
 .tool-activity { margin: 0 0 22px 10px; padding-left: 18px; border-left: 1px solid var(--border); }
 .tool-row { font-size: 12px; }

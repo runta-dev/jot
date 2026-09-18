@@ -1,7 +1,7 @@
 import {calculateOperands,type ArithmeticOperator} from './arithmetic.ts';
 import {sourceSpans} from './source-spans.ts';
-import {generateWordReply,type Evaluate} from '@jev-chat/jev-core';
-import {emptySchema,conversation,toolResults,type Parameters,type Parameter,type ToolFactory} from '@jev-chat/agent';
+import {generateWordReply,type Evaluate} from '@jot/jev-core';
+import {emptySchema,conversation,toolResults,type Parameters,type Parameter,type ToolFactory} from '@jot/agent';
 function field(description:string,options:Record<string,string|null>):Parameter{return {type:'string',description,oneOf:Object.entries(options).map(([value,label])=>({const:value,...(label?{description:label}:{})}))};}
 function parameters(properties:Record<string,Parameter>):Parameters{return {type:'object',properties,required:Object.keys(properties),additionalProperties:false};}
 /** Application tools; the agent package has no knowledge of these implementations. */

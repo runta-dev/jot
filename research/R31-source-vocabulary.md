@@ -1,5 +1,0 @@
-# R31 source lexical coverage
-
-Preregistered before new calls. R30 trace audit: rotation/evaporation/vapor/liquid absent from base and all relevant-source proposal requests; eva (name-like corpus token) available. This proves a coverage gap, not that source words will necessarily fix causal explanation. Audit final-option counts include existing prefix and are not a rigorous new-fragment recall metric; avoid overstating them.
-
-Repeat R30 relevant and unrelated source arms only, same two questions and same generic evidence instruction, with source text tokenized through the runtime conversationLexemes helper and lowercased/deduplicated, appended to the base vocabulary. No manual topic words, synonym generation, full-sentence choices, or reference answers. Topic-selection and per-step pruning unchanged, so global inclusion does not guarantee active retention. Keep source in state exactly as before. Historical R30 state-only comparison, one run. Attribute any factual material to curated sources, not internal knowledge or tested retrieval. No runtime default change.

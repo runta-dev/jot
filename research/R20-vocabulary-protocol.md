@@ -1,3 +1,0 @@
-# R20 subtitle vocabulary ablation
-
-Preregistered before inference. Change only base vocabulary in R16 greedy morphology decoder: first4096 lowercase alphabetic/apostrophe words from pinned FrequencyWords reference, hash5351ff405b1126ef555791dd4d9798a48e3e9a501a9fc481a9da957752cfb458. Same extraction as external audit; attribution at R19. Full candidate display, no branching or operation classifier. Same ice/bird two-turn conversations, actual generated history, same40-step/180s/500k-input budgets and grounding. Historical R16 greedy is comparator; single sequential sample not causal proof. No word added based on expected answer. Source snapshot retained. Judge grammar, correctness, follow-up and surprise separately. No production integration from four replies.

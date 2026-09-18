@@ -1,5 +1,5 @@
-import {toolResults,type Model,type ToolArguments} from '@jev-chat/agent';
-import type {Evaluate} from '@jev-chat/jev-core';
+import {toolResults,type Model,type ToolArguments} from '@jot/agent';
+import type {Evaluate} from '@jot/jev-core';
 /** Maps Jev's typed choices to the model interface expected by the generic loop. */
 export function createJevModel(evaluate:Evaluate):Model{return async(messages,tools,signal)=>{
  const replies=toolResults(messages).filter(m=>m.result.status==='ok'&&m.result.text);

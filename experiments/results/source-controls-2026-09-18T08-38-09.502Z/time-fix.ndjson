@@ -1,2 +1,0 @@
-{"type":"character","character":"16:20","count":5,"step":{"choice":"16:20","confidence":0.99,"alternatives":[{"char":"16:20","probability":1},{"char":"Other","probability":0},{"char":"Quarters","probability":0},{"char":"Started","probability":0}]},"requests":3,"inputTokens":35287,"outputTokens":38555,"elapsed":2187}
-{"type":"done","reason":"complete","requests":5,"inputTokens":42696,"outputTokens":45633,"elapsed":2781}

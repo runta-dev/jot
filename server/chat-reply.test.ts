@@ -1,8 +1,8 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {generateChatReply,sourceSpans} from './chat-reply.ts';
-import {emptySchema,type ToolFactory} from '@jev-chat/agent';
-import type {Evaluate,EvaluationRequest} from './typesafe.ts';
+import {emptySchema,type ToolFactory} from '@jot/agent';
+import type {Evaluate,EvaluationRequest} from '@jot/jev-core';
 function response(request:EvaluationRequest,choices:Record<string,string>){return {model:'test',answers:Object.fromEntries(Object.entries(request.questions).map(([id,q])=>[id,{type:'choice' as const,choice:choices[id],confidence:1,probabilities:Object.fromEntries(Object.keys(q.criteria).map(k=>[k,k===choices[id]?1:0]))}])),usage:{input_tokens:10,output_tokens:2}};}
 const user=[{role:'user' as const,content:'Calculate 6 plus 7, then multiply the result by 2.'}];
 test('loop appends assistant calls and tool results; next calculation consumes prior result',async()=>{
@@ -56,7 +56,7 @@ test('stored tool transcript is replayed on the next user turn with matching cal
  assert.equal((events.find(e=>e.type==='replace') as any).content,'13');
 });
 test('a failed tool-only turn survives HTTP parsing and reaches the next model turn',async()=>{
- const {parseMessages}=await import('./jev.ts');
+ const {parseMessages}=await import('./messages.ts');
  const input=parseMessages([{role:'user',content:'Try it.'},{role:'assistant',content:'',toolCalls:[{id:'failed-call',name:'compose_reply',arguments:{},result:{status:'error',error:'Provider timeout'}}]},{role:'user',content:'What happened?'}]);
  const evaluate:Evaluate=async r=>{const transcript=(r.state as any).messages;assert.ok(transcript.some((m:any)=>m.role==='tool'&&m.result.error==='Provider timeout'));assert.ok(!transcript.some((m:any)=>m.role==='assistant'&&m.content===''));throw Error('Observed retained history');};
  await assert.rejects(generateChatReply('unused',input,new AbortController().signal,{evaluate}).next(),/Observed retained history/);

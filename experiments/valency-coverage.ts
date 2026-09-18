@@ -1,5 +1,0 @@
-import {mkdir,writeFile} from 'node:fs/promises';import js from 'jsrealb';import {verbSenses} from './lib/wordnet.ts';import {frameEvidence} from './lib/valency.ts';
-js.loadEn();const lex=js.getLexicon('en');const words=await verbSenses();
-const rows=[...words].filter(([w])=>/^[a-z]+$/.test(w)&&lex[w]?.V).map(([word,senses])=>({word,senses:senses.map(s=>({offset:s.offset,frames:s.frames,bare:frameEvidence(s,'bare').status==='supported',object:frameEvidence(s,'direct-object').status==='supported'}))}));
-const senses=rows.flatMap(r=>r.senses);const summary={lemmas:rows.length,senses:senses.length,supportedSenses:senses.filter(s=>s.bare||s.object).length,unverifiedSenses:senses.filter(s=>!s.bare&&!s.object).length,lemmasWithSomeSupport:rows.filter(r=>r.senses.some(s=>s.bare||s.object)).length};
-const dir='experiments/results/valency-coverage';await mkdir(dir,{recursive:true});await writeFile(`${dir}/coverage.json`,JSON.stringify({summary,rows},null,2));console.log(JSON.stringify(summary));

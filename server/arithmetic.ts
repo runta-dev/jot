@@ -1,4 +1,4 @@
-/** Exact rational arithmetic for fully matched, simple calculation requests. No eval. */
+/** Exact arithmetic tool implementation. Arguments come from the agent; no request routing or eval. */
 type Rational={n:bigint;d:bigint};
 const gcd=(a:bigint,b:bigint):bigint=>b===0n?(a<0n?-a:a):gcd(b,a%b);
 function reduce(n:bigint,d:bigint):Rational{if(d<0n){n=-n;d=-d;}const g=gcd(n,d);return {n:n/g,d:d/g};}
@@ -25,13 +25,4 @@ export function calculateOperands(left:string,operator:ArithmeticOperator,right:
   case 'divide':if(!b.n)return 'Division by zero is undefined.';result=reduce(a.n*b.d,a.d*b.n);break;
   default:throw Error('Unsupported arithmetic operator.');
  }return format(result);
-}
-export function calculateExactRequest(text:string):{expression:string;answer:string}|null{
- if(text.length>240)return null;
- const numeric='[+-]?\\d{1,30}(?:\\.\\d{1,12})?';
- const pattern=new RegExp(`^(?:(?:please\\s+)?(?:what is|what's|calculate|compute)\\s+)?(${numeric})\\s*(plus|minus|times|multiplied by|divided by|[+*/×÷−-])\\s*(${numeric})[?.!]?\\s*(?:reply with (?:only )?(?:the )?result[.!]?)?$`,'i');
- const match=text.trim().match(pattern);if(!match)return null;
- const [,left,op,right]=match;
- const operator:ArithmeticOperator=['+','plus'].includes(op.toLowerCase())?'add':['-','−','minus'].includes(op.toLowerCase())?'subtract':['*','×','times','multiplied by'].includes(op.toLowerCase())?'multiply':'divide';
- return {expression:`${left} ${op} ${right}`,answer:calculateOperands(left,operator,right)};
 }

@@ -8,10 +8,6 @@ Use the installed TypeSafe skill at `.agents/skills/typesafe-ai/SKILL.md` for th
 - Visual reference: https://runerrand.dev/ and `/Users/shiqimei/repos/runta-dev/errand-website`. Use native system fonts, white/neutral gray surfaces, subtle borders, rounded controls, and restrained orange accents.
 - Verify with `npm run build`, `npm test`, and a real browser conversation. Distinguish successful transport from actual response quality.
 
-- Research goal constraint confirmed by the user: pure Jev only. Do not introduce another generative model to produce drafts, candidates, or answers. Follow `research/README.md`; preregister hypotheses and comparisons before experiments, consult primary internet sources, and retain full reproducible evidence.
-
-## Scope correction — 2026-09-18
-
-The product goal is general, open-ended, multi-turn chat using pure Jev. A comparator, intent router, canned-answer collection, or domain-specific template engine does not satisfy it. Do not expose narrow research components as chat modes. The comparison preview has been withdrawn; retain its evidence and separately stored history.
-
-The character loop is retained as a failed research baseline, not the current runtime. R27 permits a limited experimental word-based prototype after head-to-head evaluation and browser checks; this does not satisfy the final general-chat quality gate. Before replacing it, preregister and pass an end-to-end general-chat evaluation covering greetings, factual questions, explanations, advice, follow-ups, corrections, unknowns, and Chinese input with English output. Measure coherence, quality, latency, cost, and source/candidate coverage. Component accuracy is not product acceptance. If pure-Jev general generation remains unsolved, report that directly instead of narrowing the goal.
+- Use Jev as the only model. Do not introduce another generative model to produce drafts, candidates, or answers. Deterministic tool results must not be attributed to model reasoning.
+- Keep Jot a general, open-ended, multi-turn agent. Do not replace the chat with a comparator, canned-answer collection, or topic-specific interface.
+- Preserve conversation and tool history, exact source text, cancellation, and explicit budget limits. Verify answer quality separately from transport and test results.
