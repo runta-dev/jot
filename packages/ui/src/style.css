@@ -1205,7 +1205,7 @@ header {
   cursor: pointer;
   color: var(--activity-text);
   font-weight: 400;
-  font-variant-numeric: tabular-nums;
+  font-variant-numeric: proportional-nums;
   padding-bottom: 10px;
   margin-bottom: 0;
   border-bottom: 0.5px solid #e8e9eb;
@@ -1369,3 +1369,6 @@ hr { border: 0; border-top: 0.5px solid var(--border); }
 
 .browser-panel-header > span { display: flex; align-items: center; height: 30px; }
 .browser-collapse-button svg { display: block; }
+
+.sidebar-logo { flex-shrink: 0; padding: 16px 10px 0; }
+.sidebar-logo img { display: block; width: 55px; height: 20px; }

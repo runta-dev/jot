@@ -200,6 +200,7 @@ function App() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          chatId,
           messages: history.map(({ role, content, toolCalls }) => ({ role, content, ...(toolCalls ? { toolCalls } : {}) })),
         }),
         signal: controller.signal,
@@ -222,6 +223,7 @@ function App() {
           if (!line.trim()) continue;
           const event = JSON.parse(line) as (AgentEvent & {elapsed:number}) | {type:"error";error:string};
           if (event.type === "error") throw new Error(event.error);
+          if (event.type === "tool_call" && event.call.name.startsWith("browser_")) setBrowserOpen(true);
           updateMessage(chatId, messageId, m => applyAgentEvent(m, event, event.elapsed));
           if (event.type === "done") finished = true;
         }
@@ -284,6 +286,7 @@ function App() {
             <p className="history-empty">No conversations yet.</p>
           )}
         </nav>
+        <div className="sidebar-logo"><img src="/brand/jot-wordmark.svg" alt="Jot" width="55" height="20" /></div>
       </aside>
       <main className="workspace">
         <header>
@@ -326,7 +329,7 @@ function App() {
                     {m.content ||
                       (m.status === "writing" ? (m.toolCalls?.length ? null : (
                         <span className="thinking">
-                          Working<span>...</span>
+                          Working
                         </span>
                       )) : (
                         <span className="empty-response">

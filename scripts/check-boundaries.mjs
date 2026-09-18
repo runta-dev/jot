@@ -1,6 +1,6 @@
 import {readdir,readFile} from 'node:fs/promises';
 import {resolve,relative,dirname} from 'node:path';
-const rules={agent:new Set(),browser:new Set(['playwright-core']), 'jev-core':new Set(['jsrealb']),ui:new Set(['react','react-dom/client','lucide-react','@jot/agent','@jot/browser/types'])};
+const rules={agent:new Set(),browser:new Set(['patchright']), 'jev-core':new Set(['jsrealb']),ui:new Set(['react','react-dom/client','lucide-react','@jot/agent','@jot/browser/types'])};
 async function files(dir){const entries=await readdir(dir,{withFileTypes:true});return (await Promise.all(entries.map(e=>e.isDirectory()?files(resolve(dir,e.name)):resolve(dir,e.name)))).flat();}
 for(const [name,allowed] of Object.entries(rules)){
  const root=resolve('packages',name);

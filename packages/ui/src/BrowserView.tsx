@@ -1,5 +1,6 @@
 import {useEffect,useRef,useState} from 'react';
 import {ArrowLeft,ArrowRight,RotateCw,Globe,LoaderCircle,Square,X} from 'lucide-react';
+import {browserAddress} from './browser-address';
 import {browserFrames} from './browser-frames';
 import {remoteKey} from './browser-keyboard';
 import type {BrowserEvent,BrowserFrame,BrowserInput,BrowserStatus} from '@jot/browser/types';
@@ -34,7 +35,7 @@ export function BrowserView({chatId,active,onTakeOver}:{chatId:string;active:boo
   takeOver.current();editingAddress.current=false;setError('');navigation.current?.abort();const controller=new AbortController();navigation.current=controller;
   const stop=()=>controller.abort();lifetime.current.signal.addEventListener('abort',stop,{once:true});
   try{
-   const url=/^https?:\/\//i.test(address.trim())?address.trim():`https://${address.trim()}`;
+   const url=browserAddress(address);
    if(type==='navigate'){pendingAddress.current=url;setAddress(url);}
    const result=await request('command',type==='navigate'?{type,url}:{type},controller.signal);
    if(navigation.current!==controller)return;
@@ -63,7 +64,7 @@ export function BrowserView({chatId,active,onTakeOver}:{chatId:string;active:boo
    <button type="button" className="icon-button" aria-label="Browser back" disabled={status.state!=='ready'} onClick={()=>void command('back')}><ArrowLeft size={15}/></button>
    <button type="button" className="icon-button" aria-label="Browser forward" disabled={status.state!=='ready'} onClick={()=>void command('forward')}><ArrowRight size={15}/></button>
    <button type="button" className="icon-button" aria-label={status.loading?'Stop loading':'Reload browser'} disabled={status.state==='idle'} onClick={()=>status.loading?(navigation.current?.abort(),takeOver.current()):void command('reload')}>{status.loading?<Square size={12}/>:<RotateCw size={14}/>}</button>
-   <div className="browser-address">{status.loading||status.state==='starting'?<LoaderCircle size={13} className="browser-loading"/>:<Globe size={13}/>}<input ref={addressInput} aria-label="Browser address" placeholder="Enter a URL" value={address} onChange={e=>{editingAddress.current=true;setAddress(e.target.value);}} onFocus={e=>{editingAddress.current=true;e.target.select();}} onBlur={()=>{editingAddress.current=false;setAddress(pendingAddress.current??(latestStatus.current.url==='about:blank'?'':latestStatus.current.url));}} spellCheck={false}/></div>
+   <div className="browser-address">{status.loading||status.state==='starting'?<LoaderCircle size={13} className="browser-loading"/>:<Globe size={13}/>}<input ref={addressInput} aria-label="Browser address" placeholder="Search Google or enter a URL" value={address} onChange={e=>{editingAddress.current=true;setAddress(e.target.value);}} onFocus={e=>{editingAddress.current=true;e.target.select();}} onBlur={()=>{editingAddress.current=false;setAddress(pendingAddress.current??(latestStatus.current.url==='about:blank'?'':latestStatus.current.url));}} spellCheck={false}/></div>
   </form>
   {error&&<div className="browser-error" role="alert"><span>{error.replace(/\u001b\[[0-9;]*m/g,'').split('\n')[0]}</span><button className="icon-button" aria-label="Dismiss browser error" onClick={()=>setError('')}><X size={12}/></button></div>}
   <div className="browser-screen" ref={screen}>

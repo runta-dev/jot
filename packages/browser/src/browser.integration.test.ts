@@ -9,15 +9,16 @@ test('owned Chromium observes, fills, selects, clicks, streams frames and reject
  });
  await new Promise<void>(r=>server.listen(0,'127.0.0.1',r));const port=(server.address() as AddressInfo).port;
  const browser=new BrowserSession();t.after(async()=>{await browser.close();await new Promise<void>(r=>server.close(()=>r()));});
- let frames=0;const unsubscribe=browser.subscribe(e=>{if(e.type==='frame'){frames++;assert.ok(e.frame.data.length>0);}});t.after(unsubscribe);
+ let frames=0;let firstFrame!:()=>void;const frameReady=new Promise<void>(r=>firstFrame=r);const unsubscribe=browser.subscribe(e=>{if(e.type==='frame'){frames++;firstFrame();assert.ok(e.frame.data.length>0);}});t.after(unsubscribe);
  let snapshot=await browser.act({type:'navigate',url:`http://127.0.0.1:${port}`},new AbortController().signal);
  assert.equal(snapshot.title,'Jot browser test');const original=snapshot;
  const input=snapshot.elements.find(e=>e.name==='Query')!;assert.ok(input.actions.includes('fill'));
  snapshot=await browser.act({type:'fill',snapshotId:snapshot.id,elementId:input.id,text:'Jot'},new AbortController().signal);
  await assert.rejects(browser.act({type:'click',snapshotId:original.id,elementId:original.elements.find(e=>e.name==='Apply')!.id},new AbortController().signal),/Page changed/);
+ assert.equal(browser.current,undefined);assert.equal(browser.currentStatus.error,undefined);snapshot=await browser.observe(new AbortController().signal);
  const select=snapshot.elements.find(e=>e.name==='Color')!;snapshot=await browser.act({type:'select',snapshotId:snapshot.id,elementId:select.id,value:'blue'},new AbortController().signal);
  snapshot=await browser.act({type:'click',snapshotId:snapshot.id,elementId:snapshot.elements.find(e=>e.name==='Apply')!.id},new AbortController().signal);
- assert.match(snapshot.text,/Jot blue/);assert.ok(frames>0);
+ assert.match(snapshot.text,/Jot blue/);let frameTimer:ReturnType<typeof setTimeout>|undefined;try{await Promise.race([frameReady,new Promise((_,reject)=>{frameTimer=setTimeout(()=>reject(Error('No live browser frame received')),3000);})]);}finally{clearTimeout(frameTimer);}assert.ok(frames>0);
  const field=snapshot.elements.find(e=>e.name==='Query')!;
  const signal=new AbortController().signal;
  await browser.input({type:'click',x:field.rect.x+field.rect.width/2,y:field.rect.y+field.rect.height/2},signal);
@@ -80,4 +81,35 @@ test('page-initiated navigation reports loading before commit and clears after l
  const finished=new Promise<void>(resolve=>{const off=browser.subscribe(e=>{if(e.type==='status'&&!e.status.loading&&e.status.url.endsWith('/next')){off();resolve();}});});
  release();await finished;
  assert.equal(browser.currentStatus.loading,false);
+});
+
+test('dedicated persistent profile keeps site state across browser restarts',{skip:process.env.JOT_BROWSER_TEST!=='1',timeout:30000},async t=>{
+ const {mkdtemp,rm,stat}=await import('node:fs/promises');const {tmpdir}=await import('node:os');const {join}=await import('node:path');
+ const profileDirectory=await mkdtemp(join(tmpdir(),'jot-profile-test-'));
+ const server=createServer((req,res)=>{res.setHeader('Content-Type','text/html');res.end(`<p id="state"></p><script>const returning=localStorage.getItem('jot-check')==='saved'&&document.cookie.includes('jot-check=saved');document.querySelector('#state').textContent=returning?'Returning profile':'New profile';localStorage.setItem('jot-check','saved');document.cookie='jot-check=saved; Max-Age=3600; SameSite=Lax';</script>`);});
+ await new Promise<void>(r=>server.listen(0,'127.0.0.1',r));
+ const sessions:BrowserSession[]=[];
+ t.after(async()=>{await Promise.all(sessions.map(s=>s.close()));await new Promise<void>(r=>server.close(()=>r()));await rm(profileDirectory,{recursive:true,force:true});});
+ const url=`http://127.0.0.1:${(server.address() as AddressInfo).port}`,signal=new AbortController().signal;
+ const first=new BrowserSession({profileDirectory});sessions.push(first);
+ assert.match((await first.act({type:'navigate',url},signal)).text,/New profile/);await first.close();
+ assert.equal((await stat(profileDirectory)).mode&0o777,0o700);
+ const second=new BrowserSession({profileDirectory});sessions.push(second);
+ assert.match((await second.act({type:'navigate',url},signal)).text,/Returning profile/);
+});
+
+test('aborted navigation releases the action queue and allows a new page',{skip:process.env.JOT_BROWSER_TEST!=='1',timeout:15000},async t=>{
+ let loading!:()=>void;const requested=new Promise<void>(r=>loading=r);
+ const server=createServer((req,res)=>{
+  res.setHeader('Content-Type','text/html');
+  if(req.url==='/blocked.js'){loading();return;}
+  res.end(req.url==='/slow'?'<p>Loading</p><script src="/blocked.js"></script>':'<p>Recovered page</p>');
+ });
+ await new Promise<void>(r=>server.listen(0,'127.0.0.1',r));const origin=`http://127.0.0.1:${(server.address() as AddressInfo).port}`;
+ const browser=new BrowserSession();
+ t.after(async()=>{await browser.close();server.closeAllConnections();await new Promise<void>(r=>server.close(()=>r()));});
+ const controller=new AbortController();const navigation=browser.act({type:'navigate',url:origin+'/slow'},controller.signal);
+ await requested;controller.abort();await assert.rejects(navigation);
+ const recovered=await browser.act({type:'navigate',url:origin+'/ok'},new AbortController().signal);
+ assert.match(recovered.text,/Recovered page/);
 });

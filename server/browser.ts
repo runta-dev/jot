@@ -1,6 +1,7 @@
+import {resolve} from 'node:path';
 import {Router} from 'express';
 import {BrowserPool,type BrowserAction,type BrowserInput,type BrowserEvent} from '@jot/browser';
-export const browserPool=new BrowserPool();
+export const browserPool=new BrowserPool(4,{profileRoot:resolve('.cache/browser-profiles'),headless:process.env.JOT_BROWSER_HEADLESS!=='0'});
 export function browserChatId(value:unknown):string{if(typeof value!=='string'||!/^[A-Za-z0-9_-]{1,80}$/.test(value))throw Error('Invalid browser session.');return value;}
 export const browserRouter=Router();
 browserRouter.use((req,res,next)=>{if(!['localhost','127.0.0.1','[::1]'].includes(req.hostname)){res.status(403).json({error:'Local host required.'});return;}const origin=req.get('origin');if(req.get('sec-fetch-site')==='cross-site'||origin&&origin!==`http://${req.get('host')}`&&origin!==`https://${req.get('host')}`){res.status(403).json({error:'Origin not allowed.'});return;}next();});

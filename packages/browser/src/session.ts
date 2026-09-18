@@ -1,5 +1,6 @@
-import {chromium,type Browser,type BrowserContext,type Page,type CDPSession,type ElementHandle} from 'playwright-core';
+import {chromium,type Browser,type BrowserContext,type Page,type CDPSession,type ElementHandle} from 'patchright';
 import {existsSync} from 'node:fs';
+import {mkdir,chmod} from 'node:fs/promises';
 import {randomUUID} from 'node:crypto';
 import {READ_SNAPSHOT} from './snapshot.ts';
 import {StaleBrowserSnapshot,type BrowserAction,type BrowserEvent,type BrowserSnapshot,type BrowserStatus,type BrowserFrame,type BrowserInput} from './types.ts';
@@ -10,22 +11,39 @@ export class BrowserSession{
  private starting?:Promise<void>;private queue:Promise<unknown>=Promise.resolve();private closed=false;private inputQueue:Promise<unknown>=Promise.resolve();
  private listeners=new Set<(event:BrowserEvent)=>void>();private pageKey='';private snapshot?:BrowserSnapshot;
  private frame?:BrowserFrame;private status:BrowserStatus={state:'idle',url:'about:blank',title:'',loading:false};
- constructor(private options:{width?:number;height?:number;executablePath?:string}={}){}
+ constructor(private options:{width?:number;height?:number;executablePath?:string;profileDirectory?:string;headless?:boolean}={}){}
  get current(){return this.snapshot;}
  get currentStatus(){return {...this.status};}
  subscribe(listener:(event:BrowserEvent)=>void){this.listeners.add(listener);listener({type:'status',status:this.currentStatus});if(this.frame)listener({type:'frame',frame:this.frame});return ()=>{this.listeners.delete(listener);};}
  private emit(event:BrowserEvent){for(const listener of this.listeners){try{listener(event);}catch{/* one disconnected viewer must not stop the browser */}}}
  private update(update:Partial<BrowserStatus>){this.status={...this.status,...update};this.emit({type:'status',status:this.currentStatus});}
+ private async dispose(){const context=this.context,browser=this.browser;try{await context?.close();}finally{await browser?.close();}}
  private async start(){
-  if(this.closed)throw Error('Browser session is closed.');if(this.page)return;if(this.starting)return this.starting;
-  this.starting=(async()=>{this.update({state:'starting',loading:true});
+  if(this.closed)throw Error('Browser session is closed.');if(this.starting)return this.starting;if(this.page&&!this.page.isClosed())return;
+  this.starting=(async()=>{await this.dispose();this.update({state:'starting',loading:true});
    const chrome='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
-   this.browser=await chromium.launch({headless:true,...(this.options.executablePath?{executablePath:this.options.executablePath}:existsSync(chrome)?{executablePath:chrome}:{})});
-   this.context=await this.browser.newContext({viewport:{width:this.options.width??1120,height:this.options.height??780},deviceScaleFactor:1,acceptDownloads:false});
-   const page=await this.context.newPage();await this.attach(page);
+   const headless=this.options.headless??true;
+   // Position headed windows before their first paint; retain rendering while offscreen.
+   // macOS may still activate the application: window position is not a focus policy.
+   const launch={headless,chromiumSandbox:true,args:headless?[]:[
+    '--window-position=-32000,-32000',
+    '--no-first-run','--no-default-browser-check',
+    '--disable-backgrounding-occluded-windows',
+    '--disable-background-timer-throttling','--disable-renderer-backgrounding',
+   ],...(this.options.executablePath?{executablePath:this.options.executablePath}:existsSync(chrome)?{executablePath:chrome}:{})};
+   const contextOptions={viewport:{width:this.options.width??1120,height:this.options.height??780},deviceScaleFactor:1,acceptDownloads:false};
+   if(this.options.profileDirectory){
+    await mkdir(this.options.profileDirectory,{recursive:true,mode:0o700});await chmod(this.options.profileDirectory,0o700);
+    this.context=await chromium.launchPersistentContext(this.options.profileDirectory,{...launch,...contextOptions});
+    this.browser=this.context.browser()??undefined;
+   }else{
+    this.browser=await chromium.launch(launch);this.context=await this.browser.newContext(contextOptions);
+   }
+   const page=this.context.pages()[0]??await this.context.newPage();await this.attach(page);
+   const context=this.context;context.on('close',()=>{if(this.context===context){this.context=undefined;this.browser=undefined;this.page=undefined;this.snapshot=undefined;this.frame=undefined;this.update({state:'closed',loading:false});}});
    this.context.on('page',page=>{void this.attach(page).catch(e=>this.update({error:String(e)}));});
    this.update({state:'ready',loading:false});
-  })().catch(async error=>{await this.browser?.close().catch(()=>{});this.browser=undefined;this.page=undefined;this.update({state:'error',loading:false,error:(error as Error).message});throw error;}).finally(()=>{this.starting=undefined;});
+  })().catch(async error=>{await this.dispose().catch(()=>{});this.context=undefined;this.browser=undefined;this.page=undefined;this.update({state:'error',loading:false,error:(error as Error).message});throw error;}).finally(()=>{this.starting=undefined;});
   return this.starting;
  }
  private async attach(page:Page){
@@ -53,7 +71,7 @@ export class BrowserSession{
   });
   await cdp.send('Page.startScreencast',{format:'jpeg',quality:75,everyNthFrame:1,maxWidth:1600,maxHeight:1200});
  }
- private exclusive<T>(signal:AbortSignal,work:()=>Promise<T>):Promise<T>{const run=this.queue.then(async()=>{signal.throwIfAborted();await this.start();signal.throwIfAborted();if(this.closed)throw Error('Browser session is closed.');const abort=()=>{void this.cdp?.send('Page.stopLoading').catch(()=>{});};signal.addEventListener('abort',abort,{once:true});try{const result=await work();signal.throwIfAborted();return result;}catch(error){this.update({loading:false,error:(error as Error).message});throw error;}finally{signal.removeEventListener('abort',abort);}});this.queue=run.catch(()=>{});return run;}
+ private exclusive<T>(signal:AbortSignal,work:()=>Promise<T>):Promise<T>{const run=this.queue.then(async()=>{signal.throwIfAborted();await this.start();signal.throwIfAborted();if(this.closed)throw Error('Browser session is closed.');const abort=()=>{void this.cdp?.send('Page.stopLoading').catch(()=>{});};signal.addEventListener('abort',abort,{once:true});try{const result=await work();signal.throwIfAborted();return result;}catch(error){if(error instanceof StaleBrowserSnapshot)this.snapshot=undefined;else this.update({loading:false,error:(error as Error).message});throw error;}finally{signal.removeEventListener('abort',abort);}});this.queue=run.catch(()=>{});return run;}
  private async read():Promise<BrowserSnapshot>{
   const raw=await this.page!.evaluate(READ_SNAPSHOT) as Omit<BrowserSnapshot,'id'|'observedAt'>&{pageKey:string};
   this.pageKey=raw.pageKey;const {pageKey:_,...state}=raw;
@@ -98,5 +116,5 @@ export class BrowserSession{
   else await page.keyboard.press(input.key);
   this.snapshot=undefined;
  });this.inputQueue=run.catch(()=>{});return run;}
- async close(){this.closed=true;await this.starting?.catch(()=>{});await this.browser?.close();this.browser=undefined;this.page=undefined;this.snapshot=undefined;this.frame=undefined;this.update({state:'closed',loading:false});this.listeners.clear();}
+ async close(){this.closed=true;await this.starting?.catch(()=>{});await this.dispose();this.context=undefined;this.browser=undefined;this.page=undefined;this.snapshot=undefined;this.frame=undefined;this.update({state:'closed',loading:false});this.listeners.clear();}
 }

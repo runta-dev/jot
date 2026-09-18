@@ -4,7 +4,8 @@ import { resolve } from "node:path";
 import { parse } from "dotenv";
 import { parseMessages } from "./messages.ts";
 import { generateChatReply } from "./chat-reply.ts";
-import {browserRouter,browserPool} from "./browser.ts";
+import {browserRouter,browserPool,browserChatId} from "./browser.ts";
+import {createBrowserTools} from './browser-tools.ts';
 let raw = "";
 try {
   raw = readFileSync(resolve(".env"), "utf8").trim();
@@ -20,7 +21,7 @@ const key =
   (!raw.includes("\n") && !raw.includes("=") && !/\s/.test(raw) ? raw : "");
 const app = express();
 app.disable("x-powered-by");
-app.use(express.json({ limit: "32kb" }));
+app.use(express.json({ limit: "1mb" }));
 app.use("/api/browser",browserRouter);
 app.get("/api/health", (_req, res) =>
   res.json({ configured: Boolean(key), model: "jev-latest" }),
@@ -68,9 +69,11 @@ app.post("/api/chat", async (req, res) => {
   const emit = (event: object) => {
     if (!res.destroyed) res.write(JSON.stringify(event) + "\n");
   };
+  let lease:Awaited<ReturnType<typeof browserPool.acquire>>|undefined;
   const started = Date.now();
   try {
-    for await (const event of generateChatReply(key, messages, controller.signal)) {
+    if(req.body.chatId!==undefined)lease=await browserPool.acquire(browserChatId(req.body.chatId));
+    for await (const event of generateChatReply(key, messages, controller.signal,lease?{extraTools:createBrowserTools(lease.session),maxTurns:24}:{})) {
       emit({ ...event, elapsed: Date.now() - started });
     }
   } catch (error) {
@@ -84,6 +87,7 @@ app.post("/api/chat", async (req, res) => {
             : (error as Error).message,
       });
   } finally {
+    lease?.release();
     clearTimeout(timeout);
     active--;
     res.end();
