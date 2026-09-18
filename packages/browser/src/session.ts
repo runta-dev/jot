@@ -31,11 +31,21 @@ export class BrowserSession{
  private async attach(page:Page){
   await this.cdp?.detach().catch(()=>{});this.page=page;this.snapshot=undefined;this.frame=undefined;
   page.setDefaultTimeout(3000);page.setDefaultNavigationTimeout(15000);
-  page.on('framenavigated',frame=>{if(this.page===page&&frame===page.mainFrame()){this.snapshot=undefined;this.update({url:page.url(),loading:true});}});
-  page.on('domcontentloaded',()=>{if(this.page===page)void page.title().then(title=>this.update({title,url:page.url(),loading:false,error:undefined})).catch(()=>{});});
+  page.on('framenavigated',frame=>{if(this.page===page&&frame===page.mainFrame()){this.snapshot=undefined;this.update({url:page.url()});}});
+  page.on('domcontentloaded',()=>{if(this.page===page)void page.title().then(title=>this.update({title,url:page.url(),error:undefined})).catch(()=>{});});
   page.on('close',()=>{if(this.page===page){this.page=undefined;this.snapshot=undefined;this.update({state:'closed',loading:false});}});
   this.cdp=await this.context!.newCDPSession(page);const cdp=this.cdp;
-  await cdp.send('Page.enable');await cdp.send('Emulation.setFocusEmulationEnabled',{enabled:true});
+  await cdp.send('Page.enable');
+  const {frameTree}=await cdp.send('Page.getFrameTree');
+  let mainFrameId=frameTree.frame.id;
+  cdp.on('Page.frameNavigated',({frame})=>{if(!frame.parentId)mainFrameId=frame.id;});
+  cdp.on('Page.frameStartedLoading',({frameId})=>{
+   if(this.cdp===cdp&&frameId===mainFrameId)this.update({loading:true,error:undefined});
+  });
+  cdp.on('Page.frameStoppedLoading',({frameId})=>{
+   if(this.cdp===cdp&&frameId===mainFrameId)this.update({loading:false,url:page.url()});
+  });
+  await cdp.send('Emulation.setFocusEmulationEnabled',{enabled:true});
   cdp.on('Page.screencastFrame',event=>{
    void cdp.send('Page.screencastFrameAck',{sessionId:event.sessionId}).catch(()=>{});
    if(this.cdp!==cdp)return;const size=page.viewportSize()!;
@@ -47,7 +57,7 @@ export class BrowserSession{
  private async read():Promise<BrowserSnapshot>{
   const raw=await this.page!.evaluate(READ_SNAPSHOT) as Omit<BrowserSnapshot,'id'|'observedAt'>&{pageKey:string};
   this.pageKey=raw.pageKey;const {pageKey:_,...state}=raw;
-  this.snapshot={...state,id:randomUUID(),observedAt:Date.now()};this.update({state:'ready',url:state.url,title:state.title,loading:false,error:undefined});return this.snapshot;
+  this.snapshot={...state,id:randomUUID(),observedAt:Date.now()};this.update({state:'ready',url:state.url,title:state.title,error:undefined});return this.snapshot;
  }
  observe(signal:AbortSignal){return this.exclusive(signal,()=>this.read());}
  private async target(action:Extract<BrowserAction,{elementId:string}>):Promise<ElementHandle<HTMLElement>>{

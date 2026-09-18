@@ -1312,8 +1312,8 @@ hr { border: 0; border-top: 0.5px solid var(--border); }
 .browser-panel.is-open { opacity: 1; visibility: visible; transition-delay: 0s; }
 .browser-panel.is-resizing { transition: none; }
 .browser-panel-inner { position: relative; display: flex; flex-direction: column; width: var(--browser-panel-width); max-width: 55vw; height: 100%; border-left: 0.5px solid var(--border); }
-.browser-panel-header { height: 46px; padding: 0 8px; justify-content: flex-start; gap: 13px; border-bottom: 0.5px solid var(--border); font-size: 13px; color: var(--muted); }
-.browser-collapse-button { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 7px; background: transparent; transition: background-color 150ms ease; }
+.browser-panel-header { height: 46px; padding: 0 8px; justify-content: flex-start; align-items: center; gap: 6px; line-height: 20px; border-bottom: 0.5px solid var(--border); font-size: 13px; color: var(--muted); }
+.browser-collapse-button { width: 30px; height: 30px; padding: 0; flex-shrink: 0; display: grid; place-items: center; border-radius: 7px; background: transparent; transition: background-color 150ms ease; }
 .browser-panel-content { flex: 1; min-height: 0; overflow: hidden; display: flex; flex-direction: column; }
 .browser-panel-empty { flex: 1; display: grid; place-items: center; color: var(--faint); font-size: 13px; }
 .browser-resize-handle { position: absolute; z-index: 2; top: 0; bottom: 0; left: 0; width: 8px; cursor: col-resize; touch-action: none; }
@@ -1328,16 +1328,19 @@ hr { border: 0; border-top: 0.5px solid var(--border); }
 
 .browser-view { flex: 1; min-height: 0; display: flex; flex-direction: column; }
 .browser-navigation { display: flex; align-items: center; gap: 3px; padding: 9px 12px; border-bottom: 1px solid var(--border); background: #fff; }
-.browser-navigation > button { flex-shrink: 0; width: 25px; height: 28px; display: grid; place-items: center; }
+.browser-navigation > button { flex-shrink: 0; width: 25px; height: 28px; display: grid; place-items: center; border-radius: 6px; transition: background-color 150ms ease; }
+@media (hover: hover) { .browser-navigation > button:not(:disabled):hover { background: #f0f0f0; } }
 .browser-navigation > button:disabled { opacity: .3; }
 .browser-address { min-width: 0; flex: 1; display: flex; align-items: center; gap: 8px; margin-left: 5px; padding: 7px 10px; background: #f5f5f5; border-radius: 8px; color: var(--muted); }
 .browser-address input { font: 12px var(--font-sans); border: 0; outline: 0; background: transparent; width: 100%; min-width: 0; color: var(--text); }
 .browser-screen { position: relative; flex: 1; min-height: 0; overflow: hidden; background: #fff; display: flex; align-items: flex-start; justify-content: center; }
-.browser-screen > img { display: block; width: 100%; height: auto; user-select: none; }
+.browser-screen > canvas { display: block; width: 100%; height: auto; user-select: none; }
+.browser-screen > canvas[hidden] { display: none; }
 .browser-screen > .browser-panel-empty { align-self: stretch; }
 .browser-keyboard { position: absolute; left: 0; top: 0; width: 1px; height: 1px; opacity: 0; pointer-events: none; resize: none; padding: 0; border: 0; }
 .browser-error { padding: 8px 14px; color: #a34f40; font-size: 11px; background: #fff7f3; overflow-wrap: anywhere; }
-.browser-loading { animation: tool-spin 1s linear infinite; }
+.browser-loading { animation: browser-spin 1s linear infinite; transform-origin: center; transform-box: fill-box; }
+@keyframes browser-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 @media(prefers-reduced-motion:reduce) { .browser-loading { animation: none; } }
 
 .tool-group-chevron { flex-shrink: 0; opacity: .65; transition: transform 180ms ease; }
@@ -1363,3 +1366,6 @@ hr { border: 0; border-top: 0.5px solid var(--border); }
 .model-popover { position: fixed; position-anchor: --model-trigger; inset: auto; bottom: anchor(top); right: anchor(right); margin: 0 0 8px; width: 180px; padding: 5px; border: .5px solid #e5e5e5; border-radius: 10px; background: #fff; box-shadow: 0 4px 16px #0000000d; }
 .model-option { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 8px; border: 0; border-radius: 6px; background: transparent; color: #42464a; font-size: 13px; text-align: left; }
 .model-option:hover, .model-option:focus-visible { background: #f4f4f5; }
+
+.browser-panel-header > span { display: flex; align-items: center; height: 30px; }
+.browser-collapse-button svg { display: block; }

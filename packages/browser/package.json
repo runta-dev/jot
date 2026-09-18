@@ -11,8 +11,5 @@
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "tsx --test src/*.test.ts",
     "test:browser": "JOT_BROWSER_TEST=1 tsx --test src/browser.integration.test.ts"
-  },
-  "dependencies": {
-    "playwright-core": "^1.58.0"
   }
 }

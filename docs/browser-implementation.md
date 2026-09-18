@@ -21,3 +21,26 @@ Reference reviewed: browser-use/jev-ultrafast agent/browser/snapshot sources. Ad
 4. Real local multi-step workflow and external web navigation through Jot UI; verify lifecycle and responsive layout.
 
 Right-side panel shell and resize/toggle controls are implemented. Open uses the requested PanelRight split-view icon; collapse uses Errand DetailPanel.tsx ChevronsRight (18px). The panel currently reports no browser connection; live content and agent tool registration are still pending. Initial DOM reader includes open shadow roots, but frame indexing, downloads/uploads and complex keyboard widgets need later validation. Passing one local fixture is implementation verification, not a claim of general browser reliability.
+
+## Local streaming responsiveness
+
+Manual keyboard, text and pointer input now use a separate ordered queue from
+navigation/agent actions. A page waiting for DOMContentLoaded no longer holds
+manual input behind its resources. Adjacent pending wheel events are combined;
+clicks and keys preserve their order. The viewer's wheel listener is non-passive
+so scrolling the remote page does not also scroll Jot.
+
+SSE respects socket backpressure and retains only the latest pending frame and
+status. The viewer decodes at most one frame at a time, replacing pending frames
+with the newest, then draws directly to canvas without a React update per frame.
+CDP capture timestamps are retained. JPEG quality remains 75.
+
+Local Chromium check (2026-09-18): with a script delayed by two seconds, a manual
+input request sent 200 ms into navigation took 1,894 ms before the queue split
+and 2 ms afterward. Once focused and loaded, 12 input-to-CDP-frame samples after
+the change were 28, 24, 6, 6, 6, 6, 7, 11, 6, 6, 8, 6 ms. These measure the browser
+backend, not full input-to-display latency. The Jot UI was separately checked with
+actual text entry, Enter submission and scrolling to the bottom of a local page.
+A gated-resource Chromium regression test asserts input arrives before navigation
+completes; a decoder test verifies intermediate frames are dropped and late decode
+callbacks are ignored after unmount.
