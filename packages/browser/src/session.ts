@@ -128,7 +128,7 @@ export class BrowserSession{
   await this.navigation(this.page!.goto(this.manualURL,{waitUntil:'domcontentloaded'}),signal);
   await this.settledRead(signal);
  });}
- private exclusive<T>(signal:AbortSignal,work:()=>Promise<T>):Promise<T>{const run=this.queue.then(async()=>{signal.throwIfAborted();await this.start();signal.throwIfAborted();if(this.closed)throw Error('Browser session is closed.');const abort=()=>{void this.cdp?.send('Page.stopLoading').catch(()=>{});};signal.addEventListener('abort',abort,{once:true});try{const result=await work();signal.throwIfAborted();return result;}catch(error){if(error instanceof StaleBrowserSnapshot)this.snapshot=undefined;else this.update({loading:false,error:(error as Error).message});throw error;}finally{signal.removeEventListener('abort',abort);}});this.queue=run.catch(()=>{});return run;}
+ private exclusive<T>(signal:AbortSignal,work:()=>Promise<T>):Promise<T>{const run=this.queue.then(async()=>{signal.throwIfAborted();await this.start();signal.throwIfAborted();if(this.closed)throw Error('Browser session is closed.');const abort=()=>{void this.cdp?.send('Page.stopLoading').catch(()=>{});};signal.addEventListener('abort',abort,{once:true});try{const result=await work();signal.throwIfAborted();return result;}catch(error){if(error instanceof StaleBrowserSnapshot){await this.settledRead(signal).catch(()=>{this.snapshot=undefined;});}else this.update({loading:false,error:(error as Error).message});throw error;}finally{signal.removeEventListener('abort',abort);}});this.queue=run.catch(()=>{});return run;}
  private async read():Promise<BrowserSnapshot>{
   const raw=await this.page!.evaluate(READ_SNAPSHOT) as Omit<BrowserSnapshot,'id'|'observedAt'>&{pageKey:string};
   this.pageKey=raw.pageKey;const {pageKey:_,...state}=raw;
@@ -182,9 +182,9 @@ export class BrowserSession{
    const node=handle.asElement();if(!node){await handle.dispose();return undefined;}
    return node as ElementHandle<HTMLElement>;
   };
-  for(let attempt=0;attempt<5;attempt++){
+  for(let attempt=0;attempt<2;attempt++){
    const node=await locate();if(node)return node;
-   await new Promise(r=>setTimeout(r,80));
+   await new Promise(r=>setTimeout(r,50));
   }
   throw new StaleBrowserSnapshot('Target changed, is hidden, or is covered. Observe again.');
  }

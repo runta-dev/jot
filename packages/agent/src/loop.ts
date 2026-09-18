@@ -33,7 +33,8 @@ export async function* runAgentLoop(conversation:ChatMessage[],options:{model:Mo
     }
    }catch(error){signal.throwIfAborted();if(error instanceof BudgetReached)throw error;result={status:'error',error:(error as Error).message};}
    const message:ToolMessage={role:'tool',toolCallId:call.id,name:tool.name,result};messages.push(message);yield {type:'tool_result',message,...usage()};
-   if(result.reason==='needs_input'){if(result.text)yield {type:'replace',content:result.text,...usage()};yield {type:'done',reason:'needs_input',...usage()};return;}
+   if(tool.name==='draft_message'&&result.status==='ok'&&result.text){if(displayed!==result.text)yield {type:'replace',content:result.text,...usage()};yield {type:'done',reason:'complete',...usage()};return;}
+   if(result.reason==='needs_input'||result.reason==='final'){if(result.text&&displayed!==result.text)yield {type:'replace',content:result.text,...usage()};yield {type:'done',reason:result.reason==='final'?'complete':'needs_input',...usage()};return;}
    if(result.reason==='budget'){yield {type:'done',reason:'budget',...usage()};return;}
   }
   yield {type:'done',reason:'limit',...usage()};

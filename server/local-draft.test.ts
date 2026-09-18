@@ -11,7 +11,7 @@ test('local draft forwards history and tool evidence and streams the actual mode
   return new Response(new ReadableStream({start(c){for(let i=0;i<bytes.length;i+=3)c.enqueue(bytes.slice(i,i+3));c.close();}}));};
  const generator=createLocalDraft({fetch:fetcher})(history,new AbortController().signal);let text='';let result;
  while(true){const item=await generator.next();if(item.done){result=item.value;break;}text+=item.value.delta;}
- assert.equal(text,'结果是 13.');assert.equal(result.text,text);assert.equal(result.reason,'complete');assert.deepEqual(request.messages,draftMessages(history));assert.equal(request.max_tokens,512);
+ assert.equal(text,'结果是 13.');assert.equal(result.text,text);assert.equal(result.reason,'final');assert.deepEqual(request.messages,draftMessages(history));assert.equal(request.max_tokens,512);
  assert.equal((result.data as any).provider,'local-mlx');
  assert.match(JSON.stringify(request.messages),/calculate: ok \| 13/);
 });
@@ -47,7 +47,7 @@ test('draft_message delegates only its text generation while Jev still selects a
   return {model:'fixture',answers};
  };
  const events=[];for await(const e of generateChatReply('',[{role:'user',content:'Explain rain.'}],new AbortController().signal,{evaluate,draft:async function*(messages){localCalls++;assert.equal((messages[0] as any).content,'Explain rain.');yield {type:'text_delta',delta:'Local answer.'};return {status:'ok',text:'Local answer.'};}}))events.push(e);
- assert.equal(localCalls,1);assert.equal(decisions,2);assert.ok(events.some(e=>e.type==='tool_call'&&e.call.name==='draft_message'));assert.equal(events.at(-1)?.type,'done');
+ assert.equal(localCalls,1);assert.equal(decisions,1);assert.ok(events.some(e=>e.type==='tool_call'&&e.call.name==='draft_message'));assert.equal(events.at(-1)?.type,'done');
 });
 
 test('draft prompt includes a markdown flight table extracted from page evidence',()=>{

@@ -499,8 +499,8 @@ header {
 }
 .messages {
   max-width: 680px;
-  margin: 20px auto 28px;
-  width: calc(100% - 72px);
+  margin: 20px 20px 28px;
+  width: auto;
 }
 .message {
   margin-bottom: 33px;
@@ -793,7 +793,7 @@ header {
     padding-right: 25px;
   }
   .messages {
-    width: calc(100% - 50px);
+    width: auto;
   }
 }
 @media (max-width: 760px) {
@@ -882,7 +882,7 @@ header {
     padding: 20px 18px 15px;
   }
   .messages {
-    width: calc(100% - 40px);
+    width: auto;
     margin-top: 20px;
   }
   .connection {

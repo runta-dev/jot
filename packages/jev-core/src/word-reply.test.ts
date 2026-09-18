@@ -1,10 +1,11 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';
-import {generateWordReply,conversationLexemes} from './word-reply.ts';import type {Evaluate,EvaluationRequest,ChoiceAnswer} from './typesafe.ts';
+import {generateWordReply,conversationLexemes} from './word-reply.ts';import type {Evaluate,EvaluationRequest,ChoiceAnswer,Question} from './typesafe.ts';
+function choiceCriteria(q:Question){if(q.type!=='choice'||!q.criteria)throw Error('expected choice');return q.criteria;}
 const messages=[{role:'user' as const,content:'Say hello world.'}];
 function mock(captured:EvaluationRequest[]):Evaluate{return async request=>{captured.push(structuredClone(request));const prefix=(request.state as any).reply_so_far;const answers:Record<string,ChoiceAnswer>={};for(const[id,q]of Object.entries(request.questions)){
  const desired=prefix===''?'Hello':prefix==='Hello'?'Hello world':null;
- const choice=id==='next'?(desired?Object.keys(q.criteria).find(k=>q.criteria[k]===desired)!:'END'):Object.keys(q.criteria)[0];
- assert.ok(choice,'Expected test continuation is available');answers[id]={type:'choice',choice,confidence:1,probabilities:Object.fromEntries(Object.keys(q.criteria).map(k=>[k,k===choice?1:0]))};
+ const choice=id==='next'?(desired?Object.keys(choiceCriteria(q)).find(k=>choiceCriteria(q)[k]===desired)!:'END'):Object.keys(choiceCriteria(q))[0];
+ assert.ok(choice,'Expected test continuation is available');answers[id]={type:'choice',choice,confidence:1,probabilities:Object.fromEntries(Object.keys(choiceCriteria(q)).map(k=>[k,k===choice?1:0]))};
  }return {model:'test',answers,usage:{input_tokens:10,output_tokens:2}};};}
 const base={vocabulary:['hello','world'],forms:(w:string)=>[w]};
 test('stream commits full chosen fragment before next call and ends on EOS',async()=>{
@@ -13,7 +14,7 @@ test('stream commits full chosen fragment before next call and ends on EOS',asyn
  assert.equal(events.at(-1)?.type,'done');assert.equal((events.at(-1) as any).reason,'complete');
  assert.deepEqual(captured.map(r=>(r.state as any).reply_so_far),['','','','Hello','Hello','Hello world','Hello world']);
  assert.ok(captured.every(r=>JSON.stringify((r.state as any).conversation)===JSON.stringify(messages)));
- assert.ok(captured.every(r=>Object.values(r.questions).every(q=>Object.keys(q.criteria).length<=255)));
+ assert.ok(captured.every(r=>Object.values(r.questions).every(q=>Object.keys(choiceCriteria(q)).length<=255)));
 });
 test('abort after a streamed fragment prevents every later evaluation',async()=>{
  const captured:EvaluationRequest[]=[],controller=new AbortController();const stream=generateWordReply('unused',messages,controller.signal,{...base,evaluate:mock(captured)});
@@ -37,8 +38,8 @@ test('conversation identifiers retain digits, hyphens and underscores without re
  const evaluate:Evaluate=async request=>{
   const prefix=(request.state as any).reply_so_far;const answers:Record<string,ChoiceAnswer>={};
   for(const [id,q]of Object.entries(request.questions)){
-   const choice=id==='next'?(prefix?'END':Object.keys(q.criteria).find(k=>q.criteria[k]==='vexa-731')!):'vexa-731';assert.ok(Object.hasOwn(q.criteria,choice));
-   answers[id]={type:'choice',choice,confidence:1,probabilities:Object.fromEntries(Object.keys(q.criteria).map(k=>[k,k===choice?1:0]))};
+   const choice=id==='next'?(prefix?'END':Object.keys(choiceCriteria(q)).find(k=>choiceCriteria(q)[k]==='vexa-731')!):'vexa-731';assert.ok(Object.hasOwn(choiceCriteria(q),choice));
+   answers[id]={type:'choice',choice,confidence:1,probabilities:Object.fromEntries(Object.keys(choiceCriteria(q)).map(k=>[k,k===choice?1:0]))};
   }return {model:'test',answers};
  };
  let text='';for await(const e of generateWordReply('unused',history,new AbortController().signal,{...base,evaluate}))if(e.type==='character')text+=e.character;

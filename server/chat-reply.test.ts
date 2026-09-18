@@ -2,8 +2,9 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {generateChatReply,sourceSpans} from './chat-reply.ts';
 import {emptySchema,type ToolFactory} from '@jot/agent';
-import type {Evaluate,EvaluationRequest} from '@jot/jev-core';
-function response(request:EvaluationRequest,choices:Record<string,string>){return {model:'test',answers:Object.fromEntries(Object.entries(request.questions).map(([id,q])=>{if(q.type==='noul')return [id,{type:'noul' as const,noul:choices[id]==='true'?1:0}];const choice=choices[id]??(id==='hints'&&'criteria' in q&&q.criteria&&Object.hasOwn(q.criteria,'NONE')?'NONE':choices[id]);return [id,{type:'choice' as const,choice,confidence:1,probabilities:Object.fromEntries(Object.keys(q.criteria).map(k=>[k,k===choice?1:0]))}];})),usage:{input_tokens:10,output_tokens:2}};}
+import type {Evaluate,EvaluationRequest,Question} from '@jot/jev-core';
+function choiceCriteria(q:Question){if(q.type!=='choice'||!q.criteria)throw Error('expected choice');return q.criteria;}
+function response(request:EvaluationRequest,choices:Record<string,string>){return {model:'test',answers:Object.fromEntries(Object.entries(request.questions).map(([id,q])=>{if(q.type==='noul')return [id,{type:'noul' as const,noul:choices[id]==='true'?1:0}];const choice=choices[id]??(id==='hints'&&'criteria' in q&&q.criteria&&Object.hasOwn(q.criteria,'NONE')?'NONE':choices[id]);return [id,{type:'choice' as const,choice,confidence:1,probabilities:Object.fromEntries(Object.keys(choiceCriteria(q)).map(k=>[k,k===choice?1:0]))}];})),usage:{input_tokens:10,output_tokens:2}};}
 const user=[{role:'user' as const,content:'Calculate 6 plus 7, then multiply the result by 2.'}];
 test('loop appends assistant calls and tool results; next calculation consumes prior result',async()=>{
  const snapshots:EvaluationRequest[]=[];
@@ -22,13 +23,13 @@ test('loop appends assistant calls and tool results; next calculation consumes p
 });
 test('original whitespace/punctuation survive source tool and explicit final response turn',async()=>{
  const messages=[{role:'user' as const,content:'Repeat "blue  river!" exactly.'}];assert.ok(sourceSpans(messages)?.includes('blue  river!'));
- const evaluate:Evaluate=async r=>{if(r.questions.action)return response(r,{action:(r.state as any).messages.some((m:any)=>m.role==='tool')?'respond_0':'read_context'});const key=Object.keys(r.questions.spanId.criteria).find(k=>r.questions.spanId.criteria[k]==='blue  river!')!;return response(r,{spanId:key});};
+ const evaluate:Evaluate=async r=>{if(r.questions.action)return response(r,{action:(r.state as any).messages.some((m:any)=>m.role==='tool')?'respond_0':'read_context'});const key=Object.keys(choiceCriteria(r.questions.spanId)).find(k=>choiceCriteria(r.questions.spanId)[k]==='blue  river!')!;return response(r,{spanId:key});};
  const events=[];for await(const e of generateChatReply('unused',messages,new AbortController().signal,{evaluate}))events.push(e);
  assert.equal((events.find(e=>e.type==='replace') as any).content,'blue  river!');assert.equal(events.at(-1)?.requests,3);
 });
 test('tool errors become observations and permit the next tool, rather than hidden fallback',async()=>{
  const tools:ToolFactory[]=[()=>({name:'fail',description:'fails',parameters:emptySchema,async *execute(){throw Error('Fixture failure');}}),()=>({name:'draft_message',description:'recovers',parameters:emptySchema,async *execute(){return {status:'ok',text:'Recovered'};}})];
- const evaluate:Evaluate=async r=>{const results=(r.state as any).messages.filter((m:any)=>m.role==='tool');if(results.length===1)assert.equal(results[0].result.error,'Fixture failure');return response(r,{action:results.length===0?'fail':results.length===1?'draft_message':'respond_0'});};
+ const evaluate:Evaluate=async r=>{if(!r.questions.action)return response(r,{next:'END'});const results=(r.state as any).messages.filter((m:any)=>m.role==='tool');if(results.length===1)assert.equal(results[0].result.error,'Fixture failure');return response(r,{action:results.length===0?'fail':results.length===1?'draft_message':'respond_0',needs_long_draft:'true'});};
  const events=[];for await(const e of generateChatReply('unused',user,new AbortController().signal,{evaluate,tools}))events.push(e);
  assert.equal((events.find(e=>e.type==='replace') as any).content,'Recovered');
 });
@@ -65,11 +66,12 @@ test('free string arguments reuse Jev word generation instead of source-span sel
  const history=[{role:'user' as const,content:'search latest news about runta'}];
  let received='';const tools:ToolFactory[]=[()=>({name:'browser_search',description:'Search',parameters:{type:'object',required:['query'],additionalProperties:false,properties:{query:{type:'string',description:'Write search keywords.'}}},async *execute(args){received=args.query;return {status:'ok',text:'Executed'};}})];
  const evaluate:Evaluate=async r=>{
-  if(r.questions.action){const hasTool=(r.state as any).messages.some((m:any)=>m.role==='tool');return response(r,{action:hasTool?(Object.keys(r.questions.action.criteria).find(k=>k.startsWith('respond_'))??'browser_search'):'browser_search'});}
+  if(r.questions.has_words)return {model:'test',answers:{has_words:{type:'noul',noul:0.1}},usage:{input_tokens:1,output_tokens:1}};
+  if(r.questions.action){const hasTool=(r.state as any).messages.some((m:any)=>m.role==='tool');return response(r,{action:hasTool?(Object.keys(choiceCriteria(r.questions.action)).find(k=>k.startsWith('respond_'))??'browser_search'):'browser_search'});}
   const prefix=(r.state as any).reply_so_far;
   const desired=prefix===''?'Runta':prefix==='Runta'?'Runta news':undefined;
   assert.ok(Object.values(r.questions).every(q=>String(q.instructions).includes('browser_search.query')));
-  const choices=Object.fromEntries(Object.entries(r.questions).map(([id,q])=>[id,id==='next'?(desired?Object.keys(q.criteria).find(k=>q.criteria[k]===desired)!:'END'):(Object.hasOwn(q.criteria,'runta')?'runta':Object.hasOwn(q.criteria,'news')?'news':Object.keys(q.criteria)[0])]));
+  const choices=Object.fromEntries(Object.entries(r.questions).map(([id,q])=>{const c=choiceCriteria(q);return [id,id==='next'?(desired?Object.keys(c).find(k=>c[k]===desired)!:'END'):(Object.hasOwn(c,'runta')?'runta':Object.hasOwn(c,'news')?'news':Object.keys(c)[0])];}));
   return response(r,choices);
  };
  const events=[];for await(const e of generateChatReply('',history,new AbortController().signal,{evaluate,tools}))events.push(e);

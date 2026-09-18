@@ -2,7 +2,7 @@ import type {DraftAnswer} from './local-draft.ts';
 import {calculateOperands,type ArithmeticOperator} from './arithmetic.ts';
 import {sourceSpans} from './source-spans.ts';
 import {generateWordReply,type Evaluate} from '@jot/jev-core';
-import {conversation,toolResults,type Parameters,type Parameter,type ToolFactory} from '@jot/agent';
+import {conversation,emptySchema,toolResults,type Parameters,type Parameter,type ToolFactory} from '@jot/agent';
 function field(description:string,options:Record<string,string|null>):Parameter{return {type:'string',description,oneOf:Object.entries(options).map(([value,label])=>({const:value,...(label?{description:label}:{})}))};}
 function parameters(properties:Record<string,Parameter>):Parameters{return {type:'object',properties,required:Object.keys(properties),additionalProperties:false};}
 /** Application tools; the agent package has no knowledge of these implementations. */
@@ -22,13 +22,14 @@ export function createAgentTools(runtime:{key:string;evaluate:Evaluate;remaining
   const spans=sourceSpans(conversation(messages));if(!spans?.length)return null;
   return {name:'read_context',description:'Retrieve an exact answer already in the conversation, preserving corrections, role attribution, whitespace and punctuation. Does not invent, calculate, combine separated facts, or explain.',parameters:parameters({spanId:field('Can the latest user request be fully and correctly answered by returning exactly one provided source span? Select that exact complete answer, respecting corrections and context. Choose NONE if explanation, new content, calculation, missing information, or any wording not present in a span is needed. Do not select a span merely because it repeats the question or is related to it.',{...Object.fromEntries(spans.map((s,i)=>[`s${i}`,s])),NONE:'No source span alone fully answers; use another tool.'})}),async *execute(args){if(args.spanId==='NONE')return {status:'error',error:'No complete answer found in conversation.'};const text=spans[Number(args.spanId.slice(1))];if(!text)throw Error('Invalid span identifier.');return {status:'ok',text,data:{source:'conversation',spanId:args.spanId}};}};
  };
- const compose:ToolFactory=({messages,signal})=>({name:'draft_message',description:'Draft a concise answer from the conversation and actual tool results. Use for explanations, writing, advice, combinations, or requests not fully answered by other tools.',parameters:runtime.draft?{type:'object',additionalProperties:false,required:[],properties:{hints:{type:'string',description:'Short factual hints for the local writer. For identity, hint: assistant is Jot; Jev is the model that chooses tools. Include names, numbers, and constraints. Do not write I am Jev or a full reply.',maxLength:280}}}:{type:'object',additionalProperties:false,required:[],properties:{}},async *execute(args){
+ const draftParameters:Parameters=runtime.draft?{type:'object',additionalProperties:false,required:[],properties:{hints:{type:'string',description:'Short factual hints for the local writer: names, numbers, and constraints. Do not write a full reply.',maxLength:280}}}:emptySchema;
+ const compose:ToolFactory=({messages,signal})=>({name:'draft_message',description:'Draft a concise answer from the conversation and actual tool results. Use for explanations, writing, advice, combinations, or requests not fully answered by other tools.',parameters:draftParameters,async *execute(args){
   const focus=args.hints?.trim();
   if(runtime.draft)return yield* runtime.draft(messages,signal,focus);
   let text='',reason:'complete'|'limit'|'budget'='complete';
   for await(const event of generateWordReply(runtime.key,conversation(messages),signal,{evaluate:runtime.evaluate,maxInputTokens:runtime.remainingInput(),toolResults:toolResults(messages),instructions:focus?`Must keep these hints in the answer: ${focus}`:undefined})){
    if(event.type==='character'){text+=event.character;yield {type:'text_delta',delta:event.character,selection:event.step};}else reason=event.reason;
-  }return {status:'ok',text,reason};
+  }return {status:'ok',text,reason:reason==='complete'?'final':reason};
  }});
  return [calculate,readContext,compose];
 }

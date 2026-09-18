@@ -17,6 +17,10 @@ Jev picks the next move. Jot runs the loop.
 
 </div>
 
+<p align="center">
+  <img src="videos/demo.png" alt="Jot demo" width="100%">
+</p>
+
 <img src="docs/assets/divider.svg" alt="" width="100%" height="1">
 
 ## Introducing Jot
