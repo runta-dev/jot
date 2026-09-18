@@ -9,7 +9,8 @@
     "start": "NODE_ENV=production tsx server/index.ts",
     "test": "npm run check:boundaries && tsx --test server/*.test.ts packages/agent/src/*.test.ts packages/browser/src/*.test.ts packages/jev-core/src/*.test.ts packages/ui/src/*.test.tsx",
     "typecheck": "tsc --noEmit && npm run typecheck --workspaces",
-    "check:boundaries": "node scripts/check-boundaries.mjs"
+    "check:boundaries": "node scripts/check-boundaries.mjs",
+    "test:flights": "tsx scripts/browser-regression.ts"
   },
   "dependencies": {
     "dotenv": "^17.2.3",

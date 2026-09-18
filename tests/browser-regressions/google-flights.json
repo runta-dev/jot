@@ -1,0 +1,14 @@
+{
+  "id": "google-flights-zrh-london-one-way",
+  "prompt": "Goto https://www.google.com/travel/flights?hl=en, Find one-way flights from Zurich to London on September 20, 2026 for one adult in economy. Stop when matching flight options are visible.",
+  "expected": {
+    "origin": "Zurich",
+    "destination": "London",
+    "departureDate": "2026-09-20",
+    "tripType": "one-way",
+    "adults": 1,
+    "cabin": "economy",
+    "terminalState": "matching flight options visible"
+  },
+  "reference": {"system": "jev-ultrafast", "seconds": 7.1, "source": "user-reported; not independently measured"}
+}

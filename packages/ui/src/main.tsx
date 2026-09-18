@@ -335,7 +335,7 @@ function App() {
                           Working
                         </span>
                       )) : (
-                        <span className="empty-response">
+                        <span className={m.status === "stopped" || m.status === "error" ? "empty-response" : undefined}>
                           {m.status === "complete"
                             ? "Done."
                             : m.status === "stopped"
